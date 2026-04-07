@@ -436,6 +436,14 @@
           gap: 1.5rem;
           grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         }
+        @media (max-width: 600px) {
+          #galerie .gallery-item:nth-child(n+4) {
+            display: none;
+          }
+          #galerie .gallery-item img {
+            height: 300px;
+          }
+        }
         #galerie .gallery-item {
           background: #ffffff;
           border-radius: 16px;
@@ -596,6 +604,7 @@
   <div class="container">
     <div class="hero-box">
       <h1 class="brand">
+        <img src="images/logo.png" style="height:50px; display:block; margin:0 auto 10px;">
         FOX Garden
       </h1>
       <p class="premium">Údržba zahrad Jičín a okolí</p>
@@ -620,284 +629,56 @@
 </header>
 
 <section id="sluzby"><div class="container"><h2>🌿 Naše služby</h2>
-<p>Pracujeme pro rodinné domy, chaty, firmy, SVJ, obce, školy, školky i zdravotnická zařízení. Pokrýváme pravidelnou údržbu, jednorázové zásahy i odborné práce podle potřeby klienta.</p>
+<p>Údržba zahrad pro rodinné domy, firmy i SVJ v Jičíně a okolí.</p>
 
 <ul class="clean">
-<li><b>Sekání trávníků a seč přerostlých ploch</b> – pravidelně i jednorázově. Seč klasických
-trávníků i zanedbaných ploch, dosekávání hran a těžko dostupných míst, možnost vyhrabání
-a odvozu posekané hmoty.</li>
-<li><b>Stříhání a tvarování živých plotů</b> – túje, ptačí zob, habr a další dřeviny. Udržovací
-střih, zarovnání linií, zmlazení přerostlých plotů a kompletní úklid po práci.</li>
-<li><b>Řez ovocných a okrasných stromů a keřů</b> – zdravotní, udržovací i zmlazovací řez
-jabloní, hrušní, třešní, meruněk a okrasných dřevin. Dbáme na správné termíny řezu,
-podporu plodnosti a zdravý růst.</li>
-<li><b>Vertikutace a obnova trávníku</b> – odstranění plsti a mechu, prořez travního drnu,
-dosev, vhodné hnojení a doporučení další péče, aby trávník zhoustl a postupně se obnovil.</li>
-<li><b>Mulč, záhony a výsadby</b> – obnova záhonů, doplnění mulče, dosazování trvalek
-a keřů, údržba okrasných ploch kolem domu i firemních budov.</li>
-<li><b>Likvidace náletů a úprava zanedbaných ploch</b> – odstranění náletových dřevin,
-prořezání keřů, vyčištění předzahrádek, svahů a okrajů pozemků.</li>
-<li><b>Chemická péče (ÚKZÚZ)</b> – cílené použití přípravků na ochranu rostlin tam, kde
-to má smysl. Pracujeme s oprávněním ÚKZÚZ, vysvětlujeme postup a dodržujeme bezpečnostní
-lhůty.</li>
-<li><b>Odvoz a likvidace bioodpadu</b> – větve, tráva, listí a další bioodpad odvezeme
-na vhodné místo. Účtujeme férově podle objemu, aby bylo jasné, za co platíte.</li>
+<li><b>Sekání trávníků</b> – sečení, dosekávání hran a úklid.</li>
+<li><b>Stříhání živých plotů</b> – tvarování a zmlazení.</li>
+<li><b>Řez stromů</b> – odborný řez pro zdravý růst.</li>
+<li><b>Pravidelná údržba</b> – péče o záhony a výsadby.</li>
+<li><b>Zanedbané zahrady</b> – vyčištění a likvidace náletů.</li>
+<li><b>Chemická péče</b> – certifikovaná aplikace postřiků.</li>
 </ul>
 <div class="cta-section">
-  <p style="font-size:16px;margin-bottom:10px;">
-    Nevíte přesně, co vaše zahrada potřebuje? Nezávazně to spolu projdeme.
-  </p>
-  <a class="btn" href="#poptavka">Nezávazná poptávka</a>
+  <a class="btn" href="#poptavka">Rychlá poptávka</a>
 </div>
 </div></section>
 
-<section id="prokoho" class="alt"><div class="container"><h2>👥 Pro koho děláme</h2>
-<ul class="clean">
-<li><b>Rodinné domy a zahrady</b> – pravidelná údržba i jednorázové zásahy, když už je
-zahrada nad vaše síly.</li>
-<li><b>Chalupy a rekreační objekty</b> – postaráme se o zahradu i ve chvíli, kdy tam
-zrovna nejste. Před sezonou, po sezoně nebo na domluvené termíny.</li>
-<li><b>SVJ and bytové domy</b> – údržba společných zelených ploch, předzahrádek, okolí
-parkovišť a chodníků.</li>
-<li><b>Firmy and areály</b> – reprezentativní okolí budov, pravidelné sekání, údržba keřů
-a jednoduchý režim objednávání prací.</li>
-<li><b>Školky, školy a další zařízení</b> – bezpečná a upravená zeleň v okolí budov,
-včetně odvozu bioodpadu.</li>
-</ul>
-</div></section>
-
-<section id="akce"><div class="container"><h2>📅 Dlouhodobá péče o zahrady</h2>
-<p class="lead">Zahrada není jednorázová práce. Je to prostor, který se vyvíjí během celého roku. Nabízíme systematickou a pravidelnou péči, která udržuje zahradu zdravou a vyváženou.</p>
-<ul class="clean">
-<li><b>Sekání trávníků</b> – pravidelná údržba pro hustý a zdravý pažit.</li>
-<li><b>Péče o záhony</b> – pletí, mulčování a hnojení pro krásu vašich výsadeb.</li>
-<li><b>Řez keřů a živých plotů</b> – precizní tvarování pro soukromí i estetiku.</li>
-<li><b>Sezónní zásahy</b> – odborná příprava na sezónu a zazimování v klíčových momentech roku.</li>
-<li><b>Konzultace dalšího vývoje</b> – plánování úprav a rozvoje vaší zahrady.</li>
-</ul>
-<div class="cta-section" style="margin-top:24px;">
-    <a class="btn" href="#poptavka">Máte zájem o pravidelnou péči?</a>
-</div>
-</div></section>
-
-<section id="ovocne-stromy" class="alt"><div class="container">
-  <h2>🍎 Řez ovocných stromů</h2>
-  <p class="lead">Odborný řez je základem for zdraví stromu, jeho dlouhověkost a kvalitní úrodu. Každý strom posuzujeme individuálně podle stáří, vitality a stanoviště.</p>
-  <ul class="clean">
-    <li><b>Výchovný řez</b> – pro mladé stromky k založení silné a plodné koruny.</li>
-    <li><b>Udržovací řez</b> – pravidelné prosvětlení pro optimální růst a stabilní úrodu.</li>
-    <li><b>Postupné zmlazení</b> – citlivá obnova starších a zanedbaných stromů bez radikálních zásahů.</li>
-    <li><b>Zdravotní řez</b> – odstranění nemocných, suchých a poškozených větví pro celkovou kondici stromu.</li>
-  </ul>
-  <p class="lead" style="margin-top:10px;">Čerpáme ze zkušeností z tradičních ovocnářských oblastí (např. Holovousy) a klademe důraz na dlouhodobou rovnováhu stromu.</p>
-
-  <div style="margin-top:32px; padding-top:24px; border-top:1px solid rgba(31,61,39,0.1);">
-    <h3>Staré a přerostlé stromy řešíme citlivě</h3>
-    <p class="lead" style="margin-top:12px;">
-      Mnoho stromů po letech bez péče není potřeba radikálně zkrátit.
-      Nejprve hodnotíme stav koruny, světelné poměry a vitalitu stromu.
-      Cílem není strom "ostříhat", ale vrátit mu rovnováhu a plodnost.
-    </p>
-    <p class="lead">
-      Řežeme tak, aby strom znovu plodil a byl dlouhodobě stabilní,
-      ne jen aby vypadal dobře jednu sezónu.
-    </p>
-    <div class="cta-section">
-      <a class="btn" href="tel:+420775717291">Nezávazně konzultovat strom</a>
-      <div class="cta-trust-items">
-        <p style="font-size:15px; margin-bottom:5px;">✔ Individuální přístup ke každému stromu</p>
-        <p style="font-size:15px; margin-bottom:5px;">✔ Postupné zmlazování bez zbytečných radikálních zásahů</p>
-        <p style="font-size:15px; margin-bottom:5px;">✔ Dlouhodobá péče místo jednorázových řešení</p>
-      </div>
-      <p class="small-note" style="margin-top:12px; font-size: 14px; opacity: 0.8;">
-        Neprovádíme plošné radikální zkracování. Řez přizpůsobujeme konkrétnímu stromu a cíli pěstování.
-      </p>
-    </div>
-    <div style="margin-top:32px; border-top:1px solid rgba(31,61,39,0.1); padding-top:20px;">
-      <p class="lead">
-        Řežeme tak, aby strom zůstal stabilní, dlouhověký a pravidelně plodil – ne jen aby dobře vypadal jednu sezónu.
-      </p>
-      <p class="lead" style="margin-top:10px;">
-        Zásahy volíme s ohledem na stáří stromu, vitalitu i budoucí vývoj koruny.
-      </p>
-      <p class="lead" style="margin-top:20px;">
-        Nechte si strom nezávazně posoudit – často stačí malý zásah a výrazně pomůže.
-      </p>
-    </div>
-  </div>
-</div></section>
-
-<section id="sekani"><div class="container">
-  <h2>🚜 Sekání trávníků</h2>
-  <p class="lead">Pravidelné i jednorázové sekání trávníků pro rodinné domy, chaty, SVJ, firmy, školy i školky.</p>
-  <ul class="clean">
-    <li><b>Běžné zahrady:</b> 200–600 m², pravidelné sečení v sezoně tak, aby tráva nepřerůstala a zahrada zůstala upravená.</li>
-    <li><b>Větší plochy a SVJ:</b> sekání společných ploch kolem domů, chodníků a parkovacích míst – včetně dosekávání detailů křovinořezem.</li>
-    <li><b>Jednorázové „záchranné“ seče:</b> přerostlé zahrady a pozemky, které je potřeba dostat zpět do rozumného stavu před další údržbou.</li>
-    <li><b>Úklid po sečení:</b> vyfoukání chodníků, srovnání hran, případné vyhrabání ploch a možnost odvozu posekané hmoty.</li>
-  </ul>
-</div></section>
-
-
-<section id="akuprogram" class="alt"><div class="container">
-  <h2>🔋 Bateriový program FoxGarden</h2>
-  <p class="lead">Moderní tichá technika DeWALT – ideální tam, kde nechcete zbytečný hluk a spaliny.</p>
-  <ul class="clean">
-    <li><b>Bateriová pila na tyči a plotostřih na tyči DeWALT:</b> bezpečné a tiché tvarování vyšších keřů a živých plotů u domů, školy i firem.</li>
-    <li><b>Bateriová technika DeWALT:</b> tichá údržba u školek, škol, nemocnic, domovů pro seniory a v citlivých lokalitách.</li>
-    <li><b>Výhoda bateriového programu:</b> minimální hluk, žádné spaliny, rychlá výměna akumulátorů a možnost práce i v časech, kdy by benzínová technika rušila okolí.</li>
-  </ul>
-</div></section>
-
-<section id="kvalita-materialu" class="alt"><div class="container">
-  <h2>🌿 Kvalitní materiály, české sazenice a profesionální chemie</h2>
-
-  <p>
-    Při práci používáme pouze kvalitní a ověřené materiály – žádné levné dovozy ani
-    neznámé zdroje. Vše, co instalujeme nebo aplikujeme, musí mít jasný původ a kvalitu.
-  </p>
-
-  <p>
-    <strong>Rostliny, trvalky, keře, stromy i travní semena odebíráme výhradně od českých pěstitelů</strong>,
-    kteří garantují původ, zdravotní stav a přizpůsobení našemu klimatu. Nepoužíváme levný
-    dovoz z Holandska ani hobby-marketové rostliny s krátkou životností.
-  </p>
-
-  <p>
-    <strong>Chemii na profesionální použití</strong> – herbicidy, fungicidy, pesticidy a kvalitní hnojiva –
-    odebíráme od ověřených českých distributorů, zejména od společnosti
-    <strong>lescr.cz</strong>. Vše nakládáme a aplikujeme bezpečně a cíleně.
-  </p>
-
-  <p>
-    Veškeré práce s přípravky provádí osoba s platným
-    <strong>profesním osvědčením ÚKZÚZ – skupina 2</strong>, které opravňuje k odborné
-    aplikaci přípravků na ochranu rostlin. Držíme správné postupy a dodržujeme ochranné lhůty.
-  </p>
-
-  <p>
-    Díky tomu má zákazník jistotu, že na zahradě dostává dlouhodobě funkční a bezpečné
-    řešení – a ne kompromis.
-  </p>
-</div></section>
-
-
-<section id="kdepracujeme"><div class="container">
-  <h2>📍 Kde pracujeme</h2>
-  <p class="lead">Působíme hlavně v těchto regionech, u větších zakázek se ale lze domluvit i mimo ně.</p>
-  <div class="regions">
-    <span>Jičín • Hořice • Nová Paka • Lázně Bělohrad a okolí (po domluvě i širší okolí)</span>
-  </div>
-
-</div></section>
-
-<section id="reference"><div class="container">
+<section id="reference" class="alt"><div class="container">
   <h2>⭐ Reference</h2>
-
   <div class="refs">
     <div class="ref-card">
-      <h3>Pravidelná údržba zahrady – Hořice</h3>
-      <p>Pro rodinný dům v Hořicích zajišťujeme pravidelné sekání trávníku, střih živého
-      plotu a průběžný úklid zahrady. Zákazníci oceňují spolehlivost, čistou práci
-      a to, že termíny platí.</p>
+      <h3>Údržba zahrady – Hořice</h3>
+      <p>Sekání trávníku, střih plotu a úklid. Zákazníci oceňují spolehlivost a čistou práci.</p>
     </div>
     <div class="ref-card">
-      <h3>SVJ – údržba společné zeleně</h3>
-      <p>Pro společenství vlastníků zajišťujeme celoroční údržbu zeleně kolem domu –
-      seč ploch, údržbu keřů, úklid listí a odvoz bioodpadu. Díky pravidelné péči
-      vypadá okolí domu upraveně po celý rok.</p>
-    </div>
-    <div class="ref-card">
-      <h3>Řez stromů a obnova trávníku – rodinná zahrada</h3>
-      <p>Na jedné ze zahrad jsme provedli odborný řez ovocných stromů, úpravu keřů
-      a vertikutaci přerostlého trávníku. Po dosevu a nastavení režimu sekání se
-      trávník vrátil do formy během jedné sezóny.</p>
+      <h3>SVJ – společná zeleň</h3>
+      <p>Celoroční údržba, úklid listí a odvoz odpadu. Zeleň vypadá skvěle po celý rok.</p>
     </div>
   </div>
-
-  <div class="ref-trust-box">
-    <div class="stars">
-      <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-    </div>
-    <p><strong>Ověřené reference od skutečných zákazníků na Poptávej.cz</strong></p>
-    <p>
-      Podívejte se na hodnocení od skutečných zákazníků přímo na portálu Poptávej.cz –
-      včetně fotek z realizací a detailních komentářů.
-    </p>
-    <a
-      class="btn"
-      href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o"
-      target="_blank"
-      rel="noopener"
-    >
-      Zobrazit reference na Poptávej.cz
-    </a>
-  </div>
-
   <div style="text-align:center;margin-top:10px;">
-    <a
-      class="btn outline"
-      href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o"
-      target="_blank"
-      rel="noopener"
-    >
-      Všechny reference na Poptávej.cz
-    </a>
+    <a class="btn outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" target="_blank" rel="noopener">Více na Poptávej.cz</a>
   </div>
-
-  <div style="text-align:center;margin-top:22px;">
-    <p class="review-note">
-      Pokud jste byli s naší prací spokojeni, budeme rádi za krátké hodnocení:
-    </p>
-    <a
-      class="btn-review google"
-      href="https://g.page/r/CRpR-QH2IBZ9EBI/review"
-      target="_blank"
-      rel="noopener"
-    >
-      ⭐ Napsat recenzi na Google
-    </a>
-    <a
-      class="btn-review fb"
-      href="https://www.facebook.com/109016358813760"
-      target="_blank"
-      rel="noopener"
-    >
-      👍 Napsat recenzi na Facebooku
-    </a>
-  </div>
-
 </section>
-
 
 <section id="cenik">
   <div class="container">
-    <h2>💰 Ceník zahradnických služeb</h2>
-    <p class="subtitle">Ceny jsou orientační – konečná cena je vždy stanovena po osobní obhlídce a domluvě na rozsahu prací.</p>
+    <h2>💰 Ceník</h2>
     <ul class="price-list">
       <li>
         <h3>Sekání trávníků</h3>
-        <p>Orientačně 5–8 Kč/m² podle velikosti plochy, členitosti a četnosti sečení.</p>
+        <p>Od 5 Kč/m² podle stavu plochy.</p>
       </li>
       <li>
-        <h3>Pravidelná údržba zahrady</h3>
-        <p>Balíčky od cca 1 500 Kč / měsíc – podle velikosti zahrady a rozsahu prací.</p>
-
+        <h3>Pravidelná údržba</h3>
+        <p>Balíčky od 1 500 Kč / měsíc.</p>
       </li>
       <li>
-        <h3>Střih živých plotů a keřů</h3>
-        <p>Obvykle od 30 Kč / bm, podle výšky, síly a přístupnosti.</p>
-      </li>
-      <li>
-        <h3>Zarostlé zahrady, ostružiny, náletové dřeviny</h3>
-        <p>Individuální kalkulace, běžně od 6 000 Kč za akci.</p>
-      </li>
-      <li>
-        <h3>Odvoz a likvidace bioodpadu</h3>
-        <p>Podle objemu a počtu odvozů, zpravidla od 600 Kč.</p>
+        <h3>Střih živých plotů</h3>
+        <p>Od 30 Kč / bm podle výšky.</p>
       </li>
     </ul>
-    <p class="note">Nejsme nejlevnější – zaměřujeme se na kvalitní práci, férové jednání a dlouhodobou spolupráci. Konečnou cenu vždy domlouváme předem.</p>
+    <p class="note">Nejsme nejlevnější – děláme práci tak, aby byla bez starostí.</p>
   </div>
 </section>
 
@@ -911,7 +692,6 @@ včetně odvozu bioodpadu.</li>
         <img src="images/realizace1.jpg" alt="Přerostlá zahrada po zimě – Jičín" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">
         <h3>Přerostlá zahrada po zimě – Jičín</h3>
         <p>Zahrada byla po zimě silně přerostlá a dlouhodobě neudržovaná. Provedli jsme kompletní posekání, vyčištění plochy a srovnání terénu.</p>
-        <p>Výsledkem je opět přehledná a udržovatelná zahrada připravená na pravidelnou péči.</p>
       </div>
 
       <!-- Realizace 2 -->
@@ -919,15 +699,6 @@ včetně odvozu bioodpadu.</li>
         <img src="images/realizace2.jpg" alt="Pravidelná péče o zahradu – Hořice" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">
         <h3>Pravidelná péče o zahradu – Hořice</h3>
         <p>U této zahrady zajišťujeme pravidelné sekání, údržbu záhonů a střih živého plotu.</p>
-        <p>Díky dlouhodobé spolupráci je zahrada udržovaná bez přerůstání a majitel se o ni nemusí starat.</p>
-      </div>
-
-      <!-- Realizace 3 -->
-      <div class="ref-card">
-        <img src="images/realizace3.jpg" alt="Řez stromů a obnova trávníku" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">
-        <h3>Řez stromů a obnova trávníku</h3>
-        <p>Provedli jsme odborný řez ovocných stromů, prosvětlení koruny a následnou vertikutaci trávníku s dosevem.</p>
-        <p>Během jedné sezóny se trávník výrazně zlepšil a stromy začaly lépe plodit.</p>
       </div>
     </div>
 
@@ -940,7 +711,6 @@ včetně odvozu bioodpadu.</li>
       .then(data => {
         if (data && data.length > 0) {
           let html = "";
-          // Zobrazení 3 posledních položek (předpoklad sloupce A=Název, B=Popis, C=Obrázek)
           data.slice(-3).reverse().forEach(item => {
             html += `
               <div class="ref-card">
@@ -956,94 +726,37 @@ včetně odvozu bioodpadu.</li>
       .catch(err => console.error("Google Sheets fetch failed, using static content.", err));
     </script>
 
-    <div style="text-align:center; margin-top:24px;">
-      <a class="btn" href="https://www.facebook.com/109016358813760" target="_blank">👉 Zobrazit další realizace na Facebooku</a>
+    <div style="text-align:center; margin-top:20px;">
+      <a class="btn outline" href="https://www.facebook.com/109016358813760" target="_blank">Další na Facebooku</a>
     </div>
   </div>
 </section>
 
 <section id="galerie">
   <div class="container">
-    <h2>Fotogalerie zakázek</h2>
-    <p>Reálné ukázky naší práce – zahrady před a po úpravě.</p>
-
-    <div style="text-align:center;">
-      <a href="https://www.facebook.com/109016358813760" target="_blank" style="background:#2E7D32;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;display:inline-block;margin:10px 0;">
-        Zobrazit více realizací na Facebooku
-      </a>
-    </div>
-
+    <h2>Fotogalerie</h2>
     <div class="gallery-grid">
       <figure class="gallery-item">
         <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto1.jpg" alt="Fox Garden práce 1">
-        <figcaption>Fox Garden práce 1</figcaption>
       </figure>
-
       <figure class="gallery-item">
         <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto2.jpg" alt="Fox Garden práce 2">
-        <figcaption>Fox Garden práce 2</figcaption>
       </figure>
-
       <figure class="gallery-item">
         <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto3.jpg" alt="Fox Garden práce 3">
-        <figcaption>Fox Garden práce 3</figcaption>
       </figure>
-
       <figure class="gallery-item">
         <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto4.jpg" alt="Fox Garden práce 4">
-        <figcaption>Fox Garden práce 4</figcaption>
       </figure>
-
       <figure class="gallery-item">
         <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto5.jpg" alt="Fox Garden práce 5">
-        <figcaption>Fox Garden práce 5</figcaption>
       </figure>
-
-
       <figure class="gallery-item">
         <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto8.jpg" alt="Fox Garden práce 8">
-        <figcaption>Fox Garden práce 8</figcaption>
       </figure>
-
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto9.jpg" alt="Fox Garden práce 9">
-        <figcaption>Fox Garden práce 9</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto10.jpg" alt="Fox Garden práce 10">
-        <figcaption>Fox Garden práce 10</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto11.jpg" alt="Fox Garden práce 11">
-        <figcaption>Fox Garden práce 11</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto12.jpg" alt="Fox Garden práce 12">
-        <figcaption>Fox Garden práce 12</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto13.jpg" alt="Fox Garden práce 13">
-        <figcaption>Fox Garden práce 13</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto14.jpg" alt="Fox Garden práce 14">
-        <figcaption>Fox Garden práce 14</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto15.jpg" alt="Fox Garden práce 15">
-        <figcaption>Fox Garden práce 15</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto16.jpg" alt="Fox Garden práce 16">
-        <figcaption>Fox Garden práce 16</figcaption>
-      </figure>
+    </div>
+    <div style="text-align:center; margin-top: 20px;">
+      <a href="https://www.facebook.com/109016358813760" target="_blank" class="btn outline">Další fotky na Facebooku</a>
     </div>
   </div>
 </section>
@@ -1051,99 +764,53 @@ včetně odvozu bioodpadu.</li>
 
 
 <section id="rady"><div class="container">
-<h2>🧠 Rady & tipy</h2>
-<h3>Péče o trávník po vertikutaci: 7 kroků</h3>
-<ol>
-<li>Vyhrabat nečistoty (plst, mech), aby se trávník mohl nadechnout.</li>
-<li>Dosev travní směsí do proříznutých míst a řídkých částí.</li>
-<li>Lehce zapravit hráběmi, aby semeno nezůstalo jen na povrchu.</li>
-<li>Zavlažit – ideálně jemným „deštěm“, ne silným proudem vody.</li>
-<li>Použít vhodné hnojivo – startér pro podporu růstu mladých rostlin.</li>
-<li>První seč, až když má tráva 8–10 cm. Sekáme výš, ne na „golf“.</li>
-<li>Pravidelné zalévání 2–3 týdny podle počasí, aby neoschla klíčící semena.</li>
-</ol>
+<h2>🧠 Rady</h2>
+<h3>Péče o trávník po vertikutaci</h3>
+<ul class="clean">
+<li>Vyhrabat nečistoty, aby trávník mohl dýchat.</li>
+<li>Dosev travní směsí na prázdná místa.</li>
+<li>Zavlažit jemným deštěm a použít hnojivo.</li>
+<li>Sekat až při výšce 8–10 cm (nesekat „na golf“).</li>
+</ul>
 </div></section>
 
 <section id="faq" class="alt"><div class="container">
-<h2>❓ FAQ – Časté dotazy</h2>
+<h2>❓ Časté dotazy</h2>
 <dl class="faq">
 <dt>Kolik stojí sekání?</dt>
-<dd>Záleží na ploše, sklonu a stavu trávníku. Stačí nám napsat výměru v m², lokalitu
-a jak často chcete sekat – rychle vám řekneme orientační cenu.</dd>
-
-<dt>Děláte odvoz bioodpadu?</dt>
-<dd>Ano, odvoz je standardní součástí našich služeb. Po domluvě je možné ponechat
-posekanou hmotu i na pozemku.</dd>
-
-<dt>Děláte i řez ovocných stromů a keřů?</dt>
-<dd>Ano, provádíme řez ovocných i okrasných stromů a keřů – od základního udržovacího
-řezu až po zmlazení starších dřevin.</dd>
-
-<dt>V jakých lokalitách působíte?</dt>
-<dd>Jezdíme zejména Jičín, Hořice, Nová Paka, Lázně Bělohrad a okolí.</dd>
-
-<dt>Jak rychle se ozvete?</dt>
-<dd>V sezóně odpovídáme obvykle do 24 hodin, mimo sezónu většinou ještě tentýž den.
-Když jsme v terénu, voláme zpět, jakmile je to možné.</dd>
-
-<dt>Používáte cookies?</dt>
-<dd>Ne. Tento web je bez sledovacích skriptů a cookies.</dd>
+<dd>Cena závisí na ploše a stavu trávy. Napíšeme vám ji po sdělení výměry a lokality.</dd>
+<dt>Děláte odvoz odpadu?</dt>
+<dd>Ano, odvoz bioodpadu je standardní součástí našich služeb.</dd>
+<dt>Kde působíte?</dt>
+<dd>Hlavně Jičín, Hořice, Nová Paka, Lázně Bělohrad a okolí.</dd>
 </dl>
 </div></section>
 
 <section id="onas"><div class="container">
 <h2>🦊 O FoxGarden</h2>
-<p>FoxGarden vznikl z práce v lese a postupně se přesunul na zahrady u rodinných domů, SVJ i firem. Díky zkušenosti s terénem, dřevinami a dlouhodobou údržbou víme, co zahrada opravdu potřebuje – a co je jen „rychlý efekt“ na fotku.</p>
-<p style="margin-top:10px; font-weight: 500;">
-  Ke každé zahradě i stromu přistupujeme individuálně – s respektem k přírodě a odpovědností za výsledek.
+<p>Víme, co zahrada opravdu potřebuje. Zakládáme si na slušném jednání, dodržování termínů a čistém výsledku.</p>
+<p style="margin-top:10px;">
+  Jsme malá firma – jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně a s odpovědností.
 </p>
-<p>Jsme malá firma, kde víš, kdo ti přijede na zahradu. Jednáš přímo s člověkem, který práci plánuje i realizuje – bez zbytečných prostředníků. Zakládáme si na slušném jednání, dodržování domluvených termínů a čistém výsledku.</p>
-<p>Pracujeme hlavně v okolí Jičína, Hořice, Nové Paky, Lázní Bělohrad a okolí.</p>
-<p style="margin-top:18px;font-weight:600;">
+<p style="margin-top:10px; font-weight:600;">
   Nejsme nejlevnější. Děláme práci tak, aby byla dlouhodobě správně a bez starostí.
 </p>
-<p><a class="btn outline" href="#kontakt">Chci nacenit práce na zahradě</a></p>
+<p style="margin-top:15px;"><a class="btn outline" href="#kontakt">Chci nacenit práce</a></p>
 </div></section>
 
 
 <section id="poptavka" class="alt">
   <div class="container">
     <h2>📨 Rychlá poptávka</h2>
-    <p>
-      Napište nám stručně, s čím vám máme pomoci. Ozveme se vám zpět s návrhem řešení
-      a orientační cenou.
-    </p>
-
     <form action="https://formsubmit.co/zuki@foxgarden.cz" method="POST" class="form-box">
-      <!-- FormSubmit nastavení -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://foxgarden.cz/dekujeme.html">
 
-      <label for="jmeno">Jméno a příjmení*</label>
-      <input id="jmeno" type="text" name="Jméno" required>
-
-      <label for="telefon">Telefon*</label>
-      <input id="telefon" type="tel" name="Telefon" required>
-
-      <label for="email">E-mail</label>
-      <input id="email" type="email" name="E-mail">
-
-      <label for="mesto">Město / obec*</label>
-      <input id="mesto" type="text" name="Město / obec" required>
-
-      <label for="sluzba">Typ služby</label>
-      <select id="sluzba" name="Služba">
-        <option value="Sekání trávníku">Sekání trávníku</option>
-        <option value="Střih živého plotu">Střih živého plotu</option>
-        <option value="Úklid a odvoz bioodpadu">Úklid a odvoz bioodpadu</option>
-        <option value="Revitalizace zahrady">Revitalizace zahrady</option>
-        <option value="Chemická péče (ÚKZÚZ)">Chemická péče (ÚKZÚZ)</option>
-        <option value="Jiné">Jiné</option>
-      </select>
-
-      <label for="zprava">Popis zakázky</label>
-      <textarea id="zprava" name="Zpráva" rows="3" placeholder="Např. sekání trávníku cca 600 m² v Jičíně, pravidelně 1× za 14 dní…"></textarea>
+      <input id="jmeno" type="text" name="Jméno" placeholder="Jméno a příjmení*" required>
+      <input id="telefon" type="tel" name="Telefon" placeholder="Telefon*" required>
+      <input id="mesto" type="text" name="Město / obec" placeholder="Město / obec*" required>
+      <textarea id="zprava" name="Zpráva" rows="3" placeholder="S čím vám můžeme pomoci?"></textarea>
 
       <button type="submit" class="btn">Odeslat poptávku</button>
     </form>
@@ -1207,5 +874,21 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
+<a href="tel:+420775717291" style="
+position:fixed;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+background:#2d5c3b;
+color:#fff;
+padding:12px 20px;
+border-radius:999px;
+font-weight:600;
+z-index:999;
+text-decoration:none;
+box-shadow:0 6px 16px rgba(0,0,0,0.2);
+">
+📞 Zavolat
+</a>
 </body>
 </html>
