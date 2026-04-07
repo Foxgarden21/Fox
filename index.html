@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fox Garden – Prémiová zahradnická péče</title>
+    <meta name="description" content="Údržba zahrad, řez stromů, sekání trávníků, postřiky a revitalizace. Certifikace ÚKZÚZ – odborná aplikace herbicidů, fungicidů, pesticidů a hnojiv. Kvalitní české sazenice a profesionální zahradnické služby pro domy, SVJ a firmy." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVG7GX4D3J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VVG7GX4D3J');
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "uxujcz8awi");
+    </script>
+    <style>
+        :root{
+         --green:#1f3d27;
+         --green-soft:#2d5c3b;
+         --green-glow:#3d7651;
+         --cream:#F3E9D7;          /* Warm Cream 2026 */
+         --cream-light:#faf7f1;
+         --white:#ffffff;
+         --text:#1e281f;
+         --shadow:0 10px 22px rgba(0,0,0,.08);
+         --shadow-soft:0 4px 14px rgba(0,0,0,.05);
+         --border:#e5e0d6;
+        }
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{
+         background:linear-gradient(180deg,var(--cream)0%,var(--cream-light)40%,var(--cream)100%);
+         font-family:Poppins,Arial,sans-serif;
+         color:var(--text);
+         -webkit-font-smoothing:antialiased;
+        }
+        .container{max-width:1000px;margin:0 auto;padding:24px}
+
+        /* POPTÁVEJ TRUST BOX */
+        .ref-trust-box{
+          border:2px solid #2E7D32;
+          border-radius:24px;
+          padding:16px 20px;
+          margin:24px 0 10px;
+          background:#fffdf7;
+          box-shadow:var(--shadow-soft);
+        }
+
+        /* Jemné doladění tlačítka v Poptávej boxu */
+        .ref-trust-box .btn{
+          display:inline-flex;
+          align-items:center;
+          justify-content:center;
+          padding:10px 24px;
+          max-width:260px;
+          width:auto;
+          white-space:normal;
+          text-align: center;
+          line-height: 1.3;
+        }
+
+        @media (max-width:600px){
+          .ref-trust-box .btn{
+            width:100%;
+            max-width:100%;
+            white-space:normal;
+          }
+        }
+
+        .ref-trust-box .stars{
+          font-size:22px;
+          margin-bottom:4px;
+        }
+        .ref-trust-box .stars span{
+          margin-right:2px;
+        }
+        .ref-trust-box p{
+          margin:6px 0;
+        }
+        .ref-trust-box p strong{
+          font-size:17px;
+        }
+        .ref-trust-box .btn{
+          margin-top:8px;
+        }
+        @media (max-width:600px){
+          .ref-trust-box{
+            padding:14px 16px;
+          }
+        }
+
+        /* REVIEW BUTTONS */
+        .btn-review{
+          text-decoration:none;
+          padding:10px 22px;
+          border-radius:999px;
+          font-weight:600;
+          display:inline-block;
+          border:1px solid #2E7D32;
+          box-shadow:var(--shadow-soft);
+          margin:4px 6px;
+          font-size:14px;
+        }
+        .btn-review.google{
+          background:#ffffff;
+          color:#1f3d27;
+        }
+        .btn-review.google:hover{
+          background:#E8E4D8;
+        }
+        .btn-review.fb{
+          background:#0f271a;
+          color:#E8E4D8;
+        }
+        .btn-review.fb:hover{
+          background:#173824;
+        }
+        .review-note{
+          font-size:0.9rem;
+          margin-bottom:10px;
+          opacity:.9;
+        }
+
+        /* HERO */
+        header.hero{
+          padding:80px 20px 34px;
+          text-align:center;
+        }
+        .hero-box{
+          background:var(--cream);           /* Warm Cream v hero */
+          padding:48px;
+          border-radius:30px;
+          box-shadow:var(--shadow);
+          border:1px solid #e3d7c3;
+          transition:.3s ease;
+          position: relative;
+        }
+        .hero-fox {
+          position: absolute;
+          bottom: 15px;
+          right: 20px;
+          width: 100px;
+          height: auto;
+          z-index: 1;
+          pointer-events: none;
+        }
+        @media (max-width: 600px) {
+          .hero-fox {
+            width: 70px;
+            bottom: 10px;
+            right: 10px;
+          }
+        }
+        .hero-box:hover{
+          transform:translateY(-3px);
+        }
+        .hero-box h1,
+        .hero-box p{
+          color:var(--text);
+        }
+        .brand{
+          font-size:50px;
+          font-weight:800;
+          color:var(--green);                /* tmavě zelený Fox Garden */
+        }
+        .premium{
+          font-size:24px;
+          font-weight:700;
+          margin-top:10px;
+          color:var(--green-soft);
+        }
+        .slogan{
+          font-size:22px;
+          font-weight:600;
+          margin-top:8px;
+          color:#3f5a47;
+        }
+        .micro{
+          opacity:.95;
+          margin-top:12px;
+          font-size:16px;
+          line-height:1.55;
+        }
+
+        /* BUTTONS */
+        .buttons{
+         margin-top:26px;
+         display:flex;
+         gap:16px;
+         flex-wrap:wrap;
+         justify-content:center;
+        }
+        .btn{
+         display:inline-block;
+         text-decoration:none;
+         padding:14px 30px;
+         border-radius:999px;
+         font-weight:700;
+         color:var(--white);
+         background:linear-gradient(135deg,var(--green)0%,var(--green-soft)100%);
+         box-shadow:var(--shadow-soft);
+         transition: all 0.3s ease;
+         text-align: center;
+        }
+        /* Jemné doladění tlačítka pod referencemi */
+        #reference .btn.outline{
+          display:inline-flex;
+          align-items:center;
+          justify-content:center;
+          text-align:center;
+          padding:12px 20px;
+          max-width:100%;
+          line-height:1.3;
+          white-space:normal;
+        }
+
+        @media (max-width: 600px){
+          #reference .btn.outline{
+            display:block;
+            width:100%;
+            margin-left:auto;
+            margin-right:auto;
+          }
+        }
+
+        .btn:hover{
+         background:linear-gradient(135deg,var(--green-soft)0%,var(--green-glow)100%);
+         transform:translateY(-2px) scale(1.02);
+        }
+
+        /* Outline button – světlé sekce */
+        .btn.outline{
+         background:transparent;
+         color:#0f271a;
+         border:2px solid #0f271a;
+        }
+        .btn.outline:hover{
+         background:#E8E4D8;
+         color:#0f271a;
+        }
+
+        /* NAV PILLS */
+        .hero-nav{
+         margin-top:32px;
+         display:flex;
+         flex-wrap:wrap;
+         gap:12px;
+         justify-content:center;
+        }
+        .hero-nav a{
+         background:var(--white);
+         padding:10px 20px;
+         border-radius:999px;
+         font-weight:600;
+         text-decoration:none;
+         border:1px solid var(--border);
+         color:var(--text);
+         box-shadow:var(--shadow-soft);
+         transition: all .25s ease;
+        }
+        .hero-nav a:hover{
+         background:var(--cream-light);
+         transform:translateY(-2px);
+        }
+
+        /* REGIONS */
+        .regions{
+         margin-top:22px;
+         display:flex;
+         gap:10px;
+         justify-content:center;
+         flex-wrap:wrap;
+        }
+
+        #kdepracujeme .regions {
+          margin-top: 28px;
+        }
+        .regions span{
+         background:#ffffffee;
+         padding:7px 18px;
+         border-radius:18px;
+         font-size:14px;
+         font-weight:600;
+         border:1px solid var(--border);
+         color:var(--green);
+         box-shadow:var(--shadow-soft);
+        }
+
+        /* SECTIONS */
+        section{
+         background:var(--white);
+         border-radius:28px;
+         padding:48px 28px;
+         margin:40px 12px;
+         box-shadow:var(--shadow);
+         border:1px solid var(--border);
+        }
+
+        #sluzby {
+          margin-top: 30px;
+        }
+
+
+        /* Krémové alternativní sekce */
+        section.alt{
+          background:var(--cream);
+        }
+
+        h2{
+         font-size:32px;
+         margin-bottom:20px;
+         color:var(--green);
+        }
+        ul.clean{list-style:none;padding:0}
+        ul.clean li{
+         padding:8px 0 8px 30px;
+         position:relative;
+         line-height:1.55;
+        }
+        ul.clean li::before{
+         content:"🌿";
+         position:absolute;
+         left:0;
+         top:8px;
+         font-size:18px;
+        }
+        .lead{
+         font-size:16px;
+         line-height:1.6;
+         margin-bottom:16px;
+        }
+
+        /* GALLERY */
+        .fg-img{
+          width:30%;
+          max-width:280px;
+          aspect-ratio: 4 / 3;
+          min-width:210px;
+          border-radius:18px;
+          box-shadow:var(--shadow);
+          transition: all .3s ease;
+          object-fit:cover;
+          border:1px solid var(--border);
+          display:block;
+        }
+        .fg-img:hover{transform:scale(1.04)}
+
+        /* REFERENCES */
+        .refs{
+         display:flex;
+         flex-direction:column;
+         gap:18px;
+         margin-bottom:24px;
+        }
+        .ref-card{
+         background:var(--cream-light);
+         border-radius:18px;
+         padding:18px 20px;
+         border:1px solid var(--border);
+         box-shadow:var(--shadow-soft);
+         text-align:left;
+         transition: all .3s ease;
+        }
+
+        .ref-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .ref-card h3{
+         font-size:18px;
+         margin-bottom:6px;
+         color:var(--green);
+        }
+        .ref-card p{
+         margin:0;
+         font-size:15px;
+         line-height:1.6;
+        }
+
+        /* FAQ */
+        .faq dt{font-weight:700;margin-top:12px}
+        .faq dd{margin-bottom:12px}
+
+        /* FOOTER */
+        footer{
+         text-align:center;
+         padding:42px 14px;
+         color:var(--cream);
+         background:var(--green);
+         font-size:.95rem;
+         margin-top:60px;
+         border-radius:26px 26px 0 0;
+         box-shadow:var(--shadow);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width:600px){
+          .brand{font-size:36px;}
+          .premium{font-size:18px; margin-top: 5px;}
+          .slogan{font-size:16px !important;}
+          .hero-box { padding: 30px 15px; }
+          .hero .buttons { flex-direction: column; gap: 12px; }
+          .hero .btn { width: 100%; padding: 16px 20px !important; font-size: 18px !important; }
+        }
+
+        #onas .btn.outline {
+          white-space: normal;
+          padding: 12px 24px;
+          line-height: 1.4;
+          text-align: center;
+          display: inline-block;
+          width: auto;
+          max-width: 280px;
+        }
+
+        #cenik {padding:3rem 0;}
+        #cenik .price-list {list-style:none;margin:0;padding:0;}
+        #cenik .price-list li {margin-bottom:1.5rem;border-bottom:1px solid #eee;padding-bottom:1rem;}
+        #cenik h3 {margin-bottom:0.25rem;}
+        #cenik .note {margin-top:1rem;font-size:0.95rem;opacity:0.8;}
+
+        #galerie .container {padding-left:1rem;padding-right:1rem;margin:0 auto;}
+        #galerie .gallery-grid {
+          display: grid;
+          gap: 1.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+        #galerie .gallery-item {
+          background: #ffffff;
+          border-radius: 16px;
+          padding: 0.75rem 0.75rem 1rem;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+          text-align:center;
+          position: relative;
+          transition: all .3s ease;
+        }
+
+        #galerie .gallery-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+        #galerie .gallery-item img {
+          width:100%;
+          height:230px;
+          object-fit:cover;
+          border-radius:12px;
+          display:block;
+          margin-bottom:0.5rem;
+        }
+        #galerie .gallery-item figcaption {font-size:0.95rem;font-weight:500;}
+        #galerie .gallery-item::after {
+          content:"FoxGarden.cz";
+          position:absolute;
+          bottom:8px;
+          right:12px;
+          font-size:12px;
+          color:rgba(255,255,255,0.9);
+          background:rgba(0,0,0,0.45);
+          padding:2px 6px;
+          border-radius:6px;
+        }
+
+        .nav-cta{
+          display:inline-block;
+          padding:8px 18px;
+          border-radius:999px;
+          background:var(--green-soft);
+          color:var(--cream);
+          font-weight:600;
+          text-decoration:none;
+          margin-left:16px;
+          box-shadow:var(--shadow-soft);
+        }
+        .nav-cta:hover{
+          background:var(--green-glow);
+          color:#fff;
+        }
+
+        .form-box {
+          max-width: 640px;
+          margin: 1.5rem auto 0;
+          padding: 1.5rem;
+          border-radius: 1.25rem;
+          background: #ffffff;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .form-box label {
+          font-weight: 600;
+          font-size: 0.95rem;
+        }
+
+        .form-box input,
+        .form-box select,
+        .form-box textarea {
+          width: 100%;
+          padding: 0.55rem 0.8rem;
+          border-radius: 0.75rem;
+          border: 1px solid #d8e4d2;
+          font-size: 0.95rem;
+          font-family: inherit;
+          box-sizing: border-box;
+        }
+
+        .form-box input:focus,
+        .form-box select:focus,
+        .form-box textarea:focus {
+          outline: none;
+          border-color: #2e7d32;
+          box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.12);
+        }
+
+        .form-box button.btn {
+          align-self: flex-start;
+          margin-top: 0.5rem;
+        }
+        @media (max-width: 768px) {
+          .form-box {
+            padding: 1.2rem;
+            border-radius: 1rem;
+          }
+        }
+
+        /* NAHORU BUTTON */
+        #backToTop{
+          position:fixed;
+          bottom:24px;
+          right:20px;
+          width:46px;
+          height:46px;
+          border-radius:999px;
+          border:none;
+          background:var(--green-soft);
+          color:var(--cream);
+          font-size:22px;
+          display:none;
+          align-items:center;
+          justify-content:center;
+          box-shadow:var(--shadow);
+          cursor:pointer;
+          z-index:999;
+          transition: all .3s ease;
+        }
+        #backToTop:hover{
+          background:var(--green-glow);
+        }
+
+        /* RESPONSIVE CTA SECTION */
+        .cta-section {
+          margin-top: 24px;
+          text-align: center;
+        }
+        .cta-trust-items {
+          margin-top: 18px;
+          text-align: left;
+          display: inline-block;
+          max-width: 450px;
+          width: 100%;
+        }
+        @media (max-width: 768px) {
+          .cta-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .cta-section .btn {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+          }
+          .cta-trust-items {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+          }
+        }
+    </style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="container">
+    <div class="hero-box">
+      <h1 class="brand">
+        FOX Garden
+      </h1>
+      <p class="premium">Údržba zahrad Jičín a okolí</p>
+      <p class="slogan" style="font-size:18px; margin-top:10px; font-weight:600;">Sekání trávy • Živé ploty • Kompletní péče</p>
+
+      <div class="buttons" style="margin-top:30px;">
+        <a class="btn" href="tel:+420775717291" style="font-size: 20px; padding: 18px 36px;">📞 Zavolat 775 717 291</a>
+        <a class="btn" href="https://wa.me/420775717291" style="background:#25D366; font-size: 20px; padding: 18px 36px;">💬 WhatsApp</a>
+      </div>
+      <p class="micro" style="margin-top:20px; font-weight:600; font-size: 17px;">
+        Volné termíny se rychle plní – objednejte se včas.
+      </p>
+
+      <div class="hero-nav">
+        <a href="#sluzby">Služby</a><a href="#prokoho">Pro koho</a><a href="#akce">Dlouhodobá péče</a><a href="#ovocne-stromy">Ovocné stromy</a>
+        <a href="#reference">Reference</a><a href="#realizace">Realizace</a><a href="#galerie">Fotogalerie</a>
+        <a class="nav-cta" href="#cenik">Ceník</a><a href="#rady">Rady</a><a href="#faq">FAQ</a><a href="#onas">O nás</a><a href="#kontakt">Kontakt</a>
+      </div>
+      <img src="images/fox.png" class="hero-fox" alt="FOX Garden - liška">
+    </div>
+  </div>
+</header>
+
+<section id="sluzby"><div class="container"><h2>🌿 Naše služby</h2>
+<p>Pracujeme pro rodinné domy, chaty, firmy, SVJ, obce, školy, školky i zdravotnická zařízení. Pokrýváme pravidelnou údržbu, jednorázové zásahy i odborné práce podle potřeby klienta.</p>
+
+<ul class="clean">
+<li><b>Sekání trávníků a seč přerostlých ploch</b> – pravidelně i jednorázově. Seč klasických
+trávníků i zanedbaných ploch, dosekávání hran a těžko dostupných míst, možnost vyhrabání
+a odvozu posekané hmoty.</li>
+<li><b>Stříhání a tvarování živých plotů</b> – túje, ptačí zob, habr a další dřeviny. Udržovací
+střih, zarovnání linií, zmlazení přerostlých plotů a kompletní úklid po práci.</li>
+<li><b>Řez ovocných a okrasných stromů a keřů</b> – zdravotní, udržovací i zmlazovací řez
+jabloní, hrušní, třešní, meruněk a okrasných dřevin. Dbáme na správné termíny řezu,
+podporu plodnosti a zdravý růst.</li>
+<li><b>Vertikutace a obnova trávníku</b> – odstranění plsti a mechu, prořez travního drnu,
+dosev, vhodné hnojení a doporučení další péče, aby trávník zhoustl a postupně se obnovil.</li>
+<li><b>Mulč, záhony a výsadby</b> – obnova záhonů, doplnění mulče, dosazování trvalek
+a keřů, údržba okrasných ploch kolem domu i firemních budov.</li>
+<li><b>Likvidace náletů a úprava zanedbaných ploch</b> – odstranění náletových dřevin,
+prořezání keřů, vyčištění předzahrádek, svahů a okrajů pozemků.</li>
+<li><b>Chemická péče (ÚKZÚZ)</b> – cílené použití přípravků na ochranu rostlin tam, kde
+to má smysl. Pracujeme s oprávněním ÚKZÚZ, vysvětlujeme postup a dodržujeme bezpečnostní
+lhůty.</li>
+<li><b>Odvoz a likvidace bioodpadu</b> – větve, tráva, listí a další bioodpad odvezeme
+na vhodné místo. Účtujeme férově podle objemu, aby bylo jasné, za co platíte.</li>
+</ul>
+<div class="cta-section">
+  <p style="font-size:16px;margin-bottom:10px;">
+    Nevíte přesně, co vaše zahrada potřebuje? Nezávazně to spolu projdeme.
+  </p>
+  <a class="btn" href="#poptavka">Nezávazná poptávka</a>
+</div>
+</div></section>
+
+<section id="prokoho" class="alt"><div class="container"><h2>👥 Pro koho děláme</h2>
+<ul class="clean">
+<li><b>Rodinné domy a zahrady</b> – pravidelná údržba i jednorázové zásahy, když už je
+zahrada nad vaše síly.</li>
+<li><b>Chalupy a rekreační objekty</b> – postaráme se o zahradu i ve chvíli, kdy tam
+zrovna nejste. Před sezonou, po sezoně nebo na domluvené termíny.</li>
+<li><b>SVJ and bytové domy</b> – údržba společných zelených ploch, předzahrádek, okolí
+parkovišť a chodníků.</li>
+<li><b>Firmy and areály</b> – reprezentativní okolí budov, pravidelné sekání, údržba keřů
+a jednoduchý režim objednávání prací.</li>
+<li><b>Školky, školy a další zařízení</b> – bezpečná a upravená zeleň v okolí budov,
+včetně odvozu bioodpadu.</li>
+</ul>
+</div></section>
+
+<section id="akce"><div class="container"><h2>📅 Dlouhodobá péče o zahrady</h2>
+<p class="lead">Zahrada není jednorázová práce. Je to prostor, který se vyvíjí během celého roku. Nabízíme systematickou a pravidelnou péči, která udržuje zahradu zdravou a vyváženou.</p>
+<ul class="clean">
+<li><b>Sekání trávníků</b> – pravidelná údržba pro hustý a zdravý pažit.</li>
+<li><b>Péče o záhony</b> – pletí, mulčování a hnojení pro krásu vašich výsadeb.</li>
+<li><b>Řez keřů a živých plotů</b> – precizní tvarování pro soukromí i estetiku.</li>
+<li><b>Sezónní zásahy</b> – odborná příprava na sezónu a zazimování v klíčových momentech roku.</li>
+<li><b>Konzultace dalšího vývoje</b> – plánování úprav a rozvoje vaší zahrady.</li>
+</ul>
+<div class="cta-section" style="margin-top:24px;">
+    <a class="btn" href="#poptavka">Máte zájem o pravidelnou péči?</a>
+</div>
+</div></section>
+
+<section id="ovocne-stromy" class="alt"><div class="container">
+  <h2>🍎 Řez ovocných stromů</h2>
+  <p class="lead">Odborný řez je základem for zdraví stromu, jeho dlouhověkost a kvalitní úrodu. Každý strom posuzujeme individuálně podle stáří, vitality a stanoviště.</p>
+  <ul class="clean">
+    <li><b>Výchovný řez</b> – pro mladé stromky k založení silné a plodné koruny.</li>
+    <li><b>Udržovací řez</b> – pravidelné prosvětlení pro optimální růst a stabilní úrodu.</li>
+    <li><b>Postupné zmlazení</b> – citlivá obnova starších a zanedbaných stromů bez radikálních zásahů.</li>
+    <li><b>Zdravotní řez</b> – odstranění nemocných, suchých a poškozených větví pro celkovou kondici stromu.</li>
+  </ul>
+  <p class="lead" style="margin-top:10px;">Čerpáme ze zkušeností z tradičních ovocnářských oblastí (např. Holovousy) a klademe důraz na dlouhodobou rovnováhu stromu.</p>
+
+  <div style="margin-top:32px; padding-top:24px; border-top:1px solid rgba(31,61,39,0.1);">
+    <h3>Staré a přerostlé stromy řešíme citlivě</h3>
+    <p class="lead" style="margin-top:12px;">
+      Mnoho stromů po letech bez péče není potřeba radikálně zkrátit.
+      Nejprve hodnotíme stav koruny, světelné poměry a vitalitu stromu.
+      Cílem není strom "ostříhat", ale vrátit mu rovnováhu a plodnost.
+    </p>
+    <p class="lead">
+      Řežeme tak, aby strom znovu plodil a byl dlouhodobě stabilní,
+      ne jen aby vypadal dobře jednu sezónu.
+    </p>
+    <div class="cta-section">
+      <a class="btn" href="tel:+420775717291">Nezávazně konzultovat strom</a>
+      <div class="cta-trust-items">
+        <p style="font-size:15px; margin-bottom:5px;">✔ Individuální přístup ke každému stromu</p>
+        <p style="font-size:15px; margin-bottom:5px;">✔ Postupné zmlazování bez zbytečných radikálních zásahů</p>
+        <p style="font-size:15px; margin-bottom:5px;">✔ Dlouhodobá péče místo jednorázových řešení</p>
+      </div>
+      <p class="small-note" style="margin-top:12px; font-size: 14px; opacity: 0.8;">
+        Neprovádíme plošné radikální zkracování. Řez přizpůsobujeme konkrétnímu stromu a cíli pěstování.
+      </p>
+    </div>
+    <div style="margin-top:32px; border-top:1px solid rgba(31,61,39,0.1); padding-top:20px;">
+      <p class="lead">
+        Řežeme tak, aby strom zůstal stabilní, dlouhověký a pravidelně plodil – ne jen aby dobře vypadal jednu sezónu.
+      </p>
+      <p class="lead" style="margin-top:10px;">
+        Zásahy volíme s ohledem na stáří stromu, vitalitu i budoucí vývoj koruny.
+      </p>
+      <p class="lead" style="margin-top:20px;">
+        Nechte si strom nezávazně posoudit – často stačí malý zásah a výrazně pomůže.
+      </p>
+    </div>
+  </div>
+</div></section>
+
+<section id="sekani"><div class="container">
+  <h2>🚜 Sekání trávníků</h2>
+  <p class="lead">Pravidelné i jednorázové sekání trávníků pro rodinné domy, chaty, SVJ, firmy, školy i školky.</p>
+  <ul class="clean">
+    <li><b>Běžné zahrady:</b> 200–600 m², pravidelné sečení v sezoně tak, aby tráva nepřerůstala a zahrada zůstala upravená.</li>
+    <li><b>Větší plochy a SVJ:</b> sekání společných ploch kolem domů, chodníků a parkovacích míst – včetně dosekávání detailů křovinořezem.</li>
+    <li><b>Jednorázové „záchranné“ seče:</b> přerostlé zahrady a pozemky, které je potřeba dostat zpět do rozumného stavu před další údržbou.</li>
+    <li><b>Úklid po sečení:</b> vyfoukání chodníků, srovnání hran, případné vyhrabání ploch a možnost odvozu posekané hmoty.</li>
+  </ul>
+</div></section>
+
+
+<section id="akuprogram" class="alt"><div class="container">
+  <h2>🔋 Bateriový program FoxGarden</h2>
+  <p class="lead">Moderní tichá technika DeWALT – ideální tam, kde nechcete zbytečný hluk a spaliny.</p>
+  <ul class="clean">
+    <li><b>Bateriová pila na tyči a plotostřih na tyči DeWALT:</b> bezpečné a tiché tvarování vyšších keřů a živých plotů u domů, školy i firem.</li>
+    <li><b>Bateriová technika DeWALT:</b> tichá údržba u školek, škol, nemocnic, domovů pro seniory a v citlivých lokalitách.</li>
+    <li><b>Výhoda bateriového programu:</b> minimální hluk, žádné spaliny, rychlá výměna akumulátorů a možnost práce i v časech, kdy by benzínová technika rušila okolí.</li>
+  </ul>
+</div></section>
+
+<section id="kvalita-materialu" class="alt"><div class="container">
+  <h2>🌿 Kvalitní materiály, české sazenice a profesionální chemie</h2>
+
+  <p>
+    Při práci používáme pouze kvalitní a ověřené materiály – žádné levné dovozy ani
+    neznámé zdroje. Vše, co instalujeme nebo aplikujeme, musí mít jasný původ a kvalitu.
+  </p>
+
+  <p>
+    <strong>Rostliny, trvalky, keře, stromy i travní semena odebíráme výhradně od českých pěstitelů</strong>,
+    kteří garantují původ, zdravotní stav a přizpůsobení našemu klimatu. Nepoužíváme levný
+    dovoz z Holandska ani hobby-marketové rostliny s krátkou životností.
+  </p>
+
+  <p>
+    <strong>Chemii na profesionální použití</strong> – herbicidy, fungicidy, pesticidy a kvalitní hnojiva –
+    odebíráme od ověřených českých distributorů, zejména od společnosti
+    <strong>lescr.cz</strong>. Vše nakládáme a aplikujeme bezpečně a cíleně.
+  </p>
+
+  <p>
+    Veškeré práce s přípravky provádí osoba s platným
+    <strong>profesním osvědčením ÚKZÚZ – skupina 2</strong>, které opravňuje k odborné
+    aplikaci přípravků na ochranu rostlin. Držíme správné postupy a dodržujeme ochranné lhůty.
+  </p>
+
+  <p>
+    Díky tomu má zákazník jistotu, že na zahradě dostává dlouhodobě funkční a bezpečné
+    řešení – a ne kompromis.
+  </p>
+</div></section>
+
+
+<section id="kdepracujeme"><div class="container">
+  <h2>📍 Kde pracujeme</h2>
+  <p class="lead">Působíme hlavně v těchto regionech, u větších zakázek se ale lze domluvit i mimo ně.</p>
+  <div class="regions">
+    <span>Jičín • Hořice • Nová Paka • Lázně Bělohrad a okolí (po domluvě i širší okolí)</span>
+  </div>
+
+</div></section>
+
+<section id="reference"><div class="container">
+  <h2>⭐ Reference</h2>
+
+  <div class="refs">
+    <div class="ref-card">
+      <h3>Pravidelná údržba zahrady – Hořice</h3>
+      <p>Pro rodinný dům v Hořicích zajišťujeme pravidelné sekání trávníku, střih živého
+      plotu a průběžný úklid zahrady. Zákazníci oceňují spolehlivost, čistou práci
+      a to, že termíny platí.</p>
+    </div>
+    <div class="ref-card">
+      <h3>SVJ – údržba společné zeleně</h3>
+      <p>Pro společenství vlastníků zajišťujeme celoroční údržbu zeleně kolem domu –
+      seč ploch, údržbu keřů, úklid listí a odvoz bioodpadu. Díky pravidelné péči
+      vypadá okolí domu upraveně po celý rok.</p>
+    </div>
+    <div class="ref-card">
+      <h3>Řez stromů a obnova trávníku – rodinná zahrada</h3>
+      <p>Na jedné ze zahrad jsme provedli odborný řez ovocných stromů, úpravu keřů
+      a vertikutaci přerostlého trávníku. Po dosevu a nastavení režimu sekání se
+      trávník vrátil do formy během jedné sezóny.</p>
+    </div>
+  </div>
+
+  <div class="ref-trust-box">
+    <div class="stars">
+      <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+    </div>
+    <p><strong>Ověřené reference od skutečných zákazníků na Poptávej.cz</strong></p>
+    <p>
+      Podívejte se na hodnocení od skutečných zákazníků přímo na portálu Poptávej.cz –
+      včetně fotek z realizací a detailních komentářů.
+    </p>
+    <a
+      class="btn"
+      href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o"
+      target="_blank"
+      rel="noopener"
+    >
+      Zobrazit reference na Poptávej.cz
+    </a>
+  </div>
+
+  <div style="text-align:center;margin-top:10px;">
+    <a
+      class="btn outline"
+      href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o"
+      target="_blank"
+      rel="noopener"
+    >
+      Všechny reference na Poptávej.cz
+    </a>
+  </div>
+
+  <div style="text-align:center;margin-top:22px;">
+    <p class="review-note">
+      Pokud jste byli s naší prací spokojeni, budeme rádi za krátké hodnocení:
+    </p>
+    <a
+      class="btn-review google"
+      href="https://g.page/r/CRpR-QH2IBZ9EBI/review"
+      target="_blank"
+      rel="noopener"
+    >
+      ⭐ Napsat recenzi na Google
+    </a>
+    <a
+      class="btn-review fb"
+      href="https://www.facebook.com/109016358813760"
+      target="_blank"
+      rel="noopener"
+    >
+      👍 Napsat recenzi na Facebooku
+    </a>
+  </div>
+
+</section>
+
+
+<section id="cenik">
+  <div class="container">
+    <h2>💰 Ceník zahradnických služeb</h2>
+    <p class="subtitle">Ceny jsou orientační – konečná cena je vždy stanovena po osobní obhlídce a domluvě na rozsahu prací.</p>
+    <ul class="price-list">
+      <li>
+        <h3>Sekání trávníků</h3>
+        <p>Orientačně 5–8 Kč/m² podle velikosti plochy, členitosti a četnosti sečení.</p>
+      </li>
+      <li>
+        <h3>Pravidelná údržba zahrady</h3>
+        <p>Balíčky od cca 1 500 Kč / měsíc – podle velikosti zahrady a rozsahu prací.</p>
+
+      </li>
+      <li>
+        <h3>Střih živých plotů a keřů</h3>
+        <p>Obvykle od 30 Kč / bm, podle výšky, síly a přístupnosti.</p>
+      </li>
+      <li>
+        <h3>Zarostlé zahrady, ostružiny, náletové dřeviny</h3>
+        <p>Individuální kalkulace, běžně od 6 000 Kč za akci.</p>
+      </li>
+      <li>
+        <h3>Odvoz a likvidace bioodpadu</h3>
+        <p>Podle objemu a počtu odvozů, zpravidla od 600 Kč.</p>
+      </li>
+    </ul>
+    <p class="note">Nejsme nejlevnější – zaměřujeme se na kvalitní práci, férové jednání a dlouhodobou spolupráci. Konečnou cenu vždy domlouváme předem.</p>
+  </div>
+</section>
+
+
+<section id="realizace" class="alt">
+  <div class="container">
+    <h2>Poslední realizace</h2>
+    <div class="refs" id="realizace-container">
+      <!-- Realizace 1 -->
+      <div class="ref-card">
+        <img src="images/realizace1.jpg" alt="Přerostlá zahrada po zimě – Jičín" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">
+        <h3>Přerostlá zahrada po zimě – Jičín</h3>
+        <p>Zahrada byla po zimě silně přerostlá a dlouhodobě neudržovaná. Provedli jsme kompletní posekání, vyčištění plochy a srovnání terénu.</p>
+        <p>Výsledkem je opět přehledná a udržovatelná zahrada připravená na pravidelnou péči.</p>
+      </div>
+
+      <!-- Realizace 2 -->
+      <div class="ref-card">
+        <img src="images/realizace2.jpg" alt="Pravidelná péče o zahradu – Hořice" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">
+        <h3>Pravidelná péče o zahradu – Hořice</h3>
+        <p>U této zahrady zajišťujeme pravidelné sekání, údržbu záhonů a střih živého plotu.</p>
+        <p>Díky dlouhodobé spolupráci je zahrada udržovaná bez přerůstání a majitel se o ni nemusí starat.</p>
+      </div>
+
+      <!-- Realizace 3 -->
+      <div class="ref-card">
+        <img src="images/realizace3.jpg" alt="Řez stromů a obnova trávníku" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">
+        <h3>Řez stromů a obnova trávníku</h3>
+        <p>Provedli jsme odborný řez ovocných stromů, prosvětlení koruny a následnou vertikutaci trávníku s dosevem.</p>
+        <p>Během jedné sezóny se trávník výrazně zlepšil a stromy začaly lépe plodit.</p>
+      </div>
+    </div>
+
+    <script>
+    fetch("https://opensheet.elk.sh/1DIZwj2J19xym6QX_uGjUucTJNgiazMm-jJYvmHj10mY/List1")
+      .then(res => {
+        if (!res.ok) throw new Error('Fetch failed');
+        return res.json();
+      })
+      .then(data => {
+        if (data && data.length > 0) {
+          let html = "";
+          // Zobrazení 3 posledních položek (předpoklad sloupce A=Název, B=Popis, C=Obrázek)
+          data.slice(-3).reverse().forEach(item => {
+            html += `
+              <div class="ref-card">
+                ${item.Obrázek ? `<img src="${item.Obrázek}" alt="${item.Název}" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">` : ""}
+                <h3>${item.Název || ""}</h3>
+                <p>${item.Popis || ""}</p>
+              </div>
+            `;
+          });
+          document.getElementById("realizace-container").innerHTML = html;
+        }
+      })
+      .catch(err => console.error("Google Sheets fetch failed, using static content.", err));
+    </script>
+
+    <div style="text-align:center; margin-top:24px;">
+      <a class="btn" href="https://www.facebook.com/109016358813760" target="_blank">👉 Zobrazit další realizace na Facebooku</a>
+    </div>
+  </div>
+</section>
+
+<section id="galerie">
+  <div class="container">
+    <h2>Fotogalerie zakázek</h2>
+    <p>Reálné ukázky naší práce – zahrady před a po úpravě.</p>
+
+    <div style="text-align:center;">
+      <a href="https://www.facebook.com/109016358813760" target="_blank" style="background:#2E7D32;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;display:inline-block;margin:10px 0;">
+        Zobrazit více realizací na Facebooku
+      </a>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto1.jpg" alt="Fox Garden práce 1">
+        <figcaption>Fox Garden práce 1</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto2.jpg" alt="Fox Garden práce 2">
+        <figcaption>Fox Garden práce 2</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto3.jpg" alt="Fox Garden práce 3">
+        <figcaption>Fox Garden práce 3</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto4.jpg" alt="Fox Garden práce 4">
+        <figcaption>Fox Garden práce 4</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto5.jpg" alt="Fox Garden práce 5">
+        <figcaption>Fox Garden práce 5</figcaption>
+      </figure>
+
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto8.jpg" alt="Fox Garden práce 8">
+        <figcaption>Fox Garden práce 8</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto9.jpg" alt="Fox Garden práce 9">
+        <figcaption>Fox Garden práce 9</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto10.jpg" alt="Fox Garden práce 10">
+        <figcaption>Fox Garden práce 10</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto11.jpg" alt="Fox Garden práce 11">
+        <figcaption>Fox Garden práce 11</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto12.jpg" alt="Fox Garden práce 12">
+        <figcaption>Fox Garden práce 12</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto13.jpg" alt="Fox Garden práce 13">
+        <figcaption>Fox Garden práce 13</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto14.jpg" alt="Fox Garden práce 14">
+        <figcaption>Fox Garden práce 14</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto15.jpg" alt="Fox Garden práce 15">
+        <figcaption>Fox Garden práce 15</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto16.jpg" alt="Fox Garden práce 16">
+        <figcaption>Fox Garden práce 16</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="rady"><div class="container">
+<h2>🧠 Rady & tipy</h2>
+<h3>Péče o trávník po vertikutaci: 7 kroků</h3>
+<ol>
+<li>Vyhrabat nečistoty (plst, mech), aby se trávník mohl nadechnout.</li>
+<li>Dosev travní směsí do proříznutých míst a řídkých částí.</li>
+<li>Lehce zapravit hráběmi, aby semeno nezůstalo jen na povrchu.</li>
+<li>Zavlažit – ideálně jemným „deštěm“, ne silným proudem vody.</li>
+<li>Použít vhodné hnojivo – startér pro podporu růstu mladých rostlin.</li>
+<li>První seč, až když má tráva 8–10 cm. Sekáme výš, ne na „golf“.</li>
+<li>Pravidelné zalévání 2–3 týdny podle počasí, aby neoschla klíčící semena.</li>
+</ol>
+</div></section>
+
+<section id="faq" class="alt"><div class="container">
+<h2>❓ FAQ – Časté dotazy</h2>
+<dl class="faq">
+<dt>Kolik stojí sekání?</dt>
+<dd>Záleží na ploše, sklonu a stavu trávníku. Stačí nám napsat výměru v m², lokalitu
+a jak často chcete sekat – rychle vám řekneme orientační cenu.</dd>
+
+<dt>Děláte odvoz bioodpadu?</dt>
+<dd>Ano, odvoz je standardní součástí našich služeb. Po domluvě je možné ponechat
+posekanou hmotu i na pozemku.</dd>
+
+<dt>Děláte i řez ovocných stromů a keřů?</dt>
+<dd>Ano, provádíme řez ovocných i okrasných stromů a keřů – od základního udržovacího
+řezu až po zmlazení starších dřevin.</dd>
+
+<dt>V jakých lokalitách působíte?</dt>
+<dd>Jezdíme zejména Jičín, Hořice, Nová Paka, Lázně Bělohrad a okolí.</dd>
+
+<dt>Jak rychle se ozvete?</dt>
+<dd>V sezóně odpovídáme obvykle do 24 hodin, mimo sezónu většinou ještě tentýž den.
+Když jsme v terénu, voláme zpět, jakmile je to možné.</dd>
+
+<dt>Používáte cookies?</dt>
+<dd>Ne. Tento web je bez sledovacích skriptů a cookies.</dd>
+</dl>
+</div></section>
+
+<section id="onas"><div class="container">
+<h2>🦊 O FoxGarden</h2>
+<p>FoxGarden vznikl z práce v lese a postupně se přesunul na zahrady u rodinných domů, SVJ i firem. Díky zkušenosti s terénem, dřevinami a dlouhodobou údržbou víme, co zahrada opravdu potřebuje – a co je jen „rychlý efekt“ na fotku.</p>
+<p style="margin-top:10px; font-weight: 500;">
+  Ke každé zahradě i stromu přistupujeme individuálně – s respektem k přírodě a odpovědností za výsledek.
+</p>
+<p>Jsme malá firma, kde víš, kdo ti přijede na zahradu. Jednáš přímo s člověkem, který práci plánuje i realizuje – bez zbytečných prostředníků. Zakládáme si na slušném jednání, dodržování domluvených termínů a čistém výsledku.</p>
+<p>Pracujeme hlavně v okolí Jičína, Hořice, Nové Paky, Lázní Bělohrad a okolí.</p>
+<p style="margin-top:18px;font-weight:600;">
+  Nejsme nejlevnější. Děláme práci tak, aby byla dlouhodobě správně a bez starostí.
+</p>
+<p><a class="btn outline" href="#kontakt">Chci nacenit práce na zahradě</a></p>
+</div></section>
+
+
+<section id="poptavka" class="alt">
+  <div class="container">
+    <h2>📨 Rychlá poptávka</h2>
+    <p>
+      Napište nám stručně, s čím vám máme pomoci. Ozveme se vám zpět s návrhem řešení
+      a orientační cenou.
+    </p>
+
+    <form action="https://formsubmit.co/zuki@foxgarden.cz" method="POST" class="form-box">
+      <!-- FormSubmit nastavení -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://foxgarden.cz/dekujeme.html">
+
+      <label for="jmeno">Jméno a příjmení*</label>
+      <input id="jmeno" type="text" name="Jméno" required>
+
+      <label for="telefon">Telefon*</label>
+      <input id="telefon" type="tel" name="Telefon" required>
+
+      <label for="email">E-mail</label>
+      <input id="email" type="email" name="E-mail">
+
+      <label for="mesto">Město / obec*</label>
+      <input id="mesto" type="text" name="Město / obec" required>
+
+      <label for="sluzba">Typ služby</label>
+      <select id="sluzba" name="Služba">
+        <option value="Sekání trávníku">Sekání trávníku</option>
+        <option value="Střih živého plotu">Střih živého plotu</option>
+        <option value="Úklid a odvoz bioodpadu">Úklid a odvoz bioodpadu</option>
+        <option value="Revitalizace zahrady">Revitalizace zahrady</option>
+        <option value="Chemická péče (ÚKZÚZ)">Chemická péče (ÚKZÚZ)</option>
+        <option value="Jiné">Jiné</option>
+      </select>
+
+      <label for="zprava">Popis zakázky</label>
+      <textarea id="zprava" name="Zpráva" rows="3" placeholder="Např. sekání trávníku cca 600 m² v Jičíně, pravidelně 1× za 14 dní…"></textarea>
+
+      <button type="submit" class="btn">Odeslat poptávku</button>
+    </form>
+  </div>
+</section>
+
+
+<section id="kontakt"><div class="container">
+<h2>Kontakt</h2>
+<p style="font-size:16px;margin-bottom:10px;">
+Stačí zavolat nebo napsat – odpovíme co nejdříve.
+</p>
+<p><b>FoxGarden – Zuklesa s.r.o.</b><br>IČO: 17805368</p>
+<p><b>Telefon:</b> <a href="tel:+420775717291">775 717 291</a><br>
+<b>E-mail:</b> <a href="mailto:zuki@foxgarden.cz">zuki@foxgarden.cz</a></p>
+<div class="buttons">
+<a class="btn" href="tel:+420775717291">📞 Zavolat</a>
+<a class="btn" href="https://wa.me/420775717291" style="background:#25D366;">💬 WhatsApp</a>
+<a class="btn outline" href="#poptavka">📋 Nezávazná konzultace</a>
+<a class="btn outline" href="https://www.facebook.com/109016358813760" target="_blank" style="border:1px solid #ccc; font-weight:400;">📘 Facebook</a>
+<a class="btn outline" href="mailto:zuki@foxgarden.cz" style="border:1px solid #ccc; font-weight:400;">✉️ Napsat</a>
+<a class="btn outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" style="border:1px solid #ccc; font-weight:400;">⭐ Reference na Poptávej.cz</a>
+</div>
+</div></section>
+
+<footer style="
+  text-align:center;
+  padding:42px 14px;
+  color:#F3E9D7;
+  background:#1f3d27;
+  font-size:.95rem;
+  margin-top:60px;
+  border-radius:26px 26px 0 0;
+">
+  © <script>document.write(new Date().getFullYear());</script>
+  Fox Garden – Zuklesa s.r.o. |
+  IČO: 17805368 |
+  ÚKZÚZ |
+  Pojištěno |
+  foxgarden.cz
+  <br><br>
+
+  <a href="/interni/dochazka/dochazka.html"
+     style="
+       color:#F3E9D7;
+       text-decoration:underline;
+       font-weight:600;
+     ">
+     Docházka zaměstnanců
+  </a>
+</footer>
+<button id="backToTop" aria-label="Zpět nahoru">↑</button>
+<script>
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  backToTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
