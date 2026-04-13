@@ -17,38 +17,31 @@
       gtag('js', new Date());
       gtag('config', 'G-VVG7GX4D3J');
     </script>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "uxujcz8awi");
-    </script>
     <style>
         :root {
-            --green: #1f3d27;
-            --green-soft: #2d5c3b;
-            --cream: #f3e9d7;
-            --cream-light: #fdfbf7;
+            --green-main: #2E7D32;
+            --green-light: #E6F4EA;
+            --green-soft: #D0F0C0;
+            --accent: #f97316;
+            --accent-soft: #fed7aa;
+            --text-dark: #1b1b1b;
+            --text-light: #6b7280;
             --white: #ffffff;
-            --text: #1e281f;
-            --orange: #f97316;
-            --primary-btn: #2E7D32;
-            --primary-btn-hover: #4CAF50;
-            --orange-hover: #ea580c;
-            --shadow: 0 10px 30px rgba(0,0,0,0.06);
-            --shadow-hover: 0 20px 40px rgba(0,0,0,0.12);
-            --border: #e8e2d5;
-            --radius: 24px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --bg-color: #fafafa;
+
+            --shadow: 0 4px 20px rgba(0,0,0,0.05);
+            --shadow-hover: 0 10px 30px rgba(0,0,0,0.1);
+            --border: #eaedf0;
+            --radius: 20px;
+            --transition: all 0.3s ease;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            background-color: var(--cream-light);
+            background-color: var(--bg-color);
             font-family: 'Poppins', Arial, sans-serif;
-            color: var(--text);
+            color: var(--text-dark);
             -webkit-font-smoothing: antialiased;
             line-height: 1.6;
         }
@@ -56,7 +49,7 @@
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
 
         /* Buttons */
@@ -64,112 +57,90 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 32px;
+            padding: 14px 28px;
             border-radius: 999px;
-            font-weight: 700;
+            font-weight: 600;
             text-decoration: none;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
             text-align: center;
             border: none;
             cursor: pointer;
             font-size: 16px;
         }
         .btn-primary {
-            background: var(--primary-btn);
+            background: var(--green-main);
             color: var(--white);
-            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.25);
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
         }
         .btn-primary:hover {
-            background: var(--primary-btn-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.35);
+            background: #256629;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(46, 125, 50, 0.3);
             color: var(--white);
         }
         .btn-whatsapp {
-            background: #25D366;
+            background: #4CAF50; /* Lighter green */
             color: var(--white);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
         }
         .btn-whatsapp:hover {
-            background: #20BA56;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+            background: #43A047;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
             color: var(--white);
         }
         .btn-outline {
             background: transparent;
-            color: var(--green);
-            border: 2px solid var(--green);
-            box-shadow: none;
+            color: var(--green-main);
+            border: 2px solid var(--green-main);
         }
         .btn-outline:hover {
-            background: var(--green);
-            color: var(--cream-light);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(31, 61, 39, 0.15);
+            background: var(--green-light);
+            transform: translateY(-2px);
         }
 
         /* Hero */
         header.hero {
-            padding: 60px 0 40px;
+            padding: 60px 0 30px;
             text-align: center;
         }
         .hero-box {
             background: var(--white);
-            padding: 60px 40px;
-            border-radius: 32px;
+            padding: 50px 30px;
+            border-radius: 28px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
             position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-        .hero-box:hover {
-            box-shadow: var(--shadow-hover);
-        }
-        .hero-fox {
-            position: absolute;
-            bottom: -10px;
-            right: 20px;
-            width: 120px;
-            height: auto;
-            z-index: 0;
-            opacity: 0.9;
-            pointer-events: none;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
         }
         .brand {
-            font-size: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            font-size: 48px;
             font-weight: 800;
-            color: var(--green);
-            letter-spacing: -1px;
+            color: var(--green-main);
             line-height: 1.1;
         }
         .brand img {
-            height: 60px;
-            display: block;
-            margin: 0 auto 16px;
+            height: 50px;
+            width: auto;
         }
         .premium {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             margin-top: 16px;
-            color: var(--green-soft);
+            color: var(--text-dark);
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
         .slogan {
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 12px;
-            color: #4a6652;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 8px;
+            color: var(--text-light);
         }
         .hero-buttons {
-            margin-top: 36px;
+            margin-top: 32px;
             display: flex;
             gap: 16px;
             justify-content: center;
@@ -177,149 +148,141 @@
         }
         .hero-buttons .btn {
             font-size: 18px;
-            padding: 16px 36px;
+            padding: 16px 32px;
         }
         .micro {
-            margin-top: 24px;
+            margin-top: 20px;
             font-weight: 600;
-            font-size: 16px;
-            color: var(--green);
+            font-size: 15px;
+            color: var(--green-main);
         }
 
         /* Hero Nav */
         .hero-nav {
-            margin-top: 40px;
+            margin-top: 36px;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
         }
         .hero-nav a {
-            background: var(--cream-light);
-            padding: 10px 24px;
+            background: var(--white);
+            padding: 8px 20px;
             border-radius: 999px;
-            font-weight: 600;
+            font-weight: 500;
             text-decoration: none;
             border: 1px solid var(--border);
-            color: var(--green);
+            color: var(--text-dark);
             transition: var(--transition);
-            font-size: 15px;
+            font-size: 14px;
         }
         .hero-nav a:hover {
-            background: var(--green);
-            color: var(--white);
-            border-color: var(--green);
+            background: var(--green-light);
+            color: var(--green-main);
+            border-color: var(--green-light);
             transform: translateY(-2px);
-        }
-        .hero-nav a.nav-cta {
-            background: var(--primary-btn);
-            color: var(--white);
-            border-color: var(--primary-btn);
-        }
-        .hero-nav a.nav-cta:hover {
-            background: var(--primary-btn-hover);
-            border-color: var(--primary-btn-hover);
         }
 
         /* Insurance Banner */
         .insurance-banner {
-            background: linear-gradient(135deg, var(--green) 0%, var(--green-soft) 100%);
-            color: var(--white);
+            background: var(--green-light);
+            color: var(--green-main);
             text-align: center;
             padding: 16px 20px;
-            margin: 20px 24px 40px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 18px;
-            box-shadow: 0 10px 20px rgba(31, 61, 39, 0.2);
+            margin: 10px 20px 40px;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            max-width: 1052px;
+            gap: 8px;
+            max-width: 1060px;
             margin-left: auto;
             margin-right: auto;
-        }
-        .insurance-banner span {
-            display: inline-block;
+            border: 1px solid var(--green-soft);
         }
 
         /* Sections */
         section {
-            padding: 80px 0;
-            margin-bottom: 20px;
+            padding: 60px 0;
         }
         section.alt {
-            background: var(--cream);
-            border-radius: 40px;
-            margin: 0 24px 40px;
-            padding: 80px 24px;
+            background: var(--white);
+            border-radius: 32px;
+            margin: 0 20px 40px;
+            padding: 60px 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
         }
         .section-header {
             text-align: center;
-            margin-bottom: 48px;
+            margin-bottom: 40px;
         }
         h2 {
-            font-size: 36px;
-            font-weight: 800;
-            color: var(--green);
-            margin-bottom: 16px;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--green-main);
+            margin-bottom: 12px;
         }
         .subtitle {
-            font-size: 18px;
-            color: var(--text);
+            font-size: 16px;
+            color: var(--text-light);
             max-width: 600px;
             margin: 0 auto;
-            opacity: 0.8;
         }
 
         /* Grid Layouts */
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
 
         /* Cards */
         .card {
             background: var(--white);
             border-radius: var(--radius);
-            padding: 32px;
+            padding: 28px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
             transition: var(--transition);
             height: 100%;
         }
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-hover);
         }
         .card h3 {
             font-size: 20px;
-            color: var(--green);
-            margin-bottom: 12px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         /* Services List */
         ul.clean { list-style: none; padding: 0; }
         ul.clean li {
-            padding: 12px 0 12px 36px;
+            padding: 10px 0 10px 32px;
             position: relative;
-            line-height: 1.6;
-            font-size: 16px;
-            border-bottom: 1px solid var(--border);
+            line-height: 1.5;
+            font-size: 15px;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--bg-color);
         }
         ul.clean li:last-child { border-bottom: none; }
         ul.clean li::before {
             content: "🌿";
             position: absolute;
             left: 0;
-            top: 12px;
-            font-size: 20px;
+            top: 10px;
+            font-size: 18px;
         }
 
-        /* Realizace / Refs */
-        .ref-card {
+        /* Realizace / Work Examples */
+        .work-card {
             background: var(--white);
             border-radius: var(--radius);
-            padding: 24px;
+            overflow: hidden;
             border: 1px solid var(--border);
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -327,38 +290,38 @@
             flex-direction: column;
             height: 100%;
         }
-        .ref-card:hover {
-            transform: translateY(-5px);
+        .work-card:hover {
+            transform: translateY(-4px);
             box-shadow: var(--shadow-hover);
         }
-        .ref-card img {
+        .work-card img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
-            border-radius: 16px;
-            margin-bottom: 20px;
         }
-        .ref-card h3 {
-            font-size: 20px;
-            color: var(--green);
-            margin-bottom: 10px;
-        }
-        .ref-card p {
-            font-size: 15px;
-            color: var(--text);
+        .work-card .content {
+            padding: 20px;
             flex-grow: 1;
+        }
+        .work-card h3 {
+            font-size: 18px;
+            color: var(--green-main);
+            margin-bottom: 8px;
+        }
+        .work-card p {
+            font-size: 14px;
+            color: var(--text-light);
         }
 
         /* Pricing */
         .price-list {
-            list-style: none;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
         .price-card {
             background: var(--white);
-            padding: 32px;
+            padding: 32px 24px;
             border-radius: var(--radius);
             text-align: center;
             border: 1px solid var(--border);
@@ -366,229 +329,188 @@
             transition: var(--transition);
         }
         .price-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-hover);
-            border-color: var(--orange);
         }
         .price-card h3 {
-            font-size: 22px;
-            color: var(--green);
+            font-size: 20px;
+            color: var(--text-dark);
             margin-bottom: 16px;
         }
-        .price-card p {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--green);
-            background: var(--cream);
-            padding: 12px;
-            border-radius: 12px;
+        .price-badge {
             display: inline-block;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+        .price-desc {
+            font-size: 14px;
+            color: var(--text-light);
         }
 
-        /* Gallery */
-        .gallery-grid {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        /* References */
+        .ref-card {
+            background: var(--green-light);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid var(--green-soft);
         }
-        .gallery-item {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            position: relative;
-            transition: var(--transition);
-            aspect-ratio: 4/3;
+        .ref-card h3 {
+            font-size: 18px;
+            color: var(--green-main);
+            margin-bottom: 8px;
         }
-        .gallery-item:hover {
-            transform: scale(1.03);
-            box-shadow: var(--shadow-hover);
-            z-index: 2;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .gallery-item::after {
-            content: "FoxGarden.cz";
-            position: absolute;
-            bottom: 12px;
-            right: 16px;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--white);
-            background: rgba(31, 61, 39, 0.7);
-            padding: 4px 10px;
-            border-radius: 8px;
-            backdrop-filter: blur(4px);
+        .ref-card p {
+            font-size: 15px;
+            color: var(--text-dark);
         }
 
         /* FAQ */
         .faq-grid {
             display: grid;
             gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .faq-item {
             background: var(--white);
-            padding: 24px;
-            border-radius: 20px;
+            padding: 20px 24px;
+            border-radius: 16px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
         }
         .faq-item dt {
-            font-weight: 700;
-            font-size: 18px;
-            color: var(--green);
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .faq-item dt::before {
-            content: "❓";
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--green-main);
+            margin-bottom: 6px;
         }
         .faq-item dd {
             font-size: 15px;
-            color: var(--text);
-            margin-left: 32px;
+            color: var(--text-light);
         }
 
         /* Form */
         .form-box {
             background: var(--white);
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 40px;
-            border-radius: 32px;
+            padding: 32px;
+            border-radius: 24px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 16px;
         }
         .form-group {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
         }
         .form-box label {
-            font-weight: 600;
+            font-weight: 500;
             font-size: 14px;
-            color: var(--green);
-            margin-left: 4px;
+            color: var(--text-dark);
         }
         .form-box input,
         .form-box textarea {
             width: 100%;
-            padding: 16px 20px;
-            border-radius: 16px;
-            border: 2px solid var(--border);
-            font-size: 16px;
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            font-size: 15px;
             font-family: inherit;
-            background: var(--cream-light);
+            background: var(--bg-color);
             transition: var(--transition);
         }
         .form-box input:focus,
         .form-box textarea:focus {
             outline: none;
-            border-color: var(--orange);
+            border-color: var(--green-main);
             background: var(--white);
-            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
         }
         .form-box textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 100px;
         }
         .form-box .btn {
-            margin-top: 10px;
+            margin-top: 8px;
             width: 100%;
-            padding: 18px;
-            font-size: 18px;
         }
 
         /* Contact Section */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
-            gap: 40px;
+            gap: 32px;
             align-items: start;
         }
         .contact-info {
-            background: var(--green);
-            color: var(--white);
-            padding: 40px;
-            border-radius: 32px;
+            background: var(--white);
+            padding: 32px;
+            border-radius: 24px;
             box-shadow: var(--shadow);
+            border: 1px solid var(--border);
         }
         .contact-info h3 {
-            font-size: 24px;
-            margin-bottom: 24px;
-            color: var(--cream);
+            font-size: 20px;
+            color: var(--green-main);
+            margin-bottom: 16px;
         }
         .contact-info p {
-            margin-bottom: 16px;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: var(--text-dark);
         }
         .contact-info a {
-            color: var(--white);
+            color: var(--green-main);
             text-decoration: none;
             font-weight: 600;
-            transition: var(--transition);
         }
         .contact-info a:hover {
-            color: var(--orange);
+            text-decoration: underline;
         }
         .contact-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-            margin-top: 32px;
+            margin-bottom: 24px;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 60px 24px;
-            color: var(--cream);
-            background: var(--green);
-            font-size: 15px;
-            margin-top: 40px;
-            border-radius: 40px 40px 0 0;
-            line-height: 1.8;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 20px;
         }
         footer a {
-            color: var(--orange);
+            color: var(--green-main);
             text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        footer a:hover {
-            color: var(--white);
         }
 
         /* Float Button */
         .float-btn {
             position: fixed;
             bottom: 24px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary-btn);
+            right: 24px;
+            background: var(--green-main);
             color: var(--white);
-            padding: 14px 28px;
+            padding: 16px 24px;
             border-radius: 999px;
-            font-weight: 700;
+            font-weight: 600;
             z-index: 999;
             text-decoration: none;
-            box-shadow: 0 10px 25px rgba(46, 125, 50, 0.4);
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -596,49 +518,23 @@
             font-size: 16px;
         }
         .float-btn:hover {
-            background: var(--primary-btn-hover);
-            transform: translate(-50%, -3px);
-            box-shadow: 0 15px 30px rgba(76, 175, 80, 0.5);
+            background: #256629;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.5);
             color: var(--white);
-        }
-
-        /* Back to top */
-        #backToTop {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 50px;
-            height: 50px;
-            border-radius: 25px;
-            border: none;
-            background: var(--green-soft);
-            color: var(--white);
-            font-size: 24px;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow);
-            cursor: pointer;
-            z-index: 999;
-            transition: var(--transition);
-        }
-        #backToTop:hover {
-            background: var(--green);
-            transform: translateY(-3px);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero-box { padding: 40px 20px; }
-            .brand { font-size: 40px; }
-            .hero-fox { width: 80px; right: 10px; bottom: 0; }
-            section { padding: 60px 0; }
-            section.alt { padding: 60px 20px; margin: 0 12px 40px; }
-            .insurance-banner { margin: 10px 12px 30px; font-size: 16px; flex-direction: column; }
-            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .brand { font-size: 36px; gap: 12px; flex-direction: column; }
+            .brand img { height: 40px; }
+            section { padding: 40px 0; }
+            section.alt { padding: 40px 20px; margin: 0 12px 30px; }
+            .form-row { grid-template-columns: 1fr; gap: 16px; }
             .contact-grid { grid-template-columns: 1fr; }
-            .float-btn { width: 90%; justify-content: center; }
-            .hero-buttons .btn { width: 100%; }
+            .float-btn { width: calc(100% - 48px); justify-content: center; bottom: 16px; right: 24px; }
+            .hero-buttons .btn, .contact-buttons .btn { width: 100%; }
         }
     </style>
 </head>
@@ -647,48 +543,41 @@
 <header class="hero" id="top">
   <div class="container">
     <div class="hero-box">
-      <div class="hero-content">
-          <h1 class="brand">
-            <img src="images/logo.png" alt="">
-            FOX Garden
-          </h1>
-          <p class="premium">Údržba zahrad Jičín a okolí</p>
-          <p class="slogan">Sekání trávy • Živé ploty • Kompletní péče</p>
+      <h1 class="brand">
+        <img src="images/logo.png" alt="Logo FOX Garden" onerror="this.src='https://placehold.co/150x50/E6F4EA/2E7D32?text=FOX+Garden'">
+        FOX Garden
+      </h1>
+      <p class="premium">Údržba zahrad Jičín a okolí</p>
+      <p class="slogan">Sekání trávy • Živé ploty • Kompletní péče</p>
 
-          <div class="hero-buttons">
-            <a class="btn btn-primary" href="tel:+420775717291">📞 Zavolat 775 717 291</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/420775717291">💬 WhatsApp</a>
-          </div>
-
-          <p class="micro">Volné termíny se rychle plní – objednejte se včas.</p>
-
-          <div class="hero-nav">
-            <a href="#sluzby">Služby</a>
-            <a href="#reference">Reference</a>
-            <a href="#realizace">Realizace</a>
-            <a href="#galerie">Fotogalerie</a>
-            <a href="#cenik" class="nav-cta">Ceník</a>
-            <a href="#rady">Rady</a>
-            <a href="#faq">FAQ</a>
-            <a href="#onas">O nás</a>
-            <a href="#kontakt">Kontakt</a>
-          </div>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="tel:+420775717291">📞 Zavolat</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/420775717291">💬 WhatsApp</a>
       </div>
-      <img src="images/fox.png" class="hero-fox" alt="FOX Garden - liška">
+
+      <p class="micro">Volné termíny se rychle plní – objednejte se včas.</p>
+
+      <nav class="hero-nav">
+        <a href="#sluzby">Služby</a>
+        <a href="#ukazky">Ukázky práce</a>
+        <a href="#cenik">Ceník</a>
+        <a href="#faq">FAQ</a>
+        <a href="#onas">O nás</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
     </div>
   </div>
 </header>
 
 <div class="insurance-banner">
-    <span>🛡️ Pojištění odpovědnosti až 3 000 000 Kč</span>
-    <span>pro váš i náš klid.</span>
+    🛡️ Pojištění odpovědnosti až 3 000 000 Kč
 </div>
 
 <section id="sluzby">
   <div class="container">
     <div class="section-header">
-        <h2>🌿 Naše služby</h2>
-        <p class="subtitle">Profesionální údržba zahrad pro rodinné domy, firmy i SVJ v Jičíně a okolí.</p>
+        <h2>Naše služby</h2>
+        <p class="subtitle">Profesionální péče pro rodinné domy, firmy i SVJ</p>
     </div>
 
     <div class="grid-2">
@@ -709,9 +598,97 @@
             </ul>
         </div>
     </div>
+  </div>
+</section>
 
-    <div style="text-align:center; margin-top: 40px;">
-      <a class="btn btn-primary" href="#poptavka">Rychlá poptávka</a>
+<section id="ukazky" class="alt">
+  <div class="container">
+    <div class="section-header">
+        <h2>Ukázky práce</h2>
+        <p class="subtitle">Prohlédněte si naše nedávné realizace a výsledky</p>
+    </div>
+
+    <div class="grid-3" id="realizace-container">
+      <!-- Static Fallback Data -->
+      <div class="work-card">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto1.jpg" alt="Údržba zahrady" loading="lazy">
+        <div class="content">
+            <h3>Přerostlá zahrada – Jičín</h3>
+            <p>Kompletní posekání, vyčištění plochy a srovnání terénu po zimě.</p>
+        </div>
+      </div>
+      <div class="work-card">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto2.jpg" alt="Střih plotu" loading="lazy">
+        <div class="content">
+            <h3>Pravidelná péče – Hořice</h3>
+            <p>Pravidelné sekání, údržba záhonů a střih živého plotu.</p>
+        </div>
+      </div>
+      <div class="work-card">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto3.jpg" alt="Sekání" loading="lazy">
+        <div class="content">
+            <h3>Údržba zeleně – SVJ</h3>
+            <p>Sečení velkých ploch a úklid posekané trávy.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Future-proof script block -->
+    <script>
+    // Configured for future Google Sheets connection
+    const SHEET_URL = "https://opensheet.elk.sh/1DIZwj2J19xym6QX_uGjUucTJNgiazMm-jJYvmHj10mY/List1";
+
+    fetch(SHEET_URL)
+      .then(res => res.ok ? res.json() : Promise.reject('Failed load'))
+      .then(data => {
+        if (data && data.length > 0) {
+          const container = document.getElementById("realizace-container");
+          let html = "";
+          // Get last 3 entries
+          data.slice(-3).reverse().forEach(item => {
+            if(item.Název) {
+                html += `
+                  <div class="work-card">
+                    <img src="${item.Obrázek || 'https://placehold.co/400x300/E6F4EA/2E7D32?text=Foto'}" alt="${item.Název}" loading="lazy">
+                    <div class="content">
+                        <h3>${item.Název}</h3>
+                        <p>${item.Popis || ''}</p>
+                    </div>
+                  </div>
+                `;
+            }
+          });
+          if(html) container.innerHTML = html;
+        }
+      })
+      .catch(err => console.log("Using static content for Ukázky práce."));
+    </script>
+  </div>
+</section>
+
+<section id="cenik">
+  <div class="container">
+    <div class="section-header">
+        <h2>Ceník</h2>
+        <p class="subtitle">Nejsme nejlevnější – děláme práci tak, aby byla dlouhodobě správně a bez starostí.</p>
+    </div>
+
+    <div class="price-list">
+      <div class="price-card">
+        <h3>Sekání trávníků</h3>
+        <div class="price-badge">Od 5 Kč / m²</div>
+        <p class="price-desc">Cena se odvíjí dle stavu a členitosti plochy.</p>
+      </div>
+      <div class="price-card">
+        <h3>Pravidelná údržba</h3>
+        <div class="price-badge">Od 1 500 Kč / měsíc</div>
+        <p class="price-desc">Výhodné balíčky pro stálou péči.</p>
+      </div>
+      <div class="price-card">
+        <h3>Střih živých plotů</h3>
+        <div class="price-badge">Od 30 Kč / bm</div>
+        <p class="price-desc">Dle výšky, šířky a přístupnosti.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -719,145 +696,18 @@
 <section id="reference" class="alt">
   <div class="container">
     <div class="section-header">
-        <h2>⭐ Reference klientů</h2>
-        <p class="subtitle">Spokojenost zákazníků je pro nás na prvním místě.</p>
+        <h2>Reference klientů</h2>
     </div>
 
-    <div class="grid-2">
-      <div class="card">
+    <div class="grid-2" style="max-width: 800px; margin: 0 auto;">
+      <div class="ref-card">
         <h3>Údržba zahrady – Hořice</h3>
         <p>Sekání trávníku, střih plotu a úklid. Zákazníci oceňují spolehlivost a čistou práci.</p>
       </div>
-      <div class="card">
+      <div class="ref-card">
         <h3>SVJ – společná zeleň</h3>
         <p>Celoroční údržba, úklid listí a odvoz odpadu. Zeleň vypadá skvěle po celý rok.</p>
       </div>
-    </div>
-    <div style="text-align:center; margin-top:32px;">
-      <a class="btn btn-outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" target="_blank" rel="noopener">Více referencí na Poptávej.cz</a>
-    </div>
-  </div>
-</section>
-
-<section id="cenik">
-  <div class="container">
-    <div class="section-header">
-        <h2>💰 Orientační ceník</h2>
-        <p class="subtitle">Nejsme nejlevnější – děláme práci tak, aby byla dlouhodobě správně a bez starostí.</p>
-    </div>
-
-    <div class="price-list">
-      <div class="price-card">
-        <h3>Sekání trávníků</h3>
-        <p>Od 5 Kč / m²</p>
-        <span style="display:block; margin-top:12px; font-size:14px; opacity:0.8;">Cena se odvíjí dle stavu a členitosti plochy.</span>
-      </div>
-      <div class="price-card">
-        <h3>Pravidelná údržba</h3>
-        <p>Od 1 500 Kč / měsíc</p>
-        <span style="display:block; margin-top:12px; font-size:14px; opacity:0.8;">Výhodné balíčky pro stálou péči.</span>
-      </div>
-      <div class="price-card">
-        <h3>Střih živých plotů</h3>
-        <p>Od 30 Kč / bm</p>
-        <span style="display:block; margin-top:12px; font-size:14px; opacity:0.8;">Dle výšky, šířky a přístupnosti.</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="realizace" class="alt">
-  <div class="container">
-    <div class="section-header">
-        <h2>📸 Poslední realizace</h2>
-    </div>
-
-    <div class="grid-3" id="realizace-container">
-      <div class="ref-card">
-        <img src="images/realizace1.jpg" alt="Přerostlá zahrada po zimě – Jičín" onerror="this.src='https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto1.jpg'">
-        <h3>Přerostlá zahrada po zimě – Jičín</h3>
-        <p>Zahrada byla po zimě silně přerostlá a dlouhodobě neudržovaná. Provedli jsme kompletní posekání, vyčištění plochy a srovnání terénu.</p>
-      </div>
-
-      <div class="ref-card">
-        <img src="images/realizace2.jpg" alt="Pravidelná péče o zahradu – Hořice" onerror="this.src='https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto2.jpg'">
-        <h3>Pravidelná péče o zahradu – Hořice</h3>
-        <p>U této zahrady zajišťujeme pravidelné sekání, údržbu záhonů a střih živého plotu.</p>
-      </div>
-    </div>
-
-    <script>
-    fetch("https://opensheet.elk.sh/1DIZwj2J19xym6QX_uGjUucTJNgiazMm-jJYvmHj10mY/List1")
-      .then(res => {
-        if (!res.ok) throw new Error('Fetch failed');
-        return res.json();
-      })
-      .then(data => {
-        if (data && data.length > 0) {
-          let html = "";
-          data.slice(-3).reverse().forEach(item => {
-            html += `
-              <div class="ref-card">
-                ${item.Obrázek ? `<img src="${item.Obrázek}" alt="${item.Název}">` : ""}
-                <h3>${item.Název || ""}</h3>
-                <p>${item.Popis || ""}</p>
-              </div>
-            `;
-          });
-          document.getElementById("realizace-container").innerHTML = html;
-        }
-      })
-      .catch(err => console.error("Google Sheets fetch failed, using static content.", err));
-    </script>
-
-    <div style="text-align:center; margin-top:32px;">
-      <a class="btn btn-outline" href="https://www.facebook.com/109016358813760" target="_blank">Další realizace na Facebooku</a>
-    </div>
-  </div>
-</section>
-
-<section id="galerie">
-  <div class="container">
-    <div class="section-header">
-        <h2>🖼️ Fotogalerie</h2>
-    </div>
-
-    <div class="gallery-grid">
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto1.jpg" alt="Fox Garden práce 1" loading="lazy">
-      </figure>
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto2.jpg" alt="Fox Garden práce 2" loading="lazy">
-      </figure>
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto3.jpg" alt="Fox Garden práce 3" loading="lazy">
-      </figure>
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto4.jpg" alt="Fox Garden práce 4" loading="lazy">
-      </figure>
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto5.jpg" alt="Fox Garden práce 5" loading="lazy">
-      </figure>
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto8.jpg" alt="Fox Garden práce 8" loading="lazy">
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section id="rady" class="alt">
-  <div class="container">
-    <div class="section-header">
-        <h2>🧠 Odborné rady</h2>
-    </div>
-    <div class="card" style="max-width: 700px; margin: 0 auto;">
-        <h3>Péče o trávník po vertikutaci</h3>
-        <ul class="clean" style="margin-top: 16px;">
-            <li>Vyhrabat nečistoty, aby trávník mohl dýchat.</li>
-            <li>Dosev travní směsí na prázdná místa.</li>
-            <li>Zavlažit jemným deštěm a použít kvalitní hnojivo.</li>
-            <li>Sekat až při výšce 8–10 cm (nesekat „na golf“).</li>
-        </ul>
     </div>
   </div>
 </section>
@@ -865,7 +715,7 @@
 <section id="faq">
   <div class="container">
     <div class="section-header">
-        <h2>❓ Časté dotazy</h2>
+        <h2>Časté dotazy</h2>
     </div>
 
     <dl class="faq-grid">
@@ -875,7 +725,7 @@
       </div>
       <div class="faq-item">
           <dt>Děláte odvoz odpadu?</dt>
-          <dd>Ano, odvoz bioodpadu je standardní součástí našich služeb, ať už se jedná o trávu nebo větve.</dd>
+          <dd>Ano, odvoz bioodpadu je standardní součástí našich služeb.</dd>
       </div>
       <div class="faq-item">
           <dt>Kde všude působíte?</dt>
@@ -886,68 +736,18 @@
 </section>
 
 <section id="onas" class="alt">
-  <div class="container">
-    <div class="section-header">
-        <h2>🦊 O FoxGarden</h2>
-    </div>
-
-    <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 40px;">
-        <p style="font-size: 18px; margin-bottom: 16px;">Víme, co zahrada opravdu potřebuje. Zakládáme si na slušném jednání, dodržování termínů a čistém výsledku.</p>
-        <p style="font-size: 16px; margin-bottom: 24px; color: var(--text); opacity: 0.9;">Jsme malá firma – jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně a s odpovědností.</p>
-
-        <div style="background: var(--cream-light); padding: 20px; border-radius: 16px; display: inline-block; border: 1px solid var(--border); margin-bottom: 24px;">
-            <p style="font-weight: 700; color: var(--green); font-size: 18px;">🛡️ Jsme plně pojištěni proti škodám až do výše 3 000 000 Kč.</p>
-        </div>
-
-        <p style="font-weight: 600; font-size: 18px; color: var(--green); margin-bottom: 32px;">Nejsme nejlevnější. Děláme práci tak, aby byla dlouhodobě správně a bez starostí.</p>
-
-        <a class="btn btn-primary" href="#kontakt">Chci nacenit práce</a>
-    </div>
+  <div class="container" style="text-align: center; max-width: 700px;">
+    <h2>O FoxGarden</h2>
+    <p style="margin-bottom: 16px;">Víme, co zahrada opravdu potřebuje. Zakládáme si na slušném jednání, dodržování termínů a čistém výsledku.</p>
+    <p style="color: var(--text-light); margin-bottom: 24px;">Jsme malá firma – jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně a s odpovědností.</p>
+    <a class="btn btn-outline" href="#kontakt">Kontaktujte nás</a>
   </div>
 </section>
 
-<section id="poptavka">
+<section id="kontakt">
   <div class="container">
     <div class="section-header">
-        <h2>📨 Rychlá poptávka</h2>
-        <p class="subtitle">Napište nám, co potřebujete, a my se vám co nejdříve ozveme s návrhem řešení.</p>
-    </div>
-
-    <form action="https://formsubmit.co/zuki@foxgarden.cz" method="POST" class="form-box">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://foxgarden.cz/dekujeme.html">
-
-      <div class="form-row">
-          <div class="form-group">
-              <label for="jmeno">Jméno a příjmení *</label>
-              <input id="jmeno" type="text" name="Jméno" placeholder="Jan Novák" required>
-          </div>
-          <div class="form-group">
-              <label for="telefon">Telefonní číslo *</label>
-              <input id="telefon" type="tel" name="Telefon" placeholder="+420 777 777 777" required>
-          </div>
-      </div>
-
-      <div class="form-group">
-          <label for="mesto">Město / obec (kde se nachází zahrada) *</label>
-          <input id="mesto" type="text" name="Město / obec" placeholder="Jičín" required>
-      </div>
-
-      <div class="form-group">
-          <label for="zprava">Vaše zpráva / Co potřebujete udělat?</label>
-          <textarea id="zprava" name="Zpráva" placeholder="Dobrý den, potřeboval bych posekat zahradu cca 500m2..."></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Odeslat nezávaznou poptávku</button>
-    </form>
-  </div>
-</section>
-
-<section id="kontakt" class="alt">
-  <div class="container">
-    <div class="section-header">
-        <h2>📞 Kontakt</h2>
+        <h2>Kontakt</h2>
         <p class="subtitle">Stačí zavolat nebo napsat – odpovíme co nejdříve.</p>
     </div>
 
@@ -956,26 +756,40 @@
             <h3>FoxGarden – Zuklesa s.r.o.</h3>
             <p>IČO: 17805368</p>
             <p>🛡️ Pojištěno do 3 mil. Kč</p>
-            <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.2); margin: 24px 0;">
+            <hr style="border: 0; height: 1px; background: var(--border); margin: 20px 0;">
             <p>📞 <a href="tel:+420775717291">775 717 291</a></p>
             <p>✉️ <a href="mailto:zuki@foxgarden.cz">zuki@foxgarden.cz</a></p>
         </div>
 
         <div>
-            <div class="card" style="background: transparent; border: none; box-shadow: none; padding: 0;">
-                <p style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">Vyberte si preferovaný způsob komunikace:</p>
-                <div class="contact-buttons">
-                    <a class="btn btn-primary" href="tel:+420775717291">📞 Zavolat 775 717 291</a>
-                    <a class="btn btn-whatsapp" href="https://wa.me/420775717291">💬 Napsat na WhatsApp</a>
-                    <a class="btn btn-outline" href="#poptavka">📋 Vyplnit formulář</a>
-                    <a class="btn btn-outline" href="mailto:zuki@foxgarden.cz">✉️ Poslat e-mail</a>
-                </div>
-
-                <div style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
-                    <a class="btn btn-outline" href="https://www.facebook.com/109016358813760" target="_blank" style="padding: 10px 20px; font-size: 14px;">📘 Facebook stránka</a>
-                    <a class="btn btn-outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" target="_blank" style="padding: 10px 20px; font-size: 14px;">⭐ Hodnocení Poptávej.cz</a>
-                </div>
+            <div class="contact-buttons">
+                <a class="btn btn-primary" href="tel:+420775717291">📞 Zavolat</a>
+                <a class="btn btn-whatsapp" href="https://wa.me/420775717291">💬 WhatsApp</a>
+                <a class="btn btn-outline" href="mailto:zuki@foxgarden.cz">✉️ Email</a>
             </div>
+
+            <form action="https://formsubmit.co/zuki@foxgarden.cz" method="POST" class="form-box">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+
+              <div class="form-row">
+                  <div class="form-group">
+                      <label for="jmeno">Jméno *</label>
+                      <input id="jmeno" type="text" name="Jméno" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="telefon">Telefon *</label>
+                      <input id="telefon" type="tel" name="Telefon" required>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="zprava">Co potřebujete udělat?</label>
+                  <textarea id="zprava" name="Zpráva"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
+            </form>
         </div>
     </div>
   </div>
@@ -984,29 +798,13 @@
 <footer>
   <div class="container">
       <p>© <script>document.write(new Date().getFullYear());</script> Fox Garden – Zuklesa s.r.o. | IČO: 17805368</p>
-      <p style="margin-top: 8px;">Certifikace ÚKZÚZ | Pojištění odpovědnosti | foxgarden.cz</p>
-
-      <div style="margin-top: 32px;">
-          <a href="/interni/dochazka/dochazka.html">Docházka zaměstnanců</a>
-      </div>
+      <p style="margin-top: 8px;">Certifikace ÚKZÚZ | Pojištění odpovědnosti | <a href="/interni/dochazka/dochazka.html">Docházka</a></p>
   </div>
 </footer>
-
-<button id="backToTop" aria-label="Zpět nahoru">↑</button>
 
 <a href="tel:+420775717291" class="float-btn">
     📞 Zavolat ihned
 </a>
-
-<script>
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-  backToTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
-});
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-</script>
 
 </body>
 </html>
