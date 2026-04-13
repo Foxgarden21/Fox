@@ -591,22 +591,32 @@
         <h2>Proč si vybrat nás</h2>
     </div>
 
-    <div class="grid-2">
-        <div class="card" style="text-align: center; padding: 24px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: stretch;">
+        <div class="card" style="flex: 1 1 300px; max-width: 450px; text-align: center; padding: 24px;">
             <div style="font-size: 32px; margin-bottom: 12px;">🤝</div>
             <h3 style="justify-content: center; font-size: 18px;">Spolehlivost a dodržení domluvy</h3>
         </div>
-        <div class="card" style="text-align: center; padding: 24px;">
+        <div class="card" style="flex: 1 1 300px; max-width: 450px; text-align: center; padding: 24px;">
             <div style="font-size: 32px; margin-bottom: 12px;">🛡️</div>
             <h3 style="justify-content: center; font-size: 18px;">Jsme pojištěni až na 3 miliony Kč</h3>
         </div>
-        <div class="card" style="text-align: center; padding: 24px;">
+        <div class="card" style="flex: 1 1 300px; max-width: 450px; text-align: center; padding: 24px;">
             <div style="font-size: 32px; margin-bottom: 12px;">🌱</div>
             <h3 style="justify-content: center; font-size: 18px;">Osobní přístup ke každé zahradě</h3>
         </div>
-        <div class="card" style="text-align: center; padding: 24px;">
+        <div class="card" style="flex: 1 1 300px; max-width: 450px; text-align: center; padding: 24px;">
             <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
             <h3 style="justify-content: center; font-size: 18px;">Rychlá domluva a reakce</h3>
+        </div>
+
+        <!-- Arrow transition inline with the cards -->
+        <div style="flex: 1 1 200px; max-width: 250px; display: flex; align-items: center; justify-content: center; padding: 24px;">
+            <a href="#ukazky" class="arrow-link" style="display: inline-flex; flex-direction: column; align-items: center; color: var(--green-main); text-decoration: none; font-weight: 600; text-align: center;">
+                <span>Podívejte se na ukázky naší práce</span>
+                <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </a>
         </div>
     </div>
 
@@ -618,14 +628,6 @@
 
 <section id="ukazky" style="padding-top: 20px;">
   <div class="container">
-    <div style="text-align: center; margin-bottom: 40px;">
-        <a href="#ukazky" class="arrow-link" style="display: inline-flex; flex-direction: column; align-items: center; color: var(--green-main); text-decoration: none; font-weight: 600;">
-            <span>Podívejte se na ukázky naší práce</span>
-            <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-            </svg>
-        </a>
-    </div>
     <div class="section-header">
         <h2>Ukázky práce</h2>
         <p class="subtitle">Prohlédněte si naše nedávné realizace a výsledky</p>
