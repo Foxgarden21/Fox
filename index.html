@@ -8,14 +8,13 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVG7GX4D3J"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-VVG7GX4D3J');
     </script>
     <script type="text/javascript">
@@ -26,677 +25,760 @@
         })(window, document, "clarity", "script", "uxujcz8awi");
     </script>
     <style>
-        :root{
-         --green:#1f3d27;
-         --green-soft:#2d5c3b;
-         --green-glow:#3d7651;
-         --cream:#F3E9D7;          /* Warm Cream 2026 */
-         --cream-light:#faf7f1;
-         --white:#ffffff;
-         --text:#1e281f;
-         --shadow:0 10px 22px rgba(0,0,0,.08);
-         --shadow-soft:0 4px 14px rgba(0,0,0,.05);
-         --border:#e5e0d6;
-        }
-        *{box-sizing:border-box;margin:0;padding:0}
-        body{
-         background:linear-gradient(180deg,var(--cream)0%,var(--cream-light)40%,var(--cream)100%);
-         font-family:Poppins,Arial,sans-serif;
-         color:var(--text);
-         -webkit-font-smoothing:antialiased;
-        }
-        .container{max-width:1000px;margin:0 auto;padding:24px}
-
-        /* POPTÁVEJ TRUST BOX */
-        .ref-trust-box{
-          border:2px solid #2E7D32;
-          border-radius:24px;
-          padding:16px 20px;
-          margin:24px 0 10px;
-          background:#fffdf7;
-          box-shadow:var(--shadow-soft);
+        :root {
+            --green: #1f3d27;
+            --green-soft: #2d5c3b;
+            --cream: #f3e9d7;
+            --cream-light: #fdfbf7;
+            --white: #ffffff;
+            --text: #1e281f;
+            --orange: #f97316;
+            --orange-hover: #ea580c;
+            --shadow: 0 10px 30px rgba(0,0,0,0.06);
+            --shadow-hover: 0 20px 40px rgba(0,0,0,0.12);
+            --border: #e8e2d5;
+            --radius: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Jemné doladění tlačítka v Poptávej boxu */
-        .ref-trust-box .btn{
-          display:inline-flex;
-          align-items:center;
-          justify-content:center;
-          padding:10px 24px;
-          max-width:260px;
-          width:auto;
-          white-space:normal;
-          text-align: center;
-          line-height: 1.3;
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--cream-light);
+            font-family: 'Poppins', Arial, sans-serif;
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
         }
 
-        @media (max-width:600px){
-          .ref-trust-box .btn{
-            width:100%;
-            max-width:100%;
-            white-space:normal;
-          }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
-        .ref-trust-box .stars{
-          font-size:22px;
-          margin-bottom:4px;
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
-        .ref-trust-box .stars span{
-          margin-right:2px;
+        .btn-primary {
+            background: var(--orange);
+            color: var(--white);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.25);
         }
-        .ref-trust-box p{
-          margin:6px 0;
+        .btn-primary:hover {
+            background: var(--orange-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.35);
+            color: var(--white);
         }
-        .ref-trust-box p strong{
-          font-size:17px;
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--white);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
         }
-        .ref-trust-box .btn{
-          margin-top:8px;
+        .btn-whatsapp:hover {
+            background: #20BA56;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+            color: var(--white);
         }
-        @media (max-width:600px){
-          .ref-trust-box{
-            padding:14px 16px;
-          }
+        .btn-outline {
+            background: transparent;
+            color: var(--green);
+            border: 2px solid var(--green);
+            box-shadow: none;
         }
-
-        /* REVIEW BUTTONS */
-        .btn-review{
-          text-decoration:none;
-          padding:10px 22px;
-          border-radius:999px;
-          font-weight:600;
-          display:inline-block;
-          border:1px solid #2E7D32;
-          box-shadow:var(--shadow-soft);
-          margin:4px 6px;
-          font-size:14px;
-        }
-        .btn-review.google{
-          background:#ffffff;
-          color:#1f3d27;
-        }
-        .btn-review.google:hover{
-          background:#E8E4D8;
-        }
-        .btn-review.fb{
-          background:#0f271a;
-          color:#E8E4D8;
-        }
-        .btn-review.fb:hover{
-          background:#173824;
-        }
-        .review-note{
-          font-size:0.9rem;
-          margin-bottom:10px;
-          opacity:.9;
+        .btn-outline:hover {
+            background: var(--green);
+            color: var(--cream-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(31, 61, 39, 0.15);
         }
 
-        /* HERO */
-        header.hero{
-          padding:80px 20px 34px;
-          text-align:center;
+        /* Hero */
+        header.hero {
+            padding: 60px 0 40px;
+            text-align: center;
         }
-        .hero-box{
-          background:var(--cream);           /* Warm Cream v hero */
-          padding:48px;
-          border-radius:30px;
-          box-shadow:var(--shadow);
-          border:1px solid #e3d7c3;
-          transition:.3s ease;
-          position: relative;
+        .hero-box {
+            background: var(--white);
+            padding: 60px 40px;
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .hero-box:hover {
+            box-shadow: var(--shadow-hover);
         }
         .hero-fox {
-          position: absolute;
-          bottom: 15px;
-          right: 20px;
-          width: 100px;
-          height: auto;
-          z-index: 1;
-          pointer-events: none;
+            position: absolute;
+            bottom: -10px;
+            right: 20px;
+            width: 120px;
+            height: auto;
+            z-index: 0;
+            opacity: 0.9;
+            pointer-events: none;
         }
-        @media (max-width: 600px) {
-          .hero-fox {
-            width: 70px;
-            bottom: 10px;
-            right: 10px;
-          }
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
-        .hero-box:hover{
-          transform:translateY(-3px);
+        .brand {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--green);
+            letter-spacing: -1px;
+            line-height: 1.1;
         }
-        .hero-box h1,
-        .hero-box p{
-          color:var(--text);
+        .brand img {
+            height: 60px;
+            display: block;
+            margin: 0 auto 16px;
         }
-        .brand{
-          font-size:50px;
-          font-weight:800;
-          color:var(--green);                /* tmavě zelený Fox Garden */
+        .premium {
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 16px;
+            color: var(--green-soft);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .premium{
-          font-size:24px;
-          font-weight:700;
-          margin-top:10px;
-          color:var(--green-soft);
+        .slogan {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 12px;
+            color: #4a6652;
         }
-        .slogan{
-          font-size:22px;
-          font-weight:600;
-          margin-top:8px;
-          color:#3f5a47;
+        .hero-buttons {
+            margin-top: 36px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        .micro{
-          opacity:.95;
-          margin-top:12px;
-          font-size:16px;
-          line-height:1.55;
+        .hero-buttons .btn {
+            font-size: 18px;
+            padding: 16px 36px;
         }
-
-        /* BUTTONS */
-        .buttons{
-         margin-top:26px;
-         display:flex;
-         gap:16px;
-         flex-wrap:wrap;
-         justify-content:center;
-        }
-        .btn{
-         display:inline-block;
-         text-decoration:none;
-         padding:14px 30px;
-         border-radius:999px;
-         font-weight:700;
-         color:var(--white);
-         background:linear-gradient(135deg,var(--green)0%,var(--green-soft)100%);
-         box-shadow:var(--shadow-soft);
-         transition: all 0.3s ease;
-         text-align: center;
-        }
-        /* Jemné doladění tlačítka pod referencemi */
-        #reference .btn.outline{
-          display:inline-flex;
-          align-items:center;
-          justify-content:center;
-          text-align:center;
-          padding:12px 20px;
-          max-width:100%;
-          line-height:1.3;
-          white-space:normal;
+        .micro {
+            margin-top: 24px;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--orange);
         }
 
-        @media (max-width: 600px){
-          #reference .btn.outline{
-            display:block;
-            width:100%;
-            margin-left:auto;
-            margin-right:auto;
-          }
+        /* Hero Nav */
+        .hero-nav {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .hero-nav a {
+            background: var(--cream-light);
+            padding: 10px 24px;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--border);
+            color: var(--green);
+            transition: var(--transition);
+            font-size: 15px;
+        }
+        .hero-nav a:hover {
+            background: var(--green);
+            color: var(--white);
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+        .hero-nav a.nav-cta {
+            background: var(--orange);
+            color: var(--white);
+            border-color: var(--orange);
+        }
+        .hero-nav a.nav-cta:hover {
+            background: var(--orange-hover);
+            border-color: var(--orange-hover);
         }
 
-        .btn:hover{
-         background:linear-gradient(135deg,var(--green-soft)0%,var(--green-glow)100%);
-         transform:translateY(-2px) scale(1.02);
+        /* Insurance Banner */
+        .insurance-banner {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-soft) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 16px 20px;
+            margin: 20px 24px 40px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 10px 20px rgba(31, 61, 39, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            max-width: 1052px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .insurance-banner span {
+            display: inline-block;
         }
 
-        /* Outline button – světlé sekce */
-        .btn.outline{
-         background:transparent;
-         color:#0f271a;
-         border:2px solid #0f271a;
+        /* Sections */
+        section {
+            padding: 80px 0;
+            margin-bottom: 20px;
         }
-        .btn.outline:hover{
-         background:#E8E4D8;
-         color:#0f271a;
+        section.alt {
+            background: var(--cream);
+            border-radius: 40px;
+            margin: 0 24px 40px;
+            padding: 80px 24px;
         }
-
-        /* NAV PILLS */
-        .hero-nav{
-         margin-top:32px;
-         display:flex;
-         flex-wrap:wrap;
-         gap:12px;
-         justify-content:center;
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
         }
-        .hero-nav a{
-         background:var(--white);
-         padding:10px 20px;
-         border-radius:999px;
-         font-weight:600;
-         text-decoration:none;
-         border:1px solid var(--border);
-         color:var(--text);
-         box-shadow:var(--shadow-soft);
-         transition: all .25s ease;
+        h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--green);
+            margin-bottom: 16px;
         }
-        .hero-nav a:hover{
-         background:var(--cream-light);
-         transform:translateY(-2px);
+        .subtitle {
+            font-size: 18px;
+            color: var(--text);
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.8;
         }
 
-        /* REGIONS */
-        .regions{
-         margin-top:22px;
-         display:flex;
-         gap:10px;
-         justify-content:center;
-         flex-wrap:wrap;
+        /* Grid Layouts */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        .card h3 {
+            font-size: 20px;
+            color: var(--green);
+            margin-bottom: 12px;
         }
 
-        #kdepracujeme .regions {
-          margin-top: 28px;
+        /* Services List */
+        ul.clean { list-style: none; padding: 0; }
+        ul.clean li {
+            padding: 12px 0 12px 36px;
+            position: relative;
+            line-height: 1.6;
+            font-size: 16px;
+            border-bottom: 1px solid var(--border);
         }
-        .regions span{
-         background:#ffffffee;
-         padding:7px 18px;
-         border-radius:18px;
-         font-size:14px;
-         font-weight:600;
-         border:1px solid var(--border);
-         color:var(--green);
-         box-shadow:var(--shadow-soft);
-        }
-
-        /* SECTIONS */
-        section{
-         background:var(--white);
-         border-radius:28px;
-         padding:48px 28px;
-         margin:40px 12px;
-         box-shadow:var(--shadow);
-         border:1px solid var(--border);
+        ul.clean li:last-child { border-bottom: none; }
+        ul.clean li::before {
+            content: "🌿";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            font-size: 20px;
         }
 
-        #sluzby {
-          margin-top: 30px;
+        /* Realizace / Refs */
+        .ref-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
-
-
-        /* Krémové alternativní sekce */
-        section.alt{
-          background:var(--cream);
-        }
-
-        h2{
-         font-size:32px;
-         margin-bottom:20px;
-         color:var(--green);
-        }
-        ul.clean{list-style:none;padding:0}
-        ul.clean li{
-         padding:8px 0 8px 30px;
-         position:relative;
-         line-height:1.55;
-        }
-        ul.clean li::before{
-         content:"🌿";
-         position:absolute;
-         left:0;
-         top:8px;
-         font-size:18px;
-        }
-        .lead{
-         font-size:16px;
-         line-height:1.6;
-         margin-bottom:16px;
-        }
-
-        /* GALLERY */
-        .fg-img{
-          width:30%;
-          max-width:280px;
-          aspect-ratio: 4 / 3;
-          min-width:210px;
-          border-radius:18px;
-          box-shadow:var(--shadow);
-          transition: all .3s ease;
-          object-fit:cover;
-          border:1px solid var(--border);
-          display:block;
-        }
-        .fg-img:hover{transform:scale(1.04)}
-
-        /* REFERENCES */
-        .refs{
-         display:flex;
-         flex-direction:column;
-         gap:18px;
-         margin-bottom:24px;
-        }
-        .ref-card{
-         background:var(--cream-light);
-         border-radius:18px;
-         padding:18px 20px;
-         border:1px solid var(--border);
-         box-shadow:var(--shadow-soft);
-         text-align:left;
-         transition: all .3s ease;
-        }
-
         .ref-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
         }
-        .ref-card h3{
-         font-size:18px;
-         margin-bottom:6px;
-         color:var(--green);
+        .ref-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 20px;
         }
-        .ref-card p{
-         margin:0;
-         font-size:15px;
-         line-height:1.6;
+        .ref-card h3 {
+            font-size: 20px;
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+        .ref-card p {
+            font-size: 15px;
+            color: var(--text);
+            flex-grow: 1;
+        }
+
+        /* Pricing */
+        .price-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .price-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--orange);
+        }
+        .price-card h3 {
+            font-size: 22px;
+            color: var(--green);
+            margin-bottom: 16px;
+        }
+        .price-card p {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--orange);
+            background: var(--cream);
+            padding: 12px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+            aspect-ratio: 4/3;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-hover);
+            z-index: 2;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-item::after {
+            content: "FoxGarden.cz";
+            position: absolute;
+            bottom: 12px;
+            right: 16px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--white);
+            background: rgba(31, 61, 39, 0.7);
+            padding: 4px 10px;
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
         }
 
         /* FAQ */
-        .faq dt{font-weight:700;margin-top:12px}
-        .faq dd{margin-bottom:12px}
-
-        /* FOOTER */
-        footer{
-         text-align:center;
-         padding:42px 14px;
-         color:var(--cream);
-         background:var(--green);
-         font-size:.95rem;
-         margin-top:60px;
-         border-radius:26px 26px 0 0;
-         box-shadow:var(--shadow);
+        .faq-grid {
+            display: grid;
+            gap: 16px;
+        }
+        .faq-item {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        .faq-item dt {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--green);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .faq-item dt::before {
+            content: "❓";
+        }
+        .faq-item dd {
+            font-size: 15px;
+            color: var(--text);
+            margin-left: 32px;
         }
 
-        /* RESPONSIVE */
-        @media (max-width:600px){
-          .brand{font-size:36px;}
-          .premium{font-size:18px; margin-top: 5px;}
-          .slogan{font-size:16px !important;}
-          .hero-box { padding: 30px 15px; }
-          .hero .buttons { flex-direction: column; gap: 12px; }
-          .hero .btn { width: 100%; padding: 16px 20px !important; font-size: 18px !important; }
-        }
-
-        #onas .btn.outline {
-          white-space: normal;
-          padding: 12px 24px;
-          line-height: 1.4;
-          text-align: center;
-          display: inline-block;
-          width: auto;
-          max-width: 280px;
-        }
-
-        #cenik {padding:3rem 0;}
-        #cenik .price-list {list-style:none;margin:0;padding:0;}
-        #cenik .price-list li {margin-bottom:1.5rem;border-bottom:1px solid #eee;padding-bottom:1rem;}
-        #cenik h3 {margin-bottom:0.25rem;}
-        #cenik .note {margin-top:1rem;font-size:0.95rem;opacity:0.8;}
-
-        #galerie .container {padding-left:1rem;padding-right:1rem;margin:0 auto;}
-        #galerie .gallery-grid {
-          display: grid;
-          gap: 1.5rem;
-          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        }
-        @media (max-width: 600px) {
-          #galerie .gallery-item:nth-child(n+4) {
-            display: none;
-          }
-          #galerie .gallery-item img {
-            height: 300px;
-          }
-        }
-        #galerie .gallery-item {
-          background: #ffffff;
-          border-radius: 16px;
-          padding: 0.75rem 0.75rem 1rem;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-          text-align:center;
-          position: relative;
-          transition: all .3s ease;
-        }
-
-        #galerie .gallery-item:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-        }
-        #galerie .gallery-item img {
-          width:100%;
-          height:230px;
-          object-fit:cover;
-          border-radius:12px;
-          display:block;
-          margin-bottom:0.5rem;
-        }
-        #galerie .gallery-item figcaption {font-size:0.95rem;font-weight:500;}
-        #galerie .gallery-item::after {
-          content:"FoxGarden.cz";
-          position:absolute;
-          bottom:8px;
-          right:12px;
-          font-size:12px;
-          color:rgba(255,255,255,0.9);
-          background:rgba(0,0,0,0.45);
-          padding:2px 6px;
-          border-radius:6px;
-        }
-
-        .nav-cta{
-          display:inline-block;
-          padding:8px 18px;
-          border-radius:999px;
-          background:var(--green-soft);
-          color:var(--cream);
-          font-weight:600;
-          text-decoration:none;
-          margin-left:16px;
-          box-shadow:var(--shadow-soft);
-        }
-        .nav-cta:hover{
-          background:var(--green-glow);
-          color:#fff;
-        }
-
+        /* Form */
         .form-box {
-          max-width: 640px;
-          margin: 1.5rem auto 0;
-          padding: 1.5rem;
-          border-radius: 1.25rem;
-          background: #ffffff;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-          display: flex;
-          flex-direction: column;
-          gap: 0.75rem;
-        }
-
-        .form-box label {
-          font-weight: 600;
-          font-size: 0.95rem;
-        }
-
-        .form-box input,
-        .form-box select,
-        .form-box textarea {
-          width: 100%;
-          padding: 0.55rem 0.8rem;
-          border-radius: 0.75rem;
-          border: 1px solid #d8e4d2;
-          font-size: 0.95rem;
-          font-family: inherit;
-          box-sizing: border-box;
-        }
-
-        .form-box input:focus,
-        .form-box select:focus,
-        .form-box textarea:focus {
-          outline: none;
-          border-color: #2e7d32;
-          box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.12);
-        }
-
-        .form-box button.btn {
-          align-self: flex-start;
-          margin-top: 0.5rem;
-        }
-        @media (max-width: 768px) {
-          .form-box {
-            padding: 1.2rem;
-            border-radius: 1rem;
-          }
-        }
-
-        /* NAHORU BUTTON */
-        #backToTop{
-          position:fixed;
-          bottom:24px;
-          right:20px;
-          width:46px;
-          height:46px;
-          border-radius:999px;
-          border:none;
-          background:var(--green-soft);
-          color:var(--cream);
-          font-size:22px;
-          display:none;
-          align-items:center;
-          justify-content:center;
-          box-shadow:var(--shadow);
-          cursor:pointer;
-          z-index:999;
-          transition: all .3s ease;
-        }
-        #backToTop:hover{
-          background:var(--green-glow);
-        }
-
-        /* RESPONSIVE CTA SECTION */
-        .cta-section {
-          margin-top: 24px;
-          text-align: center;
-        }
-        .cta-trust-items {
-          margin-top: 18px;
-          text-align: left;
-          display: inline-block;
-          max-width: 450px;
-          width: 100%;
-        }
-        @media (max-width: 768px) {
-          .cta-section {
+            background: var(--white);
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
             display: flex;
             flex-direction: column;
-            align-items: center;
-          }
-          .cta-section .btn {
-            display: block;
+            gap: 20px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-box label {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--green);
+            margin-left: 4px;
+        }
+        .form-box input,
+        .form-box textarea {
             width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 15px;
-          }
-          .cta-trust-items {
-            display: block;
-            max-width: 100%;
-            margin: 0 auto;
-          }
+            padding: 16px 20px;
+            border-radius: 16px;
+            border: 2px solid var(--border);
+            font-size: 16px;
+            font-family: inherit;
+            background: var(--cream-light);
+            transition: var(--transition);
+        }
+        .form-box input:focus,
+        .form-box textarea:focus {
+            outline: none;
+            border-color: var(--orange);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+        }
+        .form-box textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .form-box .btn {
+            margin-top: 10px;
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .contact-info {
+            background: var(--green);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+        }
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            color: var(--cream);
+        }
+        .contact-info p {
+            margin-bottom: 16px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .contact-info a:hover {
+            color: var(--orange);
+        }
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 24px;
+            color: var(--cream);
+            background: var(--green);
+            font-size: 15px;
+            margin-top: 40px;
+            border-radius: 40px 40px 0 0;
+            line-height: 1.8;
+        }
+        footer a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        footer a:hover {
+            color: var(--white);
+        }
+
+        /* Float Button */
+        .float-btn {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--orange);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 700;
+            z-index: 999;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            font-size: 16px;
+        }
+        .float-btn:hover {
+            background: var(--orange-hover);
+            transform: translate(-50%, -3px);
+            box-shadow: 0 15px 30px rgba(249, 115, 22, 0.5);
+            color: var(--white);
+        }
+
+        /* Back to top */
+        #backToTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            background: var(--green-soft);
+            color: var(--white);
+            font-size: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            z-index: 999;
+            transition: var(--transition);
+        }
+        #backToTop:hover {
+            background: var(--green);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-box { padding: 40px 20px; }
+            .brand { font-size: 40px; }
+            .hero-fox { width: 80px; right: 10px; bottom: 0; }
+            section { padding: 60px 0; }
+            section.alt { padding: 60px 20px; margin: 0 12px 40px; }
+            .insurance-banner { margin: 10px 12px 30px; font-size: 16px; flex-direction: column; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .float-btn { width: 90%; justify-content: center; }
+            .hero-buttons .btn { width: 100%; }
         }
     </style>
 </head>
 <body>
+
 <header class="hero" id="top">
   <div class="container">
     <div class="hero-box">
-      <h1 class="brand">
-        <img src="images/logo.png" style="height:50px; display:block; margin:0 auto 10px;">
-        FOX Garden
-      </h1>
-      <p class="premium">Údržba zahrad Jičín a okolí</p>
-      <p class="slogan" style="font-size:18px; margin-top:10px; font-weight:600;">Sekání trávy • Živé ploty • Kompletní péče</p>
+      <div class="hero-content">
+          <h1 class="brand">
+            <img src="images/logo.png" alt="Logo FOX Garden">
+            FOX Garden
+          </h1>
+          <p class="premium">Údržba zahrad Jičín a okolí</p>
+          <p class="slogan">Sekání trávy • Živé ploty • Kompletní péče</p>
 
-      <div class="buttons" style="margin-top:30px;">
-        <a class="btn" href="tel:+420775717291" style="font-size: 20px; padding: 18px 36px;">📞 Zavolat 775 717 291</a>
-        <a class="btn" href="https://wa.me/420775717291" style="background:#25D366; font-size: 20px; padding: 18px 36px;">💬 WhatsApp</a>
-      </div>
-      <p class="micro" style="margin-top:20px; font-weight:600; font-size: 17px;">
-        Volné termíny se rychle plní – objednejte se včas.
-      </p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="tel:+420775717291">📞 Zavolat 775 717 291</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/420775717291">💬 WhatsApp</a>
+          </div>
 
-      <div class="hero-nav">
-        <a href="#sluzby">Služby</a>
-        <a href="#reference">Reference</a><a href="#realizace">Realizace</a><a href="#galerie">Fotogalerie</a>
-        <a class="nav-cta" href="#cenik">Ceník</a><a href="#rady">Rady</a><a href="#faq">FAQ</a><a href="#onas">O nás</a><a href="#kontakt">Kontakt</a>
+          <p class="micro">Volné termíny se rychle plní – objednejte se včas.</p>
+
+          <div class="hero-nav">
+            <a href="#sluzby">Služby</a>
+            <a href="#reference">Reference</a>
+            <a href="#realizace">Realizace</a>
+            <a href="#galerie">Fotogalerie</a>
+            <a href="#cenik" class="nav-cta">Ceník</a>
+            <a href="#rady">Rady</a>
+            <a href="#faq">FAQ</a>
+            <a href="#onas">O nás</a>
+            <a href="#kontakt">Kontakt</a>
+          </div>
       </div>
       <img src="images/fox.png" class="hero-fox" alt="FOX Garden - liška">
     </div>
   </div>
 </header>
 
-<section id="sluzby"><div class="container"><h2>🌿 Naše služby</h2>
-<p>Údržba zahrad pro rodinné domy, firmy i SVJ v Jičíně a okolí.</p>
-
-<ul class="clean">
-<li><b>Sekání trávníků</b> – sečení, dosekávání hran a úklid.</li>
-<li><b>Stříhání živých plotů</b> – tvarování a zmlazení.</li>
-<li><b>Řez stromů</b> – odborný řez pro zdravý růst.</li>
-<li><b>Pravidelná údržba</b> – péče o záhony a výsadby.</li>
-<li><b>Zanedbané zahrady</b> – vyčištění a likvidace náletů.</li>
-<li><b>Chemická péče</b> – certifikovaná aplikace postřiků.</li>
-</ul>
-<div class="cta-section">
-  <a class="btn" href="#poptavka">Rychlá poptávka</a>
+<div class="insurance-banner">
+    <span>🛡️ Pojištění odpovědnosti až 3 000 000 Kč</span>
+    <span>pro váš i náš klid.</span>
 </div>
-</div></section>
 
-<section id="reference" class="alt"><div class="container">
-  <h2>⭐ Reference</h2>
-  <div class="refs">
-    <div class="ref-card">
-      <h3>Údržba zahrady – Hořice</h3>
-      <p>Sekání trávníku, střih plotu a úklid. Zákazníci oceňují spolehlivost a čistou práci.</p>
+<section id="sluzby">
+  <div class="container">
+    <div class="section-header">
+        <h2>🌿 Naše služby</h2>
+        <p class="subtitle">Profesionální údržba zahrad pro rodinné domy, firmy i SVJ v Jičíně a okolí.</p>
     </div>
-    <div class="ref-card">
-      <h3>SVJ – společná zeleň</h3>
-      <p>Celoroční údržba, úklid listí a odvoz odpadu. Zeleň vypadá skvěle po celý rok.</p>
+
+    <div class="grid-2">
+        <div class="card">
+            <h3>Pravidelná údržba</h3>
+            <ul class="clean">
+                <li><b>Sekání trávníků</b> – sečení, dosekávání hran a úklid.</li>
+                <li><b>Pravidelná péče</b> – péče o záhony a výsadby.</li>
+                <li><b>Chemická péče</b> – certifikovaná aplikace postřiků.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Jednorázové zásahy</h3>
+            <ul class="clean">
+                <li><b>Stříhání živých plotů</b> – tvarování a zmlazení.</li>
+                <li><b>Řez stromů</b> – odborný řez pro zdravý růst.</li>
+                <li><b>Zanedbané zahrady</b> – vyčištění a likvidace náletů.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <a class="btn btn-primary" href="#poptavka">Rychlá poptávka</a>
     </div>
   </div>
-  <div style="text-align:center;margin-top:10px;">
-    <a class="btn outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" target="_blank" rel="noopener">Více na Poptávej.cz</a>
+</section>
+
+<section id="reference" class="alt">
+  <div class="container">
+    <div class="section-header">
+        <h2>⭐ Reference klientů</h2>
+        <p class="subtitle">Spokojenost zákazníků je pro nás na prvním místě.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Údržba zahrady – Hořice</h3>
+        <p>Sekání trávníku, střih plotu a úklid. Zákazníci oceňují spolehlivost a čistou práci.</p>
+      </div>
+      <div class="card">
+        <h3>SVJ – společná zeleň</h3>
+        <p>Celoroční údržba, úklid listí a odvoz odpadu. Zeleň vypadá skvěle po celý rok.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:32px;">
+      <a class="btn btn-outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" target="_blank" rel="noopener">Více referencí na Poptávej.cz</a>
+    </div>
   </div>
 </section>
 
 <section id="cenik">
   <div class="container">
-    <h2>💰 Ceník</h2>
-    <ul class="price-list">
-      <li>
+    <div class="section-header">
+        <h2>💰 Orientační ceník</h2>
+        <p class="subtitle">Nejsme nejlevnější – děláme práci tak, aby byla dlouhodobě správně a bez starostí.</p>
+    </div>
+
+    <div class="price-list">
+      <div class="price-card">
         <h3>Sekání trávníků</h3>
-        <p>Od 5 Kč/m² podle stavu plochy.</p>
-      </li>
-      <li>
+        <p>Od 5 Kč / m²</p>
+        <span style="display:block; margin-top:12px; font-size:14px; opacity:0.8;">Cena se odvíjí dle stavu a členitosti plochy.</span>
+      </div>
+      <div class="price-card">
         <h3>Pravidelná údržba</h3>
-        <p>Balíčky od 1 500 Kč / měsíc.</p>
-      </li>
-      <li>
+        <p>Od 1 500 Kč / měsíc</p>
+        <span style="display:block; margin-top:12px; font-size:14px; opacity:0.8;">Výhodné balíčky pro stálou péči.</span>
+      </div>
+      <div class="price-card">
         <h3>Střih živých plotů</h3>
-        <p>Od 30 Kč / bm podle výšky.</p>
-      </li>
-    </ul>
-    <p class="note">Nejsme nejlevnější – děláme práci tak, aby byla bez starostí.</p>
+        <p>Od 30 Kč / bm</p>
+        <span style="display:block; margin-top:12px; font-size:14px; opacity:0.8;">Dle výšky, šířky a přístupnosti.</span>
+      </div>
+    </div>
   </div>
 </section>
 
-
 <section id="realizace" class="alt">
   <div class="container">
-    <h2>Poslední realizace</h2>
-    <div class="refs" id="realizace-container">
-      <!-- Realizace 1 -->
+    <div class="section-header">
+        <h2>📸 Poslední realizace</h2>
+    </div>
+
+    <div class="grid-3" id="realizace-container">
       <div class="ref-card">
-        <img src="images/realizace1.jpg" alt="Přerostlá zahrada po zimě – Jičín" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">
+        <img src="images/realizace1.jpg" alt="Přerostlá zahrada po zimě – Jičín" onerror="this.src='https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto1.jpg'">
         <h3>Přerostlá zahrada po zimě – Jičín</h3>
         <p>Zahrada byla po zimě silně přerostlá a dlouhodobě neudržovaná. Provedli jsme kompletní posekání, vyčištění plochy a srovnání terénu.</p>
       </div>
 
-      <!-- Realizace 2 -->
       <div class="ref-card">
-        <img src="images/realizace2.jpg" alt="Pravidelná péče o zahradu – Hořice" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">
+        <img src="images/realizace2.jpg" alt="Pravidelná péče o zahradu – Hořice" onerror="this.src='https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto2.jpg'">
         <h3>Pravidelná péče o zahradu – Hořice</h3>
         <p>U této zahrady zajišťujeme pravidelné sekání, údržbu záhonů a střih živého plotu.</p>
       </div>
@@ -714,7 +796,7 @@
           data.slice(-3).reverse().forEach(item => {
             html += `
               <div class="ref-card">
-                ${item.Obrázek ? `<img src="${item.Obrázek}" alt="${item.Název}" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">` : ""}
+                ${item.Obrázek ? `<img src="${item.Obrázek}" alt="${item.Název}">` : ""}
                 <h3>${item.Název || ""}</h3>
                 <p>${item.Popis || ""}</p>
               </div>
@@ -726,169 +808,203 @@
       .catch(err => console.error("Google Sheets fetch failed, using static content.", err));
     </script>
 
-    <div style="text-align:center; margin-top:20px;">
-      <a class="btn outline" href="https://www.facebook.com/109016358813760" target="_blank">Další na Facebooku</a>
+    <div style="text-align:center; margin-top:32px;">
+      <a class="btn btn-outline" href="https://www.facebook.com/109016358813760" target="_blank">Další realizace na Facebooku</a>
     </div>
   </div>
 </section>
 
 <section id="galerie">
   <div class="container">
-    <h2>Fotogalerie</h2>
+    <div class="section-header">
+        <h2>🖼️ Fotogalerie</h2>
+    </div>
+
     <div class="gallery-grid">
       <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto1.jpg" alt="Fox Garden práce 1">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto1.jpg" alt="Fox Garden práce 1" loading="lazy">
       </figure>
       <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto2.jpg" alt="Fox Garden práce 2">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto2.jpg" alt="Fox Garden práce 2" loading="lazy">
       </figure>
       <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto3.jpg" alt="Fox Garden práce 3">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto3.jpg" alt="Fox Garden práce 3" loading="lazy">
       </figure>
       <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto4.jpg" alt="Fox Garden práce 4">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto4.jpg" alt="Fox Garden práce 4" loading="lazy">
       </figure>
       <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto5.jpg" alt="Fox Garden práce 5">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto5.jpg" alt="Fox Garden práce 5" loading="lazy">
       </figure>
       <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto8.jpg" alt="Fox Garden práce 8">
+        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto8.jpg" alt="Fox Garden práce 8" loading="lazy">
       </figure>
-    </div>
-    <div style="text-align:center; margin-top: 20px;">
-      <a href="https://www.facebook.com/109016358813760" target="_blank" class="btn outline">Další fotky na Facebooku</a>
     </div>
   </div>
 </section>
 
-
-
-<section id="rady"><div class="container">
-<h2>🧠 Rady</h2>
-<h3>Péče o trávník po vertikutaci</h3>
-<ul class="clean">
-<li>Vyhrabat nečistoty, aby trávník mohl dýchat.</li>
-<li>Dosev travní směsí na prázdná místa.</li>
-<li>Zavlažit jemným deštěm a použít hnojivo.</li>
-<li>Sekat až při výšce 8–10 cm (nesekat „na golf“).</li>
-</ul>
-</div></section>
-
-<section id="faq" class="alt"><div class="container">
-<h2>❓ Časté dotazy</h2>
-<dl class="faq">
-<dt>Kolik stojí sekání?</dt>
-<dd>Cena závisí na ploše a stavu trávy. Napíšeme vám ji po sdělení výměry a lokality.</dd>
-<dt>Děláte odvoz odpadu?</dt>
-<dd>Ano, odvoz bioodpadu je standardní součástí našich služeb.</dd>
-<dt>Kde působíte?</dt>
-<dd>Hlavně Jičín, Hořice, Nová Paka, Lázně Bělohrad a okolí.</dd>
-</dl>
-</div></section>
-
-<section id="onas"><div class="container">
-<h2>🦊 O FoxGarden</h2>
-<p>Víme, co zahrada opravdu potřebuje. Zakládáme si na slušném jednání, dodržování termínů a čistém výsledku.</p>
-<p style="margin-top:10px;">
-  Jsme malá firma – jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně a s odpovědností.
-</p>
-<p style="margin-top:10px; font-weight:600;">
-  Nejsme nejlevnější. Děláme práci tak, aby byla dlouhodobě správně a bez starostí.
-</p>
-<p style="margin-top:15px;"><a class="btn outline" href="#kontakt">Chci nacenit práce</a></p>
-</div></section>
-
-
-<section id="poptavka" class="alt">
+<section id="rady" class="alt">
   <div class="container">
-    <h2>📨 Rychlá poptávka</h2>
+    <div class="section-header">
+        <h2>🧠 Odborné rady</h2>
+    </div>
+    <div class="card" style="max-width: 700px; margin: 0 auto;">
+        <h3>Péče o trávník po vertikutaci</h3>
+        <ul class="clean" style="margin-top: 16px;">
+            <li>Vyhrabat nečistoty, aby trávník mohl dýchat.</li>
+            <li>Dosev travní směsí na prázdná místa.</li>
+            <li>Zavlažit jemným deštěm a použít kvalitní hnojivo.</li>
+            <li>Sekat až při výšce 8–10 cm (nesekat „na golf“).</li>
+        </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+        <h2>❓ Časté dotazy</h2>
+    </div>
+
+    <dl class="faq-grid">
+      <div class="faq-item">
+          <dt>Kolik stojí sekání?</dt>
+          <dd>Cena závisí na ploše a stavu trávy. Napíšeme vám ji po sdělení výměry a lokality.</dd>
+      </div>
+      <div class="faq-item">
+          <dt>Děláte odvoz odpadu?</dt>
+          <dd>Ano, odvoz bioodpadu je standardní součástí našich služeb, ať už se jedná o trávu nebo větve.</dd>
+      </div>
+      <div class="faq-item">
+          <dt>Kde všude působíte?</dt>
+          <dd>Hlavně v okolí měst Jičín, Hořice, Nová Paka, Lázně Bělohrad a přilehlých obcích.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section id="onas" class="alt">
+  <div class="container">
+    <div class="section-header">
+        <h2>🦊 O FoxGarden</h2>
+    </div>
+
+    <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 40px;">
+        <p style="font-size: 18px; margin-bottom: 16px;">Víme, co zahrada opravdu potřebuje. Zakládáme si na slušném jednání, dodržování termínů a čistém výsledku.</p>
+        <p style="font-size: 16px; margin-bottom: 24px; color: var(--text); opacity: 0.9;">Jsme malá firma – jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně a s odpovědností.</p>
+
+        <div style="background: var(--cream-light); padding: 20px; border-radius: 16px; display: inline-block; border: 1px solid var(--border); margin-bottom: 24px;">
+            <p style="font-weight: 700; color: var(--green); font-size: 18px;">🛡️ Jsme plně pojištěni proti škodám až do výše 3 000 000 Kč.</p>
+        </div>
+
+        <p style="font-weight: 600; font-size: 18px; color: var(--orange); margin-bottom: 32px;">Nejsme nejlevnější. Děláme práci tak, aby byla dlouhodobě správně a bez starostí.</p>
+
+        <a class="btn btn-primary" href="#kontakt">Chci nacenit práce</a>
+    </div>
+  </div>
+</section>
+
+<section id="poptavka">
+  <div class="container">
+    <div class="section-header">
+        <h2>📨 Rychlá poptávka</h2>
+        <p class="subtitle">Napište nám, co potřebujete, a my se vám co nejdříve ozveme s návrhem řešení.</p>
+    </div>
+
     <form action="https://formsubmit.co/zuki@foxgarden.cz" method="POST" class="form-box">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://foxgarden.cz/dekujeme.html">
 
-      <input id="jmeno" type="text" name="Jméno" placeholder="Jméno a příjmení*" required>
-      <input id="telefon" type="tel" name="Telefon" placeholder="Telefon*" required>
-      <input id="mesto" type="text" name="Město / obec" placeholder="Město / obec*" required>
-      <textarea id="zprava" name="Zpráva" rows="3" placeholder="S čím vám můžeme pomoci?"></textarea>
+      <div class="form-row">
+          <div class="form-group">
+              <label for="jmeno">Jméno a příjmení *</label>
+              <input id="jmeno" type="text" name="Jméno" placeholder="Jan Novák" required>
+          </div>
+          <div class="form-group">
+              <label for="telefon">Telefonní číslo *</label>
+              <input id="telefon" type="tel" name="Telefon" placeholder="+420 777 777 777" required>
+          </div>
+      </div>
 
-      <button type="submit" class="btn">Odeslat poptávku</button>
+      <div class="form-group">
+          <label for="mesto">Město / obec (kde se nachází zahrada) *</label>
+          <input id="mesto" type="text" name="Město / obec" placeholder="Jičín" required>
+      </div>
+
+      <div class="form-group">
+          <label for="zprava">Vaše zpráva / Co potřebujete udělat?</label>
+          <textarea id="zprava" name="Zpráva" placeholder="Dobrý den, potřeboval bych posekat zahradu cca 500m2..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Odeslat nezávaznou poptávku</button>
     </form>
   </div>
 </section>
 
+<section id="kontakt" class="alt">
+  <div class="container">
+    <div class="section-header">
+        <h2>📞 Kontakt</h2>
+        <p class="subtitle">Stačí zavolat nebo napsat – odpovíme co nejdříve.</p>
+    </div>
 
-<section id="kontakt"><div class="container">
-<h2>Kontakt</h2>
-<p style="font-size:16px;margin-bottom:10px;">
-Stačí zavolat nebo napsat – odpovíme co nejdříve.
-</p>
-<p><b>FoxGarden – Zuklesa s.r.o.</b><br>IČO: 17805368</p>
-<p><b>Telefon:</b> <a href="tel:+420775717291">775 717 291</a><br>
-<b>E-mail:</b> <a href="mailto:zuki@foxgarden.cz">zuki@foxgarden.cz</a></p>
-<div class="buttons">
-<a class="btn" href="tel:+420775717291">📞 Zavolat</a>
-<a class="btn" href="https://wa.me/420775717291" style="background:#25D366;">💬 WhatsApp</a>
-<a class="btn outline" href="#poptavka">📋 Nezávazná konzultace</a>
-<a class="btn outline" href="https://www.facebook.com/109016358813760" target="_blank" style="border:1px solid #ccc; font-weight:400;">📘 Facebook</a>
-<a class="btn outline" href="mailto:zuki@foxgarden.cz" style="border:1px solid #ccc; font-weight:400;">✉️ Napsat</a>
-<a class="btn outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" style="border:1px solid #ccc; font-weight:400;">⭐ Reference na Poptávej.cz</a>
-</div>
-</div></section>
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h3>FoxGarden – Zuklesa s.r.o.</h3>
+            <p>IČO: 17805368</p>
+            <p>🛡️ Pojištěno do 3 mil. Kč</p>
+            <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.2); margin: 24px 0;">
+            <p>📞 <a href="tel:+420775717291">775 717 291</a></p>
+            <p>✉️ <a href="mailto:zuki@foxgarden.cz">zuki@foxgarden.cz</a></p>
+        </div>
 
-<footer style="
-  text-align:center;
-  padding:42px 14px;
-  color:#F3E9D7;
-  background:#1f3d27;
-  font-size:.95rem;
-  margin-top:60px;
-  border-radius:26px 26px 0 0;
-">
-  © <script>document.write(new Date().getFullYear());</script>
-  Fox Garden – Zuklesa s.r.o. |
-  IČO: 17805368 |
-  ÚKZÚZ |
-  Pojištěno |
-  foxgarden.cz
-  <br><br>
+        <div>
+            <div class="card" style="background: transparent; border: none; box-shadow: none; padding: 0;">
+                <p style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">Vyberte si preferovaný způsob komunikace:</p>
+                <div class="contact-buttons">
+                    <a class="btn btn-primary" href="tel:+420775717291">📞 Zavolat 775 717 291</a>
+                    <a class="btn btn-whatsapp" href="https://wa.me/420775717291">💬 Napsat na WhatsApp</a>
+                    <a class="btn btn-outline" href="#poptavka">📋 Vyplnit formulář</a>
+                    <a class="btn btn-outline" href="mailto:zuki@foxgarden.cz">✉️ Poslat e-mail</a>
+                </div>
 
-  <a href="/interni/dochazka/dochazka.html"
-     style="
-       color:#F3E9D7;
-       text-decoration:underline;
-       font-weight:600;
-     ">
-     Docházka zaměstnanců
-  </a>
+                <div style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a class="btn btn-outline" href="https://www.facebook.com/109016358813760" target="_blank" style="padding: 10px 20px; font-size: 14px;">📘 Facebook stránka</a>
+                    <a class="btn btn-outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" target="_blank" style="padding: 10px 20px; font-size: 14px;">⭐ Hodnocení Poptávej.cz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+      <p>© <script>document.write(new Date().getFullYear());</script> Fox Garden – Zuklesa s.r.o. | IČO: 17805368</p>
+      <p style="margin-top: 8px;">Certifikace ÚKZÚZ | Pojištění odpovědnosti | foxgarden.cz</p>
+
+      <div style="margin-top: 32px;">
+          <a href="/interni/dochazka/dochazka.html">Docházka zaměstnanců</a>
+      </div>
+  </div>
 </footer>
+
 <button id="backToTop" aria-label="Zpět nahoru">↑</button>
+
+<a href="tel:+420775717291" class="float-btn">
+    📞 Zavolat ihned
+</a>
+
 <script>
 const backToTop = document.getElementById('backToTop');
-
 window.addEventListener('scroll', () => {
   backToTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
 });
-
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
-<a href="tel:+420775717291" style="
-position:fixed;
-bottom:15px;
-left:50%;
-transform:translateX(-50%);
-background:#2d5c3b;
-color:#fff;
-padding:12px 20px;
-border-radius:999px;
-font-weight:600;
-z-index:999;
-text-decoration:none;
-box-shadow:0 6px 16px rgba(0,0,0,0.2);
-">
-📞 Zavolat
-</a>
+
 </body>
 </html>
