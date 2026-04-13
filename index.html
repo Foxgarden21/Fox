@@ -33,6 +33,8 @@
             --white: #ffffff;
             --text: #1e281f;
             --orange: #f97316;
+            --primary-btn: #2E7D32;
+            --primary-btn-hover: #4CAF50;
             --orange-hover: #ea580c;
             --shadow: 0 10px 30px rgba(0,0,0,0.06);
             --shadow-hover: 0 20px 40px rgba(0,0,0,0.12);
@@ -74,14 +76,14 @@
             font-size: 16px;
         }
         .btn-primary {
-            background: var(--orange);
+            background: var(--primary-btn);
             color: var(--white);
-            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.25);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.25);
         }
         .btn-primary:hover {
-            background: var(--orange-hover);
+            background: var(--primary-btn-hover);
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.35);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.35);
             color: var(--white);
         }
         .btn-whatsapp {
@@ -181,7 +183,7 @@
             margin-top: 24px;
             font-weight: 600;
             font-size: 16px;
-            color: var(--orange);
+            color: var(--green);
         }
 
         /* Hero Nav */
@@ -210,13 +212,13 @@
             transform: translateY(-2px);
         }
         .hero-nav a.nav-cta {
-            background: var(--orange);
+            background: var(--primary-btn);
             color: var(--white);
-            border-color: var(--orange);
+            border-color: var(--primary-btn);
         }
         .hero-nav a.nav-cta:hover {
-            background: var(--orange-hover);
-            border-color: var(--orange-hover);
+            background: var(--primary-btn-hover);
+            border-color: var(--primary-btn-hover);
         }
 
         /* Insurance Banner */
@@ -376,7 +378,7 @@
         .price-card p {
             font-size: 18px;
             font-weight: 600;
-            color: var(--orange);
+            color: var(--green);
             background: var(--cream);
             padding: 12px;
             border-radius: 12px;
@@ -579,14 +581,14 @@
             bottom: 24px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--orange);
+            background: var(--primary-btn);
             color: var(--white);
             padding: 14px 28px;
             border-radius: 999px;
             font-weight: 700;
             z-index: 999;
             text-decoration: none;
-            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
+            box-shadow: 0 10px 25px rgba(46, 125, 50, 0.4);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -594,9 +596,9 @@
             font-size: 16px;
         }
         .float-btn:hover {
-            background: var(--orange-hover);
+            background: var(--primary-btn-hover);
             transform: translate(-50%, -3px);
-            box-shadow: 0 15px 30px rgba(249, 115, 22, 0.5);
+            box-shadow: 0 15px 30px rgba(76, 175, 80, 0.5);
             color: var(--white);
         }
 
@@ -647,7 +649,7 @@
     <div class="hero-box">
       <div class="hero-content">
           <h1 class="brand">
-            <img src="images/logo.png" alt="Logo FOX Garden">
+            <img src="images/logo.png" alt="">
             FOX Garden
           </h1>
           <p class="premium">Údržba zahrad Jičín a okolí</p>
@@ -897,7 +899,7 @@
             <p style="font-weight: 700; color: var(--green); font-size: 18px;">🛡️ Jsme plně pojištěni proti škodám až do výše 3 000 000 Kč.</p>
         </div>
 
-        <p style="font-weight: 600; font-size: 18px; color: var(--orange); margin-bottom: 32px;">Nejsme nejlevnější. Děláme práci tak, aby byla dlouhodobě správně a bez starostí.</p>
+        <p style="font-weight: 600; font-size: 18px; color: var(--green); margin-bottom: 32px;">Nejsme nejlevnější. Děláme práci tak, aby byla dlouhodobě správně a bez starostí.</p>
 
         <a class="btn btn-primary" href="#kontakt">Chci nacenit práce</a>
     </div>
