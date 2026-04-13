@@ -544,7 +544,14 @@
             .float-btn { width: calc(100% - 48px); justify-content: center; bottom: 16px; right: 24px; }
             .hero-buttons .btn, .contact-buttons .btn { width: 100%; }
         }
-    </style>
+
+        .arrow-link {
+            transition: var(--transition);
+        }
+        .arrow-link:hover {
+            transform: translateY(3px);
+        }
+</style>
 </head>
 <body>
 
@@ -603,8 +610,13 @@
         </div>
     </div>
 
-    <div style="text-align: center; margin-top: 32px; font-weight: 500; color: var(--green-main);">
-        <a href="#ukazky" style="color: inherit; text-decoration: none;">Podívejte se na ukázky naší práce ↓</a>
+    <div style="text-align: center; margin-top: 24px;">
+        <a href="#ukazky" class="arrow-link" style="display: inline-flex; flex-direction: column; align-items: center; color: var(--green-main); text-decoration: none; font-weight: 600;">
+            <span>Podívejte se na ukázky naší práce</span>
+            <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </a>
     </div>
 
   </div>
