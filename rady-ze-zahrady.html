@@ -3,659 +3,224 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fox Garden – Prémiová zahradnická péče</title>
-    <meta name="description" content="Údržba zahrad, řez stromů, sekání trávníků, postřiky a revitalizace. Certifikace ÚKZÚZ – odborná aplikace herbicidů, fungicidů, pesticidů a hnojiv. Kvalitní české sazenice a profesionální zahradnické služby pro domy, SVJ a firmy." />
+    <title>FOX Garden – Rady ze zahrady</title>
+    <meta name="description" content="Tipy a rady pro údržbu zahrady, sekání trávníků a stříhání živých plotů." />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVG7GX4D3J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-VVG7GX4D3J');
-    </script>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "uxujcz8awi");
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root{
-         --green:#1f3d27;
-         --green-soft:#2d5c3b;
-         --green-glow:#3d7651;
-         --cream:#F3E9D7;          /* Warm Cream 2026 */
-         --cream-light:#faf7f1;
-         --white:#ffffff;
-         --text:#1e281f;
-         --shadow:0 10px 22px rgba(0,0,0,.08);
-         --shadow-soft:0 4px 14px rgba(0,0,0,.05);
-         --border:#e5e0d6;
-        }
-        *{box-sizing:border-box;margin:0;padding:0}
-        body{
-         background:linear-gradient(180deg,var(--cream)0%,var(--cream-light)40%,var(--cream)100%);
-         font-family:Poppins,Arial,sans-serif;
-         color:var(--text);
-         -webkit-font-smoothing:antialiased;
-        }
-        .container{max-width:1000px;margin:0 auto;padding:24px}
+        :root {
+            --green-main: #2E7D32;
+            --green-light: #E6F4EA;
+            --green-soft: #D0F0C0;
+            --accent: #f97316;
+            --accent-soft: #fed7aa;
+            --text-dark: #1b1b1b;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --bg-color: #F3E9D7; /* Warm earthy beige background */
 
-        /* POPTÁVEJ TRUST BOX */
-        .ref-trust-box{
-          border:2px solid #2E7D32;
-          border-radius:24px;
-          padding:16px 20px;
-          margin:24px 0 10px;
-          background:#fffdf7;
-          box-shadow:var(--shadow-soft);
+            --shadow: 0 4px 20px rgba(0,0,0,0.05);
+            --shadow-hover: 0 10px 30px rgba(0,0,0,0.1);
+            --border: #eaedf0;
+            --radius: 20px;
+            --transition: all 0.3s ease;
         }
 
-        /* Jemné doladění tlačítka v Poptávej boxu */
-        .ref-trust-box .btn{
-          display:inline-flex;
-          align-items:center;
-          justify-content:center;
-          padding:10px 24px;
-          max-width:260px;
-          width:auto;
-          white-space:normal;
-          text-align: center;
-          line-height: 1.3;
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Poppins', Arial, sans-serif;
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
         }
 
-        @media (max-width:600px){
-          .ref-trust-box .btn{
-            width:100%;
-            max-width:100%;
-            white-space:normal;
-          }
-        }
-
-        .ref-trust-box .stars{
-          font-size:22px;
-          margin-bottom:4px;
-        }
-        .ref-trust-box .stars span{
-          margin-right:2px;
-        }
-        .ref-trust-box p{
-          margin:6px 0;
-        }
-        .ref-trust-box p strong{
-          font-size:17px;
-        }
-        .ref-trust-box .btn{
-          margin-top:8px;
-        }
-        @media (max-width:600px){
-          .ref-trust-box{
-            padding:14px 16px;
-          }
-        }
-
-        /* REVIEW BUTTONS */
-        .btn-review{
-          text-decoration:none;
-          padding:10px 22px;
-          border-radius:999px;
-          font-weight:600;
-          display:inline-block;
-          border:1px solid #2E7D32;
-          box-shadow:var(--shadow-soft);
-          margin:4px 6px;
-          font-size:14px;
-        }
-        .btn-review.google{
-          background:#ffffff;
-          color:#1f3d27;
-        }
-        .btn-review.google:hover{
-          background:#E8E4D8;
-        }
-        .btn-review.fb{
-          background:#0f271a;
-          color:#E8E4D8;
-        }
-        .btn-review.fb:hover{
-          background:#173824;
-        }
-        .review-note{
-          font-size:0.9rem;
-          margin-bottom:10px;
-          opacity:.9;
-        }
-
-        /* HERO */
-        header.hero{
-          padding:80px 20px 34px;
-          text-align:center;
-        }
-        .hero-box{
-          background:var(--cream);           /* Warm Cream v hero */
-          padding:48px;
-          border-radius:30px;
-          box-shadow:var(--shadow);
-          border:1px solid #e3d7c3;
-          transition:.3s ease;
-          position: relative;
-        }
-        .hero-fox {
-          position: absolute;
-          bottom: 15px;
-          right: 20px;
-          width: 100px;
-          height: auto;
-          z-index: 1;
-          pointer-events: none;
-        }
-        @media (max-width: 600px) {
-          .hero-fox {
-            width: 70px;
-            bottom: 10px;
-            right: 10px;
-          }
-        }
-        .hero-box:hover{
-          transform:translateY(-3px);
-        }
-        .hero-box h1,
-        .hero-box p{
-          color:var(--text);
-        }
-        .brand{
-          font-size:50px;
-          font-weight:800;
-          color:var(--green);                /* tmavě zelený Fox Garden */
-        }
-        .premium{
-          font-size:24px;
-          font-weight:700;
-          margin-top:10px;
-          color:var(--green-soft);
-        }
-        .slogan{
-          font-size:22px;
-          font-weight:600;
-          margin-top:8px;
-          color:#3f5a47;
-        }
-        .micro{
-          opacity:.95;
-          margin-top:12px;
-          font-size:16px;
-          line-height:1.55;
-        }
-
-        /* BUTTONS */
-        .buttons{
-         margin-top:26px;
-         display:flex;
-         gap:16px;
-         flex-wrap:wrap;
-         justify-content:center;
-        }
-        .btn{
-         display:inline-block;
-         text-decoration:none;
-         padding:14px 30px;
-         border-radius:999px;
-         font-weight:700;
-         color:var(--white);
-         background:linear-gradient(135deg,var(--green)0%,var(--green-soft)100%);
-         box-shadow:var(--shadow-soft);
-         transition: all 0.3s ease;
-         text-align: center;
-        }
-        /* Jemné doladění tlačítka pod referencemi */
-        #reference .btn.outline{
-          display:inline-flex;
-          align-items:center;
-          justify-content:center;
-          text-align:center;
-          padding:12px 20px;
-          max-width:100%;
-          line-height:1.3;
-          white-space:normal;
-        }
-
-        @media (max-width: 600px){
-          #reference .btn.outline{
-            display:block;
-            width:100%;
-            margin-left:auto;
-            margin-right:auto;
-          }
-        }
-
-        .btn:hover{
-         background:linear-gradient(135deg,var(--green-soft)0%,var(--green-glow)100%);
-         transform:translateY(-2px) scale(1.02);
-        }
-
-        /* Outline button – světlé sekce */
-        .btn.outline{
-         background:transparent;
-         color:#0f271a;
-         border:2px solid #0f271a;
-        }
-        .btn.outline:hover{
-         background:#E8E4D8;
-         color:#0f271a;
-        }
-
-        /* NAV PILLS */
-        .hero-nav{
-         margin-top:32px;
-         display:flex;
-         flex-wrap:wrap;
-         gap:12px;
-         justify-content:center;
-        }
-        .hero-nav a{
-         background:var(--white);
-         padding:10px 20px;
-         border-radius:999px;
-         font-weight:600;
-         text-decoration:none;
-         border:1px solid var(--border);
-         color:var(--text);
-         box-shadow:var(--shadow-soft);
-         transition: all .25s ease;
-        }
-        .hero-nav a:hover{
-         background:var(--cream-light);
-         transform:translateY(-2px);
-        }
-
-        /* REGIONS */
-        .regions{
-         margin-top:22px;
-         display:flex;
-         gap:10px;
-         justify-content:center;
-         flex-wrap:wrap;
-        }
-
-        #kdepracujeme .regions {
-          margin-top: 28px;
-        }
-        .regions span{
-         background:#ffffffee;
-         padding:7px 18px;
-         border-radius:18px;
-         font-size:14px;
-         font-weight:600;
-         border:1px solid var(--border);
-         color:var(--green);
-         box-shadow:var(--shadow-soft);
-        }
-
-        /* SECTIONS */
-        section{
-         background:var(--white);
-         border-radius:28px;
-         padding:48px 28px;
-         margin:40px 12px;
-         box-shadow:var(--shadow);
-         border:1px solid var(--border);
-        }
-
-        #sluzby {
-          margin-top: 30px;
-        }
-
-
-        /* Krémové alternativní sekce */
-        section.alt{
-          background:var(--cream);
-        }
-
-        h2{
-         font-size:32px;
-         margin-bottom:20px;
-         color:var(--green);
-        }
-        ul.clean{list-style:none;padding:0}
-        ul.clean li{
-         padding:8px 0 8px 30px;
-         position:relative;
-         line-height:1.55;
-        }
-        ul.clean li::before{
-         content:"🌿";
-         position:absolute;
-         left:0;
-         top:8px;
-         font-size:18px;
-        }
-        .lead{
-         font-size:16px;
-         line-height:1.6;
-         margin-bottom:16px;
-        }
-
-        /* GALLERY */
-        .fg-img{
-          width:30%;
-          max-width:280px;
-          aspect-ratio: 4 / 3;
-          min-width:210px;
-          border-radius:18px;
-          box-shadow:var(--shadow);
-          transition: all .3s ease;
-          object-fit:cover;
-          border:1px solid var(--border);
-          display:block;
-        }
-        .fg-img:hover{transform:scale(1.04)}
-
-        /* REFERENCES */
-        .refs{
-         display:flex;
-         flex-direction:column;
-         gap:18px;
-         margin-bottom:24px;
-        }
-        .ref-card{
-         background:var(--cream-light);
-         border-radius:18px;
-         padding:18px 20px;
-         border:1px solid var(--border);
-         box-shadow:var(--shadow-soft);
-         text-align:left;
-         transition: all .3s ease;
-        }
-
-        .ref-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .ref-card h3{
-         font-size:18px;
-         margin-bottom:6px;
-         color:var(--green);
-        }
-        .ref-card p{
-         margin:0;
-         font-size:15px;
-         line-height:1.6;
-        }
-
-        /* FAQ */
-        .faq dt{font-weight:700;margin-top:12px}
-        .faq dd{margin-bottom:12px}
-
-        /* FOOTER */
-        footer{
-         text-align:center;
-         padding:42px 14px;
-         color:var(--cream);
-         background:var(--green);
-         font-size:.95rem;
-         margin-top:60px;
-         border-radius:26px 26px 0 0;
-         box-shadow:var(--shadow);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width:600px){
-          .brand{font-size:36px;}
-          .premium{font-size:18px; margin-top: 5px;}
-          .slogan{font-size:16px !important;}
-          .hero-box { padding: 30px 15px; }
-          .hero .buttons { flex-direction: column; gap: 12px; }
-          .hero .btn { width: 100%; padding: 16px 20px !important; font-size: 18px !important; }
-        }
-
-        #onas .btn.outline {
-          white-space: normal;
-          padding: 12px 24px;
-          line-height: 1.4;
-          text-align: center;
-          display: inline-block;
-          width: auto;
-          max-width: 280px;
-        }
-
-        #cenik {padding:3rem 0;}
-        #cenik .price-list {list-style:none;margin:0;padding:0;}
-        #cenik .price-list li {margin-bottom:1.5rem;border-bottom:1px solid #eee;padding-bottom:1rem;}
-        #cenik h3 {margin-bottom:0.25rem;}
-        #cenik .note {margin-top:1rem;font-size:0.95rem;opacity:0.8;}
-
-        #galerie .container {padding-left:1rem;padding-right:1rem;margin:0 auto;}
-        #galerie .gallery-grid {
-          display: grid;
-          gap: 1.5rem;
-          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        }
-        @media (max-width: 600px) {
-          #galerie .gallery-item:nth-child(n+4) {
-            display: none;
-          }
-          #galerie .gallery-item img {
-            height: 300px;
-          }
-        }
-        #galerie .gallery-item {
-          background: #ffffff;
-          border-radius: 16px;
-          padding: 0.75rem 0.75rem 1rem;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-          text-align:center;
-          position: relative;
-          transition: all .3s ease;
-        }
-
-        #galerie .gallery-item:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-        }
-        #galerie .gallery-item img {
-          width:100%;
-          height:230px;
-          object-fit:cover;
-          border-radius:12px;
-          display:block;
-          margin-bottom:0.5rem;
-        }
-        #galerie .gallery-item figcaption {font-size:0.95rem;font-weight:500;}
-        #galerie .gallery-item::after {
-          content:"FoxGarden.cz";
-          position:absolute;
-          bottom:8px;
-          right:12px;
-          font-size:12px;
-          color:rgba(255,255,255,0.9);
-          background:rgba(0,0,0,0.45);
-          padding:2px 6px;
-          border-radius:6px;
-        }
-
-        .nav-cta{
-          display:inline-block;
-          padding:8px 18px;
-          border-radius:999px;
-          background:var(--green-soft);
-          color:var(--cream);
-          font-weight:600;
-          text-decoration:none;
-          margin-left:16px;
-          box-shadow:var(--shadow-soft);
-        }
-        .nav-cta:hover{
-          background:var(--green-glow);
-          color:#fff;
-        }
-
-        .form-box {
-          max-width: 640px;
-          margin: 1.5rem auto 0;
-          padding: 1.5rem;
-          border-radius: 1.25rem;
-          background: #ffffff;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-          display: flex;
-          flex-direction: column;
-          gap: 0.75rem;
-        }
-
-        .form-box label {
-          font-weight: 600;
-          font-size: 0.95rem;
-        }
-
-        .form-box input,
-        .form-box select,
-        .form-box textarea {
-          width: 100%;
-          padding: 0.55rem 0.8rem;
-          border-radius: 0.75rem;
-          border: 1px solid #d8e4d2;
-          font-size: 0.95rem;
-          font-family: inherit;
-          box-sizing: border-box;
-        }
-
-        .form-box input:focus,
-        .form-box select:focus,
-        .form-box textarea:focus {
-          outline: none;
-          border-color: #2e7d32;
-          box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.12);
-        }
-
-        .form-box button.btn {
-          align-self: flex-start;
-          margin-top: 0.5rem;
-        }
-        @media (max-width: 768px) {
-          .form-box {
-            padding: 1.2rem;
-            border-radius: 1rem;
-          }
-        }
-
-        /* NAHORU BUTTON */
-        #backToTop{
-          position:fixed;
-          bottom:24px;
-          right:20px;
-          width:46px;
-          height:46px;
-          border-radius:999px;
-          border:none;
-          background:var(--green-soft);
-          color:var(--cream);
-          font-size:22px;
-          display:none;
-          align-items:center;
-          justify-content:center;
-          box-shadow:var(--shadow);
-          cursor:pointer;
-          z-index:999;
-          transition: all .3s ease;
-        }
-        #backToTop:hover{
-          background:var(--green-glow);
-        }
-
-        /* RESPONSIVE CTA SECTION */
-        .cta-section {
-          margin-top: 24px;
-          text-align: center;
-        }
-        .cta-trust-items {
-          margin-top: 18px;
-          text-align: left;
-          display: inline-block;
-          max-width: 450px;
-          width: 100%;
-        }
-        @media (max-width: 768px) {
-          .cta-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-          .cta-section .btn {
-            display: block;
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 15px;
-          }
-          .cta-trust-items {
-            display: block;
-            max-width: 100%;
+        .container {
+            max-width: 1100px;
             margin: 0 auto;
-          }
+            padding: 0 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-primary {
+            background: var(--green-main);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+        }
+        .btn-primary:hover {
+            background: #256629;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(46, 125, 50, 0.3);
+            color: var(--white);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--green-main);
+            border: 2px solid var(--green-main);
+        }
+        .btn-outline:hover {
+            background: var(--green-light);
+            transform: translateY(-2px);
+        }
+
+        /* Hero */
+        header.hero {
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        .hero-box {
+            background: var(--white);
+            padding: 50px 30px;
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--green-main);
+            line-height: 1.1;
+            text-decoration: none;
+        }
+        .brand img {
+            height: 50px;
+            width: auto;
+        }
+        .premium {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 16px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+        }
+
+        /* Hero Nav */
+        .hero-nav {
+            margin-top: 36px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .hero-nav a {
+            background: var(--white);
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid var(--border);
+            color: var(--text-dark);
+            transition: var(--transition);
+            font-size: 14px;
+        }
+        .hero-nav a:hover {
+            background: var(--green-light);
+            color: var(--green-main);
+            border-color: var(--green-light);
+            transform: translateY(-2px);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            margin-bottom: 24px;
+        }
+        .card h2 {
+            font-size: 24px;
+            color: var(--green-main);
+            margin-bottom: 16px;
+        }
+        .card p {
+            font-size: 16px;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-<header class="hero" id="top" style="padding: 40px 20px 20px;">
+
+<header class="hero" id="top">
   <div class="container">
     <div class="hero-box">
-      <h1 class="brand">
-        <a href="index.html" style="text-decoration:none; color:inherit;">
-          <img src="images/logo.png" style="height:50px; display:block; margin:0 auto 10px;" alt="Logo">
-          FOX Garden
-        </a>
-      </h1>
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Logo FOX Garden" onerror="this.src='https://placehold.co/150x50/E6F4EA/2E7D32?text=FOX+Garden'">
+        FOX Garden
+      </a>
       <p class="premium">Rady ze zahrady</p>
 
-      <div class="hero-nav" style="margin-top:20px;">
+      <nav class="hero-nav">
         <a href="index.html">← Zpět na hlavní stránku</a>
-      </div>
+      </nav>
     </div>
   </div>
 </header>
 
-<section id="clanky">
-  <div class="container">
-    <div class="ref-card" style="margin-bottom: 24px; text-align: left;">
-      <h2 style="color:var(--green); font-size:24px; margin-bottom:12px;">Sekání trávy: Jak na to správně?</h2>
+<section id="clanky" style="padding: 20px 0 60px;">
+  <div class="container" style="max-width: 800px;">
+
+    <div class="card">
+      <h2>Sekání trávy: Jak na to správně?</h2>
       <p>Správné sekání trávy je základem krásného trávníku. Důležité je nesekat trávu příliš nízko, ideální výška je 4-5 cm. Během léta, kdy je sucho, nechte trávu raději o něco vyšší, aby lépe zadržovala vlhkost. Nezapomínejte na pravidelné ostření nožů sekačky – tupý nůž trávu "užvýká", což vede ke žloutnutí konečků.</p>
     </div>
 
-    <div class="ref-card" style="margin-bottom: 24px; text-align: left;">
-      <h2 style="color:var(--green); font-size:24px; margin-bottom:12px;">Živé ploty: Kdy a jak stříhat?</h2>
+    <div class="card">
+      <h2>Živé ploty: Kdy a jak stříhat?</h2>
       <p>Pravidelný řez živého plotu zaručí jeho hustotu a zdravý vzhled. Většinu živých plotů (např. túje, habr) je nejlepší stříhat dvakrát ročně – poprvé koncem června (na svatého Jana) a podruhé koncem léta v srpnu nebo začátkem září. Při stříhání dbejte na to, aby plot byl dole mírně širší než nahoře, čímž zajistíte dostatek světla pro spodní větve.</p>
     </div>
 
-    <div class="ref-card" style="margin-bottom: 24px; text-align: left;">
-      <h2 style="color:var(--green); font-size:24px; margin-bottom:12px;">Podzimní údržba zahrady</h2>
+    <div class="card">
+      <h2>Podzimní údržba zahrady</h2>
       <p>S příchodem podzimu je třeba zahradu připravit na zimu. Základem je vyhrabání listí z trávníku, aby nedocházelo k hnilobě a tvorbě plísní. Dále je vhodné trávník naposledy posekat a provést podzimní hnojení s vyšším obsahem draslíku, které posílí kořenový systém. Nezapomeňte také na zálivku stálezelených dřevin před příchodem prvních mrazů.</p>
     </div>
 
-    <div class="cta-section" style="text-align: center; margin-top: 40px;">
-      <a class="btn" href="index.html#poptavka" style="font-size: 18px; padding: 14px 28px;">Odeslat poptávku</a>
+    <div style="text-align: center; margin-top: 40px;">
+      <a class="btn btn-primary" href="index.html#kontakt">Odeslat poptávku</a>
     </div>
+
   </div>
 </section>
 
-<footer style="
-  text-align:center;
-  padding:42px 14px;
-  color:#F3E9D7;
-  background:#1f3d27;
-  font-size:.95rem;
-  margin-top:60px;
-  border-radius:26px 26px 0 0;
-">
-  © <script>document.write(new Date().getFullYear());</script>
-  Fox Garden – Zuklesa s.r.o. |
-  IČO: 17805368 |
-  ÚKZÚZ |
-  Pojištěno |
-  foxgarden.cz
+<footer>
+  <div class="container">
+      <p>© <script>document.write(new Date().getFullYear());</script> FOX Garden – Zuklesa s.r.o. | IČO: 17805368</p>
+  </div>
 </footer>
+
 </body>
 </html>
