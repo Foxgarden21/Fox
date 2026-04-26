@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FOX Garden – Rady ze zahrady</title>
+    <title>Kolik stojí sekání trávy | FOX Garden</title>
     <meta name="description" content="Tipy a rady pro údržbu zahrady, sekání trávníků a stříhání živých plotů." />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -142,25 +142,40 @@
             transform: translateY(-2px);
         }
 
-        /* Cards */
-        .card {
+        /* Article */
+        article {
             background: var(--white);
             border-radius: var(--radius);
-            padding: 32px;
+            padding: 40px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
-            transition: var(--transition);
             margin-bottom: 24px;
         }
-        .card h2 {
+        article h1 {
+            font-size: 32px;
+            color: var(--green-main);
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        article h2 {
             font-size: 24px;
             color: var(--green-main);
+            margin-top: 32px;
             margin-bottom: 16px;
         }
-        .card p {
+        article p {
             font-size: 16px;
             color: var(--text-dark);
             line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        article ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+        article ul li {
+            margin-bottom: 8px;
+            font-size: 16px;
         }
 
         /* Footer */
@@ -178,46 +193,87 @@
 <header class="hero" id="top">
   <div class="container">
     <div class="hero-box">
-      <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="Logo FOX Garden" onerror="this.src='https://placehold.co/150x50/E6F4EA/2E7D32?text=FOX+Garden'">
+      <a href="../index.html" class="brand">
+        <img src="../images/logo.png" alt="Logo FOX Garden" onerror="this.src='https://placehold.co/150x50/E6F4EA/2E7D32?text=FOX+Garden'">
         FOX Garden
       </a>
       <p class="premium">Rady ze zahrady</p>
 
       <nav class="hero-nav">
-        <a href="index.html">← Zpět na hlavní stránku</a>
+        <a href="../rady-ze-zahrady.html">← Zpět na články</a>
       </nav>
     </div>
   </div>
 </header>
 
-<section id="clanky" style="padding: 20px 0 60px;">
+<section id="clanek" style="padding: 20px 0 60px;">
   <div class="container" style="max-width: 800px;">
 
-    <div class="card">
-      <a href="clanky/kdy-zacit-sekat-travu.html" style="text-decoration:none;">
-        <h2>Kdy začít sekat trávu na jaře (a kdy ještě počkat)</h2>
-        <p>Na jaře to svádí vzít sekačku hned, jak se ukáže slunce. Jenže první sečení má svoje pravidla – jinak si můžete trávník zbytečně zničit.</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--accent);">Číst celý článek →</span>
-      </a>
-    </div>
+    <article>
+      <h1>Kolik stojí sekání trávy (a proč vás to může stát zbytečně víc)</h1>
 
-    <div class="card">
-      <a href="clanky/kolik-stoji-sekani-travy.html" style="text-decoration:none;">
-        <h2>Kolik stojí sekání trávy (a proč vás to může stát zbytečně víc)</h2>
-        <p>„Kolik stojí posekat zahradu?“ Jedna z nejčastějších otázek. Jenže odpověď není jedno číslo. Rozdíl může být klidně i několikanásobný – podle toho, v jakém stavu zahrada je.</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--accent);">Číst celý článek →</span>
-      </a>
-    </div>
+      <p>„Kolik stojí posekat zahradu?“<br>Jedna z nejčastějších otázek.</p>
 
-    <div class="card">
-      <h2>Podzimní příprava: Co trávník vážně potřebuje</h2>
-      <p>Na podzim se hodně řeší hrabání listí, ale zapomíná se na to hlavní – draslík. Poslední hnojení před zimou nesmí být dusíkaté, jinak tráva poroste do zimy měkká a plísně ji přes sníh zničí. Draslík naopak zpevní kořeny. Listí z trávníku každopádně musí pryč. Když ho tam necháte pod sněhem, trávník se pod ním na jaře už neprobere.</p>
-    </div>
+      <p>Jenže odpověď není jedno číslo.<br>Rozdíl může být klidně i několikanásobný – podle toho, v jakém stavu zahrada je.</p>
 
-    <div style="text-align: center; margin-top: 40px;">
-      <a class="btn btn-primary" href="index.html#kontakt">Odeslat poptávku</a>
-    </div>
+      <h2>Nejčastější scénář z praxe</h2>
+      <p>Přijedeme na zahradu, kde se nesekalo měsíc – někdy i dva nebo tři.</p>
+
+      <p>Tráva po kolena, místy už spíš porost než trávník.</p>
+
+      <p>👉 V tu chvíli už to není na klasickou sekačku.<br>
+      👉 Bere se křovinořez a je to úplně jiná práce.</p>
+
+      <p>➡️ Tohle už není běžné sekání.<br>
+      ➡️ To je zásah, který zabere víc času i energie.</p>
+
+      <p>A právě proto je první sečení vždy dražší.</p>
+
+      <h2>Co má největší vliv na cenu</h2>
+      <ul>
+        <li>výška a hustota trávy</li>
+        <li>kolik je překážek (stromy, záhony, ploty)</li>
+        <li>jestli se dá použít technika, nebo jen křovinořez</li>
+        <li>celkový stav zahrady</li>
+      </ul>
+
+      <h2>Realita, kterou lidi nechtějí slyšet</h2>
+      <p>Čím déle čekáte, tím víc zaplatíte.</p>
+
+      <p>První zásah je vždy nejdražší.<br>Další už jsou rychlé, levnější a hlavně bez stresu.</p>
+
+      <h2>Kolik to stojí u nás</h2>
+      <p>Sekání trávy:<br>
+      od 5 Kč / m²</p>
+
+      <p>👉 ale:<br>
+      udržovaná zahrada = nižší cena<br>
+      zanedbaná zahrada = vyšší cena</p>
+
+      <p>Férově podle reality.</p>
+
+      <h2>Co se opravdu vyplatí</h2>
+      <p>Nečekat, až to přeroste.</p>
+
+      <p>Zákazníci, kteří mají pravidelnou údržbu:</p>
+      <ul>
+        <li>platí méně</li>
+        <li>mají hezčí zahradu</li>
+        <li>neřeší „krizovky“</li>
+      </ul>
+
+      <h2>Závěr</h2>
+      <p>Sekání trávy není jen o ceně za metr.</p>
+
+      <p>Je to o tom, v jakém stavu zahrada je – a jak se o ni staráte.</p>
+
+      <hr style="border: 0; height: 1px; background: var(--border); margin: 40px 0 20px;">
+
+      <div style="text-align: center; margin-top: 30px;">
+        <p style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: var(--green-main);">Chcete vědět přesnou cenu pro vaši zahradu?<br>Ozvěte se – stačí krátká zpráva nebo fotka.<br>Řekneme vám to na rovinu.</p>
+        <a class="btn btn-primary" href="../index.html#kontakt">Odeslat poptávku</a>
+      </div>
+    </article>
 
   </div>
 </section>
