@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FOX Garden – Rady ze zahrady</title>
+    <title>Jarní údržba zahrady | FOX Garden</title>
     <meta name="description" content="Tipy a rady pro údržbu zahrady, sekání trávníků a stříhání živých plotů." />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -142,25 +142,40 @@
             transform: translateY(-2px);
         }
 
-        /* Cards */
-        .card {
+        /* Article */
+        article {
             background: var(--white);
             border-radius: var(--radius);
-            padding: 32px;
+            padding: 40px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
-            transition: var(--transition);
             margin-bottom: 24px;
         }
-        .card h2 {
+        article h1 {
+            font-size: 32px;
+            color: var(--green-main);
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        article h2 {
             font-size: 24px;
             color: var(--green-main);
+            margin-top: 32px;
             margin-bottom: 16px;
         }
-        .card p {
+        article p {
             font-size: 16px;
             color: var(--text-dark);
             line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        article ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+        article ul li {
+            margin-bottom: 8px;
+            font-size: 16px;
         }
 
         /* Footer */
@@ -178,49 +193,70 @@
 <header class="hero" id="top">
   <div class="container">
     <div class="hero-box">
-      <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="Logo FOX Garden" onerror="this.src='https://placehold.co/150x50/E6F4EA/2E7D32?text=FOX+Garden'">
+      <a href="../index.html" class="brand">
+        <img src="../images/logo.png" alt="Logo FOX Garden" onerror="this.src='https://placehold.co/150x50/E6F4EA/2E7D32?text=FOX+Garden'">
         FOX Garden
       </a>
       <p class="premium">Rady ze zahrady</p>
 
       <nav class="hero-nav">
-        <a href="index.html">← Zpět na hlavní stránku</a>
+        <a href="../rady-ze-zahrady.html">← Zpět na články</a>
       </nav>
     </div>
   </div>
 </header>
 
-<section id="clanky" style="padding: 20px 0 60px;">
+<section id="clanek" style="padding: 20px 0 60px;">
   <div class="container" style="max-width: 800px;">
 
-    <div class="card">
-      <a href="clanky/kdy-zacit-sekat-travu.html" style="text-decoration:none;">
-        <h2>Kdy začít sekat trávu na jaře (a kdy ještě počkat)</h2>
-        <p>Na jaře to svádí vzít sekačku hned, jak se ukáže slunce. Jenže první sečení má svoje pravidla – jinak si můžete trávník zbytečně zničit.</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--accent);">Číst celý článek →</span>
-      </a>
-    </div>
+    <article>
+      <h1>Jarní údržba zahrady – co udělat jako první (aby vám sezóna neutekla)</h1>
 
-    <div class="card">
-      <a href="clanky/kolik-stoji-sekani-travy.html" style="text-decoration:none;">
-        <h2>Kolik stojí sekání trávy (a proč vás to může stát zbytečně víc)</h2>
-        <p>„Kolik stojí sekání trávy?“ Jedna z nejčastějších otázek. Jenže odpověď není jedno číslo. Rozdíl může být klidně i několikanásobný – podle toho, v jakém stavu zahrada je.</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--accent);">Číst celý článek →</span>
-      </a>
-    </div>
+      <p>Na jaře to na zahradě rychle „vybuchne“. Stačí pár teplých dní a najednou je tráva dlouhá, keře rostou a práce přibývá.</p>
+      <p>Kdo začne včas, má klid. Kdo čeká, ten to pak dohání najednou.</p>
 
-    <div class="card">
-      <a href="clanky/jarni-udrzba-zahrady.html" style="text-decoration:none;">
-        <h2>Jarní údržba zahrady – co udělat jako první (aby vám sezóna neutekla)</h2>
-        <p>Na jaře to na zahradě rychle „vybuchne“. Stačí pár teplých dní a najednou je tráva dlouhá, keře rostou a práce přibývá. Kdo začne včas, má klid. Kdo čeká, ten to pak dohání najednou.</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--accent);">Číst celý článek →</span>
-      </a>
-    </div>
+      <h2>Co udělat jako první</h2>
+      <ul>
+        <li>úklid zahrady po zimě (větve, listí, zbytky)</li>
+        <li>první sečení trávy (ne moc nízko)</li>
+        <li>kontrola a úprava živých plotů</li>
+        <li>prořezání suchých a poškozených větví</li>
+      </ul>
 
-    <div style="text-align: center; margin-top: 40px;">
-      <a class="btn btn-primary" href="index.html#kontakt">Odeslat poptávku</a>
-    </div>
+      <h2>Nejčastější chyba</h2>
+      <p>Lidi čekají, až bude „hezky“.</p>
+      <p>Jenže během pár dnů se zahrada rozjede a najednou je práce dvakrát tolik. A pak už se neudržuje, ale dohání.</p>
+
+      <h2>Jak to řešíme u zákazníků</h2>
+      <p>Na jaře dává největší smysl začít včas a postupně.</p>
+      <p>Nejdřív základ:</p>
+      <ul>
+        <li>úklid</li>
+        <li>první sečení</li>
+        <li>lehké úpravy</li>
+      </ul>
+      <p>Pak už se zahrada jen udržuje a nevznikají problémy.</p>
+
+      <h2>Co se vyplatí</h2>
+      <p>Nečekat na „ideální chvíli“.</p>
+      <p>Kdo začne včas:</p>
+      <ul>
+        <li>má méně práce</li>
+        <li>zaplatí méně</li>
+        <li>zahrada vypadá dobře celou sezónu</li>
+      </ul>
+
+      <h2>Závěr</h2>
+      <p>Jaro rozhoduje o celé sezóně.</p>
+      <p>Když se začátek nepodcení, zahrada funguje bez stresu a zbytečných nákladů.</p>
+
+      <hr style="border: 0; height: 1px; background: var(--border); margin: 40px 0 20px;">
+
+      <div style="text-align: center; margin-top: 30px;">
+        <p style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: var(--green-main);">Potřebujete pomoct se zahradou v Jičíně a okolí?<br>Ozvěte se – domluvíme termín.</p>
+        <a class="btn btn-primary" href="../index.html#kontakt">Odeslat poptávku</a>
+      </div>
+    </article>
 
   </div>
 </section>
