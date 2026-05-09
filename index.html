@@ -578,6 +578,172 @@
             color: var(--white);
         }
 
+        /* Before/After Slider */
+        .ba-section {
+            background: linear-gradient(135deg, #0f271a 0%, #1f3d27 100%);
+            color: var(--white);
+            padding: 80px 0;
+            border-radius: 32px;
+            margin: 0 20px 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .ba-section::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .ba-section .section-header h2 {
+            color: var(--white);
+            font-size: 40px;
+        }
+        .ba-section .subtitle {
+            color: rgba(255,255,255,0.8);
+            font-size: 18px;
+        }
+        .ba-slider-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        .ba-slider-container img {
+            display: block;
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        @media (max-width: 600px) {
+            .ba-slider-container img {
+                height: 350px;
+            }
+        }
+        .ba-img-after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%; /* Initial split */
+            height: 100%;
+            overflow: hidden;
+            z-index: 2;
+        }
+        .ba-img-after img {
+            width: 100%; /* Must match parent's original width via JS */
+            max-width: none;
+        }
+        .ba-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            z-index: 3;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        .ba-handle-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border: 3px solid var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        .ba-handle:hover .ba-handle-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .ba-handle-btn::before, .ba-handle-btn::after {
+            content: "";
+            border: solid transparent;
+            border-width: 6px;
+            position: absolute;
+        }
+        .ba-handle-btn::before {
+            border-right-color: var(--white);
+            left: 4px;
+        }
+        .ba-handle-btn::after {
+            border-left-color: var(--white);
+            right: 4px;
+        }
+        .ba-label {
+            position: absolute;
+            bottom: 20px;
+            padding: 8px 16px;
+            background: rgba(0,0,0,0.6);
+            color: var(--white);
+            font-weight: 700;
+            border-radius: 8px;
+            font-size: 14px;
+            backdrop-filter: blur(4px);
+            z-index: 4;
+            pointer-events: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .ba-label-before { right: 20px; }
+        .ba-label-after { left: 20px; }
+
+        .ba-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+        .ba-thumb {
+            width: 100px;
+            height: 70px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .ba-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .ba-thumb.active {
+            border-color: var(--accent);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+        }
+        .ba-thumb:hover img {
+            transform: scale(1.1);
+        }
+        .ba-thumb::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            transition: background 0.3s;
+        }
+        .ba-thumb.active::after, .ba-thumb:hover::after {
+            background: transparent;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero-box { padding: 40px 20px; }
@@ -680,41 +846,122 @@
 
 
 
-<section id="ukazky" style="padding-top: 20px;">
+<section id="ukazky" class="ba-section">
   <div class="container">
-    <div class="section-header">
-        <h2>Ukázky práce</h2>
-        <p class="subtitle">Prohlédněte si naše nedávné realizace a výsledky</p>
+    <div class="section-header" style="position:relative; z-index:1;">
+        <h2>Proměny zahrad a pozemků</h2>
+        <p class="subtitle">Podívejte se na skutečné výsledky naší práce.</p>
     </div>
 
-    <div class="grid-3" id="realizace-container">
-      <!-- Static Fallback Data -->
-      <div class="work-card">
-        <img src="images/zahrada.jpg" alt="Údržba zahrady" loading="lazy">
-        <div class="content">
-            <h3>Údržba zahrady</h3>
-            <p>Kompletní posekání, vyčištění plochy a srovnání terénu po zimě.</p>
+    <div class="ba-slider-container" id="ba-slider">
+        <!-- Zde je obrázek PŘED (ten co se odkrývá napravo) -->
+        <img src="images/realizace/zakazka1-pred.jpg" id="img-before" alt="Zahrada před úpravou" onerror="this.src='https://placehold.co/900x500/1e281f/6b7280?text=Zahrada+P%C5%98ED'">
+
+        <!-- Zde je obrázek PO (ten co je defaultně z 50 % přes něj nalevo) -->
+        <div class="ba-img-after" id="ba-after-wrapper">
+            <img src="images/realizace/zakazka1-po.jpg" id="img-after" alt="Zahrada po úpravě" onerror="this.src='https://placehold.co/900x500/2E7D32/ffffff?text=Zahrada+PO'">
         </div>
-      </div>
-      <div class="work-card">
-        <img src="images/plot.jpg" alt="Střih živého plotu" loading="lazy">
-        <div class="content">
-            <h3>Střih živého plotu</h3>
-            <p>Pravidelné sekání, údržba záhonů a střih živého plotu.</p>
+
+        <div class="ba-handle" id="ba-handle">
+            <div class="ba-handle-btn"></div>
         </div>
-      </div>
-      <div class="work-card">
-        <img src="images/sekani.jpg" alt="Sekání trávníku" loading="lazy">
-        <div class="content">
-            <h3>Sekání trávníku</h3>
-            <p>Sečení velkých ploch a úklid posekané trávy.</p>
-        </div>
-      </div>
+
+        <div class="ba-label ba-label-before">PŘED</div>
+        <div class="ba-label ba-label-after">PO</div>
     </div>
 
+    <div class="ba-thumbnails" id="ba-thumbnails" style="position:relative; z-index:1;">
+        <!-- Tyto náhledy pak JavaScriptově mění hlavní fotky -->
+        <div class="ba-thumb active" data-before="images/realizace/zakazka1-pred.jpg" data-after="images/realizace/zakazka1-po.jpg">
+            <img src="images/realizace/zakazka1-po.jpg" alt="Proměna 1" onerror="this.src='https://placehold.co/100x70/2E7D32/ffffff?text=1'">
+        </div>
+        <div class="ba-thumb" data-before="images/realizace/zakazka2-pred.jpg" data-after="images/realizace/zakazka2-po.jpg">
+            <img src="images/realizace/zakazka2-po.jpg" alt="Proměna 2" onerror="this.src='https://placehold.co/100x70/2E7D32/ffffff?text=2'">
+        </div>
+        <div class="ba-thumb" data-before="images/realizace/zakazka3-pred.jpg" data-after="images/realizace/zakazka3-po.jpg">
+            <img src="images/realizace/zakazka3-po.jpg" alt="Proměna 3" onerror="this.src='https://placehold.co/100x70/2E7D32/ffffff?text=3'">
+        </div>
+    </div>
 
+    <div style="text-align:center; margin-top:40px; position:relative; z-index:1;">
+        <a href="#kontakt" class="btn btn-primary" style="font-size: 18px; padding: 16px 36px; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);">
+            Chci také takovou proměnu
+        </a>
+    </div>
   </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.getElementById("ba-slider");
+    const handle = document.getElementById("ba-handle");
+    const afterWrapper = document.getElementById("ba-after-wrapper");
+    const imgAfter = document.getElementById("img-after");
+
+    let isDragging = false;
+
+    // Přizpůsobení šířky "PO" obrázku podle šířky kontejneru, aby se nedeformoval při ořezu
+    function resizeImg() {
+        if(imgAfter) {
+            imgAfter.style.width = slider.offsetWidth + "px";
+        }
+    }
+
+    window.addEventListener("resize", resizeImg);
+    resizeImg(); // Init
+
+    // Posun slideru
+    function move(clientX) {
+        if (!isDragging) return;
+        const rect = slider.getBoundingClientRect();
+        let x = clientX - rect.left;
+        // Omezení, ať handle nevyjede mimo (5% až 95%)
+        x = Math.max(0, Math.min(x, rect.width));
+        const percent = (x / rect.width) * 100;
+
+        handle.style.left = percent + "%";
+        afterWrapper.style.width = percent + "%";
+    }
+
+    // Mouse events
+    if(handle) {
+        handle.addEventListener("mousedown", () => isDragging = true);
+        window.addEventListener("mouseup", () => isDragging = false);
+        window.addEventListener("mousemove", (e) => move(e.clientX));
+
+        // Touch events
+        handle.addEventListener("touchstart", () => isDragging = true);
+        window.addEventListener("touchend", () => isDragging = false);
+        window.addEventListener("touchmove", (e) => {
+            if (isDragging) {
+                move(e.touches[0].clientX);
+                // Zabraňuje scrollování stránky během posunu
+                e.preventDefault();
+            }
+        }, {passive: false});
+    }
+
+    // Thumbnail logic
+    const thumbnails = document.querySelectorAll(".ba-thumb");
+    const mainBefore = document.getElementById("img-before");
+    const mainAfter = document.getElementById("img-after");
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener("click", function() {
+            // Remove active
+            thumbnails.forEach(t => t.classList.remove("active"));
+            this.classList.add("active");
+
+            // Set new images
+            const beforeSrc = this.getAttribute("data-before");
+            const afterSrc = this.getAttribute("data-after");
+
+            mainBefore.src = beforeSrc;
+            mainAfter.src = afterSrc;
+        });
+    });
+});
+</script>
 
 <section id="sluzby" class="alt">
   <div class="container">
