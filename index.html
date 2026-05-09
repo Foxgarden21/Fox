@@ -109,46 +109,78 @@
 
         /* Hero */
         header.hero {
-            padding: 60px 0 30px;
-            text-align: center;
-        }
-        .hero-box {
-            background: var(--white);
-            padding: 50px 30px;
-            border-radius: 28px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
             position: relative;
+            overflow: hidden;
+            padding: 80px 0 60px;
+            text-align: center;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
         }
+
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+            z-index: -1;
+        }
+
+        .hero-box {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
         .brand {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 16px;
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 800;
-            color: var(--green-main);
+            color: var(--white);
             line-height: 1.1;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
         .brand img {
-            height: 50px;
+            height: 60px;
             width: auto;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
         }
         .premium {
-            font-size: 20px;
+            font-size: 36px;
             font-weight: 700;
-            margin-top: 16px;
-            color: var(--text-dark);
-            text-transform: uppercase;
+            margin-top: 24px;
+            color: var(--white);
+            line-height: 1.2;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
         }
         .slogan {
-            font-size: 18px;
-            font-weight: 500;
-            margin-top: 8px;
-            color: var(--text-light);
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 16px;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
         .hero-buttons {
-            margin-top: 32px;
+            margin-top: 40px;
             display: flex;
             gap: 16px;
             justify-content: center;
@@ -156,38 +188,52 @@
         }
         .hero-buttons .btn {
             font-size: 18px;
-            padding: 16px 32px;
+            padding: 16px 36px;
         }
+
+        /* Modifying primary button specifically for dark hero */
+        .hero-buttons .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+        }
+        .hero-buttons .btn-primary:hover {
+            background: #ea580c;
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.5);
+        }
+
         .micro {
-            margin-top: 20px;
-            font-weight: 600;
+            margin-top: 24px;
+            font-weight: 500;
             font-size: 15px;
-            color: var(--green-main);
+            color: rgba(255,255,255,0.8);
         }
 
         /* Hero Nav */
         .hero-nav {
-            margin-top: 36px;
+            margin-top: 40px;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
+            position: relative;
+            z-index: 1;
         }
         .hero-nav a {
-            background: var(--white);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
             padding: 8px 20px;
             border-radius: 999px;
             font-weight: 500;
             text-decoration: none;
-            border: 1px solid var(--border);
-            color: var(--text-dark);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--white);
             transition: var(--transition);
             font-size: 14px;
         }
         .hero-nav a:hover {
-            background: var(--green-light);
-            color: var(--green-main);
-            border-color: var(--green-light);
+            background: rgba(255,255,255,0.2);
             transform: translateY(-2px);
         }
 
@@ -555,19 +601,26 @@
 </head>
 <body>
 
-<header class="hero" id="top" style="position:relative;">
-  <a href="#" id="btn-dochazka" style="position:absolute; top:10px; right:20px; font-size:12px; color:rgba(0,0,0,0.4); text-decoration:none; z-index:100;">Docházka</a>
-  <div class="container">
+<header class="hero" id="top">
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline class="hero-video-bg">
+    <source src="videos/foxgardenhero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+
+  <a href="#" id="btn-dochazka" style="position:absolute; top:10px; right:20px; font-size:12px; color:rgba(255,255,255,0.4); text-decoration:none; z-index:100;">Docházka</a>
+
+  <div class="container" style="position:relative; z-index:1;">
     <div class="hero-box">
       <h1 class="brand">
         <img src="images/logo.png" alt="Logo FOX Garden" onerror="this.src='https://placehold.co/150x50/E6F4EA/2E7D32?text=FOX+Garden'">
         FOX Garden
       </h1>
-      <p class="premium">Údržba zahrad Jičín a okolí</p>
-      <p class="slogan">Sekání trávy • Živé ploty • Kompletní péče</p>
+      <p class="premium">Když je potřeba pořádná práce.</p>
+      <p class="slogan">Údržba zahrad, sekání trávy a péče o zeleň v Jičíně a okolí.</p>
 
       <div class="hero-buttons">
-        <a class="btn btn-primary" href="tel:+420775717291">📞 Zavolat</a>
+        <a class="btn btn-primary" href="#kontakt">Nezávazně poptat</a>
         <a class="btn btn-whatsapp" href="https://wa.me/420775717291">💬 WhatsApp</a>
       </div>
 
