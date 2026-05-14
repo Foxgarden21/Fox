@@ -303,6 +303,30 @@
         .card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-hover);
+            border-color: var(--accent-soft);
+        }
+        .feature-card {
+            flex: 1 1 300px;
+            max-width: 450px;
+            text-align: center;
+            padding: 32px 24px;
+        }
+        .feature-icon-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background: var(--bg-color);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+        .feature-card:hover .feature-icon-wrapper {
+            background: var(--accent);
+            color: var(--white);
+            transform: scale(1.1) rotate(-5deg);
         }
         .card h3 {
             font-size: 20px;
@@ -905,21 +929,33 @@
     </div>
 
     <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: stretch;">
-        <div class="card" style="flex: 1 1 300px; max-width: 450px; text-align: center; padding: 24px;">
-            <div style="font-size: 32px; margin-bottom: 12px;">🤝</div>
-            <h3 style="justify-content: center; font-size: 18px;">Spolehlivost a dodržení domluvy</h3>
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+            </div>
+            <h3 style="justify-content: center; font-size: 18px;">Férové jednání a spolehlivost</h3>
+            <p style="color: var(--text-light); font-size: 14px; line-height: 1.5;">Co slíbíme, to platí. Přijedeme včas a práci dokončíme v termínu.</p>
         </div>
-        <div class="card" style="flex: 1 1 300px; max-width: 450px; text-align: center; padding: 24px;">
-            <div style="font-size: 32px; margin-bottom: 12px;">🛡️</div>
-            <h3 style="justify-content: center; font-size: 18px;">Jsme pojištěni až na 3 miliony Kč</h3>
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 style="justify-content: center; font-size: 18px;">Bezpečnost a profesionalita</h3>
+            <p style="color: var(--text-light); font-size: 14px; line-height: 1.5;">Pracujeme s profi technikou a jsme pojištěni pro případ škody až do 3 mil. Kč.</p>
         </div>
-        <div class="card" style="flex: 1 1 300px; max-width: 450px; text-align: center; padding: 24px;">
-            <div style="font-size: 32px; margin-bottom: 12px;">🌱</div>
-            <h3 style="justify-content: center; font-size: 18px;">Osobní přístup ke každé zahradě</h3>
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3 style="justify-content: center; font-size: 18px;">Rozumná a transparentní cena</h3>
+            <p style="color: var(--text-light); font-size: 14px; line-height: 1.5;">Nejsme nejlevnější, ale ani nejdražší. Za férovou cenu odvádíme nadstandardní práci.</p>
         </div>
-        <div class="card" style="flex: 1 1 300px; max-width: 450px; text-align: center; padding: 24px;">
-            <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
-            <h3 style="justify-content: center; font-size: 18px;">Rychlá domluva a reakce</h3>
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+            </div>
+            <h3 style="justify-content: center; font-size: 18px;">Péče jako o vlastní zahradu</h3>
+            <p style="color: var(--text-light); font-size: 14px; line-height: 1.5;">Ke každému projektu přistupujeme s respektem k přírodě a důrazem na detail.</p>
         </div>
 
         <!-- Arrow transition inline with the cards -->
@@ -1204,8 +1240,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <section id="rady">
   <div class="container">
-    <div class="section-header">
-        <h2>🧠 Rady ze zahrady</h2>
+    <div class="section-header" style="display: flex; flex-direction: column; align-items: center;">
+        <img src="images/fox.png" alt="FOX Garden" style="width: 50px; height: auto; margin-bottom: 16px; opacity: 0.9;" onerror="this.style.display='none'">
+        <h2>Rady ze zahrady</h2>
         <p class="subtitle">Přečtěte si naše tipy a rady pro krásnou zahradu.</p>
     </div>
 
