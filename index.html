@@ -40,7 +40,7 @@
         }
         *{box-sizing:border-box;margin:0;padding:0}
         body{
-         background:linear-gradient(180deg,var(--cream)0%,var(--cream-light)40%,var(--cream)100%);
+         background:var(--cream);
          font-family:Poppins,Arial,sans-serif;
          color:var(--text);
          -webkit-font-smoothing:antialiased;
@@ -597,6 +597,112 @@
             margin: 0 auto;
           }
         }
+
+        /* COOKIE CONSENT */
+        .cookie-consent-panel {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%) translateY(150%);
+          width: calc(100% - 40px);
+          max-width: 800px;
+          background: linear-gradient(135deg, #0f271a 0%, #1f3d27 100%);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          padding: 20px 24px;
+          border-radius: 20px;
+          box-shadow: 0 15px 30px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.1);
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+          z-index: 9999;
+          color: #F3E9D7;
+          transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .cookie-consent-panel.show {
+          transform: translateX(-50%) translateY(0);
+        }
+        .cookie-content {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          flex: 1 1 300px;
+        }
+        .cookie-icon {
+          background: rgba(255,255,255,0.1);
+          border-radius: 12px;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .cookie-text h4 {
+          margin: 0 0 4px 0;
+          font-size: 1.1rem;
+          color: #fff;
+        }
+        .cookie-text p {
+          margin: 0;
+          font-size: 0.85rem;
+          line-height: 1.4;
+          opacity: 0.9;
+        }
+        .cookie-buttons {
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+        .cookie-btn {
+          border: none;
+          border-radius: 999px;
+          padding: 10px 18px;
+          font-family: inherit;
+          font-weight: 600;
+          font-size: 0.9rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .cookie-btn.primary {
+          background: #ea580c;
+          color: #fff;
+          box-shadow: 0 4px 10px rgba(234, 88, 12, 0.3);
+        }
+        .cookie-btn.primary:hover {
+          filter: brightness(1.1);
+          transform: translateY(-2px);
+        }
+        .cookie-btn.secondary {
+          background: rgba(255,255,255,0.1);
+          color: #F3E9D7;
+        }
+        .cookie-btn.secondary:hover {
+          background: rgba(255,255,255,0.15);
+        }
+        .cookie-btn.outline {
+          background: transparent;
+          border: 1px solid rgba(243, 233, 215, 0.3);
+        }
+        .cookie-btn.outline:hover {
+          background: rgba(255,255,255,0.05);
+        }
+
+        @media (max-width: 600px) {
+          .cookie-consent-panel {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 16px;
+          }
+          .cookie-buttons {
+            width: 100%;
+            flex-direction: column;
+          }
+          .cookie-btn {
+            width: 100%;
+            text-align: center;
+          }
+        }
     </style>
 </head>
 <body>
@@ -659,7 +765,7 @@
   <div style="text-align:center;margin-top:10px;">
     <a class="btn outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" target="_blank" rel="noopener">Více na Poptávej.cz</a>
   </div>
-</section>
+</div></section>
 
 <section id="cenik">
   <div class="container">
@@ -890,5 +996,55 @@ box-shadow:0 6px 16px rgba(0,0,0,0.2);
 ">
 📞 Zavolat
 </a>
+
+<div id="cookieConsent" class="cookie-consent-panel">
+  <div class="cookie-content">
+    <div class="cookie-icon">
+      <img src="favicon.svg" alt="Fox Garden Cookie" width="32" height="32">
+    </div>
+    <div class="cookie-text">
+      <h4>Tento web používá cookies 🍪</h4>
+      <p>K zajištění správného fungování webu, analýze návštěvnosti a pro marketingové účely používáme soubory cookies.</p>
+    </div>
+  </div>
+  <div class="cookie-buttons">
+    <button id="cookieAcceptAll" class="cookie-btn primary">Přijmout vše</button>
+    <button id="cookieAcceptNecessary" class="cookie-btn secondary">Pouze nezbytné</button>
+    <button id="cookieSettings" class="cookie-btn secondary outline">Nastavení</button>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const cookieBanner = document.getElementById("cookieConsent");
+  const btnAcceptAll = document.getElementById("cookieAcceptAll");
+  const btnAcceptNecessary = document.getElementById("cookieAcceptNecessary");
+  const btnSettings = document.getElementById("cookieSettings");
+
+  if (!localStorage.getItem("foxgarden_cookies_accepted")) {
+    setTimeout(() => {
+      cookieBanner.classList.add("show");
+    }, 1000);
+  }
+
+  function hideBanner(choice) {
+    localStorage.setItem("foxgarden_cookies_accepted", choice);
+    cookieBanner.classList.remove("show");
+  }
+
+  if (btnAcceptAll) {
+    btnAcceptAll.addEventListener("click", () => hideBanner("all"));
+  }
+  if (btnAcceptNecessary) {
+    btnAcceptNecessary.addEventListener("click", () => hideBanner("necessary"));
+  }
+  if (btnSettings) {
+    btnSettings.addEventListener("click", () => {
+      alert("Zde by se otevřelo detailní nastavení cookies.");
+    });
+  }
+});
+</script>
+
 </body>
 </html>
