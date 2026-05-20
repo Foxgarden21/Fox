@@ -597,6 +597,128 @@
             margin: 0 auto;
           }
         }
+
+        /* Cookie Consent */
+        .cookie-consent {
+            position: fixed;
+            bottom: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 600px;
+            background: linear-gradient(135deg, #0f271a 0%, #1f3d27 100%);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.1);
+            z-index: 10000;
+            transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .cookie-consent.show {
+            bottom: 20px;
+        }
+        .cookie-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .cookie-icon {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        .cookie-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+        .cookie-content p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.4;
+        }
+        .cookie-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-top: 5px;
+        }
+        .cookie-btn {
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            outline: none;
+        }
+        .cookie-btn-primary {
+            background: #ea580c;
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(234, 88, 12, 0.3);
+        }
+        .cookie-btn-primary:hover {
+            background: #f97316;
+            transform: translateY(-2px);
+        }
+        .cookie-btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: #ffffff;
+        }
+        .cookie-btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .cookie-btn-outline {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .cookie-btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .cookie-btn-text {
+            background: transparent;
+            color: rgba(255,255,255,0.6);
+            padding: 8px;
+        }
+        .cookie-btn-text:hover {
+            color: #ffffff;
+        }
+        @media (max-width: 600px) {
+            .cookie-consent {
+                width: 100%;
+                border-radius: 20px 20px 0 0;
+                padding: 20px;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+            }
+            .cookie-consent.show {
+                bottom: 0;
+            }
+            .cookie-header {
+                align-items: flex-start;
+            }
+            .cookie-actions {
+                flex-direction: column;
+                justify-content: stretch;
+            }
+            .cookie-btn {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -890,5 +1012,135 @@ box-shadow:0 6px 16px rgba(0,0,0,0.2);
 ">
 📞 Zavolat
 </a>
+
+<!-- Cookie Consent -->
+<div id="cookie-consent" class="cookie-consent">
+    <div class="cookie-header">
+        <img src="images/logo.png" alt="FOX Garden Logo" class="cookie-icon" onerror="this.style.display='none'">
+        <div class="cookie-content">
+            <h3>Ochrana soukromí a cookies</h3>
+            <p>
+                Pro správné fungování webu, analýzu návštěvnosti a personalizaci obsahu využíváme soubory cookies. Vaše soukromí je pro nás důležité, proto si můžete vybrat, jaké údaje nám poskytnete.
+            </p>
+        </div>
+    </div>
+    <div class="cookie-actions">
+        <button class="cookie-btn cookie-btn-text" id="cookie-settings">Nastavení</button>
+        <button class="cookie-btn cookie-btn-outline" id="cookie-accept-necessary">Pouze nezbytné</button>
+        <button class="cookie-btn cookie-btn-primary" id="cookie-accept-all">Přijmout vše</button>
+    </div>
+</div>
+
+<!-- Cookie Settings Modal -->
+<div id="cookie-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:10000; justify-content:center; align-items:center; backdrop-filter:blur(4px);">
+  <div style="background: linear-gradient(135deg, #1f3d27 0%, #2E7D32 100%); padding:30px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.3); max-width:90%; width:450px; color:#ffffff; position: relative;">
+    <button id="btn-cookie-close" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: rgba(255,255,255,0.7); font-size: 24px; cursor: pointer; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">&times;</button>
+    <h3 style="margin-bottom:15px; color:#ffffff; font-size: 22px;">Nastavení cookies</h3>
+    <p style="font-size: 14px; color: rgba(255,255,255,0.8); margin-bottom: 20px; line-height: 1.5;">Vyberte, jaké typy cookies můžeme používat. Nezbytné cookies nelze vypnout, protože zajišťují základní funkce webu.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+            <div>
+                <div style="font-weight: 600; font-size: 15px;">Nezbytné cookies</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Nutné pro správné fungování webu.</div>
+            </div>
+            <div style="color: #fed7aa; font-weight: 700; font-size: 14px;">Vždy aktivní</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <div style="font-weight: 600; font-size: 15px;">Analytické a marketingové</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Pomáhají nám vylepšovat web a reklamy.</div>
+            </div>
+            <label style="position: relative; display: inline-block; width: 44px; height: 24px;">
+                <input type="checkbox" id="cookie-analytics-check" style="opacity: 0; width: 0; height: 0;" checked>
+                <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ea580c; transition: .4s; border-radius: 24px;"></span>
+                <span style="position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;" id="cookie-toggle-slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div style="display:flex; gap:10px; justify-content:flex-end;">
+      <button id="btn-cookie-save" class="btn cookie-btn-primary" style="width: 100%; justify-content: center; padding: 12px;">Uložit nastavení</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Cookie Toggle Logic
+const toggleCheckbox = document.getElementById('cookie-analytics-check');
+const toggleSlider = document.getElementById('cookie-toggle-slider');
+
+if(toggleCheckbox) {
+  toggleCheckbox.addEventListener('change', function() {
+      if(this.checked) {
+          toggleSlider.style.transform = 'translateX(20px)';
+          toggleSlider.parentElement.querySelector('span:nth-child(2)').style.backgroundColor = '#ea580c';
+      } else {
+          toggleSlider.style.transform = 'translateX(0)';
+          toggleSlider.parentElement.querySelector('span:nth-child(2)').style.backgroundColor = '#ccc';
+      }
+  });
+  // Set initial state
+  toggleSlider.style.transform = 'translateX(20px)';
+}
+
+// Consent Banner Logic
+document.addEventListener("DOMContentLoaded", function() {
+    const cookieConsent = document.getElementById('cookie-consent');
+    const btnAcceptAll = document.getElementById('cookie-accept-all');
+    const btnAcceptNecessary = document.getElementById('cookie-accept-necessary');
+    const btnSettings = document.getElementById('cookie-settings');
+    const cookieModal = document.getElementById('cookie-modal');
+    const btnSaveSettings = document.getElementById('btn-cookie-save');
+    const btnCookieClose = document.getElementById('btn-cookie-close');
+
+    if (cookieConsent && !localStorage.getItem('foxgarden_cookies_accepted')) {
+        setTimeout(() => {
+            cookieConsent.classList.add('show');
+        }, 1000);
+    }
+
+    function hideConsent(type) {
+        localStorage.setItem('foxgarden_cookies_accepted', type);
+        if(cookieConsent) cookieConsent.classList.remove('show');
+        if(cookieModal) cookieModal.style.display = 'none';
+    }
+
+    if(btnAcceptAll) {
+      btnAcceptAll.addEventListener('click', () => {
+          hideConsent('all');
+      });
+    }
+
+    if(btnAcceptNecessary) {
+      btnAcceptNecessary.addEventListener('click', () => {
+          hideConsent('necessary');
+      });
+    }
+
+    if(btnSettings && cookieModal) {
+      btnSettings.addEventListener('click', () => {
+          cookieModal.style.display = 'flex';
+      });
+    }
+
+    if(btnCookieClose && cookieModal) {
+      btnCookieClose.addEventListener('click', () => {
+          cookieModal.style.display = 'none';
+      });
+    }
+
+    if(btnSaveSettings) {
+      btnSaveSettings.addEventListener('click', () => {
+          if(toggleCheckbox && toggleCheckbox.checked) {
+              hideConsent('all');
+          } else {
+              hideConsent('necessary');
+          }
+      });
+    }
+});
+</script>
+
 </body>
 </html>
