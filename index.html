@@ -377,6 +377,15 @@
           transform: translateY(-5px);
           box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
+        .ref-slide {
+          display: none;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+        .ref-slide.active {
+          display: block;
+          opacity: 1;
+        }
         .ref-card h3{
          font-size:18px;
          margin-bottom:6px;
@@ -628,30 +637,14 @@
   </div>
 </header>
 
-<section id="sluzby"><div class="container"><h2>🌿 Naše služby</h2>
-<p>Údržba zahrad pro rodinné domy, firmy i SVJ v Jičíně a okolí.</p>
-
-<ul class="clean">
-<li><b>Sekání trávníků</b> – sečení, dosekávání hran a úklid.</li>
-<li><b>Stříhání živých plotů</b> – tvarování a zmlazení.</li>
-<li><b>Řez stromů</b> – odborný řez pro zdravý růst.</li>
-<li><b>Pravidelná údržba</b> – péče o záhony a výsadby.</li>
-<li><b>Zanedbané zahrady</b> – vyčištění a likvidace náletů.</li>
-<li><b>Chemická péče</b> – certifikovaná aplikace postřiků.</li>
-</ul>
-<div class="cta-section">
-  <a class="btn" href="#poptavka">Rychlá poptávka</a>
-</div>
-</div></section>
-
 <section id="reference" class="alt"><div class="container">
   <h2>⭐ Reference</h2>
   <div class="refs">
-    <div class="ref-card">
+    <div class="ref-card ref-slide active">
       <h3>Údržba zahrady – Hořice</h3>
       <p>Sekání trávníku, střih plotu a úklid. Zákazníci oceňují spolehlivost a čistou práci.</p>
     </div>
-    <div class="ref-card">
+    <div class="ref-card ref-slide">
       <h3>SVJ – společná zeleň</h3>
       <p>Celoroční údržba, úklid listí a odvoz odpadu. Zeleň vypadá skvěle po celý rok.</p>
     </div>
@@ -661,31 +654,9 @@
   </div>
 </section>
 
-<section id="cenik">
-  <div class="container">
-    <h2>💰 Ceník</h2>
-    <ul class="price-list">
-      <li>
-        <h3>Sekání trávníků</h3>
-        <p>Od 5 Kč/m² podle stavu plochy.</p>
-      </li>
-      <li>
-        <h3>Pravidelná údržba</h3>
-        <p>Balíčky od 1 500 Kč / měsíc.</p>
-      </li>
-      <li>
-        <h3>Střih živých plotů</h3>
-        <p>Od 30 Kč / bm podle výšky.</p>
-      </li>
-    </ul>
-    <p class="note">Nejsme nejlevnější – děláme práci tak, aby byla bez starostí.</p>
-  </div>
-</section>
-
-
 <section id="realizace" class="alt">
   <div class="container">
-    <h2>Poslední realizace</h2>
+    <h2>Proměny zahrad</h2>
     <div class="refs" id="realizace-container">
       <!-- Realizace 1 -->
       <div class="ref-card">
@@ -732,6 +703,85 @@
   </div>
 </section>
 
+<section id="sluzby"><div class="container"><h2>🌿 Naše služby</h2>
+<p>Údržba zahrad pro rodinné domy, firmy i SVJ v Jičíně a okolí.</p>
+
+<ul class="clean">
+<li><b>Sekání trávníků</b> – sečení, dosekávání hran a úklid.</li>
+<li><b>Stříhání živých plotů</b> – tvarování a zmlazení.</li>
+<li><b>Řez stromů</b> – odborný řez pro zdravý růst.</li>
+<li><b>Pravidelná údržba</b> – péče o záhony a výsadby.</li>
+<li><b>Zanedbané zahrady</b> – vyčištění a likvidace náletů.</li>
+<li><b>Chemická péče</b> – certifikovaná aplikace postřiků.</li>
+</ul>
+<div class="cta-section">
+  <a class="btn" href="#poptavka">Rychlá poptávka</a>
+</div>
+</div></section>
+
+<section id="onas"><div class="container">
+<h2>🦊 Proč si vybrat nás</h2>
+<p>Víme, co zahrada opravdu potřebuje. Zakládáme si na slušném jednání, dodržování termínů a čistém výsledku.</p>
+<p style="margin-top:10px;">
+  Jsme malá firma – jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně a s odpovědností.
+</p>
+<p style="margin-top:10px; font-weight:600;">
+  Nejsme nejlevnější. Děláme práci tak, aby byla dlouhodobě správně a bez starostí.
+</p>
+<p style="margin-top:15px;"><a class="btn outline" href="#kontakt">Chci nacenit práce</a></p>
+</div></section>
+
+<section id="cenik">
+  <div class="container">
+    <h2>💰 Ceník</h2>
+    <ul class="price-list">
+      <li>
+        <h3>Sekání trávníků</h3>
+        <p>Od 5 Kč/m² podle stavu plochy.</p>
+      </li>
+      <li>
+        <h3>Pravidelná údržba</h3>
+        <p>Balíčky od 1 500 Kč / měsíc.</p>
+      </li>
+      <li>
+        <h3>Střih živých plotů</h3>
+        <p>Od 30 Kč / bm podle výšky.</p>
+      </li>
+    </ul>
+    <p class="note">Nejsme nejlevnější – děláme práci tak, aby byla bez starostí.</p>
+  </div>
+</section>
+
+<section id="faq" class="alt"><div class="container">
+<h2>❓ Časté dotazy</h2>
+<dl class="faq">
+<dt>Kolik stojí sekání?</dt>
+<dd>Cena závisí na ploše a stavu trávy. Napíšeme vám ji po sdělení výměry a lokality.</dd>
+<dt>Děláte odvoz odpadu?</dt>
+<dd>Ano, odvoz bioodpadu je standardní součástí našich služeb.</dd>
+<dt>Kde působíte?</dt>
+<dd>Hlavně Jičín, Hořice, Nová Paka, Lázně Bělohrad a okolí.</dd>
+</dl>
+</div></section>
+
+<section id="kontakt"><div class="container">
+<h2>Kontakt</h2>
+<p style="font-size:16px;margin-bottom:10px;">
+Stačí zavolat nebo napsat – odpovíme co nejdříve.
+</p>
+<p><b>FoxGarden – Zuklesa s.r.o.</b><br>IČO: 17805368</p>
+<p><b>Telefon:</b> <a href="tel:+420775717291">775 717 291</a><br>
+<b>E-mail:</b> <a href="mailto:zuki@foxgarden.cz">zuki@foxgarden.cz</a></p>
+<div class="buttons">
+<a class="btn" href="tel:+420775717291">📞 Zavolat</a>
+<a class="btn" href="https://wa.me/420775717291" style="background:#25D366;">💬 WhatsApp</a>
+<a class="btn outline" href="#poptavka">📋 Nezávazná konzultace</a>
+<a class="btn outline" href="https://www.facebook.com/109016358813760" target="_blank" style="border:1px solid #ccc; font-weight:400;">📘 Facebook</a>
+<a class="btn outline" href="mailto:zuki@foxgarden.cz" style="border:1px solid #ccc; font-weight:400;">✉️ Napsat</a>
+<a class="btn outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" style="border:1px solid #ccc; font-weight:400;">⭐ Reference na Poptávej.cz</a>
+</div>
+</div></section>
+
 <section id="galerie">
   <div class="container">
     <h2>Fotogalerie</h2>
@@ -761,8 +811,6 @@
   </div>
 </section>
 
-
-
 <section id="rady"><div class="container">
 <h2>🧠 Rady</h2>
 <h3>Péče o trávník po vertikutaci</h3>
@@ -773,31 +821,6 @@
 <li>Sekat až při výšce 8–10 cm (nesekat „na golf“).</li>
 </ul>
 </div></section>
-
-<section id="faq" class="alt"><div class="container">
-<h2>❓ Časté dotazy</h2>
-<dl class="faq">
-<dt>Kolik stojí sekání?</dt>
-<dd>Cena závisí na ploše a stavu trávy. Napíšeme vám ji po sdělení výměry a lokality.</dd>
-<dt>Děláte odvoz odpadu?</dt>
-<dd>Ano, odvoz bioodpadu je standardní součástí našich služeb.</dd>
-<dt>Kde působíte?</dt>
-<dd>Hlavně Jičín, Hořice, Nová Paka, Lázně Bělohrad a okolí.</dd>
-</dl>
-</div></section>
-
-<section id="onas"><div class="container">
-<h2>🦊 O FoxGarden</h2>
-<p>Víme, co zahrada opravdu potřebuje. Zakládáme si na slušném jednání, dodržování termínů a čistém výsledku.</p>
-<p style="margin-top:10px;">
-  Jsme malá firma – jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně a s odpovědností.
-</p>
-<p style="margin-top:10px; font-weight:600;">
-  Nejsme nejlevnější. Děláme práci tak, aby byla dlouhodobě správně a bez starostí.
-</p>
-<p style="margin-top:15px;"><a class="btn outline" href="#kontakt">Chci nacenit práce</a></p>
-</div></section>
-
 
 <section id="poptavka" class="alt">
   <div class="container">
@@ -818,23 +841,6 @@
 </section>
 
 
-<section id="kontakt"><div class="container">
-<h2>Kontakt</h2>
-<p style="font-size:16px;margin-bottom:10px;">
-Stačí zavolat nebo napsat – odpovíme co nejdříve.
-</p>
-<p><b>FoxGarden – Zuklesa s.r.o.</b><br>IČO: 17805368</p>
-<p><b>Telefon:</b> <a href="tel:+420775717291">775 717 291</a><br>
-<b>E-mail:</b> <a href="mailto:zuki@foxgarden.cz">zuki@foxgarden.cz</a></p>
-<div class="buttons">
-<a class="btn" href="tel:+420775717291">📞 Zavolat</a>
-<a class="btn" href="https://wa.me/420775717291" style="background:#25D366;">💬 WhatsApp</a>
-<a class="btn outline" href="#poptavka">📋 Nezávazná konzultace</a>
-<a class="btn outline" href="https://www.facebook.com/109016358813760" target="_blank" style="border:1px solid #ccc; font-weight:400;">📘 Facebook</a>
-<a class="btn outline" href="mailto:zuki@foxgarden.cz" style="border:1px solid #ccc; font-weight:400;">✉️ Napsat</a>
-<a class="btn outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" style="border:1px solid #ccc; font-weight:400;">⭐ Reference na Poptávej.cz</a>
-</div>
-</div></section>
 
 <footer style="
   text-align:center;
@@ -873,6 +879,19 @@ window.addEventListener('scroll', () => {
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.ref-slide');
+    if (slides.length > 0) {
+      let currentSlide = 0;
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 5000);
+    }
+  });
 </script>
 <a href="tel:+420775717291" style="
 position:fixed;
