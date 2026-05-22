@@ -35,10 +35,11 @@
             --text-dark: #1b1b1b;
             --text-light: #6b7280;
             --white: #ffffff;
-            --bg-color: #F3E9D7; /* Warm earthy beige background */
+            --bg-color: #ffffff;
+            --bg-alt: #f4f9f6; /* Warm earthy beige background */
 
-            --shadow: 0 4px 20px rgba(0,0,0,0.05);
-            --shadow-hover: 0 10px 30px rgba(0,0,0,0.1);
+            --shadow: 0 4px 24px rgba(0,0,0,0.03);
+            --shadow-hover: 0 12px 40px rgba(0,0,0,0.06);
             --border: #eaedf0;
             --radius: 20px;
             --transition: all 0.3s ease;
@@ -262,13 +263,13 @@
             padding: 60px 0;
         }
         section.alt {
-            background: var(--white);
+            background: var(--bg-alt);
+            border: none;
             border-radius: 32px;
             margin: 0 20px 40px;
             padding: 60px 20px;
             box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-        }
+            }
         .section-header {
             text-align: center;
             margin-bottom: 40px;
@@ -317,14 +318,14 @@
             justify-content: center;
             width: 64px;
             height: 64px;
-            background: var(--bg-color);
+            background: var(--green-light);
             border-radius: 20px;
             margin-bottom: 20px;
-            color: var(--accent);
+            color: var(--green-main);
             transition: var(--transition);
         }
         .feature-card:hover .feature-icon-wrapper {
-            background: var(--accent);
+            background: var(--green-main);
             color: var(--white);
             transform: scale(1.1) rotate(-5deg);
         }
@@ -345,7 +346,7 @@
             line-height: 1.5;
             font-size: 15px;
             color: var(--text-dark);
-            border-bottom: 1px solid var(--bg-color);
+            border-bottom: 1px solid var(--border);
         }
         ul.clean li:last-child { border-bottom: none; }
         ul.clean li::before {
@@ -417,8 +418,8 @@
         }
         .price-badge {
             display: inline-block;
-            background: var(--accent-soft);
-            color: var(--accent);
+            background: var(--green-light);
+            color: var(--green-main);
             font-weight: 700;
             font-size: 18px;
             padding: 8px 16px;
@@ -605,7 +606,7 @@
             border: 1px solid var(--border);
             font-size: 15px;
             font-family: inherit;
-            background: var(--bg-color);
+            background: #f9fafb;
             transition: var(--transition);
         }
         .form-box input:focus,
@@ -716,7 +717,7 @@
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.1) 0%, transparent 60%);
+            background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
             pointer-events: none;
         }
         .ba-section .section-header h2 {
@@ -1560,7 +1561,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </section>
 
 
-<section id="seo-text" style="padding: 20px 0; background: var(--bg-color);">
+<section id="seo-text" style="padding: 20px 0; background: #f9fafb;">
   <div class="container" style="text-align: center; max-width: 800px; opacity: 0.8; font-size: 14px;">
     <p>Poskytujeme profesionální zahradnické služby, údržbu zeleně, pravidelné sekání trávníků a odborné stříhání živých plotů. Působíme především v okolí měst Jičín, Hořice a Lázně Bělohrad a v přilehlých obcích. Po domluvě dojedeme i dál. Pečujeme o zahrady rodinných domů, firemní areály i zeleň společenství vlastníků (SVJ).</p>
   </div>
