@@ -36,9 +36,9 @@
             --text-light: #6b7280;
             --white: #ffffff;
             --bg-color: #ffffff;
-            --bg-alt: #f4f9f6;
-            --yellow-accent: #facc15;
-            --yellow-soft: #fefce8; /* Warm earthy beige background */
+            --bg-alt: #f8f9fa;
+            --yellow-accent: #FFDE00;
+            --yellow-soft: #fffdf0; /* Warm earthy beige background */
 
             --shadow: 0 4px 24px rgba(0,0,0,0.03);
             --shadow-hover: 0 12px 40px rgba(0,0,0,0.06);
@@ -243,7 +243,7 @@
 
         /* Insurance Banner */
         .insurance-banner {
-            background: var(--green-light);
+            background: var(--white);
             color: var(--green-main);
             text-align: center;
             padding: 16px 20px;
@@ -258,24 +258,26 @@
             max-width: 1060px;
             margin-left: auto;
             margin-right: auto;
-            border: 1px solid var(--green-soft);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--yellow-accent);
+            box-shadow: var(--shadow);
         }
 
         /* Sections */
         section {
-            padding: 60px 0;
+            padding: 100px 0;
         }
         section.alt {
             background: var(--bg-alt);
             border: none;
             border-radius: 32px;
             margin: 0 20px 40px;
-            padding: 60px 20px;
+            padding: 80px 20px;
             box-shadow: var(--shadow);
             }
         .section-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         h2 {
             font-size: 32px;
@@ -321,16 +323,19 @@
             justify-content: center;
             width: 64px;
             height: 64px;
-            background: var(--green-light);
+            background: var(--white);
             border-radius: 20px;
             margin-bottom: 20px;
             color: var(--green-main);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
             transition: var(--transition);
         }
         .feature-card:hover .feature-icon-wrapper {
-            background: var(--green-main);
-            color: var(--white);
+            background: var(--white);
+            color: var(--green-main);
             transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 8px 25px rgba(255, 222, 0, 0.4);
+            border: 1px solid var(--yellow-accent);
         }
         .card h3 {
             font-size: 20px;
@@ -424,13 +429,15 @@
         }
         .price-badge {
             display: inline-block;
-            background: var(--green-light);
+            background: var(--white);
             color: var(--green-main);
             font-weight: 700;
             font-size: 18px;
             padding: 8px 16px;
             border-radius: 12px;
             margin-bottom: 12px;
+            border-left: 3px solid var(--yellow-accent);
+            box-shadow: var(--shadow);
         }
         .price-desc {
             font-size: 14px;
@@ -481,7 +488,8 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: var(--green-soft);
+            background: var(--white);
+            border: 2px solid var(--yellow-accent);
             color: var(--green-main);
             display: flex;
             align-items: center;
@@ -710,9 +718,9 @@
 
         /* Before/After Slider */
         .ba-section {
-            background: linear-gradient(135deg, var(--green-light) 0%, var(--green-soft) 100%);
-            color: var(--white);
-            padding: 80px 0;
+            background: var(--bg-alt);
+            color: var(--text-dark);
+            padding: 100px 0;
             border-radius: 32px;
             margin: 0 20px 40px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
@@ -873,8 +881,8 @@
             .hero-box { padding: 40px 20px; }
             .brand { font-size: 36px; gap: 12px; flex-direction: column; }
             .brand img { height: 50px; }
-            section { padding: 40px 0; }
-            section.alt { padding: 40px 20px; margin: 0 12px 30px; }
+            section { padding: 60px 0; }
+            section.alt { padding: 50px 20px; margin: 0 12px 40px; }
             .form-row { grid-template-columns: 1fr; gap: 16px; }
             .contact-grid { grid-template-columns: 1fr; }
             .float-btn { width: calc(100% - 48px); justify-content: center; bottom: 16px; right: 24px; }
