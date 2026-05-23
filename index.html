@@ -77,9 +77,9 @@
         }
         .btn-primary {
             background: linear-gradient(135deg, var(--green-main) 0%, #1e4235 100%);
-            color: var(--white);
-            border: 1px solid rgba(255, 222, 0, 0.2);
-            box-shadow: 0 4px 15px rgba(46, 94, 78, 0.3);
+            color: var(--yellow-accent);
+            border: 1px solid rgba(255, 222, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 222, 0, 0.15);
         }
         .btn-primary:hover {
             background: linear-gradient(135deg, #224A3D 0%, #153227 100%);
@@ -198,10 +198,6 @@
             padding: 16px 36px;
         }
 
-        /* Modifying primary button specifically for dark hero */
-        .hero-buttons .btn-primary {
-            color: var(--yellow-accent);
-        }
 
         .micro {
             margin-top: 24px;
@@ -239,6 +235,37 @@
             border-color: rgba(255, 222, 0, 0.6);
             color: var(--yellow-accent);
             box-shadow: 0 8px 20px rgba(255, 222, 0, 0.15);
+        }
+
+        /* Hero Social Links */
+        .hero-social {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--white);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hero-social a:hover {
+            background: rgba(255, 222, 0, 0.15);
+            border-color: var(--yellow-accent);
+            color: var(--yellow-accent);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(255, 222, 0, 0.2);
         }
 
         /* Insurance Banner */
@@ -631,47 +658,52 @@
         /* Form */
         .form-box {
             background: var(--white);
-            padding: 40px;
+            padding: 48px;
             border-radius: 32px;
-            box-shadow: var(--shadow);
-            border: none;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.02);
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
         }
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 24px;
         }
         .form-group {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
         }
         .form-box label {
             font-weight: 600;
-            font-size: 14px;
-            color: var(--text-dark);
+            font-size: 15px;
+            color: var(--green-main);
         }
         .form-box input,
         .form-box textarea {
             width: 100%;
-            padding: 16px 20px;
-            border-radius: 16px;
-            border: 2px solid rgba(0,0,0,0.05);
-            font-size: 15px;
+            padding: 18px 24px;
+            border-radius: 20px;
+            border: 2px solid #eef2f5;
+            font-size: 16px;
             font-family: inherit;
-            background: #f9fafb;
-            transition: var(--transition);
+            background: var(--white);
+            transition: all 0.3s ease;
             color: var(--text-dark);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .form-box input:hover,
+        .form-box textarea:hover {
+            border-color: rgba(46, 94, 78, 0.2);
         }
         .form-box input:focus,
         .form-box textarea:focus {
             outline: none;
-            border-color: var(--green-main);
+            border-color: var(--yellow-accent);
             background: var(--white);
-            box-shadow: 0 0 0 4px rgba(46, 94, 78, 0.1);
+            box-shadow: 0 0 0 6px rgba(255, 222, 0, 0.15), inset 0 2px 4px rgba(0,0,0,0.02);
         }
         .form-box textarea {
             resize: vertical;
@@ -740,26 +772,25 @@
             bottom: 24px;
             right: 24px;
             background: var(--green-main);
-            color: var(--white);
+            color: var(--yellow-accent);
             padding: 14px 24px;
             border-radius: 999px;
             font-weight: 600;
             z-index: 999;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(46, 94, 78, 0.2);
+            box-shadow: 0 8px 25px rgba(255, 222, 0, 0.15);
             display: flex;
             align-items: center;
             gap: 10px;
             transition: var(--transition);
             font-size: 15px;
-            border: 1px solid transparent;
+            border: 1px solid rgba(255, 222, 0, 0.3);
         }
         .float-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(46, 94, 78, 0.35);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 222, 0, 0.25);
             background: #224A3D;
-            color: var(--yellow-accent);
-            border-color: rgba(255, 222, 0, 0.3);
+            border-color: var(--yellow-accent);
         }
 
         /* Before/After Slider */
@@ -1119,6 +1150,19 @@
 
       <p class="micro">Volné termíny se rychle plní – objednejte se včas.</p>
 
+      <div class="hero-social">
+        <a href="https://www.facebook.com/profile.php?id=100090484467357" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5 10H16.639L17.29 6.8H14.5V4.666C14.5 3.82 14.5 3.2 15.632 3.2H17.29V0.384C16.89 0.32 15.772 0 14.49 0C11.838 0 10 1.636 10 4.542V6.8H7V10H10V18H14.5V10Z"/>
+            </svg>
+        </a>
+        <a href="https://www.instagram.com/foxgarden.expert/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C9.239 7 7 9.239 7 12C7 14.761 9.239 17 12 17C14.761 17 17 14.761 17 12C17 9.239 14.761 7 12 7ZM12 15C10.343 15 9 13.657 9 12C9 10.343 10.343 9 12 9C13.657 9 15 10.343 15 12C15 13.657 13.657 15 12 15ZM16.5 7.5C16.5 8.052 16.052 8.5 15.5 8.5C14.948 8.5 14.5 8.052 14.5 7.5C14.5 6.948 14.948 6.5 15.5 6.5C16.052 6.5 16.5 6.948 16.5 7.5ZM12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.877 4.234 21.221 4.79 21.475 5.45C21.723 6.088 21.89 6.813 21.94 7.878C21.99 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.723 17.912 21.475 18.55C21.221 19.21 20.877 19.766 20.322 20.322C19.766 20.877 19.21 21.221 18.55 21.475C17.912 21.723 17.187 21.89 16.122 21.94C15.056 21.99 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.723 5.45 21.475C4.79 21.221 4.234 20.877 3.678 20.322C3.123 19.766 2.779 19.21 2.525 18.55C2.277 17.912 2.11 17.187 2.06 16.122C2.01 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.813 2.277 6.088 2.525 5.45C2.779 4.79 3.123 4.234 3.678 3.678C4.234 3.123 4.79 2.779 5.45 2.525C6.088 2.277 6.813 2.11 7.878 2.06C8.944 2.01 9.283 2 12 2ZM12 4C9.318 4 8.981 4.01 7.968 4.056C7.03 4.099 6.391 4.253 5.926 4.433C5.309 4.673 4.869 4.965 4.428 5.405C3.988 5.846 3.696 6.286 3.456 6.903C3.275 7.368 3.121 8.007 3.078 8.945C3.032 9.958 3.022 10.295 3.022 12C3.022 13.705 3.032 14.042 3.078 15.055C3.121 15.993 3.275 16.632 3.456 17.097C3.696 17.714 3.988 18.154 4.428 18.595C4.869 19.035 5.309 19.327 5.926 19.567C6.391 19.747 7.03 19.901 7.968 19.944C8.981 19.99 9.318 20 12 20C14.682 20 15.019 19.99 16.032 19.944C16.97 19.901 17.609 19.747 18.074 19.567C18.691 19.327 19.131 19.035 19.572 18.595C20.012 18.154 20.304 17.714 20.544 17.097C20.725 16.632 20.879 15.993 20.922 15.055C20.968 14.042 20.978 13.705 20.978 12C20.978 10.295 20.968 9.958 20.922 8.945C20.879 8.007 20.725 7.368 20.544 6.903C20.304 6.286 20.012 5.846 19.572 5.405C19.131 4.965 18.691 4.673 18.074 4.433C17.609 4.253 16.97 4.099 16.032 4.056C15.019 4.01 14.682 4 12 4Z"/>
+            </svg>
+        </a>
+      </div>
+
       <nav class="hero-nav">
         <a href="#sluzby">Služby</a>
         <a href="#ukazky">Ukázky práce</a>
@@ -1220,8 +1264,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <section id="ukazky" class="ba-section">
   <div class="container">
     <div class="section-header" style="position:relative; z-index:1;">
-        <h2>Proměníme chaos v klid</h2>
-        <p class="subtitle">Péče, která je vidět. Podívejte se na reálné ukázky naší práce.</p>
+        <h2>Ukázky práce</h2>
+        <p class="subtitle">Podívejte se na skutečné výsledky naší práce.</p>
     </div>
 
     <div class="ba-slider-container" id="ba-slider">
@@ -1582,11 +1626,26 @@ document.addEventListener("DOMContentLoaded", function() {
 </section>
 
 <section id="onas" class="alt">
-  <div class="container" style="text-align: center; max-width: 700px;">
-    <h2>O FOX Garden</h2>
-    <p style="margin-bottom: 16px;">Víme, co zahrada opravdu potřebuje – od úvodního návrhu a terénních úprav, přes odbornou výsadbu, až po dlouhodobou péči. Zakládáme si na slušném jednání, dodržování termínů a čistém výsledku.</p>
-    <p style="color: var(--text-light); margin-bottom: 16px;">Jsme malá firma – jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně a s odpovědností.</p>
-    <p style="color: var(--text-light); margin-bottom: 24px;">Navrhujeme zahrady především tam, kde následně realizujeme i samotnou úpravu.</p>
+  <div class="container">
+    <div style="background: var(--white); border-radius: 32px; padding: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 900px; margin: 0 auto; position: relative; overflow: hidden;">
+        <!-- Subtle background accent -->
+        <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255, 222, 0, 0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+
+        <img src="images/fox.png" alt="FOX Garden" style="width: 64px; height: auto; margin-bottom: 24px;" onerror="this.style.display='none'">
+
+        <h2 style="font-size: 32px; margin-bottom: 24px; color: var(--green-main);">Kdo stojí za FOX Garden</h2>
+
+        <div style="font-size: 18px; color: var(--text-dark); line-height: 1.6; max-width: 700px; margin-bottom: 32px;">
+            <p style="margin-bottom: 16px; font-weight: 500;">„Víme, co zahrada opravdu potřebuje – od úvodního návrhu a terénních úprav, přes odbornou výsadbu, až po dlouhodobou péči.“</p>
+            <p style="color: var(--text-light); font-size: 16px; margin-bottom: 16px;">Jsme malá firma a zakládáme si na osobním přístupu. Jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně, s respektem k přírodě a plnou odpovědností.</p>
+            <p style="color: var(--text-light); font-size: 16px;">Navrhujeme zahrady především tam, kde následně realizujeme i samotnou úpravu, abychom zaručili 100% výsledek a kvalitu od prvního nákresu po poslední sazenici.</p>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px; color: var(--green-main); font-weight: 600; font-size: 16px;">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Poctivá práce & dodržování termínů
+        </div>
+    </div>
   </div>
 </section>
 
