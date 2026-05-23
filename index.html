@@ -78,21 +78,25 @@
         .btn-primary {
             background: var(--green-main);
             color: var(--white);
+            border: 1px solid transparent;
             box-shadow: 0 4px 15px rgba(46, 94, 78, 0.2);
         }
         .btn-primary:hover {
             background: #224A3D;
+            border-color: rgba(255, 222, 0, 0.3);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(46, 94, 78, 0.3);
-            color: var(--white);
+            box-shadow: 0 8px 25px rgba(46, 94, 78, 0.35);
+            color: var(--yellow-accent);
         }
         .btn-whatsapp {
             background: #4CAF50; /* Lighter green */
             color: var(--white);
+            border: 1px solid transparent;
             box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
         }
         .btn-whatsapp:hover {
             background: #43A047;
+            border-color: rgba(255, 255, 255, 0.5);
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
             color: var(--white);
@@ -103,8 +107,10 @@
             border: 2px solid var(--green-main);
         }
         .btn-outline:hover {
-            background: var(--yellow-soft);
-            border-color: var(--yellow-accent);
+            background: var(--green-main);
+            color: var(--yellow-accent);
+            border-color: var(--green-main);
+            box-shadow: 0 8px 20px rgba(46, 94, 78, 0.2);
             transform: translateY(-2px);
         }
 
@@ -194,13 +200,16 @@
 
         /* Modifying primary button specifically for dark hero */
         .hero-buttons .btn-primary {
-            background: var(--green-main);
-            color: var(--white);
-            box-shadow: 0 4px 15px rgba(46, 94, 78, 0.2);
+            background: linear-gradient(135deg, var(--green-main) 0%, #1e4235 100%);
+            color: var(--yellow-accent);
+            border: 1px solid rgba(255, 222, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 222, 0, 0.15);
         }
         .hero-buttons .btn-primary:hover {
-            background: #224A3D;
-            box-shadow: 0 8px 20px rgba(46, 94, 78, 0.4);
+            background: linear-gradient(135deg, #224A3D 0%, #153227 100%);
+            box-shadow: 0 12px 30px rgba(255, 222, 0, 0.25);
+            transform: translateY(-3px);
+            border-color: var(--yellow-accent);
         }
 
         .micro {
@@ -221,21 +230,24 @@
             z-index: 1;
         }
         .hero-nav a {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
+            background: rgba(46, 94, 78, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             padding: 8px 20px;
             border-radius: 999px;
             font-weight: 500;
             text-decoration: none;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 222, 0, 0.2);
             color: var(--white);
-            transition: var(--transition);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             font-size: 14px;
         }
         .hero-nav a:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
+            background: rgba(46, 94, 78, 0.8);
+            transform: translateY(-3px) scale(1.05);
+            border-color: rgba(255, 222, 0, 0.6);
+            color: var(--yellow-accent);
+            box-shadow: 0 8px 20px rgba(255, 222, 0, 0.15);
         }
 
         /* Insurance Banner */
@@ -265,7 +277,7 @@
             padding: 100px 0;
         }
         section.alt {
-            background: var(--bg-alt);
+            background: #f0f7f4;
             border: none;
             border-radius: 32px;
             margin: 0 20px 40px;
@@ -540,31 +552,44 @@
             margin: 0 auto;
         }
         .process-step {
-            background: var(--white);
-            padding: 24px 20px;
-            border-radius: 16px;
+            background: var(--green-main);
+            padding: 32px 24px;
+            border-radius: 32px;
             text-align: center;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.15);
+            border: none;
             position: relative;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        .process-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(46, 94, 78, 0.25);
         }
         .process-num {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: var(--green-main);
-            color: var(--white);
+            width: 48px;
+            height: 48px;
+            background: transparent;
+            border: 2px solid var(--yellow-accent);
+            color: var(--yellow-accent);
             border-radius: 50%;
             font-weight: 700;
-            font-size: 18px;
-            margin-bottom: 16px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        .process-step:hover .process-num {
+            background: var(--yellow-accent);
+            color: var(--green-main);
+            transform: scale(1.1);
         }
         .process-title {
             font-weight: 600;
             font-size: 16px;
-            color: var(--green-main);
+            color: var(--white);
         }
         @media (max-width: 768px) {
             .process-grid {
@@ -585,21 +610,45 @@
             margin: 0 auto;
         }
         .faq-item {
+            background: #f0f7f4;
+            padding: 32px;
+            border-radius: 24px;
+            box-shadow: none;
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            transform: translateY(-2px);
             background: var(--white);
-            padding: 20px 24px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
+            border-color: rgba(255, 222, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.08);
         }
         .faq-item dt {
             font-weight: 600;
-            font-size: 16px;
+            font-size: 18px;
             color: var(--green-main);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .faq-item dt::before {
+            content: "?";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--yellow-accent);
+            color: var(--text-dark);
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 800;
         }
         .faq-item dd {
             font-size: 15px;
             color: var(--text-light);
+            padding-left: 40px;
         }
 
         /* Form */
@@ -711,30 +760,32 @@
             position: fixed;
             bottom: 24px;
             right: 24px;
-            background: #2E5E4E;
+            background: var(--green-main);
             color: var(--white);
             padding: 14px 24px;
             border-radius: 999px;
             font-weight: 600;
             z-index: 999;
             text-decoration: none;
-            box-shadow: var(--shadow);
+            box-shadow: 0 4px 15px rgba(46, 94, 78, 0.2);
             display: flex;
             align-items: center;
             gap: 10px;
             transition: var(--transition);
             font-size: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid transparent;
         }
         .float-btn:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-hover);
-            background: var(--green-main);
+            box-shadow: 0 8px 25px rgba(46, 94, 78, 0.35);
+            background: #224A3D;
+            color: var(--yellow-accent);
+            border-color: rgba(255, 222, 0, 0.3);
         }
 
         /* Before/After Slider */
         .ba-section {
-            background: var(--bg-alt);
+            background: #f0f7f4;
             color: var(--text-dark);
             padding: 100px 0;
             border-radius: 32px;
@@ -1468,6 +1519,32 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
 </section>
 
+<section id="spoluprace" class="alt">
+  <div class="container">
+    <div class="section-header">
+        <h2>Jak probíhá spolupráce</h2>
+    </div>
+    <div class="process-grid">
+        <div class="process-step">
+            <div class="process-num">1</div>
+            <div class="process-title">Zavoláte nebo pošlete fotku</div>
+        </div>
+        <div class="process-step">
+            <div class="process-num">2</div>
+            <div class="process-title">Domluvíme obhlídku</div>
+        </div>
+        <div class="process-step">
+            <div class="process-num">3</div>
+            <div class="process-title">Připravíme řešení</div>
+        </div>
+        <div class="process-step">
+            <div class="process-num">4</div>
+            <div class="process-title">Realizujeme práci</div>
+        </div>
+    </div>
+  </div>
+</section>
+
 <section id="rady">
   <div class="container">
     <div class="section-header" style="display: flex; flex-direction: column; align-items: center;">
@@ -1500,31 +1577,7 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
 </section>
 
-<section id="spoluprace" class="alt">
-  <div class="container">
-    <div class="section-header">
-        <h2>Jak probíhá spolupráce</h2>
-    </div>
-    <div class="process-grid">
-        <div class="process-step">
-            <div class="process-num">1</div>
-            <div class="process-title">Zavoláte nebo pošlete fotku</div>
-        </div>
-        <div class="process-step">
-            <div class="process-num">2</div>
-            <div class="process-title">Domluvíme obhlídku</div>
-        </div>
-        <div class="process-step">
-            <div class="process-num">3</div>
-            <div class="process-title">Připravíme řešení</div>
-        </div>
-        <div class="process-step">
-            <div class="process-num">4</div>
-            <div class="process-title">Realizujeme práci</div>
-        </div>
-    </div>
-  </div>
-</section>
+
 
 <section id="faq">
   <div class="container">
