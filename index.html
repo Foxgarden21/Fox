@@ -76,16 +76,16 @@
             font-size: 16px;
         }
         .btn-primary {
-            background: var(--green-main);
+            background: linear-gradient(135deg, var(--green-main) 0%, #1e4235 100%);
             color: var(--white);
-            border: 1px solid transparent;
-            box-shadow: 0 4px 15px rgba(46, 94, 78, 0.2);
+            border: 1px solid rgba(255, 222, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(46, 94, 78, 0.3);
         }
         .btn-primary:hover {
-            background: #224A3D;
-            border-color: rgba(255, 222, 0, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(46, 94, 78, 0.35);
+            background: linear-gradient(135deg, #224A3D 0%, #153227 100%);
+            border-color: var(--yellow-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 222, 0, 0.25);
             color: var(--yellow-accent);
         }
         .btn-whatsapp {
@@ -107,11 +107,11 @@
             border: 2px solid var(--green-main);
         }
         .btn-outline:hover {
-            background: var(--green-main);
+            background: linear-gradient(135deg, var(--green-main) 0%, #1e4235 100%);
             color: var(--yellow-accent);
-            border-color: var(--green-main);
-            box-shadow: 0 8px 20px rgba(46, 94, 78, 0.2);
-            transform: translateY(-2px);
+            border-color: transparent;
+            box-shadow: 0 8px 25px rgba(46, 94, 78, 0.3);
+            transform: translateY(-3px);
         }
 
         /* Hero */
@@ -200,16 +200,7 @@
 
         /* Modifying primary button specifically for dark hero */
         .hero-buttons .btn-primary {
-            background: linear-gradient(135deg, var(--green-main) 0%, #1e4235 100%);
             color: var(--yellow-accent);
-            border: 1px solid rgba(255, 222, 0, 0.3);
-            box-shadow: 0 8px 25px rgba(255, 222, 0, 0.15);
-        }
-        .hero-buttons .btn-primary:hover {
-            background: linear-gradient(135deg, #224A3D 0%, #153227 100%);
-            box-shadow: 0 12px 30px rgba(255, 222, 0, 0.25);
-            transform: translateY(-3px);
-            border-color: var(--yellow-accent);
         }
 
         .micro {
@@ -277,7 +268,7 @@
             padding: 100px 0;
         }
         section.alt {
-            background: #f0f7f4;
+            background: var(--bg-alt);
             border: none;
             border-radius: 32px;
             margin: 0 20px 40px;
@@ -610,89 +601,77 @@
             margin: 0 auto;
         }
         .faq-item {
-            background: #f0f7f4;
+            background: var(--green-main);
+            color: var(--white);
             padding: 32px;
             border-radius: 24px;
-            box-shadow: none;
-            border: 1px solid transparent;
+            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.1);
+            border: none;
             transition: var(--transition);
         }
         .faq-item:hover {
-            transform: translateY(-2px);
-            background: var(--white);
-            border-color: rgba(255, 222, 0, 0.4);
-            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(46, 94, 78, 0.2);
         }
         .faq-item dt {
             font-weight: 600;
             font-size: 18px;
-            color: var(--green-main);
+            color: var(--yellow-accent);
             margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 12px;
         }
-        .faq-item dt::before {
-            content: "?";
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 28px;
-            background: var(--yellow-accent);
-            color: var(--text-dark);
-            border-radius: 50%;
-            font-size: 14px;
-            font-weight: 800;
-        }
         .faq-item dd {
             font-size: 15px;
-            color: var(--text-light);
-            padding-left: 40px;
+            color: var(--white);
+            opacity: 0.9;
         }
 
         /* Form */
         .form-box {
             background: var(--white);
-            padding: 32px;
-            border-radius: 24px;
+            padding: 40px;
+            border-radius: 32px;
             box-shadow: var(--shadow);
-            border: 1px solid var(--border);
+            border: none;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
         }
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 20px;
         }
         .form-group {
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 8px;
         }
         .form-box label {
-            font-weight: 500;
+            font-weight: 600;
             font-size: 14px;
             color: var(--text-dark);
         }
         .form-box input,
         .form-box textarea {
             width: 100%;
-            padding: 14px 16px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
+            padding: 16px 20px;
+            border-radius: 16px;
+            border: 2px solid rgba(0,0,0,0.05);
             font-size: 15px;
             font-family: inherit;
             background: #f9fafb;
             transition: var(--transition);
+            color: var(--text-dark);
         }
         .form-box input:focus,
         .form-box textarea:focus {
             outline: none;
             border-color: var(--green-main);
             background: var(--white);
+            box-shadow: 0 0 0 4px rgba(46, 94, 78, 0.1);
         }
         .form-box textarea {
             resize: vertical;
@@ -785,7 +764,7 @@
 
         /* Before/After Slider */
         .ba-section {
-            background: #f0f7f4;
+            background: var(--bg-alt);
             color: var(--text-dark);
             padding: 100px 0;
             border-radius: 32px;
