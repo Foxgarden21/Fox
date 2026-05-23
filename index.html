@@ -28,10 +28,7 @@
     <style>
         :root {
             --green-main: #2E7D32;
-            --green-light: #E6F4EA;
-            --green-soft: #D0F0C0;
             --accent: #ea580c;
-            --accent-soft: #fed7aa;
             --text-dark: #1b1b1b;
             --text-light: #6b7280;
             --white: #ffffff;
@@ -314,28 +311,45 @@
         .feature-card {
             flex: 1 1 300px;
             max-width: 450px;
-            text-align: center;
-            padding: 32px 24px;
+            text-align: left;
+            padding: 40px 32px;
+            background: #064E3B !important;
+            color: var(--white);
+            border: none !important;
+            border-radius: 32px !important;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(6, 78, 59, 0.3);
+            border-color: transparent;
+        }
+        .feature-card h3 {
+            color: var(--yellow-accent) !important;
+            font-size: 22px !important;
+            margin-bottom: 12px;
+            justify-content: flex-start !important;
+            width: 100%;
         }
         .feature-icon-wrapper {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 64px;
-            height: 64px;
-            background: var(--white);
-            border-radius: 20px;
-            margin-bottom: 20px;
-            color: var(--green-main);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            width: 56px;
+            height: 56px;
+            background: transparent;
+            border-radius: 50%;
+            margin-bottom: 24px;
+            color: var(--yellow-accent);
+            border: 2px solid var(--yellow-accent);
             transition: var(--transition);
         }
         .feature-card:hover .feature-icon-wrapper {
-            background: var(--white);
-            color: var(--green-main);
-            transform: scale(1.1) rotate(-5deg);
-            box-shadow: 0 8px 25px rgba(255, 222, 0, 0.4);
-            border: 1px solid var(--yellow-accent);
+            background: var(--yellow-accent);
+            color: #064E3B;
+            transform: scale(1.1);
         }
         .card h3 {
             font-size: 20px;
@@ -858,7 +872,7 @@
             transition: transform 0.3s;
         }
         .ba-thumb.active {
-            border-color: var(--accent);
+            border-color: var(--yellow-accent);
             transform: scale(1.05);
             box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
         }
@@ -1061,7 +1075,7 @@
   <div class="container" style="position:relative; z-index:1;">
     <div class="hero-box">
       <h1 class="brand">
-        <img src="images/logo.png" alt="Logo FOX Garden" onerror="this.src='https://placehold.co/150x50/E6F4EA/2E7D32?text=FOX+Garden'">
+        <img src="images/logo.png" alt="Logo FOX Garden" onerror="this.src='https://placehold.co/150x50/FFFFFF/2E7D32?text=FOX+Garden'">
         FOX Garden
       </h1>
       <p class="premium">Když je potřeba pořádná práce.</p>
@@ -1148,7 +1162,7 @@
       <div style="text-align:center; margin-top:40px;">
         <a href="https://www.google.com/search?q=fox+garden" target="_blank" rel="noopener" class="arrow-link" style="display: inline-flex; flex-direction: column; align-items: center; color: var(--white); text-decoration: none; font-weight: 600; text-align: center;">
             <span>Podívejte se na další reference</span>
-            <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--yellow-accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
         </a>
@@ -1361,36 +1375,36 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="feature-icon-wrapper">
                 <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
             </div>
-            <h3 style="justify-content: center; font-size: 18px;">Férové jednání a spolehlivost</h3>
-            <p style="color: var(--text-light); font-size: 14px; line-height: 1.5;">Co slíbíme, to platí. Přijedeme včas a práci dokončíme v termínu.</p>
+            <h3>Férové jednání a spolehlivost</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Co slíbíme, to platí. Přijedeme včas a práci dokončíme v termínu.</p>
         </div>
         <div class="card feature-card">
             <div class="feature-icon-wrapper">
                 <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
-            <h3 style="justify-content: center; font-size: 18px;">Bezpečnost a profesionalita</h3>
-            <p style="color: var(--text-light); font-size: 14px; line-height: 1.5;">Pracujeme s profi technikou a jsme pojištěni pro případ škody až do 3 mil. Kč.</p>
+            <h3>Bezpečnost a profesionalita</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Pracujeme s profi technikou a jsme pojištěni pro případ škody až do 3 mil. Kč.</p>
         </div>
         <div class="card feature-card">
             <div class="feature-icon-wrapper">
                 <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
             </div>
-            <h3 style="justify-content: center; font-size: 18px;">Rozumná a transparentní cena</h3>
-            <p style="color: var(--text-light); font-size: 14px; line-height: 1.5;">Nejsme nejlevnější, ale ani nejdražší. Za férovou cenu odvádíme nadstandardní práci.</p>
+            <h3>Rozumná a transparentní cena</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Nejsme nejlevnější, ale ani nejdražší. Za férovou cenu odvádíme nadstandardní práci.</p>
         </div>
         <div class="card feature-card">
             <div class="feature-icon-wrapper">
                 <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
             </div>
-            <h3 style="justify-content: center; font-size: 18px;">Péče jako o vlastní zahradu</h3>
-            <p style="color: var(--text-light); font-size: 14px; line-height: 1.5;">Ke každému projektu přistupujeme s respektem k přírodě a důrazem na detail.</p>
+            <h3>Péče jako o vlastní zahradu</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Ke každému projektu přistupujeme s respektem k přírodě a důrazem na detail.</p>
         </div>
 
         <!-- Arrow transition inline with the cards -->
         <div style="flex: 1 1 200px; max-width: 250px; display: flex; align-items: center; justify-content: center; padding: 24px;">
             <a href="#ukazky" class="arrow-link" style="display: inline-flex; flex-direction: column; align-items: center; color: var(--green-main); text-decoration: none; font-weight: 600; text-align: center;">
                 <span>Podívejte se na ukázky naší práce</span>
-                <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--yellow-accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
                 </svg>
             </a>
@@ -1415,7 +1429,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <h3>Sekání trávníků</h3>
         <div class="price-badge">Od 2 Kč / m²</div>
         <p class="price-desc">Cena se odvíjí dle stavu a členitosti plochy.</p>
-        <a href="clanky/kolik-stoji-sekani-travy.html" style="font-size: 13px; color: var(--accent); font-weight: 600; text-decoration: none; margin-top: 10px; display: inline-block;">Přečtěte si článek: Kolik stojí sekání trávy →</a>
+        <a href="clanky/kolik-stoji-sekani-travy.html" style="font-size: 13px; color: var(--yellow-accent); font-weight: 600; text-decoration: none; margin-top: 10px; display: inline-block;">Přečtěte si článek: Kolik stojí sekání trávy →</a>
       </div>
       <div class="price-card">
         <h3>Pravidelná údržba</h3>
@@ -1443,17 +1457,17 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="card" onclick="window.location.href='clanky/kdy-zacit-sekat-travu.html'" style="cursor:pointer;">
         <h3>Kdy začít sekat trávu na jaře</h3>
         <p>Na jaře to svádí vzít sekačku hned, jak se ukáže slunce. Jenže první sečení má svoje pravidla...</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--accent); font-size:14px;">Číst článek →</span>
+        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--yellow-accent); font-size:14px;">Číst článek →</span>
       </div>
       <div class="card" onclick="window.location.href='clanky/kolik-stoji-sekani-travy.html'" style="cursor:pointer;">
         <h3>Kolik stojí sekání trávy</h3>
         <p>Zajímá vás, kolik stojí sekání trávy? Rozdíl může být klidně i několikanásobný – podle toho, v jakém je stavu zahrada.</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--accent); font-size:14px;">Číst článek →</span>
+        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--yellow-accent); font-size:14px;">Číst článek →</span>
       </div>
       <div class="card" onclick="window.location.href='clanky/jarni-udrzba-zahrady.html'" style="cursor:pointer;">
         <h3>Jarní údržba zahrady</h3>
         <p>Na jaře to na zahradě rychle „vybuchne“. Kdo začne včas, má klid. Kdo čeká, ten to pak dohání najednou.</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--accent); font-size:14px;">Číst článek →</span>
+        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--yellow-accent); font-size:14px;">Číst článek →</span>
       </div>
     </div>
     <div style="text-align:center; display:flex; flex-direction:column; gap:12px; align-items:center;">
@@ -1678,7 +1692,7 @@ function checkPin() {
                 <div style="font-weight: 600; font-size: 15px;">Nezbytné cookies</div>
                 <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Nutné pro správné fungování webu.</div>
             </div>
-            <div style="color: var(--accent-soft); font-weight: 700; font-size: 14px;">Vždy aktivní</div>
+            <div style="color: var(--yellow-accent); font-weight: 700; font-size: 14px;">Vždy aktivní</div>
         </div>
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <div>
@@ -1687,7 +1701,7 @@ function checkPin() {
             </div>
             <label style="position: relative; display: inline-block; width: 44px; height: 24px;">
                 <input type="checkbox" id="cookie-analytics-check" style="opacity: 0; width: 0; height: 0;" checked>
-                <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--accent); transition: .4s; border-radius: 24px;"></span>
+                <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--yellow-accent); transition: .4s; border-radius: 24px;"></span>
                 <span style="position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;" id="cookie-toggle-slider"></span>
             </label>
         </div>
