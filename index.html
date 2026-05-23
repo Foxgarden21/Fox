@@ -291,22 +291,21 @@
 
         /* Grid Layouts */
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
 
         /* Cards */
         .card {
             background: var(--white);
-            border-radius: var(--radius);
-            padding: 28px;
+            border-radius: 32px;
+            padding: 40px 32px;
             box-shadow: var(--shadow);
-            border: 1px solid var(--border);
+            border: none;
             transition: var(--transition);
             height: 100%;
         }
         .card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-hover);
-            border-color: var(--yellow-accent);
         }
         .feature-card {
             flex: 1 1 300px;
@@ -363,23 +362,26 @@
         /* Services List */
         ul.clean { list-style: none; padding: 0; }
         ul.clean li {
-            padding: 10px 0 10px 32px;
+            padding: 14px 0 14px 32px;
             position: relative;
-            line-height: 1.5;
-            font-size: 15px;
+            line-height: 1.6;
+            font-size: 16px;
             color: var(--text-dark);
             border-bottom: 1px solid var(--border);
         }
         ul.clean li:last-child { border-bottom: none; }
         ul.clean li::before {
-            content: "";
+            content: "✓";
             position: absolute;
             left: 0;
-            top: 16px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--yellow-accent);
+            top: 14px;
+            color: var(--green-main);
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 0;
+            background: transparent;
+            width: auto;
+            height: auto;
         }
 
         /* Realizace / Work Examples */
@@ -709,25 +711,25 @@
             position: fixed;
             bottom: 24px;
             right: 24px;
-            background: var(--green-main);
+            background: #064E3B;
             color: var(--white);
-            padding: 16px 24px;
+            padding: 14px 24px;
             border-radius: 999px;
             font-weight: 600;
             z-index: 999;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+            box-shadow: var(--shadow);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             transition: var(--transition);
-            font-size: 16px;
+            font-size: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
         .float-btn:hover {
-            background: #256629;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.5);
-            color: var(--white);
+            box-shadow: var(--shadow-hover);
+            background: var(--green-main);
         }
 
         /* Before/After Slider */
@@ -785,50 +787,49 @@
             width: 100%; /* Must match parent's original width via JS */
             max-width: none;
         }
+        @keyframes pulse-handle {
+            0% { box-shadow: 0 0 0 0 rgba(255, 222, 0, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 222, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 222, 0, 0); }
+        }
         .ba-handle {
             position: absolute;
             top: 0;
             left: 50%;
             width: 4px;
             height: 100%;
-            background: var(--green-main);
+            background: var(--white);
             z-index: 3;
             cursor: ew-resize;
             transform: translateX(-50%);
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
         }
         .ba-handle-btn {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            background: var(--green-main);
-            border: 3px solid var(--yellow-accent);
+            width: 56px;
+            height: 56px;
+            background: var(--white);
+            border: 4px solid var(--green-main);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background 0.3s;
+            animation: pulse-handle 2s infinite;
+        }
+        .ba-handle-btn::after {
+            content: "↔";
+            color: var(--green-main);
+            font-size: 24px;
+            font-weight: 800;
         }
         .ba-handle:hover .ba-handle-btn {
             transform: translate(-50%, -50%) scale(1.1);
-        }
-        .ba-handle-btn::before, .ba-handle-btn::after {
-            content: "";
-            border: solid transparent;
-            border-width: 6px;
-            position: absolute;
-        }
-        .ba-handle-btn::before {
-            border-right-color: var(--white);
-            left: 4px;
-        }
-        .ba-handle-btn::after {
-            border-left-color: var(--white);
-            right: 4px;
+            background: var(--yellow-accent);
         }
         .ba-label {
             position: absolute;
@@ -1189,8 +1190,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <section id="ukazky" class="ba-section">
   <div class="container">
     <div class="section-header" style="position:relative; z-index:1;">
-        <h2>Proměny zahrad a pozemků</h2>
-        <p class="subtitle">Podívejte se na skutečné výsledky naší práce.</p>
+        <h2>Proměníme chaos v klid</h2>
+        <p class="subtitle">Péče, která je vidět. Podívejte se na reálné ukázky naší práce.</p>
     </div>
 
     <div class="ba-slider-container" id="ba-slider">
@@ -1296,6 +1297,28 @@ document.addEventListener("DOMContentLoaded", function() {
         }, {passive: false});
     }
 
+    // Subtle wiggle animation on load
+    setTimeout(() => {
+        if(handle && afterWrapper) {
+            handle.style.transition = "left 0.5s ease-in-out";
+            afterWrapper.style.transition = "width 0.5s ease-in-out";
+            handle.style.left = "45%";
+            afterWrapper.style.width = "45%";
+            setTimeout(() => {
+                handle.style.left = "55%";
+                afterWrapper.style.width = "55%";
+                setTimeout(() => {
+                    handle.style.left = "50%";
+                    afterWrapper.style.width = "50%";
+                    setTimeout(() => {
+                        handle.style.transition = "none";
+                        afterWrapper.style.transition = "none";
+                    }, 500);
+                }, 500);
+            }, 500);
+        }
+    }, 1000);
+
     // Thumbnail logic
     const thumbnails = document.querySelectorAll(".ba-thumb");
     const mainBefore = document.getElementById("img-before");
@@ -1328,8 +1351,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <section id="sluzby" class="alt">
   <div class="container">
     <div class="section-header">
-        <h2>Naše služby</h2>
-        <p class="subtitle">Profesionální péče pro rodinné domy, firmy i SVJ</p>
+        <h2>Zahrada bez starostí</h2>
+        <p class="subtitle">Profesionální péče pro rodinné domy, firmy i SVJ. Spolehněte se na odborníky.</p>
     </div>
 
     <div class="grid-3">
@@ -1342,7 +1365,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li><b>Nové výsadby</b> – stromy, keře i trvalkové záhony.</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card" style="box-shadow: 0 10px 40px rgba(46, 125, 50, 0.08); transform: translateY(-4px); border: 1px solid rgba(46, 125, 50, 0.1);">
             <h3>Pravidelná údržba</h3>
             <p style="font-size: 14px; color: var(--text-light); margin-bottom: 12px; line-height: 1.4;">Ať vás zahrada těší, ne stresuje. Zahrada bez starostí.</p>
             <ul class="clean">
@@ -1609,7 +1632,8 @@ document.addEventListener("DOMContentLoaded", function() {
 </footer>
 
 <a href="tel:+420775717291" class="float-btn">
-    📞 Zavolat ihned
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" style="color: var(--yellow-accent);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    Nezávazná poptávka
 </a>
 
 <!-- Docházka PIN Modal -->
