@@ -141,7 +141,7 @@
             object-fit: cover;
             z-index: -2;
             opacity: 0;
-            transition: opacity 0.8s ease;
+            transition: opacity 1s ease;
         }
 
         .hero-video-bg.loaded {
@@ -1950,16 +1950,18 @@ document.addEventListener("DOMContentLoaded", function() {
     // Handle Video Load Fade
     const heroVideo = document.querySelector('.hero-video-bg');
     if (heroVideo) {
+        const playVideo = () => {
+            heroVideo.classList.add('loaded');
+            heroVideo.play().catch(e => console.log('Autoplay prevented:', e));
+        };
+
         // If the video is already ready (e.g. cached)
         if (heroVideo.readyState >= 3) {
-            heroVideo.classList.add('loaded');
+            playVideo();
         } else {
-            heroVideo.addEventListener('loadeddata', () => {
-                heroVideo.classList.add('loaded');
-            });
-            heroVideo.addEventListener('canplay', () => {
-                heroVideo.classList.add('loaded');
-            });
+            heroVideo.addEventListener('canplaythrough', playVideo);
+            // Fallback for some mobile browsers that never reach canplaythrough without play()
+            heroVideo.addEventListener('loadeddata', playVideo);
         }
     }
 });

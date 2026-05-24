@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Video Test</title>
+</head>
+<body>
+<video id="vid" controls src="https://www.w3schools.com/html/mov_bbb.mp4" playsinline muted autoplay></video>
+<script>
+    const v = document.getElementById('vid');
+    v.addEventListener('loadeddata', () => console.log('loadeddata'));
+    v.addEventListener('canplay', () => console.log('canplay'));
+    v.addEventListener('canplaythrough', () => console.log('canplaythrough'));
+</script>
+</body>
+</html>
