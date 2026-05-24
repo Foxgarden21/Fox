@@ -316,21 +316,42 @@
         }
         section.warm .section-header .subtitle {
             color: var(--green-main);
-            opacity: 0.85;
         }
         section.warm .card {
-            background: rgba(255,255,255,0.7);
+            background: var(--white);
+            border: 1px solid rgba(46, 94, 78, 0.1);
         }
         section.warm .card h3 {
             color: var(--green-main);
+            font-weight: 700;
+            font-size: 24px;
         }
         section.warm .card p {
             color: var(--green-main) !important;
-            opacity: 0.85;
+            font-weight: 500;
         }
         section.warm ul.clean li {
             color: var(--green-main);
             border-bottom-color: rgba(46, 94, 78, 0.1);
+            font-weight: 500;
+            padding-left: 40px;
+        }
+        section.warm ul.clean li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 14px;
+            width: 24px;
+            height: 24px;
+            background: var(--green-main);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
         }
 
         .section-header {
@@ -1470,7 +1491,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li><b>Nové výsadby</b> – stromy, keře i trvalkové záhony.</li>
             </ul>
         </div>
-        <div class="card" style="box-shadow: 0 10px 40px rgba(46, 94, 78, 0.08); transform: translateY(-4px); border: 1px solid rgba(46, 94, 78, 0.1);">
+        <div class="card" style="box-shadow: 0 15px 40px rgba(46, 94, 78, 0.15); transform: translateY(-8px); border: 2px solid var(--green-main);">
             <h3>Pravidelná údržba</h3>
             <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Ať vás zahrada těší, ne stresuje. Zahrada bez starostí.</p>
             <ul class="clean">
