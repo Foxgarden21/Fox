@@ -6,6 +6,7 @@
     <title>FOX Garden – Prémiová zahradnická péče</title>
     <meta name="description" content="Údržba zahrad, řez stromů, sekání trávníků, postřiky a revitalizace. Certifikace ÚKZÚZ – odborná aplikace herbicidů, fungicidů, pesticidů a hnojiv. Kvalitní české sazenice a profesionální zahradnické služby pro domy, SVJ a firmy." />
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="images/hero-poster.webp" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -127,6 +128,8 @@
             justify-content: center;
             align-items: center;
             min-height: 80vh;
+            background: url('images/hero-poster.webp') center/cover no-repeat;
+            background-color: var(--green-main); /* Fallback */
         }
 
         .hero-video-bg {
@@ -137,6 +140,12 @@
             height: 100%;
             object-fit: cover;
             z-index: -2;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .hero-video-bg.loaded {
+            opacity: 1;
         }
 
         .hero-overlay {
@@ -1179,7 +1188,7 @@
 
 <header class="hero" id="top">
   <!-- Video Background -->
-  <video autoplay muted loop playsinline class="hero-video-bg">
+  <video autoplay muted loop playsinline poster="images/hero-poster.webp" class="hero-video-bg">
     <source src="videos/hero-jaro.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
@@ -1937,6 +1946,22 @@ document.addEventListener("DOMContentLoaded", function() {
             hideConsent('necessary');
         }
     });
+
+    // Handle Video Load Fade
+    const heroVideo = document.querySelector('.hero-video-bg');
+    if (heroVideo) {
+        // If the video is already ready (e.g. cached)
+        if (heroVideo.readyState >= 3) {
+            heroVideo.classList.add('loaded');
+        } else {
+            heroVideo.addEventListener('loadeddata', () => {
+                heroVideo.classList.add('loaded');
+            });
+            heroVideo.addEventListener('canplay', () => {
+                heroVideo.classList.add('loaded');
+            });
+        }
+    }
 });
 </script>
 
