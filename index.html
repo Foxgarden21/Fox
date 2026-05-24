@@ -34,6 +34,7 @@
             --white: #ffffff;
             --bg-color: #ffffff;
             --bg-alt: #f8f9fa;
+            --bg-warm: #F7F5F0;
             --yellow-accent: #FFDE00;
             --yellow-soft: #fffdf0; /* Warm earthy beige background */
 
@@ -300,8 +301,38 @@
             border-radius: 32px;
             margin: 0 20px 40px;
             padding: 80px 20px;
-            box-shadow: var(--shadow);
-            }
+            box-shadow: none;
+        }
+        section.warm {
+            background: var(--bg-warm);
+            border: none;
+            border-radius: 32px;
+            margin: 0 20px 40px;
+            padding: 80px 20px;
+            box-shadow: none;
+        }
+        section.warm .section-header h2 {
+            color: var(--green-main);
+        }
+        section.warm .section-header .subtitle {
+            color: var(--green-main);
+            opacity: 0.85;
+        }
+        section.warm .card {
+            background: rgba(255,255,255,0.7);
+        }
+        section.warm .card h3 {
+            color: var(--green-main);
+        }
+        section.warm .card p {
+            color: var(--green-main) !important;
+            opacity: 0.85;
+        }
+        section.warm ul.clean li {
+            color: var(--green-main);
+            border-bottom-color: rgba(46, 94, 78, 0.1);
+        }
+
         .section-header {
             text-align: center;
             margin-bottom: 50px;
@@ -958,7 +989,7 @@
             .brand { font-size: 36px; gap: 12px; flex-direction: column; }
             .brand img { height: 50px; }
             section { padding: 60px 0; }
-            section.alt { padding: 50px 20px; margin: 0 12px 40px; }
+            section.alt, section.warm { padding: 50px 20px; margin: 0 12px 40px; }
             .form-row { grid-template-columns: 1fr; gap: 16px; }
             .contact-grid { grid-template-columns: 1fr; }
             .float-btn { width: calc(100% - 48px); justify-content: center; bottom: 16px; right: 24px; }
@@ -1422,7 +1453,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<section id="sluzby" class="alt">
+<section id="sluzby" class="warm">
   <div class="container">
     <div class="section-header">
         <h2>Naše služby</h2>
@@ -1432,7 +1463,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="grid-3">
         <div class="card">
             <h3>Návrhy a realizace</h3>
-            <p style="font-size: 14px; color: var(--text-light); margin-bottom: 12px; line-height: 1.4;">Když chcete mít kolem domu opravdu hezky. Místo, kde si odpočinete.</p>
+            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Když chcete mít kolem domu opravdu hezky. Místo, kde si odpočinete.</p>
             <ul class="clean">
                 <li><b>Komplexní proměny</b> – od návrhu po finální výsadbu.</li>
                 <li><b>Terénní úpravy</b> – rovnání a příprava pozemku.</li>
@@ -1441,7 +1472,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <div class="card" style="box-shadow: 0 10px 40px rgba(46, 94, 78, 0.08); transform: translateY(-4px); border: 1px solid rgba(46, 94, 78, 0.1);">
             <h3>Pravidelná údržba</h3>
-            <p style="font-size: 14px; color: var(--text-light); margin-bottom: 12px; line-height: 1.4;">Ať vás zahrada těší, ne stresuje. Zahrada bez starostí.</p>
+            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Ať vás zahrada těší, ne stresuje. Zahrada bez starostí.</p>
             <ul class="clean">
                 <li><b>Sekání trávníků</b> – sečení, dosekávání hran a úklid.</li>
                 <li><b>Pravidelná péče</b> – péče o záhony a výsadby.</li>
@@ -1450,7 +1481,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <div class="card">
             <h3>Jednorázové zásahy</h3>
-            <p style="font-size: 14px; color: var(--text-light); margin-bottom: 12px; line-height: 1.4;">Poctivá práce, kterou je vidět. Proměníme chaos v místo pro klid.</p>
+            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Poctivá práce, kterou je vidět. Proměníme chaos v místo pro klid.</p>
             <ul class="clean">
                 <li><b>Stříhání živých plotů</b> – tvarování a zmlazení.</li>
                 <li><b>Řez stromů</b> – odborný řez pro zdravý růst.</li>
