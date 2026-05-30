@@ -836,20 +836,36 @@
         }
         .contact-info {
             background: var(--white);
-            padding: 32px;
+            padding: 40px 32px;
             border-radius: 24px;
-            box-shadow: var(--shadow);
+            box-shadow: 0 15px 40px rgba(46, 94, 78, 0.1);
             border: 1px solid var(--border);
+            border-left: 4px solid var(--yellow-accent);
         }
         .contact-info h3 {
-            font-size: 20px;
+            font-size: 24px;
             color: var(--green-main);
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+            font-weight: 700;
         }
-        .contact-info p {
-            margin-bottom: 12px;
-            font-size: 15px;
+        .contact-info .contact-row {
+            margin-bottom: 16px;
+            font-size: 16px;
             color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .contact-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 222, 0, 0.15);
+            color: var(--yellow-accent);
+            border-radius: 50%;
+            flex-shrink: 0;
         }
         .contact-info a {
             color: var(--green-main);
@@ -1696,25 +1712,28 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="container">
     <div class="section-header" style="display: flex; flex-direction: column; align-items: center;">
         <img src="images/fox.png" alt="FOX Garden" style="width: 80px; height: auto; margin-bottom: 16px; opacity: 0.9;" onerror="this.style.display='none'">
-        <h2>Rady ze zahrady</h2>
-        <p class="subtitle">Přečtěte si naše tipy a rady pro krásnou zahradu.</p>
+        <h2 style="display: inline-block; position: relative; padding-bottom: 8px;">
+            Rady ze zahrady
+            <span style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background: var(--yellow-accent); border-radius: 2px;"></span>
+        </h2>
+        <p class="subtitle" style="margin-top: 16px;">Přečtěte si naše tipy a rady pro krásnou zahradu.</p>
     </div>
 
     <div class="grid-3" style="margin-bottom: 30px;">
-      <div class="card" onclick="window.location.href='clanky/kdy-zacit-sekat-travu.html'" style="cursor:pointer;">
+      <div class="card" onclick="window.location.href='clanky/kdy-zacit-sekat-travu.html'" style="cursor:pointer; border-left: 4px solid var(--yellow-accent);">
         <h3>Kdy začít sekat trávu na jaře</h3>
         <p>Na jaře to svádí vzít sekačku hned, jak se ukáže slunce. Jenže první sečení má svoje pravidla...</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--yellow-accent); font-size:14px;">Číst článek →</span>
+        <span style="display:inline-block; margin-top:16px; padding: 6px 12px; background: rgba(255, 222, 0, 0.15); border-radius: 8px; font-weight:600; color:var(--green-main); font-size:14px;">Číst článek →</span>
       </div>
-      <div class="card" onclick="window.location.href='clanky/kolik-stoji-sekani-travy.html'" style="cursor:pointer;">
+      <div class="card" onclick="window.location.href='clanky/kolik-stoji-sekani-travy.html'" style="cursor:pointer; border-left: 4px solid var(--yellow-accent);">
         <h3>Kolik stojí sekání trávy</h3>
         <p>Zajímá vás, kolik stojí sekání trávy? Rozdíl může být klidně i několikanásobný – podle toho, v jakém je stavu zahrada.</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--yellow-accent); font-size:14px;">Číst článek →</span>
+        <span style="display:inline-block; margin-top:16px; padding: 6px 12px; background: rgba(255, 222, 0, 0.15); border-radius: 8px; font-weight:600; color:var(--green-main); font-size:14px;">Číst článek →</span>
       </div>
-      <div class="card" onclick="window.location.href='clanky/jarni-udrzba-zahrady.html'" style="cursor:pointer;">
+      <div class="card" onclick="window.location.href='clanky/jarni-udrzba-zahrady.html'" style="cursor:pointer; border-left: 4px solid var(--yellow-accent);">
         <h3>Jarní údržba zahrady</h3>
         <p>Na jaře to na zahradě rychle „vybuchne“. Kdo začne včas, má klid. Kdo čeká, ten to pak dohání najednou.</p>
-        <span style="display:inline-block; margin-top:10px; font-weight:600; color:var(--yellow-accent); font-size:14px;">Číst článek →</span>
+        <span style="display:inline-block; margin-top:16px; padding: 6px 12px; background: rgba(255, 222, 0, 0.15); border-radius: 8px; font-weight:600; color:var(--green-main); font-size:14px;">Číst článek →</span>
       </div>
     </div>
     <div style="text-align:center; display:flex; flex-direction:column; gap:12px; align-items:center;">
@@ -1757,16 +1776,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
         <img src="images/fox.png" alt="FOX Garden" style="width: 64px; height: auto; margin-bottom: 24px;" onerror="this.style.display='none'">
 
-        <h2 style="font-size: 32px; margin-bottom: 24px; color: var(--green-main);">Kdo stojí za FOX Garden</h2>
+        <h2 style="font-size: 32px; margin-bottom: 24px; color: var(--green-main); position: relative; display: inline-block;">
+            Kdo stojí za FOX Garden
+            <span style="position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background: var(--yellow-accent); border-radius: 2px;"></span>
+        </h2>
 
-        <div style="font-size: 18px; color: var(--text-dark); line-height: 1.6; max-width: 700px; margin-bottom: 32px;">
-            <p style="margin-bottom: 16px; font-weight: 500;">„Víme, co zahrada opravdu potřebuje – od úvodního návrhu a terénních úprav, přes odbornou výsadbu, až po dlouhodobou péči.“</p>
-            <p style="color: var(--text-light); font-size: 16px; margin-bottom: 16px;">Jsme malá firma a zakládáme si na osobním přístupu. Jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně, s respektem k přírodě a plnou odpovědností.</p>
-            <p style="color: var(--text-light); font-size: 16px;">Navrhujeme zahrady především tam, kde následně realizujeme i samotnou úpravu, abychom zaručili 100% výsledek a kvalitu od prvního nákresu po poslední sazenici.</p>
+        <div style="font-size: 18px; color: var(--text-dark); line-height: 1.6; max-width: 700px; margin-bottom: 32px; margin-top: 16px;">
+            <div style="margin-bottom: 24px; font-weight: 600; font-size: 20px; color: var(--green-main); background: rgba(255, 222, 0, 0.15); padding: 20px; border-radius: 16px; border-left: 4px solid var(--yellow-accent);">
+                „Víme, co zahrada opravdu potřebuje – od úvodního návrhu a terénních úprav, přes odbornou výsadbu, až po dlouhodobou péči.“
+            </div>
+            <p style="color: var(--text-light); font-size: 16px; margin-bottom: 16px;">Jsme malá firma a zakládáme si na <strong>osobním přístupu</strong>. Jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně, s respektem k přírodě a plnou odpovědností.</p>
+            <p style="color: var(--text-light); font-size: 16px;">Navrhujeme zahrady především tam, kde následně realizujeme i samotnou úpravu, abychom zaručili <strong>100% výsledek a kvalitu</strong> od prvního nákresu po poslední sazenici.</p>
         </div>
 
         <div style="display: flex; align-items: center; gap: 12px; color: var(--green-main); font-weight: 600; font-size: 16px;">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color: var(--yellow-accent);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             Poctivá práce & dodržování termínů
         </div>
     </div>
@@ -1783,11 +1807,11 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="contact-grid">
         <div class="contact-info">
             <h3>FOX Garden – Zuklesa s.r.o.</h3>
-            <p>IČO: 17805368</p>
-            <p>🛡️ Pojištěno do 3 mil. Kč</p>
-            <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.2); margin: 20px 0;">
-            <p>📞 <a href="tel:+420775717291">775 717 291</a></p>
-            <p>✉️ <a href="mailto:zuki@foxgarden.cz">zuki@foxgarden.cz</a></p>
+            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div> <span>IČO: 17805368</span></div>
+            <div class="contact-row" style="font-weight: 600; color: var(--green-main);"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div> <span>Pojištěno do 3 000 000 Kč</span></div>
+            <hr style="border: 0; height: 1px; background: var(--border); margin: 24px 0;">
+            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div> <a href="tel:+420775717291" style="font-size: 18px;">775 717 291</a></div>
+            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div> <a href="mailto:zuki@foxgarden.cz" style="font-size: 18px;">zuki@foxgarden.cz</a></div>
         </div>
 
         <div>
