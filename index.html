@@ -6,7 +6,6 @@
     <title>FOX Garden | Návrhy, realizace a údržba zahrad Jičín</title>
     <meta name="description" content="Údržba zahrad, řez stromů, sekání trávníků, postřiky a revitalizace. Certifikace ÚKZÚZ – odborná aplikace herbicidů, fungicidů, pesticidů a hnojiv. Kvalitní české sazenice a profesionální zahradnické služby pro domy, SVJ a firmy." />
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" href="images/hero-poster.webp" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -131,41 +130,6 @@
             background-color: var(--green-main); /* Fallback */
         }
 
-        .hero-poster-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -3;
-        }
-
-        .hero-video-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-
-        .hero-video-bg.loaded {
-            opacity: 1;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
-            z-index: -1;
-        }
 
         .hero-box {
             position: relative;
@@ -176,17 +140,19 @@
 
         .brand {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 16px;
+            gap: 8px;
             font-size: 56px;
             font-weight: 800;
             color: var(--white);
             line-height: 1.1;
             text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            margin-bottom: 32px;
         }
         .brand img {
-            height: 75px;
+            height: 120px;
             width: auto;
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
         }
@@ -216,6 +182,16 @@
             font-size: 18px;
             padding: 16px 36px;
         }
+        .hero-buttons .btn-primary {
+            background: var(--yellow-accent);
+            color: var(--green-main);
+            box-shadow: 0 4px 15px rgba(255, 222, 0, 0.4);
+        }
+        .hero-buttons .btn-primary:hover {
+            background: #e6c800; /* slightly darker yellow for hover */
+            box-shadow: 0 8px 20px rgba(255, 222, 0, 0.6);
+            color: var(--green-main);
+        }
 
 
         .micro {
@@ -223,6 +199,26 @@
             font-weight: 500;
             font-size: 15px;
             color: rgba(255,255,255,0.8);
+        }
+
+        .hero-trust {
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--white);
+        }
+        .hero-trust span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.3);
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         /* Hero Nav */
@@ -258,33 +254,50 @@
 
         /* Hero Social Links */
         .hero-social {
-            margin-top: 24px;
+            margin-top: 32px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            gap: 16px;
+            gap: 12px;
             position: relative;
             z-index: 1;
+        }
+        .hero-social-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .hero-social-links {
+            display: flex;
+            gap: 16px;
         }
         .hero-social a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 44px;
-            height: 44px;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
             color: var(--white);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        .hero-social a svg {
+            width: 24px;
+            height: 24px;
+        }
         .hero-social a:hover {
-            background: rgba(255, 222, 0, 0.15);
+            background: var(--yellow-accent);
             border-color: var(--yellow-accent);
-            color: var(--yellow-accent);
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 8px 20px rgba(255, 222, 0, 0.2);
+            color: var(--green-main);
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(255, 222, 0, 0.3);
         }
 
         /* Insurance Banner */
@@ -1025,8 +1038,8 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero-box { padding: 40px 20px; }
-            .brand { font-size: 36px; gap: 12px; flex-direction: column; }
-            .brand img { height: 50px; }
+            .brand { font-size: 36px; gap: 8px; margin-bottom: 24px; }
+            .brand img { height: 80px; }
             section { padding: 60px 0; }
             section.alt, section.warm { padding: 50px 20px; margin: 0 12px 40px; }
             .form-row { grid-template-columns: 1fr; gap: 16px; }
@@ -1196,15 +1209,6 @@
 <body>
 
 <header class="hero" id="top">
-  <!-- LCP Image for immediate render -->
-  <img src="images/hero-poster.webp" alt="FOX Garden Zahrady" class="hero-poster-img" fetchpriority="high" loading="eager" />
-
-  <!-- Video Background -->
-  <video autoplay muted loop playsinline poster="images/hero-poster.webp" class="hero-video-bg">
-    <source src="videos/hero-jaro.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-
   <a href="#" id="btn-dochazka" style="position:absolute; top:10px; right:20px; font-size:12px; color:rgba(255,255,255,0.4); text-decoration:none; z-index:100;">Docházka</a>
 
   <div class="container" style="position:relative; z-index:1;">
@@ -1223,17 +1227,25 @@
 
       <p class="micro">Volné termíny se rychle plní – objednejte se včas.</p>
 
+      <div class="hero-trust">
+        <span>⭐ 8 ověřených Google recenzí</span>
+        <span>🛡️ Pojištění do 3 000 000 Kč</span>
+      </div>
+
       <div class="hero-social">
-        <a href="https://www.facebook.com/profile.php?id=100090484467357" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.5 10H16.639L17.29 6.8H14.5V4.666C14.5 3.82 14.5 3.2 15.632 3.2H17.29V0.384C16.89 0.32 15.772 0 14.49 0C11.838 0 10 1.636 10 4.542V6.8H7V10H10V18H14.5V10Z"/>
-            </svg>
-        </a>
-        <a href="https://www.instagram.com/foxgarden.expert/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C9.239 7 7 9.239 7 12C7 14.761 9.239 17 12 17C14.761 17 17 14.761 17 12C17 9.239 14.761 7 12 7ZM12 15C10.343 15 9 13.657 9 12C9 10.343 10.343 9 12 9C13.657 9 15 10.343 15 12C15 13.657 13.657 15 12 15ZM16.5 7.5C16.5 8.052 16.052 8.5 15.5 8.5C14.948 8.5 14.5 8.052 14.5 7.5C14.5 6.948 14.948 6.5 15.5 6.5C16.052 6.5 16.5 6.948 16.5 7.5ZM12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.877 4.234 21.221 4.79 21.475 5.45C21.723 6.088 21.89 6.813 21.94 7.878C21.99 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.723 17.912 21.475 18.55C21.221 19.21 20.877 19.766 20.322 20.322C19.766 20.877 19.21 21.221 18.55 21.475C17.912 21.723 17.187 21.89 16.122 21.94C15.056 21.99 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.723 5.45 21.475C4.79 21.221 4.234 20.877 3.678 20.322C3.123 19.766 2.779 19.21 2.525 18.55C2.277 17.912 2.11 17.187 2.06 16.122C2.01 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.813 2.277 6.088 2.525 5.45C2.779 4.79 3.123 4.234 3.678 3.678C4.234 3.123 4.79 2.779 5.45 2.525C6.088 2.277 6.813 2.11 7.878 2.06C8.944 2.01 9.283 2 12 2ZM12 4C9.318 4 8.981 4.01 7.968 4.056C7.03 4.099 6.391 4.253 5.926 4.433C5.309 4.673 4.869 4.965 4.428 5.405C3.988 5.846 3.696 6.286 3.456 6.903C3.275 7.368 3.121 8.007 3.078 8.945C3.032 9.958 3.022 10.295 3.022 12C3.022 13.705 3.032 14.042 3.078 15.055C3.121 15.993 3.275 16.632 3.456 17.097C3.696 17.714 3.988 18.154 4.428 18.595C4.869 19.035 5.309 19.327 5.926 19.567C6.391 19.747 7.03 19.901 7.968 19.944C8.981 19.99 9.318 20 12 20C14.682 20 15.019 19.99 16.032 19.944C16.97 19.901 17.609 19.747 18.074 19.567C18.691 19.327 19.131 19.035 19.572 18.595C20.012 18.154 20.304 17.714 20.544 17.097C20.725 16.632 20.879 15.993 20.922 15.055C20.968 14.042 20.978 13.705 20.978 12C20.978 10.295 20.968 9.958 20.922 8.945C20.879 8.007 20.725 7.368 20.544 6.903C20.304 6.286 20.012 5.846 19.572 5.405C19.131 4.965 18.691 4.673 18.074 4.433C17.609 4.253 16.97 4.099 16.032 4.056C15.019 4.01 14.682 4 12 4Z"/>
-            </svg>
-        </a>
+        <span class="hero-social-title">Sledujte nás</span>
+        <div class="hero-social-links">
+            <a href="https://www.facebook.com/profile.php?id=100090484467357" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.5 10H16.639L17.29 6.8H14.5V4.666C14.5 3.82 14.5 3.2 15.632 3.2H17.29V0.384C16.89 0.32 15.772 0 14.49 0C11.838 0 10 1.636 10 4.542V6.8H7V10H10V18H14.5V10Z"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/foxgarden.expert/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C9.239 7 7 9.239 7 12C7 14.761 9.239 17 12 17C14.761 17 17 14.761 17 12C17 9.239 14.761 7 12 7ZM12 15C10.343 15 9 13.657 9 12C9 10.343 10.343 9 12 9C13.657 9 15 10.343 15 12C15 13.657 13.657 15 12 15ZM16.5 7.5C16.5 8.052 16.052 8.5 15.5 8.5C14.948 8.5 14.5 8.052 14.5 7.5C14.5 6.948 14.948 6.5 15.5 6.5C16.052 6.5 16.5 6.948 16.5 7.5ZM12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.877 4.234 21.221 4.79 21.475 5.45C21.723 6.088 21.89 6.813 21.94 7.878C21.99 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.723 17.912 21.475 18.55C21.221 19.21 20.877 19.766 20.322 20.322C19.766 20.877 19.21 21.221 18.55 21.475C17.912 21.723 17.187 21.89 16.122 21.94C15.056 21.99 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.723 5.45 21.475C4.79 21.221 4.234 20.877 3.678 20.322C3.123 19.766 2.779 19.21 2.525 18.55C2.277 17.912 2.11 17.187 2.06 16.122C2.01 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.813 2.277 6.088 2.525 5.45C2.779 4.79 3.123 4.234 3.678 3.678C4.234 3.123 4.79 2.779 5.45 2.525C6.088 2.277 6.813 2.11 7.878 2.06C8.944 2.01 9.283 2 12 2ZM12 4C9.318 4 8.981 4.01 7.968 4.056C7.03 4.099 6.391 4.253 5.926 4.433C5.309 4.673 4.869 4.965 4.428 5.405C3.988 5.846 3.696 6.286 3.456 6.903C3.275 7.368 3.121 8.007 3.078 8.945C3.032 9.958 3.022 10.295 3.022 12C3.022 13.705 3.032 14.042 3.078 15.055C3.121 15.993 3.275 16.632 3.456 17.097C3.696 17.714 3.988 18.154 4.428 18.595C4.869 19.035 5.309 19.327 5.926 19.567C6.391 19.747 7.03 19.901 7.968 19.944C8.981 19.99 9.318 20 12 20C14.682 20 15.019 19.99 16.032 19.944C16.97 19.901 17.609 19.747 18.074 19.567C18.691 19.327 19.131 19.035 19.572 18.595C20.012 18.154 20.304 17.714 20.544 17.097C20.725 16.632 20.879 15.993 20.922 15.055C20.968 14.042 20.978 13.705 20.978 12C20.978 10.295 20.968 9.958 20.922 8.945C20.879 8.007 20.725 7.368 20.544 6.903C20.304 6.286 20.012 5.846 19.572 5.405C19.131 4.965 18.691 4.673 18.074 4.433C17.609 4.253 16.97 4.099 16.032 4.056C15.019 4.01 14.682 4 12 4Z"/>
+                </svg>
+            </a>
+        </div>
       </div>
 
       <nav class="hero-nav">
@@ -1959,23 +1971,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Handle Video Load Fade
-    const heroVideo = document.querySelector('.hero-video-bg');
-    if (heroVideo) {
-        const playVideo = () => {
-            heroVideo.classList.add('loaded');
-            heroVideo.play().catch(e => console.log('Autoplay prevented:', e));
-        };
-
-        // If the video is already ready (e.g. cached)
-        if (heroVideo.readyState >= 3) {
-            playVideo();
-        } else {
-            heroVideo.addEventListener('canplaythrough', playVideo);
-            // Fallback for some mobile browsers that never reach canplaythrough without play()
-            heroVideo.addEventListener('loadeddata', playVideo);
-        }
-    }
 });
 </script>
 
