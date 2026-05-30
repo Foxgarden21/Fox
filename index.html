@@ -344,13 +344,43 @@
         }
         section.warm .section-header h2 {
             color: var(--green-main);
+            display: inline-block;
+            position: relative;
+        }
+        section.warm .section-header h2::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--yellow-accent);
+            border-radius: 2px;
         }
         section.warm .section-header .subtitle {
             color: var(--green-main);
+            margin-top: 16px;
         }
         section.warm .card {
             background: var(--white);
             border: 1px solid rgba(46, 94, 78, 0.1);
+            position: relative;
+        }
+        section.warm .card-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--green-main);
+            color: var(--yellow-accent);
+            margin-bottom: 20px;
+        }
+        section.warm .card-icon.accent {
+            background: var(--yellow-accent);
+            color: var(--green-main);
         }
         section.warm .card h3 {
             color: var(--green-main);
@@ -372,12 +402,12 @@
             position: absolute;
             left: 0;
             top: 12px;
-            color: var(--white);
+            color: var(--green-main);
             font-weight: 700;
             font-size: 14px;
             width: 24px;
             height: 24px;
-            background: var(--green-main);
+            background: var(--yellow-accent);
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
@@ -1516,6 +1546,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     <div class="grid-3">
         <div class="card">
+            <div class="card-icon accent">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
             <h3>Návrhy a realizace</h3>
             <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Když chcete mít kolem domu opravdu hezky. Místo, kde si odpočinete.</p>
             <ul class="clean">
@@ -1525,6 +1558,9 @@ document.addEventListener("DOMContentLoaded", function() {
             </ul>
         </div>
         <div class="card" style="box-shadow: 0 15px 40px rgba(46, 94, 78, 0.15); transform: translateY(-8px); border: 2px solid var(--green-main);">
+            <div class="card-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
             <h3>Pravidelná údržba</h3>
             <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Ať vás zahrada těší, ne stresuje. Zahrada bez starostí.</p>
             <ul class="clean">
@@ -1534,6 +1570,9 @@ document.addEventListener("DOMContentLoaded", function() {
             </ul>
         </div>
         <div class="card">
+            <div class="card-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
             <h3>Jednorázové zásahy</h3>
             <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Poctivá práce, kterou je vidět. Proměníme chaos v místo pro klid.</p>
             <ul class="clean">
