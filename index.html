@@ -699,19 +699,19 @@
             margin: 0 auto;
         }
         .process-step {
-            background: var(--yellow-accent);
+            background: var(--green-main);
             padding: 32px 24px;
             border-radius: 32px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(255, 222, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.15);
             border: none;
             position: relative;
-            color: var(--green-main);
+            color: var(--white);
             transition: var(--transition);
         }
         .process-step:hover {
             transform: translateY(-4px);
-            box-shadow: 0 15px 40px rgba(255, 222, 0, 0.3);
+            box-shadow: 0 15px 40px rgba(46, 94, 78, 0.25);
         }
         .process-num {
             display: inline-flex;
@@ -719,22 +719,42 @@
             justify-content: center;
             width: 48px;
             height: 48px;
-            background: var(--green-main);
+            background: transparent;
             color: var(--yellow-accent);
             border-radius: 50%;
             font-weight: 700;
             font-size: 20px;
             margin-bottom: 20px;
             transition: var(--transition);
-            border: none;
+            border: 2px solid var(--yellow-accent);
         }
         .process-step:hover .process-num {
             transform: scale(1.1);
+            background: var(--yellow-accent);
+            color: var(--green-main);
         }
         .process-title {
             font-weight: 700;
             font-size: 16px;
-            color: var(--green-main);
+            color: var(--white);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        .process-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background: var(--yellow-accent);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .process-step:hover .process-title::after {
+            width: 100%;
         }
         @media (max-width: 768px) {
             .process-grid {
