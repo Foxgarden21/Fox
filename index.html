@@ -2813,6 +2813,65 @@
 
 
 </section>
+<section id="ukazky" class="ba-section">
+  <div class="container">
+    <div class="section-header" style="position:relative; z-index:1;">
+        <h2>Ukázky práce</h2>
+        <p class="subtitle">Podívejte se na skutečné výsledky naší práce.</p>
+    </div>
+
+    <div class="ba-slider-container" id="ba-slider">
+        <!-- Zde je obrázek PŘED (ten co se odkrývá napravo) -->
+        <picture>
+            <source srcset="images/realizace/zakazka1-pred.webp" type="image/webp" id="src-before-webp">
+            <img src="images/realizace/zakazka1-pred.jpg" id="img-before" alt="Zahrada před úpravou" onerror="this.src='https://placehold.co/900x500/1e281f/6b7280?text=Zahrada+P%C5%98ED'">
+        </picture>
+
+        <!-- Zde je obrázek PO (ten co je defaultně z 50 % přes něj nalevo) -->
+        <div class="ba-img-after" id="ba-after-wrapper">
+            <picture>
+                <source srcset="images/realizace/zakazka1-po.webp" type="image/webp" id="src-after-webp">
+                <img src="images/realizace/zakazka1-po.jpg" id="img-after" alt="Zahrada po úpravě" onerror="this.src='https://placehold.co/900x500/2E5E4E/ffffff?text=Zahrada+PO'">
+            </picture>
+        </div>
+
+        <div class="ba-handle" id="ba-handle">
+            <div class="ba-handle-btn"></div>
+        </div>
+
+        <div class="ba-label ba-label-before">PŘED</div>
+        <div class="ba-label ba-label-after">PO</div>
+    </div>
+
+    <div class="ba-thumbnails" id="ba-thumbnails" style="position:relative; z-index:1;">
+        <!-- Tyto náhledy pak JavaScriptově mění hlavní fotky -->
+        <div class="ba-thumb active" data-before="images/realizace/zakazka1-pred.jpg" data-after="images/realizace/zakazka1-po.jpg" data-before-webp="images/realizace/zakazka1-pred.webp" data-after-webp="images/realizace/zakazka1-po.webp">
+            <picture>
+                <source srcset="images/realizace/zakazka1-po.webp" type="image/webp">
+                <img src="images/realizace/zakazka1-po.jpg" alt="Proměna 1" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=1'">
+            </picture>
+        </div>
+        <div class="ba-thumb" data-before="images/realizace/zakazka2-pred.jpg" data-after="images/realizace/zakazka2-po.jpg" data-before-webp="images/realizace/zakazka2-pred.webp" data-after-webp="images/realizace/zakazka2-po.webp">
+            <picture>
+                <source srcset="images/realizace/zakazka2-po.webp" type="image/webp">
+                <img src="images/realizace/zakazka2-po.jpg" alt="Proměna 2" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=2'">
+            </picture>
+        </div>
+        <div class="ba-thumb" data-before="images/realizace/zakazka3-pred.jpg" data-after="images/realizace/zakazka3-po.jpg" data-before-webp="images/realizace/zakazka3-pred.webp" data-after-webp="images/realizace/zakazka3-po.webp">
+            <picture>
+                <source srcset="images/realizace/zakazka3-po.webp" type="image/webp">
+                <img src="images/realizace/zakazka3-po.jpg" alt="Proměna 3" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=3'">
+            </picture>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:40px; position:relative; z-index:1;">
+        <a href="#kontakt" class="btn btn-primary" style="font-size: 18px; padding: 16px 36px; box-shadow: 0 8px 20px rgba(46, 94, 78, 0.2);">
+            Chci také takovou proměnu
+        </a>
+    </div>
+  </div>
+</section>
 <section id="spoluprace" class="alt">
   <div class="container">
     <div class="section-header">
@@ -2960,65 +3019,6 @@
               <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
             </form>
         </div>
-    </div>
-  </div>
-</section>
-<section id="ukazky" class="ba-section">
-  <div class="container">
-    <div class="section-header" style="position:relative; z-index:1;">
-        <h2>Ukázky práce</h2>
-        <p class="subtitle">Podívejte se na skutečné výsledky naší práce.</p>
-    </div>
-
-    <div class="ba-slider-container" id="ba-slider">
-        <!-- Zde je obrázek PŘED (ten co se odkrývá napravo) -->
-        <picture>
-            <source srcset="images/realizace/zakazka1-pred.webp" type="image/webp" id="src-before-webp">
-            <img src="images/realizace/zakazka1-pred.jpg" id="img-before" alt="Zahrada před úpravou" onerror="this.src='https://placehold.co/900x500/1e281f/6b7280?text=Zahrada+P%C5%98ED'">
-        </picture>
-
-        <!-- Zde je obrázek PO (ten co je defaultně z 50 % přes něj nalevo) -->
-        <div class="ba-img-after" id="ba-after-wrapper">
-            <picture>
-                <source srcset="images/realizace/zakazka1-po.webp" type="image/webp" id="src-after-webp">
-                <img src="images/realizace/zakazka1-po.jpg" id="img-after" alt="Zahrada po úpravě" onerror="this.src='https://placehold.co/900x500/2E5E4E/ffffff?text=Zahrada+PO'">
-            </picture>
-        </div>
-
-        <div class="ba-handle" id="ba-handle">
-            <div class="ba-handle-btn"></div>
-        </div>
-
-        <div class="ba-label ba-label-before">PŘED</div>
-        <div class="ba-label ba-label-after">PO</div>
-    </div>
-
-    <div class="ba-thumbnails" id="ba-thumbnails" style="position:relative; z-index:1;">
-        <!-- Tyto náhledy pak JavaScriptově mění hlavní fotky -->
-        <div class="ba-thumb active" data-before="images/realizace/zakazka1-pred.jpg" data-after="images/realizace/zakazka1-po.jpg" data-before-webp="images/realizace/zakazka1-pred.webp" data-after-webp="images/realizace/zakazka1-po.webp">
-            <picture>
-                <source srcset="images/realizace/zakazka1-po.webp" type="image/webp">
-                <img src="images/realizace/zakazka1-po.jpg" alt="Proměna 1" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=1'">
-            </picture>
-        </div>
-        <div class="ba-thumb" data-before="images/realizace/zakazka2-pred.jpg" data-after="images/realizace/zakazka2-po.jpg" data-before-webp="images/realizace/zakazka2-pred.webp" data-after-webp="images/realizace/zakazka2-po.webp">
-            <picture>
-                <source srcset="images/realizace/zakazka2-po.webp" type="image/webp">
-                <img src="images/realizace/zakazka2-po.jpg" alt="Proměna 2" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=2'">
-            </picture>
-        </div>
-        <div class="ba-thumb" data-before="images/realizace/zakazka3-pred.jpg" data-after="images/realizace/zakazka3-po.jpg" data-before-webp="images/realizace/zakazka3-pred.webp" data-after-webp="images/realizace/zakazka3-po.webp">
-            <picture>
-                <source srcset="images/realizace/zakazka3-po.webp" type="image/webp">
-                <img src="images/realizace/zakazka3-po.jpg" alt="Proměna 3" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=3'">
-            </picture>
-        </div>
-    </div>
-
-    <div style="text-align:center; margin-top:40px; position:relative; z-index:1;">
-        <a href="#kontakt" class="btn btn-primary" style="font-size: 18px; padding: 16px 36px; box-shadow: 0 8px 20px rgba(46, 94, 78, 0.2);">
-            Chci také takovou proměnu
-        </a>
     </div>
   </div>
 </section>
