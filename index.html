@@ -227,7 +227,7 @@
             font-size: 15px;
             color: var(--white);
         }
-        .hero-trust span {
+        .hero-trust a {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -235,6 +235,16 @@
             padding: 8px 16px;
             border-radius: 999px;
             border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .hero-trust a:hover {
+            transform: translateY(-2px);
+            background: rgba(0,0,0,0.5);
+            border-color: rgba(255, 222, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 222, 0, 0.1);
         }
 
         /* Hero Nav */
@@ -1488,7 +1498,7 @@
             font-size: 15px;
             color: var(--white);
         }
-        .hero-trust span {
+        .hero-trust a {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -1496,6 +1506,16 @@
             padding: 8px 16px;
             border-radius: 999px;
             border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .hero-trust a:hover {
+            transform: translateY(-2px);
+            background: rgba(0,0,0,0.5);
+            border-color: rgba(255, 222, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 222, 0, 0.1);
         }
 
         /* Hero Nav */
@@ -2567,8 +2587,8 @@
       <p class="micro">Volné termíny se rychle plní – objednejte se včas.</p>
 
       <div class="hero-trust">
-        <span>⭐ 8 ověřených Google recenzí</span>
-        <span>🛡️ Pojištění do 3 000 000 Kč</span>
+        <a href="https://www.google.com/search?q=fox+garden" target="_blank" rel="noopener">⭐ 8 ověřených Google recenzí</a>
+        <a href="#kontakt">🛡️ Pojištění do 3 000 000 Kč</a>
       </div>
 
       <div class="hero-social">
@@ -2598,6 +2618,129 @@
     </div>
   </div>
 </header>
+<section id="sluzby" class="warm">
+  <div class="container">
+    <div class="section-header">
+        <h2>Naše služby</h2>
+        <p class="subtitle">Zahrada bez starostí po celý rok. Profesionální péče pro rodinné domy, firmy i SVJ.</p>
+    </div>
+
+    <div class="grid-3">
+        <div class="card">
+            <div class="card-icon accent">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3>Návrhy a realizace</h3>
+            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Když chcete mít kolem domu opravdu hezky. Místo, kde si odpočinete.</p>
+            <ul class="clean">
+                <li><b>Komplexní proměny</b> – od návrhu po finální výsadbu.</li>
+                <li><b>Terénní úpravy</b> – rovnání a příprava pozemku.</li>
+                <li><b>Nové výsadby</b> – stromy, keře i trvalkové záhony.</li>
+            </ul>
+        </div>
+        <div class="card" style="box-shadow: 0 15px 40px rgba(46, 94, 78, 0.15); transform: translateY(-8px); border: 2px solid var(--green-main);">
+            <div class="card-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>Pravidelná údržba</h3>
+            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Ať vás zahrada těší, ne stresuje. Zahrada bez starostí.</p>
+            <ul class="clean">
+                <li><b>Sekání trávníků</b> – sečení, dosekávání hran a úklid.</li>
+                <li><b>Pravidelná péče</b> – péče o záhony a výsadby.</li>
+                <li><b>Odborná péče o zeleň</b> – profesionální ošetření a výživa rostlin.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>Jednorázové zásahy</h3>
+            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Poctivá práce, kterou je vidět. Proměníme chaos v místo pro klid.</p>
+            <ul class="clean">
+                <li><b>Stříhání živých plotů</b> – tvarování a zmlazení.</li>
+                <li><b>Řez stromů</b> – odborný řez pro zdravý růst.</li>
+                <li><b>Zanedbané zahrady</b> – vyčištění a likvidace náletů.</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</section>
+<section id="cenik">
+  <div class="container">
+    <div class="section-header">
+        <h2>Ceník</h2>
+        <p class="subtitle" style="max-width: 800px; margin: 0 auto;">Nejsme nejlevnější, ale ani nejdražší. Pracujeme pro majitele, kteří chtějí mít svou zahradu dlouhodobě v pořádku, bez starostí a kompromisů. Zakládáme si na kvalitně odvedené práci, spolehlivosti a výsledku, který bude dělat radost i po delší době.</p>
+    </div>
+
+    <div class="price-list">
+      <div class="price-card">
+        <h3>Sekání trávníků</h3>
+        <div class="price-badge">Od 2 Kč / m²</div>
+        <p class="price-desc">Cena se odvíjí dle stavu a členitosti plochy.</p>
+        <a href="clanky/kolik-stoji-sekani-travy.html" style="font-size: 13px; color: var(--yellow-accent); font-weight: 600; text-decoration: none; margin-top: 10px; display: inline-block;">Přečtěte si článek: Kolik stojí sekání trávy →</a>
+      </div>
+      <div class="price-card">
+        <h3>Pravidelná údržba</h3>
+        <div class="price-badge">Od 1 500 Kč / měsíc</div>
+        <p class="price-desc">Výhodné balíčky pro stálou péči.</p>
+      </div>
+      <div class="price-card">
+        <h3>Střih živých plotů</h3>
+        <div class="price-badge">Od 30 Kč / bm</div>
+        <p class="price-desc">Dle výšky, šířky a přístupnosti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="proc-nas" class="alt" style="margin-top: -20px; margin-bottom: 0;">
+  <div class="container">
+    <div class="section-header">
+        <h2>Proč si vybrat nás</h2>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: stretch;">
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+            </div>
+            <h3>Férové jednání a spolehlivost</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Co slíbíme, to platí. Přijedeme včas a práci dokončíme v termínu.</p>
+        </div>
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>Bezpečnost a profesionalita</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Pracujeme s profi technikou a jsme pojištěni pro případ škody až do 3 mil. Kč.</p>
+        </div>
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3>Rozumná a transparentní cena</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Nejsme nejlevnější, ale ani nejdražší. Za férovou cenu odvádíme nadstandardní práci.</p>
+        </div>
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+            </div>
+            <h3>Péče jako o vlastní zahradu</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Ke každému projektu přistupujeme s respektem k přírodě a důrazem na detail.</p>
+        </div>
+
+        <!-- Arrow transition inline with the cards -->
+        <div style="flex: 1 1 200px; max-width: 250px; display: flex; align-items: center; justify-content: center; padding: 24px;">
+            <a href="#ukazky" class="arrow-link" style="display: inline-flex; flex-direction: column; align-items: center; color: var(--green-main); text-decoration: none; font-weight: 600; text-align: center;">
+                <span>Podívejte se na ukázky naší práce</span>
+                <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--yellow-accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+  </div>
+</section>
 <section id="reference">
   <div class="container">
     <div class="google-reviews-wrapper">
@@ -2669,256 +2812,6 @@
   </div>
 
 
-</section>
-<section id="ukazky" class="ba-section">
-  <div class="container">
-    <div class="section-header" style="position:relative; z-index:1;">
-        <h2>Ukázky práce</h2>
-        <p class="subtitle">Podívejte se na skutečné výsledky naší práce.</p>
-    </div>
-
-    <div class="ba-slider-container" id="ba-slider">
-        <!-- Zde je obrázek PŘED (ten co se odkrývá napravo) -->
-        <picture>
-            <source srcset="images/realizace/zakazka1-pred.webp" type="image/webp" id="src-before-webp">
-            <img src="images/realizace/zakazka1-pred.jpg" id="img-before" alt="Zahrada před úpravou" onerror="this.src='https://placehold.co/900x500/1e281f/6b7280?text=Zahrada+P%C5%98ED'">
-        </picture>
-
-        <!-- Zde je obrázek PO (ten co je defaultně z 50 % přes něj nalevo) -->
-        <div class="ba-img-after" id="ba-after-wrapper">
-            <picture>
-                <source srcset="images/realizace/zakazka1-po.webp" type="image/webp" id="src-after-webp">
-                <img src="images/realizace/zakazka1-po.jpg" id="img-after" alt="Zahrada po úpravě" onerror="this.src='https://placehold.co/900x500/2E5E4E/ffffff?text=Zahrada+PO'">
-            </picture>
-        </div>
-
-        <div class="ba-handle" id="ba-handle">
-            <div class="ba-handle-btn"></div>
-        </div>
-
-        <div class="ba-label ba-label-before">PŘED</div>
-        <div class="ba-label ba-label-after">PO</div>
-    </div>
-
-    <div class="ba-thumbnails" id="ba-thumbnails" style="position:relative; z-index:1;">
-        <!-- Tyto náhledy pak JavaScriptově mění hlavní fotky -->
-        <div class="ba-thumb active" data-before="images/realizace/zakazka1-pred.jpg" data-after="images/realizace/zakazka1-po.jpg" data-before-webp="images/realizace/zakazka1-pred.webp" data-after-webp="images/realizace/zakazka1-po.webp">
-            <picture>
-                <source srcset="images/realizace/zakazka1-po.webp" type="image/webp">
-                <img src="images/realizace/zakazka1-po.jpg" alt="Proměna 1" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=1'">
-            </picture>
-        </div>
-        <div class="ba-thumb" data-before="images/realizace/zakazka2-pred.jpg" data-after="images/realizace/zakazka2-po.jpg" data-before-webp="images/realizace/zakazka2-pred.webp" data-after-webp="images/realizace/zakazka2-po.webp">
-            <picture>
-                <source srcset="images/realizace/zakazka2-po.webp" type="image/webp">
-                <img src="images/realizace/zakazka2-po.jpg" alt="Proměna 2" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=2'">
-            </picture>
-        </div>
-        <div class="ba-thumb" data-before="images/realizace/zakazka3-pred.jpg" data-after="images/realizace/zakazka3-po.jpg" data-before-webp="images/realizace/zakazka3-pred.webp" data-after-webp="images/realizace/zakazka3-po.webp">
-            <picture>
-                <source srcset="images/realizace/zakazka3-po.webp" type="image/webp">
-                <img src="images/realizace/zakazka3-po.jpg" alt="Proměna 3" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=3'">
-            </picture>
-        </div>
-    </div>
-
-    <div style="text-align:center; margin-top:40px; position:relative; z-index:1;">
-        <a href="#kontakt" class="btn btn-primary" style="font-size: 18px; padding: 16px 36px; box-shadow: 0 8px 20px rgba(46, 94, 78, 0.2);">
-            Chci také takovou proměnu
-        </a>
-    </div>
-  </div>
-</section>
-<section id="sluzby" class="warm">
-  <div class="container">
-    <div class="section-header">
-        <h2>Naše služby</h2>
-        <p class="subtitle">Zahrada bez starostí po celý rok. Profesionální péče pro rodinné domy, firmy i SVJ.</p>
-    </div>
-
-    <div class="grid-3">
-        <div class="card">
-            <div class="card-icon accent">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-            </div>
-            <h3>Návrhy a realizace</h3>
-            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Když chcete mít kolem domu opravdu hezky. Místo, kde si odpočinete.</p>
-            <ul class="clean">
-                <li><b>Komplexní proměny</b> – od návrhu po finální výsadbu.</li>
-                <li><b>Terénní úpravy</b> – rovnání a příprava pozemku.</li>
-                <li><b>Nové výsadby</b> – stromy, keře i trvalkové záhony.</li>
-            </ul>
-        </div>
-        <div class="card" style="box-shadow: 0 15px 40px rgba(46, 94, 78, 0.15); transform: translateY(-8px); border: 2px solid var(--green-main);">
-            <div class="card-icon">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <h3>Pravidelná údržba</h3>
-            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Ať vás zahrada těší, ne stresuje. Zahrada bez starostí.</p>
-            <ul class="clean">
-                <li><b>Sekání trávníků</b> – sečení, dosekávání hran a úklid.</li>
-                <li><b>Pravidelná péče</b> – péče o záhony a výsadby.</li>
-                <li><b>Odborná péče o zeleň</b> – profesionální ošetření a výživa rostlin.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <div class="card-icon">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            </div>
-            <h3>Jednorázové zásahy</h3>
-            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Poctivá práce, kterou je vidět. Proměníme chaos v místo pro klid.</p>
-            <ul class="clean">
-                <li><b>Stříhání živých plotů</b> – tvarování a zmlazení.</li>
-                <li><b>Řez stromů</b> – odborný řez pro zdravý růst.</li>
-                <li><b>Zanedbané zahrady</b> – vyčištění a likvidace náletů.</li>
-            </ul>
-        </div>
-    </div>
-  </div>
-</section>
-<section id="proc-nas" class="alt" style="margin-top: -20px; margin-bottom: 0;">
-  <div class="container">
-    <div class="section-header">
-        <h2>Proč si vybrat nás</h2>
-    </div>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: stretch;">
-        <div class="card feature-card">
-            <div class="feature-icon-wrapper">
-                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-            </div>
-            <h3>Férové jednání a spolehlivost</h3>
-            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Co slíbíme, to platí. Přijedeme včas a práci dokončíme v termínu.</p>
-        </div>
-        <div class="card feature-card">
-            <div class="feature-icon-wrapper">
-                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <h3>Bezpečnost a profesionalita</h3>
-            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Pracujeme s profi technikou a jsme pojištěni pro případ škody až do 3 mil. Kč.</p>
-        </div>
-        <div class="card feature-card">
-            <div class="feature-icon-wrapper">
-                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-            </div>
-            <h3>Rozumná a transparentní cena</h3>
-            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Nejsme nejlevnější, ale ani nejdražší. Za férovou cenu odvádíme nadstandardní práci.</p>
-        </div>
-        <div class="card feature-card">
-            <div class="feature-icon-wrapper">
-                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
-            </div>
-            <h3>Péče jako o vlastní zahradu</h3>
-            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Ke každému projektu přistupujeme s respektem k přírodě a důrazem na detail.</p>
-        </div>
-
-        <!-- Arrow transition inline with the cards -->
-        <div style="flex: 1 1 200px; max-width: 250px; display: flex; align-items: center; justify-content: center; padding: 24px;">
-            <a href="#ukazky" class="arrow-link" style="display: inline-flex; flex-direction: column; align-items: center; color: var(--green-main); text-decoration: none; font-weight: 600; text-align: center;">
-                <span>Podívejte se na ukázky naší práce</span>
-                <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--yellow-accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </a>
-        </div>
-    </div>
-
-  </div>
-</section>
-<section id="cenik">
-  <div class="container">
-    <div class="section-header">
-        <h2>Ceník</h2>
-        <p class="subtitle" style="max-width: 800px; margin: 0 auto;">Nejsme nejlevnější, ale ani nejdražší. Pracujeme pro majitele, kteří chtějí mít svou zahradu dlouhodobě v pořádku, bez starostí a kompromisů. Zakládáme si na kvalitně odvedené práci, spolehlivosti a výsledku, který bude dělat radost i po delší době.</p>
-    </div>
-
-    <div class="price-list">
-      <div class="price-card">
-        <h3>Sekání trávníků</h3>
-        <div class="price-badge">Od 2 Kč / m²</div>
-        <p class="price-desc">Cena se odvíjí dle stavu a členitosti plochy.</p>
-        <a href="clanky/kolik-stoji-sekani-travy.html" style="font-size: 13px; color: var(--yellow-accent); font-weight: 600; text-decoration: none; margin-top: 10px; display: inline-block;">Přečtěte si článek: Kolik stojí sekání trávy →</a>
-      </div>
-      <div class="price-card">
-        <h3>Pravidelná údržba</h3>
-        <div class="price-badge">Od 1 500 Kč / měsíc</div>
-        <p class="price-desc">Výhodné balíčky pro stálou péči.</p>
-      </div>
-      <div class="price-card">
-        <h3>Střih živých plotů</h3>
-        <div class="price-badge">Od 30 Kč / bm</div>
-        <p class="price-desc">Dle výšky, šířky a přístupnosti.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="faq">
-  <div class="container">
-    <div class="section-header">
-        <h2>Časté dotazy</h2>
-    </div>
-
-    <dl class="faq-grid">
-      <div class="faq-item">
-          <dt>Kolik stojí sekání?</dt>
-          <dd>Cena závisí na ploše a stavu trávy. Napíšeme vám ji po sdělení výměry a lokality.</dd>
-      </div>
-      <div class="faq-item">
-          <dt>Děláte odvoz odpadu?</dt>
-          <dd>Ano, odvoz bioodpadu je standardní součástí našich služeb.</dd>
-      </div>
-      <div class="faq-item">
-          <dt>Kde všude působíte?</dt>
-          <dd>Působíme především v okolí měst Jičín, Hořice a Lázně Bělohrad a v přilehlých obcích. Po domluvě dojedeme i dál.</dd>
-      </div>
-    </dl>
-  </div>
-</section>
-<section id="kontakt">
-  <div class="container">
-    <div class="section-header">
-        <h2>Kontakt</h2>
-        <p class="subtitle">Stačí zavolat nebo napsat – odpovíme co nejdříve.</p>
-    </div>
-
-    <div class="contact-grid">
-        <div class="contact-info">
-            <h3>FOX Garden – Zuklesa s.r.o.</h3>
-            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div> <span>IČO: 17805368</span></div>
-            <div class="contact-row" style="font-weight: 600; color: var(--green-main);"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div> <span>Pojištěno do 3 000 000 Kč</span></div>
-            <hr style="border: 0; height: 1px; background: var(--border); margin: 24px 0;">
-            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div> <a href="tel:+420775717291" style="font-size: 18px;">775 717 291</a></div>
-            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div> <a href="mailto:zuki@foxgarden.cz" style="font-size: 18px;">zuki@foxgarden.cz</a></div>
-        </div>
-
-        <div>
-
-
-            <form action="https://formsubmit.co/zuki@foxgarden.cz" method="POST" class="form-box">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="table">
-
-              <div class="form-row">
-                  <div class="form-group">
-                      <label for="jmeno">Jméno *</label>
-                      <input id="jmeno" type="text" name="Jméno" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="telefon">Telefon *</label>
-                      <input id="telefon" type="tel" name="Telefon" required>
-                  </div>
-              </div>
-
-              <div class="form-group">
-                  <label for="zprava">Co potřebujete udělat?</label>
-                  <textarea id="zprava" name="Zpráva"></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
-            </form>
-        </div>
-    </div>
-  </div>
 </section>
 <section id="spoluprace" class="alt">
   <div class="container">
@@ -2999,6 +2892,133 @@
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color: var(--yellow-accent);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             Poctivá práce & dodržování termínů
         </div>
+    </div>
+  </div>
+</section>
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+        <h2>Časté dotazy</h2>
+    </div>
+
+    <dl class="faq-grid">
+      <div class="faq-item">
+          <dt>Kolik stojí sekání?</dt>
+          <dd>Cena závisí na ploše a stavu trávy. Napíšeme vám ji po sdělení výměry a lokality.</dd>
+      </div>
+      <div class="faq-item">
+          <dt>Děláte odvoz odpadu?</dt>
+          <dd>Ano, odvoz bioodpadu je standardní součástí našich služeb.</dd>
+      </div>
+      <div class="faq-item">
+          <dt>Kde všude působíte?</dt>
+          <dd>Působíme především v okolí měst Jičín, Hořice a Lázně Bělohrad a v přilehlých obcích. Po domluvě dojedeme i dál.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+<section id="kontakt">
+  <div class="container">
+    <div class="section-header">
+        <h2>Kontakt</h2>
+        <p class="subtitle">Stačí zavolat nebo napsat – odpovíme co nejdříve.</p>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h3>FOX Garden – Zuklesa s.r.o.</h3>
+            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div> <span>IČO: 17805368</span></div>
+            <div class="contact-row" style="font-weight: 600; color: var(--green-main);"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div> <span>Pojištěno do 3 000 000 Kč</span></div>
+            <hr style="border: 0; height: 1px; background: var(--border); margin: 24px 0;">
+            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div> <a href="tel:+420775717291" style="font-size: 18px;">775 717 291</a></div>
+            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div> <a href="mailto:zuki@foxgarden.cz" style="font-size: 18px;">zuki@foxgarden.cz</a></div>
+        </div>
+
+        <div>
+
+
+            <form action="https://formsubmit.co/zuki@foxgarden.cz" method="POST" class="form-box">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+
+              <div class="form-row">
+                  <div class="form-group">
+                      <label for="jmeno">Jméno *</label>
+                      <input id="jmeno" type="text" name="Jméno" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="telefon">Telefon *</label>
+                      <input id="telefon" type="tel" name="Telefon" required>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="zprava">Co potřebujete udělat?</label>
+                  <textarea id="zprava" name="Zpráva"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
+            </form>
+        </div>
+    </div>
+  </div>
+</section>
+<section id="ukazky" class="ba-section">
+  <div class="container">
+    <div class="section-header" style="position:relative; z-index:1;">
+        <h2>Ukázky práce</h2>
+        <p class="subtitle">Podívejte se na skutečné výsledky naší práce.</p>
+    </div>
+
+    <div class="ba-slider-container" id="ba-slider">
+        <!-- Zde je obrázek PŘED (ten co se odkrývá napravo) -->
+        <picture>
+            <source srcset="images/realizace/zakazka1-pred.webp" type="image/webp" id="src-before-webp">
+            <img src="images/realizace/zakazka1-pred.jpg" id="img-before" alt="Zahrada před úpravou" onerror="this.src='https://placehold.co/900x500/1e281f/6b7280?text=Zahrada+P%C5%98ED'">
+        </picture>
+
+        <!-- Zde je obrázek PO (ten co je defaultně z 50 % přes něj nalevo) -->
+        <div class="ba-img-after" id="ba-after-wrapper">
+            <picture>
+                <source srcset="images/realizace/zakazka1-po.webp" type="image/webp" id="src-after-webp">
+                <img src="images/realizace/zakazka1-po.jpg" id="img-after" alt="Zahrada po úpravě" onerror="this.src='https://placehold.co/900x500/2E5E4E/ffffff?text=Zahrada+PO'">
+            </picture>
+        </div>
+
+        <div class="ba-handle" id="ba-handle">
+            <div class="ba-handle-btn"></div>
+        </div>
+
+        <div class="ba-label ba-label-before">PŘED</div>
+        <div class="ba-label ba-label-after">PO</div>
+    </div>
+
+    <div class="ba-thumbnails" id="ba-thumbnails" style="position:relative; z-index:1;">
+        <!-- Tyto náhledy pak JavaScriptově mění hlavní fotky -->
+        <div class="ba-thumb active" data-before="images/realizace/zakazka1-pred.jpg" data-after="images/realizace/zakazka1-po.jpg" data-before-webp="images/realizace/zakazka1-pred.webp" data-after-webp="images/realizace/zakazka1-po.webp">
+            <picture>
+                <source srcset="images/realizace/zakazka1-po.webp" type="image/webp">
+                <img src="images/realizace/zakazka1-po.jpg" alt="Proměna 1" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=1'">
+            </picture>
+        </div>
+        <div class="ba-thumb" data-before="images/realizace/zakazka2-pred.jpg" data-after="images/realizace/zakazka2-po.jpg" data-before-webp="images/realizace/zakazka2-pred.webp" data-after-webp="images/realizace/zakazka2-po.webp">
+            <picture>
+                <source srcset="images/realizace/zakazka2-po.webp" type="image/webp">
+                <img src="images/realizace/zakazka2-po.jpg" alt="Proměna 2" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=2'">
+            </picture>
+        </div>
+        <div class="ba-thumb" data-before="images/realizace/zakazka3-pred.jpg" data-after="images/realizace/zakazka3-po.jpg" data-before-webp="images/realizace/zakazka3-pred.webp" data-after-webp="images/realizace/zakazka3-po.webp">
+            <picture>
+                <source srcset="images/realizace/zakazka3-po.webp" type="image/webp">
+                <img src="images/realizace/zakazka3-po.jpg" alt="Proměna 3" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=3'">
+            </picture>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:40px; position:relative; z-index:1;">
+        <a href="#kontakt" class="btn btn-primary" style="font-size: 18px; padding: 16px 36px; box-shadow: 0 8px 20px rgba(46, 94, 78, 0.2);">
+            Chci také takovou proměnu
+        </a>
     </div>
   </div>
 </section>
