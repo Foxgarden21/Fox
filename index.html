@@ -3,19 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fox Garden – Prémiová zahradnická péče</title>
+    <title>FOX Garden | Návrhy, realizace a údržba zahrad Jičín</title>
     <meta name="description" content="Údržba zahrad, řez stromů, sekání trávníků, postřiky a revitalizace. Certifikace ÚKZÚZ – odborná aplikace herbicidů, fungicidů, pesticidů a hnojiv. Kvalitní české sazenice a profesionální zahradnické služby pro domy, SVJ a firmy." />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVG7GX4D3J"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-VVG7GX4D3J');
     </script>
     <script type="text/javascript">
@@ -25,870 +24,3378 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "uxujcz8awi");
     </script>
+
     <style>
-        :root{
-         --green:#1f3d27;
-         --green-soft:#2d5c3b;
-         --green-glow:#3d7651;
-         --cream:#F3E9D7;          /* Warm Cream 2026 */
-         --cream-light:#faf7f1;
-         --white:#ffffff;
-         --text:#1e281f;
-         --shadow:0 10px 22px rgba(0,0,0,.08);
-         --shadow-soft:0 4px 14px rgba(0,0,0,.05);
-         --border:#e5e0d6;
-        }
-        *{box-sizing:border-box;margin:0;padding:0}
-        body{
-         background:linear-gradient(180deg,var(--cream)0%,var(--cream-light)40%,var(--cream)100%);
-         font-family:Poppins,Arial,sans-serif;
-         color:var(--text);
-         -webkit-font-smoothing:antialiased;
-        }
-        .container{max-width:1000px;margin:0 auto;padding:24px}
+        :root {
+            --green-main: #2E5E4E;
+            --accent: #ea580c;
+            --text-dark: #1b1b1b;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --bg-color: #ffffff;
+            --bg-alt: #f8f9fa;
+            --bg-warm: #F7F5F0;
+            --yellow-accent: #FFDE00;
+            --yellow-soft: #fffdf0; /* Warm earthy beige background */
 
-        /* POPTÁVEJ TRUST BOX */
-        .ref-trust-box{
-          border:2px solid #2E7D32;
-          border-radius:24px;
-          padding:16px 20px;
-          margin:24px 0 10px;
-          background:#fffdf7;
-          box-shadow:var(--shadow-soft);
+            --shadow: 0 4px 24px rgba(0,0,0,0.03);
+            --shadow-hover: 0 12px 40px rgba(0,0,0,0.06);
+            --border: #eaedf0;
+            --radius: 20px;
+            --transition: all 0.3s ease;
         }
 
-        /* Jemné doladění tlačítka v Poptávej boxu */
-        .ref-trust-box .btn{
-          display:inline-flex;
-          align-items:center;
-          justify-content:center;
-          padding:10px 24px;
-          max-width:260px;
-          width:auto;
-          white-space:normal;
-          text-align: center;
-          line-height: 1.3;
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--green-main);
+            border-radius: 6px;
+            border: 3px solid var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--yellow-accent);
         }
 
-        @media (max-width:600px){
-          .ref-trust-box .btn{
-            width:100%;
-            max-width:100%;
-            white-space:normal;
-          }
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Poppins', Arial, sans-serif;
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
         }
 
-        .ref-trust-box .stars{
-          font-size:22px;
-          margin-bottom:4px;
-        }
-        .ref-trust-box .stars span{
-          margin-right:2px;
-        }
-        .ref-trust-box p{
-          margin:6px 0;
-        }
-        .ref-trust-box p strong{
-          font-size:17px;
-        }
-        .ref-trust-box .btn{
-          margin-top:8px;
-        }
-        @media (max-width:600px){
-          .ref-trust-box{
-            padding:14px 16px;
-          }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        /* REVIEW BUTTONS */
-        .btn-review{
-          text-decoration:none;
-          padding:10px 22px;
-          border-radius:999px;
-          font-weight:600;
-          display:inline-block;
-          border:1px solid #2E7D32;
-          box-shadow:var(--shadow-soft);
-          margin:4px 6px;
-          font-size:14px;
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
-        .btn-review.google{
-          background:#ffffff;
-          color:#1f3d27;
+        .btn-primary {
+            background: linear-gradient(135deg, var(--green-main) 0%, #1e4235 100%);
+            color: var(--yellow-accent);
+            border: 1px solid rgba(255, 222, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 222, 0, 0.15);
         }
-        .btn-review.google:hover{
-          background:#E8E4D8;
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #224A3D 0%, #153227 100%);
+            border-color: var(--yellow-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 222, 0, 0.25);
+            color: var(--yellow-accent);
         }
-        .btn-review.fb{
-          background:#0f271a;
-          color:#E8E4D8;
+        .btn-whatsapp {
+            background: #4CAF50; /* Lighter green */
+            color: var(--white);
+            border: 1px solid transparent;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
         }
-        .btn-review.fb:hover{
-          background:#173824;
+        .btn-whatsapp:hover {
+            background: #43A047;
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+            color: var(--white);
         }
-        .review-note{
-          font-size:0.9rem;
-          margin-bottom:10px;
-          opacity:.9;
+        .btn-outline {
+            background: transparent;
+            color: var(--green-main);
+            border: 2px solid var(--green-main);
         }
-
-        /* HERO */
-        header.hero{
-          padding:80px 20px 34px;
-          text-align:center;
-        }
-        .hero-box{
-          background:var(--cream);           /* Warm Cream v hero */
-          padding:48px;
-          border-radius:30px;
-          box-shadow:var(--shadow);
-          border:1px solid #e3d7c3;
-          transition:.3s ease;
-          position: relative;
-        }
-        .hero-fox {
-          position: absolute;
-          bottom: 15px;
-          right: 20px;
-          width: 100px;
-          height: auto;
-          z-index: 1;
-          pointer-events: none;
-        }
-        @media (max-width: 600px) {
-          .hero-fox {
-            width: 70px;
-            bottom: 10px;
-            right: 10px;
-          }
-        }
-        .hero-box:hover{
-          transform:translateY(-3px);
-        }
-        .hero-box h1,
-        .hero-box p{
-          color:var(--text);
-        }
-        .brand{
-          font-size:50px;
-          font-weight:800;
-          color:var(--green);                /* tmavě zelený Fox Garden */
-        }
-        .premium{
-          font-size:24px;
-          font-weight:700;
-          margin-top:10px;
-          color:var(--green-soft);
-        }
-        .slogan{
-          font-size:22px;
-          font-weight:600;
-          margin-top:8px;
-          color:#3f5a47;
-        }
-        .micro{
-          opacity:.95;
-          margin-top:12px;
-          font-size:16px;
-          line-height:1.55;
-        }
-
-        /* BUTTONS */
-        .buttons{
-         margin-top:26px;
-         display:flex;
-         gap:16px;
-         flex-wrap:wrap;
-         justify-content:center;
-        }
-        .btn{
-         display:inline-block;
-         text-decoration:none;
-         padding:14px 30px;
-         border-radius:999px;
-         font-weight:700;
-         color:var(--white);
-         background:linear-gradient(135deg,var(--green)0%,var(--green-soft)100%);
-         box-shadow:var(--shadow-soft);
-         transition: all 0.3s ease;
-         text-align: center;
-        }
-        /* Jemné doladění tlačítka pod referencemi */
-        #reference .btn.outline{
-          display:inline-flex;
-          align-items:center;
-          justify-content:center;
-          text-align:center;
-          padding:12px 20px;
-          max-width:100%;
-          line-height:1.3;
-          white-space:normal;
-        }
-
-        @media (max-width: 600px){
-          #reference .btn.outline{
-            display:block;
-            width:100%;
-            margin-left:auto;
-            margin-right:auto;
-          }
-        }
-
-        .btn:hover{
-         background:linear-gradient(135deg,var(--green-soft)0%,var(--green-glow)100%);
-         transform:translateY(-2px) scale(1.02);
-        }
-
-        /* Outline button – světlé sekce */
-        .btn.outline{
-         background:transparent;
-         color:#0f271a;
-         border:2px solid #0f271a;
-        }
-        .btn.outline:hover{
-         background:#E8E4D8;
-         color:#0f271a;
-        }
-
-        /* NAV PILLS */
-        .hero-nav{
-         margin-top:32px;
-         display:flex;
-         flex-wrap:wrap;
-         gap:12px;
-         justify-content:center;
-        }
-        .hero-nav a{
-         background:var(--white);
-         padding:10px 20px;
-         border-radius:999px;
-         font-weight:600;
-         text-decoration:none;
-         border:1px solid var(--border);
-         color:var(--text);
-         box-shadow:var(--shadow-soft);
-         transition: all .25s ease;
-        }
-        .hero-nav a:hover{
-         background:var(--cream-light);
-         transform:translateY(-2px);
-        }
-
-        /* REGIONS */
-        .regions{
-         margin-top:22px;
-         display:flex;
-         gap:10px;
-         justify-content:center;
-         flex-wrap:wrap;
-        }
-
-        #kdepracujeme .regions {
-          margin-top: 28px;
-        }
-        .regions span{
-         background:#ffffffee;
-         padding:7px 18px;
-         border-radius:18px;
-         font-size:14px;
-         font-weight:600;
-         border:1px solid var(--border);
-         color:var(--green);
-         box-shadow:var(--shadow-soft);
-        }
-
-        /* SECTIONS */
-        section{
-         background:var(--white);
-         border-radius:28px;
-         padding:48px 28px;
-         margin:40px 12px;
-         box-shadow:var(--shadow);
-         border:1px solid var(--border);
-        }
-
-        #sluzby {
-          margin-top: 30px;
+        .btn-outline:hover {
+            background: linear-gradient(135deg, var(--green-main) 0%, #1e4235 100%);
+            color: var(--yellow-accent);
+            border-color: transparent;
+            box-shadow: 0 8px 25px rgba(46, 94, 78, 0.3);
+            transform: translateY(-3px);
         }
 
 
-        /* Krémové alternativní sekce */
-        section.alt{
-          background:var(--cream);
+        /* Hero */
+        header.hero {
+            position: relative;
+            overflow: hidden;
+            padding: 80px 0 60px;
+            text-align: center;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: var(--green-main); /* Fallback */
         }
 
-        h2{
-         font-size:32px;
-         margin-bottom:20px;
-         color:var(--green);
-        }
-        ul.clean{list-style:none;padding:0}
-        ul.clean li{
-         padding:8px 0 8px 30px;
-         position:relative;
-         line-height:1.55;
-        }
-        ul.clean li::before{
-         content:"🌿";
-         position:absolute;
-         left:0;
-         top:8px;
-         font-size:18px;
-        }
-        .lead{
-         font-size:16px;
-         line-height:1.6;
-         margin-bottom:16px;
+
+        .hero-box {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
         }
 
-        /* GALLERY */
-        .fg-img{
-          width:30%;
-          max-width:280px;
-          aspect-ratio: 4 / 3;
-          min-width:210px;
-          border-radius:18px;
-          box-shadow:var(--shadow);
-          transition: all .3s ease;
-          object-fit:cover;
-          border:1px solid var(--border);
-          display:block;
-        }
-        .fg-img:hover{transform:scale(1.04)}
-
-        /* REFERENCES */
-        .refs{
-         display:flex;
-         flex-direction:column;
-         gap:18px;
-         margin-bottom:24px;
-        }
-        .ref-card{
-         background:var(--cream-light);
-         border-radius:18px;
-         padding:18px 20px;
-         border:1px solid var(--border);
-         box-shadow:var(--shadow-soft);
-         text-align:left;
-         transition: all .3s ease;
-        }
-
-        .ref-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .ref-card h3{
-         font-size:18px;
-         margin-bottom:6px;
-         color:var(--green);
-        }
-        .ref-card p{
-         margin:0;
-         font-size:15px;
-         line-height:1.6;
-        }
-
-        /* FAQ */
-        .faq dt{font-weight:700;margin-top:12px}
-        .faq dd{margin-bottom:12px}
-
-        /* FOOTER */
-        footer{
-         text-align:center;
-         padding:42px 14px;
-         color:var(--cream);
-         background:var(--green);
-         font-size:.95rem;
-         margin-top:60px;
-         border-radius:26px 26px 0 0;
-         box-shadow:var(--shadow);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width:600px){
-          .brand{font-size:36px;}
-          .premium{font-size:18px; margin-top: 5px;}
-          .slogan{font-size:16px !important;}
-          .hero-box { padding: 30px 15px; }
-          .hero .buttons { flex-direction: column; gap: 12px; }
-          .hero .btn { width: 100%; padding: 16px 20px !important; font-size: 18px !important; }
-        }
-
-        #onas .btn.outline {
-          white-space: normal;
-          padding: 12px 24px;
-          line-height: 1.4;
-          text-align: center;
-          display: inline-block;
-          width: auto;
-          max-width: 280px;
-        }
-
-        #cenik {padding:3rem 0;}
-        #cenik .price-list {list-style:none;margin:0;padding:0;}
-        #cenik .price-list li {margin-bottom:1.5rem;border-bottom:1px solid #eee;padding-bottom:1rem;}
-        #cenik h3 {margin-bottom:0.25rem;}
-        #cenik .note {margin-top:1rem;font-size:0.95rem;opacity:0.8;}
-
-        #galerie .container {padding-left:1rem;padding-right:1rem;margin:0 auto;}
-        #galerie .gallery-grid {
-          display: grid;
-          gap: 1.5rem;
-          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        }
-        @media (max-width: 600px) {
-          #galerie .gallery-item:nth-child(n+4) {
-            display: none;
-          }
-          #galerie .gallery-item img {
-            height: 300px;
-          }
-        }
-        #galerie .gallery-item {
-          background: #ffffff;
-          border-radius: 16px;
-          padding: 0.75rem 0.75rem 1rem;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-          text-align:center;
-          position: relative;
-          transition: all .3s ease;
-        }
-
-        #galerie .gallery-item:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-        }
-        #galerie .gallery-item img {
-          width:100%;
-          height:230px;
-          object-fit:cover;
-          border-radius:12px;
-          display:block;
-          margin-bottom:0.5rem;
-        }
-        #galerie .gallery-item figcaption {font-size:0.95rem;font-weight:500;}
-        #galerie .gallery-item::after {
-          content:"FoxGarden.cz";
-          position:absolute;
-          bottom:8px;
-          right:12px;
-          font-size:12px;
-          color:rgba(255,255,255,0.9);
-          background:rgba(0,0,0,0.45);
-          padding:2px 6px;
-          border-radius:6px;
-        }
-
-        .nav-cta{
-          display:inline-block;
-          padding:8px 18px;
-          border-radius:999px;
-          background:var(--green-soft);
-          color:var(--cream);
-          font-weight:600;
-          text-decoration:none;
-          margin-left:16px;
-          box-shadow:var(--shadow-soft);
-        }
-        .nav-cta:hover{
-          background:var(--green-glow);
-          color:#fff;
-        }
-
-        .form-box {
-          max-width: 640px;
-          margin: 1.5rem auto 0;
-          padding: 1.5rem;
-          border-radius: 1.25rem;
-          background: #ffffff;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-          display: flex;
-          flex-direction: column;
-          gap: 0.75rem;
-        }
-
-        .form-box label {
-          font-weight: 600;
-          font-size: 0.95rem;
-        }
-
-        .form-box input,
-        .form-box select,
-        .form-box textarea {
-          width: 100%;
-          padding: 0.55rem 0.8rem;
-          border-radius: 0.75rem;
-          border: 1px solid #d8e4d2;
-          font-size: 0.95rem;
-          font-family: inherit;
-          box-sizing: border-box;
-        }
-
-        .form-box input:focus,
-        .form-box select:focus,
-        .form-box textarea:focus {
-          outline: none;
-          border-color: #2e7d32;
-          box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.12);
-        }
-
-        .form-box button.btn {
-          align-self: flex-start;
-          margin-top: 0.5rem;
-        }
-        @media (max-width: 768px) {
-          .form-box {
-            padding: 1.2rem;
-            border-radius: 1rem;
-          }
-        }
-
-        /* NAHORU BUTTON */
-        #backToTop{
-          position:fixed;
-          bottom:24px;
-          right:20px;
-          width:46px;
-          height:46px;
-          border-radius:999px;
-          border:none;
-          background:var(--green-soft);
-          color:var(--cream);
-          font-size:22px;
-          display:none;
-          align-items:center;
-          justify-content:center;
-          box-shadow:var(--shadow);
-          cursor:pointer;
-          z-index:999;
-          transition: all .3s ease;
-        }
-        #backToTop:hover{
-          background:var(--green-glow);
-        }
-
-        /* RESPONSIVE CTA SECTION */
-        .cta-section {
-          margin-top: 24px;
-          text-align: center;
-        }
-        .cta-trust-items {
-          margin-top: 18px;
-          text-align: left;
-          display: inline-block;
-          max-width: 450px;
-          width: 100%;
-        }
-        @media (max-width: 768px) {
-          .cta-section {
+        .brand {
             display: flex;
             flex-direction: column;
             align-items: center;
-          }
-          .cta-section .btn {
+            justify-content: center;
+            gap: 8px;
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            margin-bottom: 32px;
+        }
+        .brand img {
+            height: 120px;
+            width: auto;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+        }
+        .premium {
+            font-size: 36px;
+            font-weight: 700;
+            margin-top: 24px;
+            color: var(--white);
+            line-height: 1.2;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+        .slogan {
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 16px;
+            color: var(--bg-warm); /* Warm cream color */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+        .hero-buttons {
+            margin-top: 40px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .hero-buttons .btn {
+            font-size: 18px;
+            padding: 16px 36px;
+        }
+        .hero-buttons .btn-primary {
+            background: var(--yellow-accent);
+            color: var(--green-main);
+            box-shadow: 0 4px 15px rgba(255, 222, 0, 0.4);
+        }
+        .hero-buttons .btn-primary:hover {
+            background: #e6c800; /* slightly darker yellow for hover */
+            box-shadow: 0 8px 20px rgba(255, 222, 0, 0.6);
+            color: var(--green-main);
+        }
+
+
+        .micro {
+            margin-top: 24px;
+            font-weight: 500;
+            font-size: 15px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .hero-trust {
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--white);
+        }
+        .hero-trust a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.3);
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .hero-trust a:hover {
+            transform: translateY(-2px);
+            background: rgba(0,0,0,0.5);
+            border-color: rgba(255, 222, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 222, 0, 0.1);
+        }
+
+        /* Hero Nav */
+        .hero-nav {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-nav a {
+            background: rgba(46, 94, 78, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid rgba(255, 222, 0, 0.2);
+            color: var(--white);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 14px;
+        }
+        .hero-nav a:hover {
+            background: rgba(46, 94, 78, 0.8);
+            transform: translateY(-3px) scale(1.05);
+            border-color: rgba(255, 222, 0, 0.6);
+            color: var(--yellow-accent);
+            box-shadow: 0 8px 20px rgba(255, 222, 0, 0.15);
+        }
+
+        /* Hero Social Links */
+        .hero-social {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-social-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .hero-social-links {
+            display: flex;
+            gap: 16px;
+        }
+        .hero-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: var(--white);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hero-social a svg {
+            width: 24px;
+            height: 24px;
+        }
+        .hero-social a:hover {
+            background: var(--yellow-accent);
+            border-color: var(--yellow-accent);
+            color: var(--green-main);
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(255, 222, 0, 0.3);
+        }
+
+        /* Insurance Banner */
+        .insurance-banner {
+            background: var(--white);
+            color: var(--green-main);
+            text-align: center;
+            padding: 16px 20px;
+            margin: 10px 20px 40px;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            max-width: 1060px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--yellow-accent);
+            box-shadow: var(--shadow);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+        section.alt {
+            background: var(--bg-alt);
+            border: none;
+            border-radius: 32px;
+            margin: 0 20px 40px;
+            padding: 80px 20px;
+            box-shadow: none;
+        }
+        section.warm {
+            background: var(--bg-warm);
+            border: none;
+            border-radius: 32px;
+            margin: 0 20px 40px;
+            padding: 80px 20px;
+            box-shadow: none;
+        }
+        section.warm .section-header .subtitle {
+            color: var(--green-main);
+            margin-top: 16px;
+        }
+        section.warm .card {
+            background: var(--white);
+            border: 1px solid rgba(46, 94, 78, 0.1);
+            position: relative;
+        }
+        section.warm .card-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--green-main);
+            color: var(--yellow-accent);
+            margin-bottom: 20px;
+        }
+        section.warm .card-icon.accent {
+            background: var(--yellow-accent);
+            color: var(--green-main);
+        }
+        section.warm .card h3 {
+            color: var(--green-main);
+            font-weight: 700;
+            font-size: 24px;
+        }
+        section.warm .card p {
+            color: var(--green-main) !important;
+            font-weight: 500;
+        }
+        section.warm ul.clean li {
+            color: var(--green-main);
+            border-bottom-color: rgba(46, 94, 78, 0.1);
+            font-weight: 500;
+            padding-left: 40px;
+        }
+        section.warm ul.clean li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: var(--green-main);
+            font-weight: 700;
+            font-size: 14px;
+            width: 24px;
+            height: 24px;
+            background: var(--yellow-accent);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--green-main);
+            margin-bottom: 12px;
+        }
+        .section-header h2 {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        .section-header h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--yellow-accent);
+            border-radius: 2px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid Layouts */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: 32px;
+            padding: 40px 32px;
+            box-shadow: var(--shadow);
+            border: none;
+            transition: var(--transition);
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .feature-card {
+            flex: 1 1 300px;
+            max-width: 450px;
+            text-align: left;
+            padding: 40px 32px;
+            background: #2E5E4E !important;
+            color: var(--white);
+            border: none !important;
+            border-radius: 32px !important;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.3);
+            border-color: transparent;
+        }
+        .feature-card h3 {
+            color: var(--yellow-accent) !important;
+            font-size: 22px !important;
+            margin-bottom: 12px;
+            justify-content: flex-start !important;
+            width: 100%;
+        }
+        .feature-icon-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background: transparent;
+            border-radius: 50%;
+            margin-bottom: 24px;
+            color: var(--yellow-accent);
+            border: 2px solid var(--yellow-accent);
+            transition: var(--transition);
+        }
+        .feature-card:hover .feature-icon-wrapper {
+            background: var(--yellow-accent);
+            color: #2E5E4E;
+            transform: scale(1.1);
+        }
+        .card h3 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Services List */
+        ul.clean { list-style: none; padding: 0; }
+        ul.clean li {
+            padding: 14px 0 14px 32px;
+            position: relative;
+            line-height: 1.6;
+            font-size: 16px;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--border);
+        }
+        ul.clean li:last-child { border-bottom: none; }
+        ul.clean li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 14px;
+            color: var(--green-main);
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 0;
+            background: transparent;
+            width: auto;
+            height: auto;
+        }
+
+        /* Realizace / Work Examples */
+        .work-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .work-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .work-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .work-card .content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .work-card h3 {
+            font-size: 18px;
+            color: var(--green-main);
+            margin-bottom: 8px;
+        }
+        .work-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Pricing */
+        .price-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .price-card {
+            background: var(--white);
+            padding: 32px 24px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .price-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .price-card h3 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+        .price-badge {
+            display: inline-block;
+            background: var(--white);
+            color: var(--green-main);
+            font-weight: 700;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--yellow-accent);
+            box-shadow: var(--shadow);
+        }
+        .price-desc {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* References (Google Reviews) */
+        .google-reviews-wrapper {
+            background: linear-gradient(135deg, #1f3d27 0%, #2E5E4E 100%);
+            border-radius: var(--radius);
+            padding: 40px 20px;
+        }
+        .google-reviews-wrapper h2 {
+            color: var(--white);
+        }
+        .google-reviews-wrapper .subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+        .review-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.02);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            height: 100%;
+        }
+        .review-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transform: translateY(-3px);
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 2px solid var(--yellow-accent);
+            color: var(--green-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .reviewer-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text-dark);
+        }
+        .review-stars {
+            color: #fbbc05; /* Google star color */
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+        .review-text {
+            font-size: 15px;
+            color: var(--text-light);
+            font-style: italic;
+            line-height: 1.5;
+            margin-top: auto; /* Push text down if cards have different heights */
+        }
+
+        /* Process */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .process-step {
+            background: var(--green-main);
+            padding: 32px 24px;
+            border-radius: 32px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.15);
+            border: none;
+            position: relative;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        .process-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(46, 94, 78, 0.25);
+        }
+        .process-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: transparent;
+            color: var(--yellow-accent);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+            border: 2px solid var(--yellow-accent);
+        }
+        .process-step:hover .process-num {
+            transform: scale(1.1);
+            background: var(--yellow-accent);
+            color: var(--green-main);
+        }
+        .process-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--white);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        .process-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background: var(--yellow-accent);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .process-step:hover .process-title::after {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--green-main);
+            color: var(--white);
+            padding: 32px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.1);
+            border: none;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(46, 94, 78, 0.2);
+        }
+        .faq-item dt {
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--yellow-accent);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .faq-item dd {
+            font-size: 15px;
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        /* Form */
+        .form-box {
+            background: var(--white);
+            padding: 48px;
+            border-radius: 32px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .form-box label {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--green-main);
+        }
+        .form-box input,
+        .form-box textarea {
+            width: 100%;
+            padding: 18px 24px;
+            border-radius: 20px;
+            border: 2px solid #eef2f5;
+            font-size: 16px;
+            font-family: inherit;
+            background: var(--white);
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .form-box input:hover,
+        .form-box textarea:hover {
+            border-color: rgba(46, 94, 78, 0.2);
+        }
+        .form-box input:focus,
+        .form-box textarea:focus {
+            outline: none;
+            border-color: var(--yellow-accent);
+            background: var(--white);
+            box-shadow: 0 0 0 6px rgba(255, 222, 0, 0.15), inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .form-box textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-box .btn {
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 32px;
+            align-items: start;
+        }
+        .contact-info {
+            background: var(--white);
+            padding: 40px 32px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(46, 94, 78, 0.1);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--yellow-accent);
+        }
+        .contact-info h3 {
+            font-size: 24px;
+            color: var(--green-main);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+        .contact-info .contact-row {
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .contact-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--green-main);
+            color: var(--yellow-accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .contact-info a {
+            color: var(--green-main);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: var(--green-main);
+            text-decoration: none;
+        }
+
+        /* Float Button */
+        .float-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--green-main);
+            color: var(--yellow-accent);
+            padding: 14px 24px;
+            border-radius: 999px;
+            font-weight: 600;
+            z-index: 999;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(255, 222, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            font-size: 15px;
+            border: 1px solid rgba(255, 222, 0, 0.3);
+        }
+        .float-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 222, 0, 0.25);
+            background: #224A3D;
+            border-color: var(--yellow-accent);
+        }
+
+        /* Before/After Slider */
+        .ba-section {
+            background: var(--bg-alt);
+            color: var(--text-dark);
+            padding: 100px 0;
+            border-radius: 32px;
+            margin: 0 20px 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ba-section .section-header h2 {
+            color: var(--green-main);
+            font-size: 40px;
+        }
+        .ba-section .subtitle {
+            color: var(--text-dark);
+            font-size: 18px;
+        }
+        .ba-slider-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        .ba-slider-container img {
             display: block;
             width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 15px;
-          }
-          .cta-trust-items {
-            display: block;
-            max-width: 100%;
-            margin: 0 auto;
-          }
+            height: 500px;
+            object-fit: cover;
+            user-select: none;
+            -webkit-user-drag: none;
         }
-    </style>
+        @media (max-width: 600px) {
+            .ba-slider-container img {
+                height: 350px;
+            }
+        }
+        .ba-img-after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%; /* Initial split */
+            height: 100%;
+            overflow: hidden;
+            z-index: 2;
+        }
+        .ba-img-after img {
+            width: 100%; /* Must match parent's original width via JS */
+            max-width: none;
+        }
+        @keyframes pulse-handle {
+            0% { box-shadow: 0 0 0 0 rgba(255, 222, 0, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 222, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 222, 0, 0); }
+        }
+        .ba-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--white);
+            z-index: 3;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .ba-handle-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 56px;
+            height: 56px;
+            background: var(--white);
+            border: 4px solid var(--green-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background 0.3s;
+            animation: pulse-handle 2s infinite;
+        }
+        .ba-handle-btn::after {
+            content: "↔";
+            color: var(--green-main);
+            font-size: 24px;
+            font-weight: 800;
+        }
+        .ba-handle:hover .ba-handle-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: var(--yellow-accent);
+        }
+        .ba-label {
+            position: absolute;
+            bottom: 20px;
+            padding: 8px 16px;
+            background: rgba(0,0,0,0.6);
+            color: var(--white);
+            font-weight: 700;
+            border-radius: 8px;
+            font-size: 14px;
+            backdrop-filter: blur(4px);
+            z-index: 4;
+            pointer-events: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .ba-label-before { right: 20px; }
+        .ba-label-after { left: 20px; }
+
+        .ba-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+        .ba-thumb {
+            width: 100px;
+            height: 70px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .ba-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .ba-thumb.active {
+            border-color: var(--yellow-accent);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(46, 94, 78, 0.2);
+        }
+        .ba-thumb:hover img {
+            transform: scale(1.1);
+        }
+        .ba-thumb::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            transition: background 0.3s;
+        }
+        .ba-thumb.active::after, .ba-thumb:hover::after {
+            background: transparent;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-box { padding: 40px 20px; }
+            .brand { font-size: 36px; gap: 8px; margin-bottom: 24px; }
+            .brand img { height: 80px; }
+            section { padding: 60px 0; }
+            section.alt, section.warm { padding: 50px 20px; margin: 0 12px 40px; }
+            .form-row { grid-template-columns: 1fr; gap: 16px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .float-btn { width: calc(100% - 48px); justify-content: center; bottom: 16px; right: 24px; }
+            .hero-buttons .btn, .contact-buttons .btn { width: 100%; }
+        }
+
+        .arrow-link {
+            transition: var(--transition);
+        }
+        .arrow-link:hover {
+            transform: translateY(3px);
+        }
+
+        /* Cookie Consent */
+        .cookie-consent {
+            position: fixed;
+            bottom: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 600px;
+            background: linear-gradient(135deg, #0f271a 0%, #1f3d27 100%);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.1);
+            z-index: 10000;
+            transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .cookie-consent.show {
+            bottom: 20px;
+        }
+        .cookie-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .cookie-icon {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        .cookie-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+        .cookie-content p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.4;
+        }
+        .cookie-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-top: 5px;
+        }
+        .cookie-btn {
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+        }
+        .cookie-btn-primary {
+            background: var(--green-main);
+            color: var(--white);
+            box-shadow: 0 4px 10px rgba(46, 94, 78, 0.3);
+        }
+        .cookie-btn-primary:hover {
+            background: #224A3D;
+            transform: translateY(-2px);
+        }
+        .cookie-btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+        }
+        .cookie-btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .cookie-btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .cookie-btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .cookie-btn-text {
+            background: transparent;
+            color: rgba(255,255,255,0.6);
+            padding: 8px;
+        }
+        .cookie-btn-text:hover {
+            color: var(--white);
+        }
+        @media (max-width: 600px) {
+            .cookie-consent {
+                width: 100%;
+                border-radius: 20px 20px 0 0;
+                padding: 20px;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+            }
+            .cookie-consent.show {
+                bottom: 0;
+            }
+            .cookie-header {
+                align-items: center;
+            }
+            .cookie-icon {
+                display: block !important;
+            }
+            .cookie-actions {
+                flex-direction: column;
+                justify-content: stretch;
+            }
+            .cookie-btn {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px;
+            }
+        }
+
+        /* Carousel CSS */
+        .reviews-carousel {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            min-height: 200px;
+        }
+        .review-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s ease-in-out, visibility 0.8s;
+            z-index: 1;
+        }
+        .review-slide.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 2;
+            position: relative;
+        }
+
+</style>
 </head>
+    <style>
+        :root {
+            --green-main: #2E5E4E;
+            --accent: #ea580c;
+            --text-dark: #1b1b1b;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --bg-color: #ffffff;
+            --bg-alt: #f8f9fa;
+            --bg-warm: #F7F5F0;
+            --yellow-accent: #FFDE00;
+            --yellow-soft: #fffdf0; /* Warm earthy beige background */
+
+            --shadow: 0 4px 24px rgba(0,0,0,0.03);
+            --shadow-hover: 0 12px 40px rgba(0,0,0,0.06);
+            --border: #eaedf0;
+            --radius: 20px;
+            --transition: all 0.3s ease;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--green-main);
+            border-radius: 6px;
+            border: 3px solid var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--yellow-accent);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Poppins', Arial, sans-serif;
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--green-main) 0%, #1e4235 100%);
+            color: var(--yellow-accent);
+            border: 1px solid rgba(255, 222, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 222, 0, 0.15);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #224A3D 0%, #153227 100%);
+            border-color: var(--yellow-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 222, 0, 0.25);
+            color: var(--yellow-accent);
+        }
+        .btn-whatsapp {
+            background: #4CAF50; /* Lighter green */
+            color: var(--white);
+            border: 1px solid transparent;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+        }
+        .btn-whatsapp:hover {
+            background: #43A047;
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+            color: var(--white);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--green-main);
+            border: 2px solid var(--green-main);
+        }
+        .btn-outline:hover {
+            background: linear-gradient(135deg, var(--green-main) 0%, #1e4235 100%);
+            color: var(--yellow-accent);
+            border-color: transparent;
+            box-shadow: 0 8px 25px rgba(46, 94, 78, 0.3);
+            transform: translateY(-3px);
+        }
+
+
+        @keyframes subtle-breathe {
+            0% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 222, 0, 0); }
+            50% { transform: scale(1.02); box-shadow: 0 4px 20px rgba(255, 222, 0, 0.2); }
+            100% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 222, 0, 0); }
+        }
+
+        .breathe-animate {
+            animation: subtle-breathe 6s ease-in-out infinite;
+        }
+        .breathe-animate:hover {
+            animation-play-state: paused;
+        }
+
+        /* Hero */
+        header.hero {
+            position: relative;
+            overflow: hidden;
+            padding: 80px 0 60px;
+            text-align: center;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: var(--green-main); /* Fallback */
+        }
+
+
+        .hero-box {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            margin-bottom: 32px;
+        }
+        .brand img {
+            height: 120px;
+            width: auto;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+        }
+        .premium {
+            font-size: 36px;
+            font-weight: 700;
+            margin-top: 24px;
+            color: var(--white);
+            line-height: 1.2;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+        .slogan {
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 16px;
+            color: var(--bg-warm); /* Warm cream color */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+        .hero-buttons {
+            margin-top: 40px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .hero-buttons .btn {
+            font-size: 18px;
+            padding: 16px 36px;
+        }
+        .hero-buttons .btn-primary {
+            background: var(--yellow-accent);
+            color: var(--green-main);
+            box-shadow: 0 4px 15px rgba(255, 222, 0, 0.4);
+        }
+        .hero-buttons .btn-primary:hover {
+            background: #e6c800; /* slightly darker yellow for hover */
+            box-shadow: 0 8px 20px rgba(255, 222, 0, 0.6);
+            color: var(--green-main);
+        }
+
+
+        .micro {
+            margin-top: 24px;
+            font-weight: 500;
+            font-size: 15px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .hero-trust {
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--white);
+        }
+        .hero-trust a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.3);
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .hero-trust a:hover {
+            transform: translateY(-2px);
+            background: rgba(0,0,0,0.5);
+            border-color: rgba(255, 222, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 222, 0, 0.1);
+        }
+
+        /* Hero Nav */
+        .hero-nav {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-nav a {
+            background: rgba(46, 94, 78, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid rgba(255, 222, 0, 0.2);
+            color: var(--white);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 14px;
+        }
+        .hero-nav a:hover {
+            background: rgba(46, 94, 78, 0.8);
+            transform: translateY(-3px) scale(1.05);
+            border-color: rgba(255, 222, 0, 0.6);
+            color: var(--yellow-accent);
+            box-shadow: 0 8px 20px rgba(255, 222, 0, 0.15);
+        }
+
+        /* Hero Social Links */
+        .hero-social {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-social-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .hero-social-links {
+            display: flex;
+            gap: 16px;
+        }
+        .hero-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: var(--white);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hero-social a svg {
+            width: 24px;
+            height: 24px;
+        }
+        .hero-social a:hover {
+            background: var(--yellow-accent);
+            border-color: var(--yellow-accent);
+            color: var(--green-main);
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(255, 222, 0, 0.3);
+        }
+
+        /* Insurance Banner */
+        .insurance-banner {
+            background: var(--white);
+            color: var(--green-main);
+            text-align: center;
+            padding: 16px 20px;
+            margin: 10px 20px 40px;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            max-width: 1060px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--yellow-accent);
+            box-shadow: var(--shadow);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+        section.alt {
+            background: var(--bg-alt);
+            border: none;
+            border-radius: 32px;
+            margin: 0 20px 40px;
+            padding: 80px 20px;
+            box-shadow: none;
+        }
+        section.warm {
+            background: var(--bg-warm);
+            border: none;
+            border-radius: 32px;
+            margin: 0 20px 40px;
+            padding: 80px 20px;
+            box-shadow: none;
+        }
+        section.warm .section-header .subtitle {
+            color: var(--green-main);
+            margin-top: 16px;
+        }
+        section.warm .card {
+            background: var(--white);
+            border: 1px solid rgba(46, 94, 78, 0.1);
+            position: relative;
+        }
+        section.warm .card-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--green-main);
+            color: var(--yellow-accent);
+            margin-bottom: 20px;
+        }
+        section.warm .card-icon.accent {
+            background: var(--yellow-accent);
+            color: var(--green-main);
+        }
+        section.warm .card h3 {
+            color: var(--green-main);
+            font-weight: 700;
+            font-size: 24px;
+        }
+        section.warm .card p {
+            color: var(--green-main) !important;
+            font-weight: 500;
+        }
+        section.warm ul.clean li {
+            color: var(--green-main);
+            border-bottom-color: rgba(46, 94, 78, 0.1);
+            font-weight: 500;
+            padding-left: 40px;
+        }
+        section.warm ul.clean li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: var(--green-main);
+            font-weight: 700;
+            font-size: 14px;
+            width: 24px;
+            height: 24px;
+            background: var(--yellow-accent);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--green-main);
+            margin-bottom: 12px;
+        }
+        .section-header h2 {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        .section-header h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--yellow-accent);
+            border-radius: 2px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid Layouts */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: 32px;
+            padding: 40px 32px;
+            box-shadow: var(--shadow);
+            border: none;
+            transition: var(--transition);
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .feature-card {
+            flex: 1 1 300px;
+            max-width: 450px;
+            text-align: left;
+            padding: 40px 32px;
+            background: #2E5E4E !important;
+            color: var(--white);
+            border: none !important;
+            border-radius: 32px !important;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.3);
+            border-color: transparent;
+        }
+        .feature-card h3 {
+            color: var(--yellow-accent) !important;
+            font-size: 22px !important;
+            margin-bottom: 12px;
+            justify-content: flex-start !important;
+            width: 100%;
+        }
+        .feature-icon-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background: transparent;
+            border-radius: 50%;
+            margin-bottom: 24px;
+            color: var(--yellow-accent);
+            border: 2px solid var(--yellow-accent);
+            transition: var(--transition);
+        }
+        .feature-card:hover .feature-icon-wrapper {
+            background: var(--yellow-accent);
+            color: #2E5E4E;
+            transform: scale(1.1);
+        }
+        .card h3 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Services List */
+        ul.clean { list-style: none; padding: 0; }
+        ul.clean li {
+            padding: 14px 0 14px 32px;
+            position: relative;
+            line-height: 1.6;
+            font-size: 16px;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--border);
+        }
+        ul.clean li:last-child { border-bottom: none; }
+        ul.clean li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 14px;
+            color: var(--green-main);
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 0;
+            background: transparent;
+            width: auto;
+            height: auto;
+        }
+
+        /* Realizace / Work Examples */
+        .work-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .work-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .work-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .work-card .content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .work-card h3 {
+            font-size: 18px;
+            color: var(--green-main);
+            margin-bottom: 8px;
+        }
+        .work-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Pricing */
+        .price-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .price-card {
+            background: var(--white);
+            padding: 32px 24px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .price-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .price-card h3 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+        .price-badge {
+            display: inline-block;
+            background: var(--white);
+            color: var(--green-main);
+            font-weight: 700;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--yellow-accent);
+            box-shadow: var(--shadow);
+        }
+        .price-desc {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* References (Google Reviews) */
+        .google-reviews-wrapper {
+            background: linear-gradient(135deg, #1f3d27 0%, #2E5E4E 100%);
+            border-radius: var(--radius);
+            padding: 40px 20px;
+        }
+        .google-reviews-wrapper h2 {
+            color: var(--white);
+        }
+        .google-reviews-wrapper .subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+        .review-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.02);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            height: 100%;
+        }
+        .review-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transform: translateY(-3px);
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 2px solid var(--yellow-accent);
+            color: var(--green-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .reviewer-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text-dark);
+        }
+        .review-stars {
+            color: #fbbc05; /* Google star color */
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+        .review-text {
+            font-size: 15px;
+            color: var(--text-light);
+            font-style: italic;
+            line-height: 1.5;
+            margin-top: auto; /* Push text down if cards have different heights */
+        }
+
+        /* Process */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .process-step {
+            background: var(--green-main);
+            padding: 32px 24px;
+            border-radius: 32px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.15);
+            border: none;
+            position: relative;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        .process-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(46, 94, 78, 0.25);
+        }
+        .process-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: transparent;
+            color: var(--yellow-accent);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+            border: 2px solid var(--yellow-accent);
+        }
+        .process-step:hover .process-num {
+            transform: scale(1.1);
+            background: var(--yellow-accent);
+            color: var(--green-main);
+        }
+        .process-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--white);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        .process-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background: var(--yellow-accent);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .process-step:hover .process-title::after {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--green-main);
+            color: var(--white);
+            padding: 32px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(46, 94, 78, 0.1);
+            border: none;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(46, 94, 78, 0.2);
+        }
+        .faq-item dt {
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--yellow-accent);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .faq-item dd {
+            font-size: 15px;
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        /* Form */
+        .form-box {
+            background: var(--white);
+            padding: 48px;
+            border-radius: 32px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .form-box label {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--green-main);
+        }
+        .form-box input,
+        .form-box textarea {
+            width: 100%;
+            padding: 18px 24px;
+            border-radius: 20px;
+            border: 2px solid #eef2f5;
+            font-size: 16px;
+            font-family: inherit;
+            background: var(--white);
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .form-box input:hover,
+        .form-box textarea:hover {
+            border-color: rgba(46, 94, 78, 0.2);
+        }
+        .form-box input:focus,
+        .form-box textarea:focus {
+            outline: none;
+            border-color: var(--yellow-accent);
+            background: var(--white);
+            box-shadow: 0 0 0 6px rgba(255, 222, 0, 0.15), inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .form-box textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-box .btn {
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 32px;
+            align-items: start;
+        }
+        .contact-info {
+            background: var(--white);
+            padding: 40px 32px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(46, 94, 78, 0.1);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--yellow-accent);
+        }
+        .contact-info h3 {
+            font-size: 24px;
+            color: var(--green-main);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+        .contact-info .contact-row {
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .contact-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--green-main);
+            color: var(--yellow-accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .contact-info a {
+            color: var(--green-main);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: var(--green-main);
+            text-decoration: none;
+        }
+
+        /* Float Button */
+        .float-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--green-main);
+            color: var(--yellow-accent);
+            padding: 14px 24px;
+            border-radius: 999px;
+            font-weight: 600;
+            z-index: 999;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(255, 222, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            font-size: 15px;
+            border: 1px solid rgba(255, 222, 0, 0.3);
+        }
+        .float-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 222, 0, 0.25);
+            background: #224A3D;
+            border-color: var(--yellow-accent);
+        }
+
+        /* Before/After Slider */
+        .ba-section {
+            background: var(--bg-alt);
+            color: var(--text-dark);
+            padding: 100px 0;
+            border-radius: 32px;
+            margin: 0 20px 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ba-section .section-header h2 {
+            color: var(--green-main);
+            font-size: 40px;
+        }
+        .ba-section .subtitle {
+            color: var(--text-dark);
+            font-size: 18px;
+        }
+        .ba-slider-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        .ba-slider-container img {
+            display: block;
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        @media (max-width: 600px) {
+            .ba-slider-container img {
+                height: 350px;
+            }
+        }
+        .ba-img-after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%; /* Initial split */
+            height: 100%;
+            overflow: hidden;
+            z-index: 2;
+        }
+        .ba-img-after img {
+            width: 100%; /* Must match parent's original width via JS */
+            max-width: none;
+        }
+        @keyframes pulse-handle {
+            0% { box-shadow: 0 0 0 0 rgba(255, 222, 0, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 222, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 222, 0, 0); }
+        }
+        .ba-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--white);
+            z-index: 3;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .ba-handle-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 56px;
+            height: 56px;
+            background: var(--white);
+            border: 4px solid var(--green-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background 0.3s;
+            animation: pulse-handle 2s infinite;
+        }
+        .ba-handle-btn::after {
+            content: "↔";
+            color: var(--green-main);
+            font-size: 24px;
+            font-weight: 800;
+        }
+        .ba-handle:hover .ba-handle-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: var(--yellow-accent);
+        }
+        .ba-label {
+            position: absolute;
+            bottom: 20px;
+            padding: 8px 16px;
+            background: rgba(0,0,0,0.6);
+            color: var(--white);
+            font-weight: 700;
+            border-radius: 8px;
+            font-size: 14px;
+            backdrop-filter: blur(4px);
+            z-index: 4;
+            pointer-events: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .ba-label-before { right: 20px; }
+        .ba-label-after { left: 20px; }
+
+        .ba-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+        .ba-thumb {
+            width: 100px;
+            height: 70px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .ba-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .ba-thumb.active {
+            border-color: var(--yellow-accent);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(46, 94, 78, 0.2);
+        }
+        .ba-thumb:hover img {
+            transform: scale(1.1);
+        }
+        .ba-thumb::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            transition: background 0.3s;
+        }
+        .ba-thumb.active::after, .ba-thumb:hover::after {
+            background: transparent;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-box { padding: 40px 20px; }
+            .brand { font-size: 36px; gap: 8px; margin-bottom: 24px; }
+            .brand img { height: 80px; }
+            section { padding: 60px 0; }
+            section.alt, section.warm { padding: 50px 20px; margin: 0 12px 40px; }
+            .form-row { grid-template-columns: 1fr; gap: 16px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .float-btn { width: calc(100% - 48px); justify-content: center; bottom: 16px; right: 24px; }
+            .hero-buttons .btn, .contact-buttons .btn { width: 100%; }
+        }
+
+        .arrow-link {
+            transition: var(--transition);
+        }
+        .arrow-link:hover {
+            transform: translateY(3px);
+        }
+
+        /* Cookie Consent */
+        .cookie-consent {
+            position: fixed;
+            bottom: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 600px;
+            background: linear-gradient(135deg, #0f271a 0%, #1f3d27 100%);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.1);
+            z-index: 10000;
+            transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .cookie-consent.show {
+            bottom: 20px;
+        }
+        .cookie-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .cookie-icon {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        .cookie-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+        .cookie-content p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.4;
+        }
+        .cookie-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-top: 5px;
+        }
+        .cookie-btn {
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+        }
+        .cookie-btn-primary {
+            background: var(--green-main);
+            color: var(--white);
+            box-shadow: 0 4px 10px rgba(46, 94, 78, 0.3);
+        }
+        .cookie-btn-primary:hover {
+            background: #224A3D;
+            transform: translateY(-2px);
+        }
+        .cookie-btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+        }
+        .cookie-btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .cookie-btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .cookie-btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .cookie-btn-text {
+            background: transparent;
+            color: rgba(255,255,255,0.6);
+            padding: 8px;
+        }
+        .cookie-btn-text:hover {
+            color: var(--white);
+        }
+        @media (max-width: 600px) {
+            .cookie-consent {
+                width: 100%;
+                border-radius: 20px 20px 0 0;
+                padding: 20px;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+            }
+            .cookie-consent.show {
+                bottom: 0;
+            }
+            .cookie-header {
+                align-items: center;
+            }
+            .cookie-icon {
+                display: block !important;
+            }
+            .cookie-actions {
+                flex-direction: column;
+                justify-content: stretch;
+            }
+            .cookie-btn {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px;
+            }
+        }
+
+        /* Carousel CSS */
+        .reviews-carousel {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            min-height: 200px;
+        }
+        .review-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s ease-in-out, visibility 0.8s;
+            z-index: 1;
+        }
+        .review-slide.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 2;
+            position: relative;
+        }
+
+</style>
 <body>
 <header class="hero" id="top">
-  <div class="container">
+  <a href="#" id="btn-dochazka" style="position:absolute; top:10px; right:20px; font-size:12px; color:rgba(255,255,255,0.4); text-decoration:none; z-index:100;">Docházka</a>
+
+  <div class="container" style="position:relative; z-index:1;">
     <div class="hero-box">
       <h1 class="brand">
-        <img src="images/logo.png" style="height:50px; display:block; margin:0 auto 10px;">
+        <img src="images/logo.png" alt="Logo FOX Garden" onerror="this.src='https://placehold.co/150x50/FFFFFF/2E5E4E?text=FOX+Garden'">
         FOX Garden
       </h1>
-      <p class="premium">Údržba zahrad Jičín a okolí</p>
-      <p class="slogan" style="font-size:18px; margin-top:10px; font-weight:600;">Sekání trávy • Živé ploty • Kompletní péče</p>
+      <p class="premium">Když je potřeba pořádná práce.</p>
+      <p class="slogan">Od jednorázového sekání po kompletní realizace zahrad.</p>
 
-      <div class="buttons" style="margin-top:30px;">
-        <a class="btn" href="tel:+420775717291" style="font-size: 20px; padding: 18px 36px;">📞 Zavolat 775 717 291</a>
-        <a class="btn" href="https://wa.me/420775717291" style="background:#25D366; font-size: 20px; padding: 18px 36px;">💬 WhatsApp</a>
+      <div class="hero-buttons">
+        <a class="btn btn-primary breathe-animate" href="#kontakt">Nezávazně poptat</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/420775717291">💬 WhatsApp</a>
       </div>
-      <p class="micro" style="margin-top:20px; font-weight:600; font-size: 17px;">
-        Volné termíny se rychle plní – objednejte se včas.
-      </p>
 
-      <div class="hero-nav">
+      <p class="micro">Volné termíny se rychle plní – objednejte se včas.</p>
+
+      <div class="hero-trust">
+        <a href="https://www.google.com/search?q=fox+garden" target="_blank" rel="noopener" class="breathe-animate">⭐ 9 ověřených Google recenzí</a>
+        <a href="#kontakt">🛡️ Pojištění do 3 000 000 Kč</a>
+      </div>
+
+      <div class="hero-social">
+        <span class="hero-social-title">Sledujte nás</span>
+        <div class="hero-social-links">
+            <a href="https://www.facebook.com/profile.php?id=100090484467357" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.5 10H16.639L17.29 6.8H14.5V4.666C14.5 3.82 14.5 3.2 15.632 3.2H17.29V0.384C16.89 0.32 15.772 0 14.49 0C11.838 0 10 1.636 10 4.542V6.8H7V10H10V18H14.5V10Z"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/foxgarden.expert/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C9.239 7 7 9.239 7 12C7 14.761 9.239 17 12 17C14.761 17 17 14.761 17 12C17 9.239 14.761 7 12 7ZM12 15C10.343 15 9 13.657 9 12C9 10.343 10.343 9 12 9C13.657 9 15 10.343 15 12C15 13.657 13.657 15 12 15ZM16.5 7.5C16.5 8.052 16.052 8.5 15.5 8.5C14.948 8.5 14.5 8.052 14.5 7.5C14.5 6.948 14.948 6.5 15.5 6.5C16.052 6.5 16.5 6.948 16.5 7.5ZM12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.877 4.234 21.221 4.79 21.475 5.45C21.723 6.088 21.89 6.813 21.94 7.878C21.99 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.723 17.912 21.475 18.55C21.221 19.21 20.877 19.766 20.322 20.322C19.766 20.877 19.21 21.221 18.55 21.475C17.912 21.723 17.187 21.89 16.122 21.94C15.056 21.99 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.723 5.45 21.475C4.79 21.221 4.234 20.877 3.678 20.322C3.123 19.766 2.779 19.21 2.525 18.55C2.277 17.912 2.11 17.187 2.06 16.122C2.01 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.813 2.277 6.088 2.525 5.45C2.779 4.79 3.123 4.234 3.678 3.678C4.234 3.123 4.79 2.779 5.45 2.525C6.088 2.277 6.813 2.11 7.878 2.06C8.944 2.01 9.283 2 12 2ZM12 4C9.318 4 8.981 4.01 7.968 4.056C7.03 4.099 6.391 4.253 5.926 4.433C5.309 4.673 4.869 4.965 4.428 5.405C3.988 5.846 3.696 6.286 3.456 6.903C3.275 7.368 3.121 8.007 3.078 8.945C3.032 9.958 3.022 10.295 3.022 12C3.022 13.705 3.032 14.042 3.078 15.055C3.121 15.993 3.275 16.632 3.456 17.097C3.696 17.714 3.988 18.154 4.428 18.595C4.869 19.035 5.309 19.327 5.926 19.567C6.391 19.747 7.03 19.901 7.968 19.944C8.981 19.99 9.318 20 12 20C14.682 20 15.019 19.99 16.032 19.944C16.97 19.901 17.609 19.747 18.074 19.567C18.691 19.327 19.131 19.035 19.572 18.595C20.012 18.154 20.304 17.714 20.544 17.097C20.725 16.632 20.879 15.993 20.922 15.055C20.968 14.042 20.978 13.705 20.978 12C20.978 10.295 20.968 9.958 20.922 8.945C20.879 8.007 20.725 7.368 20.544 6.903C20.304 6.286 20.012 5.846 19.572 5.405C19.131 4.965 18.691 4.673 18.074 4.433C17.609 4.253 16.97 4.099 16.032 4.056C15.019 4.01 14.682 4 12 4Z"/>
+                </svg>
+            </a>
+        </div>
+      </div>
+
+      <nav class="hero-nav">
         <a href="#sluzby">Služby</a>
-        <a href="#reference">Reference</a><a href="#realizace">Realizace</a><a href="#galerie">Fotogalerie</a>
-        <a class="nav-cta" href="#cenik">Ceník</a><a href="#rady">Rady</a><a href="#faq">FAQ</a><a href="#onas">O nás</a><a href="#kontakt">Kontakt</a>
-      </div>
-      <img src="images/fox.png" class="hero-fox" alt="FOX Garden - liška">
+        <a href="#ukazky">Ukázky práce</a>
+        <a href="#cenik">Ceník</a>
+        <a href="#faq">FAQ</a>
+        <a href="#onas">O nás</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
     </div>
   </div>
 </header>
-
-<section id="sluzby"><div class="container"><h2>🌿 Naše služby</h2>
-<p>Údržba zahrad pro rodinné domy, firmy i SVJ v Jičíně a okolí.</p>
-
-<ul class="clean">
-<li><b>Sekání trávníků</b> – sečení, dosekávání hran a úklid.</li>
-<li><b>Stříhání živých plotů</b> – tvarování a zmlazení.</li>
-<li><b>Řez stromů</b> – odborný řez pro zdravý růst.</li>
-<li><b>Pravidelná údržba</b> – péče o záhony a výsadby.</li>
-<li><b>Zanedbané zahrady</b> – vyčištění a likvidace náletů.</li>
-<li><b>Chemická péče</b> – certifikovaná aplikace postřiků.</li>
-</ul>
-<div class="cta-section">
-  <a class="btn" href="#poptavka">Rychlá poptávka</a>
-</div>
-</div></section>
-
-<section id="reference" class="alt"><div class="container">
-  <h2>⭐ Reference</h2>
-  <div class="refs">
-    <div class="ref-card">
-      <h3>Údržba zahrady – Hořice</h3>
-      <p>Sekání trávníku, střih plotu a úklid. Zákazníci oceňují spolehlivost a čistou práci.</p>
+<section id="sluzby" class="warm">
+  <div class="container">
+    <div class="section-header">
+        <h2>Naše služby</h2>
+        <p class="subtitle">Zahrada bez starostí po celý rok. Profesionální péče pro rodinné domy, firmy i SVJ.</p>
     </div>
-    <div class="ref-card">
-      <h3>SVJ – společná zeleň</h3>
-      <p>Celoroční údržba, úklid listí a odvoz odpadu. Zeleň vypadá skvěle po celý rok.</p>
+
+    <div class="grid-3">
+        <div class="card">
+            <div class="card-icon accent">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3>Návrhy a realizace</h3>
+            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Když chcete mít kolem domu opravdu hezky. Místo, kde si odpočinete.</p>
+            <ul class="clean">
+                <li><b>Komplexní proměny</b> – od návrhu po finální výsadbu.</li>
+                <li><b>Terénní úpravy</b> – rovnání a příprava pozemku.</li>
+                <li><b>Nové výsadby</b> – stromy, keře i trvalkové záhony.</li>
+            </ul>
+        </div>
+        <div class="card" style="box-shadow: 0 15px 40px rgba(46, 94, 78, 0.15); transform: translateY(-8px); border: 2px solid var(--green-main);">
+            <div class="card-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>Pravidelná údržba</h3>
+            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Ať vás zahrada těší, ne stresuje. Zahrada bez starostí.</p>
+            <ul class="clean">
+                <li><b>Sekání trávníků</b> – sečení, dosekávání hran a úklid.</li>
+                <li><b>Pravidelná péče</b> – péče o záhony a výsadby.</li>
+                <li><b>Odborná péče o zeleň</b> – profesionální ošetření a výživa rostlin.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>Jednorázové zásahy</h3>
+            <p style="font-size: 15px; margin-bottom: 16px; line-height: 1.5;">Poctivá práce, kterou je vidět. Proměníme chaos v místo pro klid.</p>
+            <ul class="clean">
+                <li><b>Stříhání živých plotů</b> – tvarování a zmlazení.</li>
+                <li><b>Řez stromů</b> – odborný řez pro zdravý růst.</li>
+                <li><b>Zanedbané zahrady</b> – vyčištění a likvidace náletů.</li>
+            </ul>
+        </div>
     </div>
-  </div>
-  <div style="text-align:center;margin-top:10px;">
-    <a class="btn outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" target="_blank" rel="noopener">Více na Poptávej.cz</a>
   </div>
 </section>
-
 <section id="cenik">
   <div class="container">
-    <h2>💰 Ceník</h2>
-    <ul class="price-list">
-      <li>
+    <div class="section-header">
+        <h2>Ceník</h2>
+        <p class="subtitle" style="max-width: 800px; margin: 0 auto;">Nejsme nejlevnější, ale ani nejdražší. Pracujeme pro majitele, kteří chtějí mít svou zahradu dlouhodobě v pořádku, bez starostí a kompromisů. Zakládáme si na kvalitně odvedené práci, spolehlivosti a výsledku, který bude dělat radost i po delší době.</p>
+    </div>
+
+    <div class="price-list">
+      <div class="price-card">
         <h3>Sekání trávníků</h3>
-        <p>Od 5 Kč/m² podle stavu plochy.</p>
-      </li>
-      <li>
+        <div class="price-badge">Od 2 Kč / m²</div>
+        <p class="price-desc">Cena se odvíjí dle stavu a členitosti plochy.</p>
+        <a href="clanky/kolik-stoji-sekani-travy.html" style="font-size: 13px; color: var(--yellow-accent); font-weight: 600; text-decoration: none; margin-top: 10px; display: inline-block;">Přečtěte si článek: Kolik stojí sekání trávy →</a>
+      </div>
+      <div class="price-card">
         <h3>Pravidelná údržba</h3>
-        <p>Balíčky od 1 500 Kč / měsíc.</p>
-      </li>
-      <li>
+        <div class="price-badge">Od 1 500 Kč / měsíc</div>
+        <p class="price-desc">Výhodné balíčky pro stálou péči.</p>
+      </div>
+      <div class="price-card">
         <h3>Střih živých plotů</h3>
-        <p>Od 30 Kč / bm podle výšky.</p>
-      </li>
-    </ul>
-    <p class="note">Nejsme nejlevnější – děláme práci tak, aby byla bez starostí.</p>
-  </div>
-</section>
-
-
-<section id="realizace" class="alt">
-  <div class="container">
-    <h2>Poslední realizace</h2>
-    <div class="refs" id="realizace-container">
-      <!-- Realizace 1 -->
-      <div class="ref-card">
-        <img src="images/realizace1.jpg" alt="Přerostlá zahrada po zimě – Jičín" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">
-        <h3>Přerostlá zahrada po zimě – Jičín</h3>
-        <p>Zahrada byla po zimě silně přerostlá a dlouhodobě neudržovaná. Provedli jsme kompletní posekání, vyčištění plochy a srovnání terénu.</p>
-      </div>
-
-      <!-- Realizace 2 -->
-      <div class="ref-card">
-        <img src="images/realizace2.jpg" alt="Pravidelná péče o zahradu – Hořice" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">
-        <h3>Pravidelná péče o zahradu – Hořice</h3>
-        <p>U této zahrady zajišťujeme pravidelné sekání, údržbu záhonů a střih živého plotu.</p>
+        <div class="price-badge">Od 30 Kč / bm</div>
+        <p class="price-desc">Dle výšky, šířky a přístupnosti.</p>
       </div>
     </div>
+  </div>
+</section>
+<section id="proc-nas" class="alt" style="margin-top: -20px; margin-bottom: 0;">
+  <div class="container">
+    <div class="section-header">
+        <h2>Proč si vybrat nás</h2>
+    </div>
 
-    <script>
-    fetch("https://opensheet.elk.sh/1DIZwj2J19xym6QX_uGjUucTJNgiazMm-jJYvmHj10mY/List1")
-      .then(res => {
-        if (!res.ok) throw new Error('Fetch failed');
-        return res.json();
-      })
-      .then(data => {
-        if (data && data.length > 0) {
-          let html = "";
-          data.slice(-3).reverse().forEach(item => {
-            html += `
-              <div class="ref-card">
-                ${item.Obrázek ? `<img src="${item.Obrázek}" alt="${item.Název}" style="width:100%; border-radius:12px; margin-bottom:12px; object-fit:cover; height:200px;">` : ""}
-                <h3>${item.Název || ""}</h3>
-                <p>${item.Popis || ""}</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: stretch;">
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+            </div>
+            <h3>Férové jednání a spolehlivost</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Co slíbíme, to platí. Přijedeme včas a práci dokončíme v termínu.</p>
+        </div>
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>Bezpečnost a profesionalita</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Pracujeme s profi technikou a jsme pojištěni pro případ škody až do 3 mil. Kč.</p>
+        </div>
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3>Rozumná a transparentní cena</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Nejsme nejlevnější, ale ani nejdražší. Za férovou cenu odvádíme nadstandardní práci.</p>
+        </div>
+        <div class="card feature-card">
+            <div class="feature-icon-wrapper">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+            </div>
+            <h3>Péče jako o vlastní zahradu</h3>
+            <p style="color: var(--white); font-size: 15px; line-height: 1.5; opacity: 0.9;">Ke každému projektu přistupujeme s respektem k přírodě a důrazem na detail.</p>
+        </div>
+
+        <!-- Arrow transition inline with the cards -->
+        <div style="flex: 1 1 200px; max-width: 250px; display: flex; align-items: center; justify-content: center; padding: 24px;">
+            <a href="#ukazky" class="arrow-link" style="display: inline-flex; flex-direction: column; align-items: center; color: var(--green-main); text-decoration: none; font-weight: 600; text-align: center;">
+                <span>Podívejte se na ukázky naší práce</span>
+                <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--yellow-accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+<section id="reference">
+  <div class="container">
+    <div class="google-reviews-wrapper">
+      <div class="section-header" style="margin-bottom: 30px;">
+          <h2>Reference klientů</h2>
+          <p class="subtitle">Co o naší práci říkají zákazníci na Google</p>
+      </div>
+
+      <div class="reviews-carousel" id="reviewsCarousel">
+
+        <!-- Recenze 1 -->
+        <a href="https://www.google.com/search?q=fox+garden" target="_blank" rel="noopener" class="review-card review-slide active">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">P</div>
+              <div>
+                <div class="reviewer-name">Petr Souta</div>
+                <div class="review-stars">★★★★★</div>
               </div>
-            `;
-          });
-          document.getElementById("realizace-container").innerHTML = html;
-        }
-      })
-      .catch(err => console.error("Google Sheets fetch failed, using static content.", err));
-    </script>
+            </div>
+            <!-- Google Logo SVG -->
+            <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+          </div>
+          <div class="review-text">
+            „Spolehlivost, zkušenosti a férový přístup. Fox Garden mohu určitě doporučit.“
+          </div>
+        </a>
 
-    <div style="text-align:center; margin-top:20px;">
-      <a class="btn outline" href="https://www.facebook.com/109016358813760" target="_blank">Další na Facebooku</a>
+        <!-- Recenze 2 -->
+        <a href="https://www.google.com/search?q=fox+garden" target="_blank" rel="noopener" class="review-card review-slide">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">Š</div>
+              <div>
+                <div class="reviewer-name">Šárka Šatrová</div>
+                <div class="review-stars">★★★★★</div>
+              </div>
+            </div>
+            <!-- Google Logo SVG -->
+            <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+          </div>
+          <div class="review-text">
+            „Rychlé jednání, profesionalita a skvěle odvedená práce.“
+          </div>
+        </a>
+
+      </div>
+
+      <div style="text-align:center; margin-top:40px;">
+        <a href="https://www.google.com/search?q=fox+garden" target="_blank" rel="noopener" class="arrow-link" style="display: inline-flex; flex-direction: column; align-items: center; color: var(--white); text-decoration: none; font-weight: 600; text-align: center;">
+            <span>Podívejte se na další reference</span>
+            <svg style="margin-top: 8px; width: 32px; height: 32px; color: var(--yellow-accent); opacity: 0.9;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </a>
+      </div>
+
     </div>
   </div>
-</section>
 
-<section id="galerie">
+
+</section>
+<section id="ukazky" class="ba-section">
   <div class="container">
-    <h2>Fotogalerie</h2>
-    <div class="gallery-grid">
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto1.jpg" alt="Fox Garden práce 1">
-      </figure>
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto2.jpg" alt="Fox Garden práce 2">
-      </figure>
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto3.jpg" alt="Fox Garden práce 3">
-      </figure>
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto4.jpg" alt="Fox Garden práce 4">
-      </figure>
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto5.jpg" alt="Fox Garden práce 5">
-      </figure>
-      <figure class="gallery-item">
-        <img src="https://pub-45c05f7c0916484f8eeec1e8aa2c05e4.r2.dev/Galerie/foto8.jpg" alt="Fox Garden práce 8">
-      </figure>
+    <div class="section-header" style="position:relative; z-index:1;">
+        <h2>Ukázky práce</h2>
+        <p class="subtitle">Podívejte se na skutečné výsledky naší práce.</p>
     </div>
-    <div style="text-align:center; margin-top: 20px;">
-      <a href="https://www.facebook.com/109016358813760" target="_blank" class="btn outline">Další fotky na Facebooku</a>
+
+    <div class="ba-slider-container" id="ba-slider">
+        <!-- Zde je obrázek PŘED (ten co se odkrývá napravo) -->
+        <picture>
+            <source srcset="images/realizace/zakazka1-pred.webp" type="image/webp" id="src-before-webp">
+            <img src="images/realizace/zakazka1-pred.jpg" id="img-before" alt="Zahrada před úpravou" onerror="this.src='https://placehold.co/900x500/1e281f/6b7280?text=Zahrada+P%C5%98ED'">
+        </picture>
+
+        <!-- Zde je obrázek PO (ten co je defaultně z 50 % přes něj nalevo) -->
+        <div class="ba-img-after" id="ba-after-wrapper">
+            <picture>
+                <source srcset="images/realizace/zakazka1-po.webp" type="image/webp" id="src-after-webp">
+                <img src="images/realizace/zakazka1-po.jpg" id="img-after" alt="Zahrada po úpravě" onerror="this.src='https://placehold.co/900x500/2E5E4E/ffffff?text=Zahrada+PO'">
+            </picture>
+        </div>
+
+        <div class="ba-handle" id="ba-handle">
+            <div class="ba-handle-btn"></div>
+        </div>
+
+        <div class="ba-label ba-label-before">PŘED</div>
+        <div class="ba-label ba-label-after">PO</div>
+    </div>
+
+    <div class="ba-thumbnails" id="ba-thumbnails" style="position:relative; z-index:1;">
+        <!-- Tyto náhledy pak JavaScriptově mění hlavní fotky -->
+        <div class="ba-thumb active" data-before="images/realizace/zakazka1-pred.jpg" data-after="images/realizace/zakazka1-po.jpg" data-before-webp="images/realizace/zakazka1-pred.webp" data-after-webp="images/realizace/zakazka1-po.webp">
+            <picture>
+                <source srcset="images/realizace/zakazka1-po.webp" type="image/webp">
+                <img src="images/realizace/zakazka1-po.jpg" alt="Proměna 1" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=1'">
+            </picture>
+        </div>
+        <div class="ba-thumb" data-before="images/realizace/zakazka2-pred.jpg" data-after="images/realizace/zakazka2-po.jpg" data-before-webp="images/realizace/zakazka2-pred.webp" data-after-webp="images/realizace/zakazka2-po.webp">
+            <picture>
+                <source srcset="images/realizace/zakazka2-po.webp" type="image/webp">
+                <img src="images/realizace/zakazka2-po.jpg" alt="Proměna 2" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=2'">
+            </picture>
+        </div>
+        <div class="ba-thumb" data-before="images/realizace/zakazka3-pred.jpg" data-after="images/realizace/zakazka3-po.jpg" data-before-webp="images/realizace/zakazka3-pred.webp" data-after-webp="images/realizace/zakazka3-po.webp">
+            <picture>
+                <source srcset="images/realizace/zakazka3-po.webp" type="image/webp">
+                <img src="images/realizace/zakazka3-po.jpg" alt="Proměna 3" onerror="this.src='https://placehold.co/100x70/2E5E4E/ffffff?text=3'">
+            </picture>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:40px; position:relative; z-index:1;">
+        <a href="#kontakt" class="btn btn-primary" style="font-size: 18px; padding: 16px 36px; box-shadow: 0 8px 20px rgba(46, 94, 78, 0.2);">
+            Chci také takovou proměnu
+        </a>
     </div>
   </div>
 </section>
-
-
-
-<section id="rady"><div class="container">
-<h2>🧠 Rady</h2>
-<h3>Péče o trávník po vertikutaci</h3>
-<ul class="clean">
-<li>Vyhrabat nečistoty, aby trávník mohl dýchat.</li>
-<li>Dosev travní směsí na prázdná místa.</li>
-<li>Zavlažit jemným deštěm a použít hnojivo.</li>
-<li>Sekat až při výšce 8–10 cm (nesekat „na golf“).</li>
-</ul>
-</div></section>
-
-<section id="faq" class="alt"><div class="container">
-<h2>❓ Časté dotazy</h2>
-<dl class="faq">
-<dt>Kolik stojí sekání?</dt>
-<dd>Cena závisí na ploše a stavu trávy. Napíšeme vám ji po sdělení výměry a lokality.</dd>
-<dt>Děláte odvoz odpadu?</dt>
-<dd>Ano, odvoz bioodpadu je standardní součástí našich služeb.</dd>
-<dt>Kde působíte?</dt>
-<dd>Hlavně Jičín, Hořice, Nová Paka, Lázně Bělohrad a okolí.</dd>
-</dl>
-</div></section>
-
-<section id="onas"><div class="container">
-<h2>🦊 O FoxGarden</h2>
-<p>Víme, co zahrada opravdu potřebuje. Zakládáme si na slušném jednání, dodržování termínů a čistém výsledku.</p>
-<p style="margin-top:10px;">
-  Jsme malá firma – jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně a s odpovědností.
-</p>
-<p style="margin-top:10px; font-weight:600;">
-  Nejsme nejlevnější. Děláme práci tak, aby byla dlouhodobě správně a bez starostí.
-</p>
-<p style="margin-top:15px;"><a class="btn outline" href="#kontakt">Chci nacenit práce</a></p>
-</div></section>
-
-
-<section id="poptavka" class="alt">
+<section id="spoluprace" class="alt">
   <div class="container">
-    <h2>📨 Rychlá poptávka</h2>
-    <form action="https://formsubmit.co/zuki@foxgarden.cz" method="POST" class="form-box">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://foxgarden.cz/dekujeme.html">
-
-      <input id="jmeno" type="text" name="Jméno" placeholder="Jméno a příjmení*" required>
-      <input id="telefon" type="tel" name="Telefon" placeholder="Telefon*" required>
-      <input id="mesto" type="text" name="Město / obec" placeholder="Město / obec*" required>
-      <textarea id="zprava" name="Zpráva" rows="3" placeholder="S čím vám můžeme pomoci?"></textarea>
-
-      <button type="submit" class="btn">Odeslat poptávku</button>
-    </form>
+    <div class="section-header">
+        <h2>Jak probíhá spolupráce</h2>
+    </div>
+    <div class="process-grid">
+        <div class="process-step">
+            <div class="process-num">1</div>
+            <div class="process-title">Zavoláte nebo pošlete fotku</div>
+        </div>
+        <div class="process-step">
+            <div class="process-num">2</div>
+            <div class="process-title">Domluvíme obhlídku</div>
+        </div>
+        <div class="process-step">
+            <div class="process-num">3</div>
+            <div class="process-title">Připravíme řešení</div>
+        </div>
+        <div class="process-step">
+            <div class="process-num">4</div>
+            <div class="process-title">Realizujeme práci</div>
+        </div>
+    </div>
   </div>
 </section>
+<section id="rady">
+  <div class="container">
+    <div class="section-header" style="display: flex; flex-direction: column; align-items: center;">
+        <img src="images/fox.png" alt="FOX Garden" style="width: 80px; height: auto; margin-bottom: 16px; opacity: 0.9;" onerror="this.style.display='none'">
+        <h2>Rady ze zahrady</h2>
+        <p class="subtitle" style="margin-top: 16px;">Přečtěte si naše tipy a rady pro krásnou zahradu.</p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 30px;">
+      <div class="card" onclick="window.location.href='clanky/kdy-zacit-sekat-travu.html'" style="cursor:pointer; border-left: 4px solid var(--yellow-accent);">
+        <h3>Kdy začít sekat trávu na jaře</h3>
+        <p>Na jaře to svádí vzít sekačku hned, jak se ukáže slunce. Jenže první sečení má svoje pravidla...</p>
+        <span style="display:inline-block; margin-top:16px; padding: 6px 12px; background: rgba(255, 222, 0, 0.15); border-radius: 8px; font-weight:600; color:var(--green-main); font-size:14px;">Číst článek →</span>
+      </div>
+      <div class="card" onclick="window.location.href='clanky/kolik-stoji-sekani-travy.html'" style="cursor:pointer; border-left: 4px solid var(--yellow-accent);">
+        <h3>Kolik stojí sekání trávy</h3>
+        <p>Zajímá vás, kolik stojí sekání trávy? Rozdíl může být klidně i několikanásobný – podle toho, v jakém je stavu zahrada.</p>
+        <span style="display:inline-block; margin-top:16px; padding: 6px 12px; background: rgba(255, 222, 0, 0.15); border-radius: 8px; font-weight:600; color:var(--green-main); font-size:14px;">Číst článek →</span>
+      </div>
+      <div class="card" onclick="window.location.href='clanky/jarni-udrzba-zahrady.html'" style="cursor:pointer; border-left: 4px solid var(--yellow-accent);">
+        <h3>Jarní údržba zahrady</h3>
+        <p>Na jaře to na zahradě rychle „vybuchne“. Kdo začne včas, má klid. Kdo čeká, ten to pak dohání najednou.</p>
+        <span style="display:inline-block; margin-top:16px; padding: 6px 12px; background: rgba(255, 222, 0, 0.15); border-radius: 8px; font-weight:600; color:var(--green-main); font-size:14px;">Číst článek →</span>
+      </div>
+    </div>
+    <div style="text-align:center; display:flex; flex-direction:column; gap:12px; align-items:center;">
+      <a class="btn btn-outline" href="rady-ze-zahrady.html">Zobrazit všechny články</a>
+      <a class="btn btn-primary" href="#kontakt">Odeslat poptávku</a>
+    </div>
+  </div>
+</section>
+<section id="onas" class="alt">
+  <div class="container">
+    <div style="background: var(--white); border-radius: 32px; padding: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 900px; margin: 0 auto; position: relative; overflow: hidden;">
+        <!-- Subtle background accent -->
+        <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255, 222, 0, 0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+
+        <div class="section-header" style="display: flex; flex-direction: column; align-items: center;">
+            <img src="images/fox.png" alt="FOX Garden" style="width: 64px; height: auto; margin-bottom: 24px;" onerror="this.style.display='none'">
+            <h2>Kdo stojí za FOX Garden</h2>
+        </div>
+
+        <div style="font-size: 18px; color: var(--text-dark); line-height: 1.6; max-width: 700px; margin-bottom: 32px;">
+            <div style="margin-bottom: 24px; font-weight: 600; font-size: 20px; color: var(--green-main); background: rgba(255, 222, 0, 0.15); padding: 20px; border-radius: 16px; border-left: 4px solid var(--yellow-accent);">
+                „Víme, co zahrada opravdu potřebuje – od úvodního návrhu a terénních úprav, přes odbornou výsadbu, až po dlouhodobou péči.“
+            </div>
+            <p style="color: var(--text-light); font-size: 16px; margin-bottom: 16px;">Jsme malá firma a zakládáme si na <strong>osobním přístupu</strong>. Jednáte přímo s člověkem, který práci realizuje. Ke každé zahradě přistupujeme individuálně, s respektem k přírodě a plnou odpovědností.</p>
+            <p style="color: var(--text-light); font-size: 16px;">Navrhujeme zahrady především tam, kde následně realizujeme i samotnou úpravu, abychom zaručili <strong>100% výsledek a kvalitu</strong> od prvního nákresu po poslední sazenici.</p>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px; color: var(--green-main); font-weight: 600; font-size: 16px;">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color: var(--yellow-accent);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Poctivá práce & dodržování termínů
+        </div>
+    </div>
+  </div>
+</section>
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+        <h2>Časté dotazy</h2>
+    </div>
+
+    <dl class="faq-grid">
+      <div class="faq-item">
+          <dt>Kolik stojí sekání?</dt>
+          <dd>Cena závisí na ploše a stavu trávy. Napíšeme vám ji po sdělení výměry a lokality.</dd>
+      </div>
+      <div class="faq-item">
+          <dt>Děláte odvoz odpadu?</dt>
+          <dd>Ano, odvoz bioodpadu je standardní součástí našich služeb.</dd>
+      </div>
+      <div class="faq-item">
+          <dt>Kde všude působíte?</dt>
+          <dd>Působíme především v okolí měst Jičín, Hořice a Lázně Bělohrad a v přilehlých obcích. Po domluvě dojedeme i dál.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+<section id="kontakt">
+  <div class="container">
+    <div class="section-header">
+        <h2>Kontakt</h2>
+        <p class="subtitle">Stačí zavolat nebo napsat – odpovíme co nejdříve.</p>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h3>FOX Garden – Zuklesa s.r.o.</h3>
+            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div> <span>IČO: 17805368</span></div>
+            <div class="contact-row" style="font-weight: 600; color: var(--green-main);"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div> <span>Pojištěno do 3 000 000 Kč</span></div>
+            <hr style="border: 0; height: 1px; background: var(--border); margin: 24px 0;">
+            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div> <a href="tel:+420775717291" style="font-size: 18px;">775 717 291</a></div>
+            <div class="contact-row"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div> <a href="mailto:zuki@foxgarden.cz" style="font-size: 18px;">zuki@foxgarden.cz</a></div>
+        </div>
+
+        <div>
 
 
-<section id="kontakt"><div class="container">
-<h2>Kontakt</h2>
-<p style="font-size:16px;margin-bottom:10px;">
-Stačí zavolat nebo napsat – odpovíme co nejdříve.
-</p>
-<p><b>FoxGarden – Zuklesa s.r.o.</b><br>IČO: 17805368</p>
-<p><b>Telefon:</b> <a href="tel:+420775717291">775 717 291</a><br>
-<b>E-mail:</b> <a href="mailto:zuki@foxgarden.cz">zuki@foxgarden.cz</a></p>
-<div class="buttons">
-<a class="btn" href="tel:+420775717291">📞 Zavolat</a>
-<a class="btn" href="https://wa.me/420775717291" style="background:#25D366;">💬 WhatsApp</a>
-<a class="btn outline" href="#poptavka">📋 Nezávazná konzultace</a>
-<a class="btn outline" href="https://www.facebook.com/109016358813760" target="_blank" style="border:1px solid #ccc; font-weight:400;">📘 Facebook</a>
-<a class="btn outline" href="mailto:zuki@foxgarden.cz" style="border:1px solid #ccc; font-weight:400;">✉️ Napsat</a>
-<a class="btn outline" href="https://www.poptavej.cz/firma/62729030/fox-garden-zuklesa-s-r-o" style="border:1px solid #ccc; font-weight:400;">⭐ Reference na Poptávej.cz</a>
-</div>
-</div></section>
+            <form action="https://formsubmit.co/zuki@foxgarden.cz" method="POST" class="form-box">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
 
-<footer style="
-  text-align:center;
-  padding:42px 14px;
-  color:#F3E9D7;
-  background:#1f3d27;
-  font-size:.95rem;
-  margin-top:60px;
-  border-radius:26px 26px 0 0;
-">
-  © <script>document.write(new Date().getFullYear());</script>
-  Fox Garden – Zuklesa s.r.o. |
-  IČO: 17805368 |
-  ÚKZÚZ |
-  Pojištěno |
-  foxgarden.cz
-  <br><br>
+              <div class="form-row">
+                  <div class="form-group">
+                      <label for="jmeno">Jméno *</label>
+                      <input id="jmeno" type="text" name="Jméno" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="telefon">Telefon *</label>
+                      <input id="telefon" type="tel" name="Telefon" required>
+                  </div>
+              </div>
 
-  <a href="/interni/dochazka/dochazka.html"
-     style="
-       color:#F3E9D7;
-       text-decoration:underline;
-       font-weight:600;
-     ">
-     Docházka zaměstnanců
-  </a>
+              <div class="form-group">
+                  <label for="zprava">Co potřebujete udělat?</label>
+                  <textarea id="zprava" name="Zpráva"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
+            </form>
+        </div>
+    </div>
+  </div>
+</section>
+<section id="seo-text" style="padding: 20px 0; background: #f9fafb;">
+  <div class="container" style="text-align: center; max-width: 800px; opacity: 0.8; font-size: 14px;">
+    <p>Poskytujeme profesionální zahradnické služby, údržbu zeleně, pravidelné sekání trávníků a odborné stříhání živých plotů. Působíme především v okolí měst Jičín, Hořice a Lázně Bělohrad a v přilehlých obcích. Po domluvě dojedeme i dál. Pečujeme o zahrady rodinných domů, firemní areály i zeleň společenství vlastníků (SVJ).</p>
+  </div>
+</section>
+<footer>
+  <div class="container">
+      <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+          <a href="https://www.facebook.com/profile.php?id=100090484467357" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.7); transition: color 0.3s; display: inline-flex; align-items: center; justify-content: center;" onmouseover="this.style.color='#ea580c'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.5 10H16.639L17.29 6.8H14.5V4.666C14.5 3.82 14.5 3.2 15.632 3.2H17.29V0.384C16.89 0.32 15.772 0 14.49 0C11.838 0 10 1.636 10 4.542V6.8H7V10H10V18H14.5V10Z"/>
+              </svg>
+          </a>
+          <a href="https://www.instagram.com/foxgarden.expert/" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.7); transition: color 0.3s; display: inline-flex; align-items: center; justify-content: center;" onmouseover="this.style.color='#ea580c'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C9.239 7 7 9.239 7 12C7 14.761 9.239 17 12 17C14.761 17 17 14.761 17 12C17 9.239 14.761 7 12 7ZM12 15C10.343 15 9 13.657 9 12C9 10.343 10.343 9 12 9C13.657 9 15 10.343 15 12C15 13.657 13.657 15 12 15ZM16.5 7.5C16.5 8.052 16.052 8.5 15.5 8.5C14.948 8.5 14.5 8.052 14.5 7.5C14.5 6.948 14.948 6.5 15.5 6.5C16.052 6.5 16.5 6.948 16.5 7.5ZM12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.877 4.234 21.221 4.79 21.475 5.45C21.723 6.088 21.89 6.813 21.94 7.878C21.99 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.723 17.912 21.475 18.55C21.221 19.21 20.877 19.766 20.322 20.322C19.766 20.877 19.21 21.221 18.55 21.475C17.912 21.723 17.187 21.89 16.122 21.94C15.056 21.99 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.723 5.45 21.475C4.79 21.221 4.234 20.877 3.678 20.322C3.123 19.766 2.779 19.21 2.525 18.55C2.277 17.912 2.11 17.187 2.06 16.122C2.01 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.813 2.277 6.088 2.525 5.45C2.779 4.79 3.123 4.234 3.678 3.678C4.234 3.123 4.79 2.779 5.45 2.525C6.088 2.277 6.813 2.11 7.878 2.06C8.944 2.01 9.283 2 12 2ZM12 4C9.318 4 8.981 4.01 7.968 4.056C7.03 4.099 6.391 4.253 5.926 4.433C5.309 4.673 4.869 4.965 4.428 5.405C3.988 5.846 3.696 6.286 3.456 6.903C3.275 7.368 3.121 8.007 3.078 8.945C3.032 9.958 3.022 10.295 3.022 12C3.022 13.705 3.032 14.042 3.078 15.055C3.121 15.993 3.275 16.632 3.456 17.097C3.696 17.714 3.988 18.154 4.428 18.595C4.869 19.035 5.309 19.327 5.926 19.567C6.391 19.747 7.03 19.901 7.968 19.944C8.981 19.99 9.318 20 12 20C14.682 20 15.019 19.99 16.032 19.944C16.97 19.901 17.609 19.747 18.074 19.567C18.691 19.327 19.131 19.035 19.572 18.595C20.012 18.154 20.304 17.714 20.544 17.097C20.725 16.632 20.879 15.993 20.922 15.055C20.968 14.042 20.978 13.705 20.978 12C20.978 10.295 20.968 9.958 20.922 8.945C20.879 8.007 20.725 7.368 20.544 6.903C20.304 6.286 20.012 5.846 19.572 5.405C19.131 4.965 18.691 4.673 18.074 4.433C17.609 4.253 16.97 4.099 16.032 4.056C15.019 4.01 14.682 4 12 4Z"/>
+              </svg>
+          </a>
+      </div>
+      <p>© <script>document.write(new Date().getFullYear());</script> FOX Garden – Zuklesa s.r.o. | IČO: 17805368</p>
+      <p style="margin-top: 8px;">Certifikace ÚKZÚZ | Pojištění odpovědnosti</p>
+  </div>
 </footer>
-<button id="backToTop" aria-label="Zpět nahoru">↑</button>
+<a href="tel:+420775717291" class="float-btn">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" style="color: var(--yellow-accent);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    Nezávazná poptávka
+</a>
+<!-- Docházka PIN Modal -->
+<div id="dochazka-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
+  <div style="background:#fff; padding:30px; border-radius:12px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.2); max-width:90%; width:300px;">
+    <h3 style="margin-bottom:15px; color:var(--green-main);">Zadejte PIN</h3>
+    <input type="password" id="dochazka-pin" style="font-size:24px; padding:10px; width:100%; text-align:center; border:1px solid #ccc; border-radius:8px; margin-bottom:15px; letter-spacing:5px;" placeholder="****">
+    <div id="dochazka-error" style="color:red; font-size:14px; margin-bottom:15px; display:none;">Nesprávný PIN</div>
+    <div style="display:flex; gap:10px; justify-content:center;">
+      <button id="btn-pin-zrusit" class="btn btn-outline" style="padding:10px 20px;">Zrušit</button>
+      <button id="btn-pin-potvrdit" class="btn btn-primary" style="padding:10px 20px;">Potvrdit</button>
+    </div>
+  </div>
+</div>
 <script>
-const backToTop = document.getElementById('backToTop');
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll("#reviewsCarousel .review-slide");
+    if(slides.length === 0) return;
+    let currentSlide = 0;
 
-window.addEventListener('scroll', () => {
-  backToTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
-});
-
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    setInterval(() => {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+    }, 5000);
 });
 </script>
-<a href="tel:+420775717291" style="
-position:fixed;
-bottom:15px;
-left:50%;
-transform:translateX(-50%);
-background:#2d5c3b;
-color:#fff;
-padding:12px 20px;
-border-radius:999px;
-font-weight:600;
-z-index:999;
-text-decoration:none;
-box-shadow:0 6px 16px rgba(0,0,0,0.2);
-">
-📞 Zavolat
-</a>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.getElementById("ba-slider");
+    const handle = document.getElementById("ba-handle");
+    const afterWrapper = document.getElementById("ba-after-wrapper");
+    const imgAfter = document.getElementById("img-after");
+
+    let isDragging = false;
+
+    // Přizpůsobení šířky "PO" obrázku podle šířky kontejneru, aby se nedeformoval při ořezu
+    function resizeImg() {
+        if(imgAfter) {
+            imgAfter.style.width = slider.offsetWidth + "px";
+        }
+    }
+
+    window.addEventListener("resize", resizeImg);
+    resizeImg(); // Init
+
+    // Posun slideru
+    function move(clientX) {
+        if (!isDragging) return;
+        const rect = slider.getBoundingClientRect();
+        let x = clientX - rect.left;
+        // Omezení, ať handle nevyjede mimo (5% až 95%)
+        x = Math.max(0, Math.min(x, rect.width));
+        const percent = (x / rect.width) * 100;
+
+        handle.style.left = percent + "%";
+        afterWrapper.style.width = percent + "%";
+    }
+
+    // Mouse events
+    if(handle) {
+        handle.addEventListener("mousedown", () => isDragging = true);
+        window.addEventListener("mouseup", () => isDragging = false);
+        window.addEventListener("mousemove", (e) => move(e.clientX));
+
+        // Touch events
+        handle.addEventListener("touchstart", () => isDragging = true);
+        window.addEventListener("touchend", () => isDragging = false);
+        window.addEventListener("touchmove", (e) => {
+            if (isDragging) {
+                move(e.touches[0].clientX);
+                // Zabraňuje scrollování stránky během posunu
+                e.preventDefault();
+            }
+        }, {passive: false});
+    }
+
+    // Subtle wiggle animation on load
+    setTimeout(() => {
+        if(handle && afterWrapper) {
+            handle.style.transition = "left 0.5s ease-in-out";
+            afterWrapper.style.transition = "width 0.5s ease-in-out";
+            handle.style.left = "45%";
+            afterWrapper.style.width = "45%";
+            setTimeout(() => {
+                handle.style.left = "55%";
+                afterWrapper.style.width = "55%";
+                setTimeout(() => {
+                    handle.style.left = "50%";
+                    afterWrapper.style.width = "50%";
+                    setTimeout(() => {
+                        handle.style.transition = "none";
+                        afterWrapper.style.transition = "none";
+                    }, 500);
+                }, 500);
+            }, 500);
+        }
+    }, 1000);
+
+    // Thumbnail logic
+    const thumbnails = document.querySelectorAll(".ba-thumb");
+    const mainBefore = document.getElementById("img-before");
+    const mainAfter = document.getElementById("img-after");
+    const srcBeforeWebp = document.getElementById("src-before-webp");
+    const srcAfterWebp = document.getElementById("src-after-webp");
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener("click", function() {
+            // Remove active
+            thumbnails.forEach(t => t.classList.remove("active"));
+            this.classList.add("active");
+
+            // Set new images
+            const beforeSrc = this.getAttribute("data-before");
+            const afterSrc = this.getAttribute("data-after");
+            const beforeWebpSrc = this.getAttribute("data-before-webp");
+            const afterWebpSrc = this.getAttribute("data-after-webp");
+
+            if (srcBeforeWebp && beforeWebpSrc) srcBeforeWebp.srcset = beforeWebpSrc;
+            if (srcAfterWebp && afterWebpSrc) srcAfterWebp.srcset = afterWebpSrc;
+
+            mainBefore.src = beforeSrc;
+            mainAfter.src = afterSrc;
+        });
+    });
+});
+</script>
+<script>
+const btnDochazka = document.getElementById('btn-dochazka');
+const modalDochazka = document.getElementById('dochazka-modal');
+const inputPin = document.getElementById('dochazka-pin');
+const btnPotvrdit = document.getElementById('btn-pin-potvrdit');
+const btnZrusit = document.getElementById('btn-pin-zrusit');
+const errorMsg = document.getElementById('dochazka-error');
+
+btnDochazka.addEventListener('click', (e) => {
+  e.preventDefault();
+  modalDochazka.style.display = 'flex';
+  inputPin.value = '';
+  errorMsg.style.display = 'none';
+  inputPin.focus();
+});
+
+btnZrusit.addEventListener('click', () => {
+  modalDochazka.style.display = 'none';
+});
+
+btnPotvrdit.addEventListener('click', checkPin);
+inputPin.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') checkPin();
+});
+
+function checkPin() {
+  if (inputPin.value === '1133') {
+    window.location.href = '/interni/dochazka/dochazka.html';
+  } else {
+    errorMsg.style.display = 'block';
+    inputPin.value = '';
+    inputPin.focus();
+  }
+}
+</script>
+<script>
+// Cookie Toggle Logic
+const toggleCheckbox = document.getElementById('cookie-analytics-check');
+const toggleSlider = document.getElementById('cookie-toggle-slider');
+
+toggleCheckbox.addEventListener('change', function() {
+    if(this.checked) {
+        toggleSlider.style.transform = 'translateX(20px)';
+        toggleSlider.parentElement.querySelector('span:nth-child(2)').style.backgroundColor = 'var(--accent)';
+    } else {
+        toggleSlider.style.transform = 'translateX(0)';
+        toggleSlider.parentElement.querySelector('span:nth-child(2)').style.backgroundColor = '#ccc';
+    }
+});
+// Set initial state
+toggleSlider.style.transform = 'translateX(20px)';
+
+// Consent Banner Logic
+document.addEventListener("DOMContentLoaded", function() {
+    const cookieConsent = document.getElementById('cookie-consent');
+    const btnAcceptAll = document.getElementById('cookie-accept-all');
+    const btnAcceptNecessary = document.getElementById('cookie-accept-necessary');
+    const btnSettings = document.getElementById('cookie-settings');
+    const cookieModal = document.getElementById('cookie-modal');
+    const btnSaveSettings = document.getElementById('btn-cookie-save');
+
+    if (!localStorage.getItem('foxgarden_cookies_accepted')) {
+        setTimeout(() => {
+            cookieConsent.classList.add('show');
+        }, 1000);
+    }
+
+    function hideConsent(type) {
+        localStorage.setItem('foxgarden_cookies_accepted', type);
+        cookieConsent.classList.remove('show');
+        cookieModal.style.display = 'none';
+    }
+
+    btnAcceptAll.addEventListener('click', () => {
+        hideConsent('all');
+    });
+
+    btnAcceptNecessary.addEventListener('click', () => {
+        hideConsent('necessary');
+    });
+
+    btnSettings.addEventListener('click', () => {
+        cookieModal.style.display = 'flex';
+    });
+
+    btnSaveSettings.addEventListener('click', () => {
+        if(toggleCheckbox.checked) {
+            hideConsent('all');
+        } else {
+            hideConsent('necessary');
+        }
+    });
+
+});
+</script>
+<!-- Cookie Consent -->
+<div id="cookie-consent" class="cookie-consent">
+    <div class="cookie-header">
+        <img src="images/logo.png" alt="FOX Garden Logo" class="cookie-icon" onerror="this.style.display='none'">
+        <div class="cookie-content">
+            <h3>Ochrana soukromí a cookies</h3>
+            <p>
+                Pro správné fungování webu, analýzu návštěvnosti a personalizaci obsahu využíváme soubory cookies. Vaše soukromí je pro nás důležité, proto si můžete vybrat, jaké údaje nám poskytnete.
+            </p>
+        </div>
+    </div>
+    <div class="cookie-actions">
+        <button class="cookie-btn cookie-btn-text" id="cookie-settings">Nastavení</button>
+        <button class="cookie-btn cookie-btn-outline" id="cookie-accept-necessary">Pouze nezbytné</button>
+        <button class="cookie-btn cookie-btn-primary" id="cookie-accept-all">Přijmout vše</button>
+    </div>
+</div>
+
+<!-- Cookie Settings Modal -->
+<div id="cookie-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:10000; justify-content:center; align-items:center; backdrop-filter:blur(4px);">
+  <div style="background: linear-gradient(135deg, #1f3d27 0%, #2E5E4E 100%); padding:30px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.3); max-width:90%; width:450px; color:var(--white); position: relative;">
+    <button id="btn-cookie-close" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: rgba(255,255,255,0.7); font-size: 24px; cursor: pointer; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">&times;</button>
+    <h3 style="margin-bottom:15px; color:var(--white); font-size: 22px;">Nastavení cookies</h3>
+    <p style="font-size: 14px; color: rgba(255,255,255,0.8); margin-bottom: 20px; line-height: 1.5;">Vyberte, jaké typy cookies můžeme používat. Nezbytné cookies nelze vypnout, protože zajišťují základní funkce webu.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+            <div>
+                <div style="font-weight: 600; font-size: 15px;">Nezbytné cookies</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Nutné pro správné fungování webu.</div>
+            </div>
+            <div style="color: var(--yellow-accent); font-weight: 700; font-size: 14px;">Vždy aktivní</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <div style="font-weight: 600; font-size: 15px;">Analytické a marketingové</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Pomáhají nám vylepšovat web a reklamy.</div>
+            </div>
+            <label style="position: relative; display: inline-block; width: 44px; height: 24px;">
+                <input type="checkbox" id="cookie-analytics-check" style="opacity: 0; width: 0; height: 0;" checked>
+                <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--yellow-accent); transition: .4s; border-radius: 24px;"></span>
+                <span style="position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;" id="cookie-toggle-slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div style="display:flex; gap:10px; justify-content:flex-end;">
+      <button id="btn-cookie-save" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 12px;">Uložit nastavení</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Cookie Toggle Logic
+const toggleCheckbox = document.getElementById('cookie-analytics-check');
+const toggleSlider = document.getElementById('cookie-toggle-slider');
+
+toggleCheckbox.addEventListener('change', function() {
+    if(this.checked) {
+        toggleSlider.style.transform = 'translateX(20px)';
+        toggleSlider.parentElement.querySelector('span:nth-child(2)').style.backgroundColor = 'var(--accent)';
+    } else {
+        toggleSlider.style.transform = 'translateX(0)';
+        toggleSlider.parentElement.querySelector('span:nth-child(2)').style.backgroundColor = '#ccc';
+    }
+});
+// Set initial state
+toggleSlider.style.transform = 'translateX(20px)';
+
+// Consent Banner Logic
+document.addEventListener("DOMContentLoaded", function() {
+    const cookieConsent = document.getElementById('cookie-consent');
+    const btnAcceptAll = document.getElementById('cookie-accept-all');
+    const btnAcceptNecessary = document.getElementById('cookie-accept-necessary');
+    const btnSettings = document.getElementById('cookie-settings');
+    const cookieModal = document.getElementById('cookie-modal');
+    const btnSaveSettings = document.getElementById('btn-cookie-save');
+
+    if (!localStorage.getItem('foxgarden_cookies_accepted')) {
+        setTimeout(() => {
+            cookieConsent.classList.add('show');
+        }, 1000);
+    }
+
+    function hideConsent(type) {
+        localStorage.setItem('foxgarden_cookies_accepted', type);
+        cookieConsent.classList.remove('show');
+        cookieModal.style.display = 'none';
+    }
+
+    btnAcceptAll.addEventListener('click', () => {
+        hideConsent('all');
+    });
+
+    btnAcceptNecessary.addEventListener('click', () => {
+        hideConsent('necessary');
+    });
+
+    btnSettings.addEventListener('click', () => {
+        cookieModal.style.display = 'flex';
+    });
+
+    btnSaveSettings.addEventListener('click', () => {
+        if(toggleCheckbox.checked) {
+            hideConsent('all');
+        } else {
+            hideConsent('necessary');
+        }
+    });
+
+});
+</script>
+
 </body>
 </html>
