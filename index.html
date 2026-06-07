@@ -2835,6 +2835,10 @@
         <p class="subtitle">Podívejte se na skutečné výsledky naší práce.</p>
     </div>
 
+    <div style="text-align:center; font-weight: 600; color: var(--yellow-accent); margin-bottom: 16px; font-size: 15px; animation: subtle-breathe 6s ease-in-out infinite;">
+        <span style="display:inline-block; margin-right: 8px;">↔</span> Posuňte jezdce doleva a doprava pro porovnání stavu PŘED a PO
+    </div>
+
     <div class="ba-slider-container" id="ba-slider">
         <!-- Zde je obrázek PŘED (ten co se odkrývá napravo) -->
         <picture>
@@ -2852,6 +2856,12 @@
 
         <div class="ba-handle" id="ba-handle">
             <div class="ba-handle-btn"></div>
+            <div id="ba-hand-hint" style="position: absolute; top: 70px; left: 10px; width: 40px; height: 40px; color: var(--yellow-accent); filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4)); transition: opacity 0.3s; z-index: 5; pointer-events: none;">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C10.9 2 10 2.9 10 4V13.5L8.2 12.6C7.5 12.3 6.6 12.4 6 13L2.5 16.5L8.5 22C9.2 22.7 10.1 23 11 23H17C18.6 23 20 21.6 20 20V9C20 7.9 19.1 7 18 7C17.9 7 17.8 7 17.7 7.1C17.4 5.9 16.3 5 15 5C14.7 5 14.5 5 14.3 5.1C13.8 4.5 13 4 12 4V2ZM12 4C13.1 4 14 4.9 14 6V10H16V7C16 8.1 16.9 9 18 9V20C18 20.6 17.6 21 17 21H11C10.6 21 10.3 20.8 10 20.6L4.6 15.2L7 13.8V4C7 2.9 7.9 2 9 2H12Z" fill="white" />
+                    <path d="M12 2C10.9 2 10 2.9 10 4V13.5L8.2 12.6C7.5 12.3 6.6 12.4 6 13L2.5 16.5L8.5 22C9.2 22.7 10.1 23 11 23H17C18.6 23 20 21.6 20 20V9C20 7.9 19.1 7 18 7C17.9 7 17.8 7 17.7 7.1C17.4 5.9 16.3 5 15 5C14.7 5 14.5 5 14.3 5.1C13.8 4.5 13 4 12 4Z" />
+                </svg>
+            </div>
         </div>
 
         <div class="ba-label ba-label-before">PŘED</div>
@@ -3123,12 +3133,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Mouse events
     if(handle) {
-        handle.addEventListener("mousedown", () => isDragging = true);
+        handle.addEventListener("mousedown", () => {
+            isDragging = true;
+            const handHint = document.getElementById("ba-hand-hint");
+            if (handHint) handHint.style.opacity = "0";
+        });
         window.addEventListener("mouseup", () => isDragging = false);
         window.addEventListener("mousemove", (e) => move(e.clientX));
 
         // Touch events
-        handle.addEventListener("touchstart", () => isDragging = true);
+        handle.addEventListener("touchstart", () => {
+            isDragging = true;
+            const handHint = document.getElementById("ba-hand-hint");
+            if (handHint) handHint.style.opacity = "0";
+        });
         window.addEventListener("touchend", () => isDragging = false);
         window.addEventListener("touchmove", (e) => {
             if (isDragging) {
@@ -3139,27 +3157,37 @@ document.addEventListener("DOMContentLoaded", function() {
         }, {passive: false});
     }
 
-    // Subtle wiggle animation on load
+    // Pronounced wiggle animation on load to indicate interaction
     setTimeout(() => {
         if(handle && afterWrapper) {
-            handle.style.transition = "left 0.5s ease-in-out";
-            afterWrapper.style.transition = "width 0.5s ease-in-out";
-            handle.style.left = "45%";
-            afterWrapper.style.width = "45%";
+            handle.style.transition = "left 0.6s ease-in-out";
+            afterWrapper.style.transition = "width 0.6s ease-in-out";
+            // Sweep left
+            handle.style.left = "35%";
+            afterWrapper.style.width = "35%";
             setTimeout(() => {
-                handle.style.left = "55%";
-                afterWrapper.style.width = "55%";
+                // Sweep right
+                handle.style.left = "65%";
+                afterWrapper.style.width = "65%";
                 setTimeout(() => {
-                    handle.style.left = "50%";
-                    afterWrapper.style.width = "50%";
+                    // Sweep left again slightly less
+                    handle.style.left = "45%";
+                    afterWrapper.style.width = "45%";
                     setTimeout(() => {
-                        handle.style.transition = "none";
-                        afterWrapper.style.transition = "none";
-                    }, 500);
-                }, 500);
-            }, 500);
+                        // Back to center
+                        handle.style.left = "50%";
+                        afterWrapper.style.width = "50%";
+                        setTimeout(() => {
+                            handle.style.transition = "none";
+                            afterWrapper.style.transition = "none";
+                            const handHint = document.getElementById("ba-hand-hint");
+                            if (handHint) handHint.style.opacity = "0"; // Fade out hand
+                        }, 600);
+                    }, 600);
+                }, 600);
+            }, 600);
         }
-    }, 1000);
+    }, 1200);
 
     // Thumbnail logic
     const thumbnails = document.querySelectorAll(".ba-thumb");
