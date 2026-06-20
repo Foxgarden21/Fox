@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="foxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+  </defs>
+
+  <path d="M 25 15 L 45 15 L 45 85 L 25 85 Z" fill="#ea580c"/>
+  <path d="M 40 45 L 60 45 C 65 45, 65 60, 60 60 L 40 60 Z" fill="#ea580c"/>
+  <path d="M 40 15 L 50 15 C 80 15, 95 30, 95 55 C 95 85, 65 95, 45 90 C 65 85, 75 75, 75 55 C 75 35, 65 30, 40 30 Z" fill="url(#foxGradient)"/>
+  <path d="M 95 55 C 95 85, 65 95, 45 90 C 50 80, 65 85, 75 75 C 85 65, 85 55, 95 55 Z" fill="#ffffff" opacity="0.9"/>
+</svg>
