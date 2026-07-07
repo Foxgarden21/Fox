@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Fox Garden – Docházka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dochazka.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Fox Garden – Evidence docházky</h1>
+</header>
+
+<main>
+
+  <!-- Admin Toggle Button (hidden/unobtrusive) -->
+  <div style="text-align: right; margin-bottom: 10px;">
+    <button id="btnAdmin" style="background: none; border: none; color: #666; cursor: pointer; font-size: 13px; text-decoration: underline;">⚙️ Správa (Admin)</button>
+  </div>
+
+  <label>Jméno</label>
+  <select id="worker">
+    <option value="">-- vyber --</option>
+    <!-- Options populated by JS -->
+  </select>
+
+  <label>Typ práce</label>
+  <select id="work_type">
+    <option value="">-- vyber --</option>
+    <option>Údržba</option>
+    <option>Realizace</option>
+    <option>Výsadby</option>
+    <option>Servis strojů</option>
+    <option>Ostatní</option>
+  </select>
+
+  <label>Zakázka</label>
+  <select id="job">
+    <option value="">-- vyber --</option>
+    <!-- Options populated by JS -->
+  </select>
+
+  <button id="btnIn" onclick="sendAttendance('IN')">🟢 PŘÍCHOD</button>
+<button id="btnOut" onclick="sendAttendance('OUT')">🔴 ODCHOD</button>
+
+
+
+</main>
+
+  <!-- Admin Panel -->
+  <div id="adminPanel" style="display: none; margin-top: 30px; border-top: 2px solid #ccc; padding-top: 20px;">
+    <h2>Admin Panel</h2>
+
+    <div style="margin-bottom: 20px;">
+      <h3>Správa Pracovníků</h3>
+      <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+        <input type="text" id="newWorkerInput" placeholder="Nové jméno (např. Pracovník 5)">
+        <button onclick="addWorker()">Přidat</button>
+      </div>
+      <ul id="workerList" style="list-style: none; padding: 0;"></ul>
+    </div>
+
+    <div>
+      <h3>Správa Zakázek</h3>
+      <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+        <input type="text" id="newJobInput" placeholder="Nová zakázka (např. 2026-06-004 Jičín)">
+        <button onclick="addJob()">Přidat</button>
+      </div>
+      <ul id="jobList" style="list-style: none; padding: 0;"></ul>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <h3>Historie docházky (lokální)</h3>
+      <ul id="attendanceLogList" style="list-style: none; padding: 0; font-size: 13px;"></ul>
+    </div>
+  </div>
+
+  <!-- Admin PIN Modal -->
+  <div id="adminModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
+    <div style="background:#fff; padding:30px; border-radius:12px; text-align:center; max-width:90%; width:300px;">
+      <h3 style="margin-bottom:15px; color:#2E5E4E;">Admin PIN</h3>
+      <input type="password" id="adminPin" style="font-size:24px; padding:10px; width:100%; text-align:center; border:1px solid #ccc; border-radius:8px; margin-bottom:15px; letter-spacing:5px;" placeholder="****">
+      <div id="adminError" style="color:red; font-size:14px; margin-bottom:15px; display:none;">Nesprávný PIN</div>
+      <div style="display:flex; gap:10px; justify-content:center;">
+        <button onclick="document.getElementById('adminModal').style.display='none'" style="padding:10px 20px;">Zrušit</button>
+        <button onclick="checkAdminPin()" style="padding:10px 20px; background:#2E5E4E; color:#fff; border:none; border-radius:8px;">Potvrdit</button>
+      </div>
+    </div>
+  </div>
+
+<script src="dochazka.js"></script>
+</body>
+</html>
